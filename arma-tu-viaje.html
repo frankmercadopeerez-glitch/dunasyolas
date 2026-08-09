@@ -190,6 +190,18 @@
 
     /* --- Modal animation --- */
     .modal-box { animation: modalIn 0.22s ease; }
+    #checkout-modal .modal-box {
+      border-radius: 1.25rem !important;
+      overflow: hidden !important;
+      clip-path: inset(0 round 1.25rem);
+      isolation: isolate;
+    }
+    #checkout-modal .checkout-scroll {
+      min-height: 0;
+      overflow-y: auto;
+      scrollbar-gutter: stable;
+      border-radius: 0 0 1.25rem 1.25rem;
+    }
     @keyframes modalIn { from { opacity:0; transform:scale(0.95) translateY(8px); } to { opacity:1; transform:scale(1) translateY(0); } }
 
     /* --- Highlight day card after applying package --- */
@@ -676,7 +688,7 @@
 <div id="checkout-modal" class="fixed inset-0 z-[100] hidden">
   <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeCheckout()"></div>
   <div class="relative z-10 flex items-center justify-center min-h-full p-4">
-    <div class="modal-box bg-white rounded-2xl w-full max-w-lg max-h-[92vh] overflow-y-auto shadow-2xl">
+    <div class="modal-box bg-white rounded-2xl w-full max-w-lg max-h-[92vh] overflow-hidden flex flex-col shadow-2xl">
       <!-- Header -->
       <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
         <div>
@@ -686,7 +698,7 @@
         <button onclick="closeCheckout()" class="text-gray-300 hover:text-gray-600 text-2xl leading-none">&times;</button>
       </div>
 
-      <div class="p-6 space-y-4">
+      <div class="checkout-scroll p-6 space-y-4">
         <!-- Resumen itinerario -->
         <div id="checkout-itinerary" class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700 space-y-1"></div>
 
@@ -968,6 +980,18 @@ const ACTIVITIES = {
     slots: ['morning'],
     allDay: true,
     link: 'pasadia-mucura-tintipan.html',
+  },
+  isla_lizamar: {
+    name: 'Pasadía Isla Lizamar',
+    emoji: '🏝️',
+    price: 385000,
+    duration: 'Todo el día',
+    description: 'Isla Grande, piscinas, tobogán al mar, almuerzo buffet, guía bilingüe y recorrido panorámico por Islas del Rosario. Servicios opcionales no incluidos.',
+    category: 'water',
+    image: 'images/isla-lizamar-piscina.webp',
+    slots: ['morning'],
+    allDay: true,
+    link: 'pasadia-isla-lizamar.html',
   },
   buceo: {
     name: 'Buceo y Snorkel',
@@ -1565,7 +1589,7 @@ function renderPickerGrid() {
   grid.innerHTML = visible.map(([id, act]) => `
     <div class="act-card text-left bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-blue-500 hover:shadow-md transition-all group cursor-pointer" onclick="pickActivity('${id}')">
       <div class="relative" style="height:120px;overflow:hidden;">
-        <img src="${act.image}" alt="${act.name}" style="display:block;width:100%;height:100%;object-fit:cover;" class="group-hover:scale-105 transition-transform duration-300"/>
+        <img src="${act.image}" alt="${act.name}" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover;" class="group-hover:scale-105 transition-transform duration-300"/>
         <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(0,0,0,0.5),transparent)"></div>
         <div class="absolute bottom-2 left-3 flex items-center gap-1.5">
           <span class="text-xl leading-none">${act.emoji}</span>
@@ -1966,7 +1990,8 @@ function sendToWhatsApp(e) {
   const travelers  = state.travelers || 1;
   const days       = getDays();
 
-  let msg = `¡Hola Nohemi! Quiero armar mi viaje a Cartagena 🌴\n\n`;
+  let msg = `Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Arma tu itinerario para Cartagena.\n\n`;
+  msg += `Detalle de mi reserva:\n`;
   if (state.arrival) msg += `📅 Fechas: ${state.arrival} → ${state.departure}\n`;
   msg += `👥 Viajeros: ${travelers} ${travelers===1?'persona':'personas'}\n\n📍 MI ITINERARIO:\n`;
 
@@ -2161,6 +2186,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })();
 </script>
-  <script src="js/site-refresh.js?v=20260805c" defer></script>
+  <script src="js/site-refresh.js?v=20260806a" defer></script>
 </body>
 </html>

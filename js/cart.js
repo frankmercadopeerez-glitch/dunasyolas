@@ -50,6 +50,11 @@ const TOURS = {
     price: 320000,
     unit: "persona",
   },
+  isla_lizamar: {
+    name: "Pasadía Isla Lizamar – Piscinas y playa",
+    price: 385000,
+    unit: "persona",
+  },
   atardecer: {
     name: "Atardeceres Mágicos en la Bahía",
     price: 120000,

@@ -57,6 +57,20 @@
         .slice(0, 140);
     }
 
+    // WhatsApp messages can contain a complete itinerary, notes and contact
+    // details. Keep those line breaks and characters intact; the 140-character
+    // limit above is only appropriate for a card/page title.
+    function cleanMessage(value) {
+      return String(value || "")
+        .replace(/\r\n?/g, "\n")
+        .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, "")
+        .trim();
+    }
+
+    function messageHasSitePrefix(value) {
+      return /^¡?Hola,\s*vengo\s+desde\s+la\s+web\s+de\s+Dunas\s+y\s+Olas/i.test(value);
+    }
+
     function normalize(value) {
       return cleanLabel(value)
         .normalize("NFD")
@@ -73,7 +87,9 @@
       var explicit = scope && (scope.getAttribute("data-experience-name") || scope.getAttribute("data-tour-name"));
       var scopedTitle = scope && scope.querySelector("h2, h3, h4, [data-title], .title");
       var heading = document.querySelector("main h1, body > header h1, h1");
-      var title = cleanLabel(explicit || (scopedTitle && scopedTitle.textContent) || clickContext || (heading && heading.textContent));
+      var titleNode = scopedTitle || heading;
+      var titleText = titleNode && (titleNode.innerText || titleNode.textContent);
+      var title = cleanLabel(explicit || titleText || clickContext);
 
       if (!title || /^(inicio|contacto|tu carrito|arma tu viaje|dunas\s*&\s*olas)$/i.test(title)) {
         title = cleanLabel(document.title.split("|")[0].split("–")[0]);
@@ -84,7 +100,17 @@
     function personalizedMessage(original, trigger) {
       var context = pageContext(trigger);
       var base = "Hola, vengo desde la web de Dunas y Olas y quiero más información sobre " + context + ".";
-      var detail = cleanLabel(String(original || "")
+      var source = cleanMessage(original);
+
+      // Reservation messages are already fully composed by the itinerary
+      // checkout. Never replace or shorten them: doing so used to cut the
+      // message at 140 characters and hide the selected activities, total and
+      // customer details in WhatsApp.
+      if (messageHasSitePrefix(source) || /MI ITINERARIO|TOTAL ESTIMADO|PAGO ELEGIDO|Nombre:\s|WhatsApp:\s|Correo:\s/i.test(source)) {
+        return source;
+      }
+
+      var detail = cleanMessage(source
         .replace(/^hola[,!\s]*/i, "")
         .replace(/^vengo desde la web de dunas y olas[^.]*\.?/i, ""));
 
@@ -100,7 +126,7 @@
         var url = new URL(String(rawUrl), window.location.href);
         if (!/(^|\.)wa\.me$|(^|\.)api\.whatsapp\.com$/i.test(url.hostname)) return rawUrl;
         var original = url.searchParams.get("text") || "";
-        if (/^Hola, vengo desde la web de Dunas y Olas/i.test(original)) return url.toString();
+        if (messageHasSitePrefix(original) || /MI ITINERARIO|TOTAL ESTIMADO|PAGO ELEGIDO|Nombre:\s|WhatsApp:\s|Correo:\s/i.test(original)) return url.toString();
         url.searchParams.set("text", personalizedMessage(original, trigger));
         return url.toString();
       } catch (_error) {

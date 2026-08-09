@@ -637,74 +637,60 @@
 
     <!-- Hero Section -->
     <header
-      class="hero-section flex items-center justify-center text-center px-4"
+      class="hero-section home-hero flex items-center justify-center text-center px-4"
     >
-      <!-- Reordered Slides: Images first, Video last -->
-
-      <!-- Slide 1: Imagen Atardecer (Start here) -->
+      <!-- One real image, matching the Spanish homepage for a consistent brand. -->
       <div class="hero-slide active">
-        <div
+        <img
           class="hero-bg-image"
-          style="background-image: url(&quot;../images/cartagenasunset.jpg&quot;)"
-        ></div>
-      </div>
-      <!-- Slide 2: Imagen Acuario -->
-      <div class="hero-slide">
-        <div
-          class="hero-bg-image"
-          style="background-image: url(&quot;../images/acuario.jpg&quot;)"
-        ></div>
-      </div>
-      <!-- Slide 3: Imagen Cartagena -->
-      <div class="hero-slide">
-        <div
-          class="hero-bg-image"
-          style="background-image: url(&quot;../images/cartagena.jpg&quot;)"
-        ></div>
+          src="../images/catamaran-cartagena-atardecer.webp"
+          alt="Catamaran sailing in front of Cartagena at sunset"
+          width="1920"
+          height="1080"
+          fetchpriority="high"
+          loading="eager"
+          decoding="async"
+          style="object-fit:cover; object-position:center 58%;"
+        />
       </div>
 
       <div class="hero-overlay"></div>
 
-      <!-- Contenedor del texto (Añadido ID para controlarlo con JS y animación de opacidad) -->
       <div
         id="hero-content"
         class="max-w-5xl text-white relative z-10 pt-28 md:pt-20 pb-14 transition-opacity duration-1000"
       >
-        <!-- FRASE CAMBIANTE -->
-        <div class="mb-10 hidden md:flex justify-center animate-fade-in-up">
-          <div
-            class="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 shadow-lg"
-          >
-            <p class="text-white text-xs md:text-sm font-medium tracking-wide">
-              ✨ "The secret to getting ahead is getting started"
-            </p>
-          </div>
+        <div class="mb-7 flex justify-center animate-fade-in-up">
+          <div class="site-kicker">Mexicana en Cartagena · Nohemi</div>
         </div>
-        <!-- FIN FRASE CAMBIANTE -->
 
         <span
-          class="text-blue-400 font-bold tracking-widest uppercase text-sm md:text-base mb-4 block drop-shadow-lg"
-          >Cartagena de Indias</span
+          class="text-yellow-300 font-bold tracking-widest uppercase text-sm md:text-base mb-4 block drop-shadow-lg"
+          >Discover Cartagena like a local</span
         >
         <h1
           class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 leading-tight tracking-tight drop-shadow-lg"
         >
-          Discover Cartagena <br />
-          <span class="text-white">at your pace, with local support</span>
+          Cartagena, your way <br />
+          <span class="text-yellow-300">with Nohemi's local guide</span>
         </h1>
-        <p class="text-yellow-400 font-semibold tracking-wide text-sm md:text-base mb-6 drop-shadow-md">
-          Dunas &amp; Olas · Multicultural travel agency — the warmth of the north, the magic of the Caribbean
-        </p>
         <p
           class="text-lg md:text-xl mb-10 font-light text-gray-100 max-w-3xl mx-auto drop-shadow-md"
         >
-          Build a custom itinerary with selected experiences, clear costs and
-          support from Nohemi and her team before and during your trip.
+          A Mexican who made Cartagena her home helps you choose reliable tours,
+          understand every cost and plan your days with ease.
         </p>
         <div class="flex flex-col md:flex-row gap-4 justify-center">
-          <a href="experiences.html" class="btn-primary text-lg px-10 py-4"
-            >View Experiences</a
-          >
+          <a href="../arma-tu-viaje.html" class="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold rounded-xl text-lg px-10 py-4 transition">
+            <i class="fas fa-calendar-plus"></i> Plan your trip
+          </a>
+          <a href="experiences.html" class="btn-primary text-lg px-10 py-4">View experiences</a>
+        </div>
+        <div class="site-search-shell" role="search">
+          <i class="fas fa-search" aria-hidden="true"></i>
+          <label for="site-search" class="sr-only">Search Dunas &amp; Olas</label>
+          <input id="site-search" class="site-search-input" type="search" autocomplete="off" placeholder="Search Barú, Isla Palma, kitesurf, beaches or guides…" aria-controls="site-search-results" aria-expanded="false" />
+          <div id="site-search-results" class="site-search-results hidden" role="listbox" aria-label="Search results"></div>
         </div>
       </div>
 
@@ -1881,6 +1867,7 @@
     </script>
       <script src="../js/currency.js"></script>
       <script src="../js/cookie-consent.js"></script>
-    <script src="../js/site-refresh.js?v=20260805c" defer></script>
+    <script src="../js/site-search.js?v=20260804a" defer></script>
+    <script src="../js/site-refresh.js?v=20260806a" defer></script>
 </body>
 </html>
