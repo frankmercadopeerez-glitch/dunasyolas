@@ -1,5 +1,11 @@
 [
   {
+    "title": "3 Luxury Beach Clubs Premium | Tours en Cartagena",
+    "description": "Tres islas privadas en un solo día, con lancha deportiva, almuerzo gourmet, cócteles y traslados desde tu hotel. Precio público desde $390.000 COP por persona. Reserva con orientac",
+    "keywords": "3 luxury beach clubs Cartagena, tour islas privadas Cartagena, pasadía premium Islas del Rosario",
+    "url": "/3-luxury-beach-clubs"
+  },
+  {
     "title": "Nohemi y Dunas & Olas | Agencia local en Cartagena",
     "description": "Conoce a Nohemi y Dunas & Olas, agencia turística multicultural en Cartagena: acompañamiento honesto, itinerarios personalizados y costos claros.",
     "keywords": "Dunas y Olas Cartagena, agencia turística multicultural Cartagena, Nohemi Cartagena, acompañamiento local Cartagena, agencia RNT Cartagena",
@@ -300,6 +306,12 @@
     "url": "/experiences"
   },
   {
+    "title": "Family Eco-Route + Plancton | Tours en Cartagena",
+    "description": "Un día completo con Mambo Beach, snorkel, manglar, atardecer y plancton bioluminiscente en Barú. Precio público desde $200.000 COP por persona. Reserva con orientación local en Car",
+    "keywords": "plancton bioluminiscente Cartagena, Family Eco Route Barú, Mambo snorkel manglar plancton",
+    "url": "/family-eco-route"
+  },
+  {
     "title": "Preguntas Frecuentes",
     "description": "Resuelve tus dudas sobre tours, reservas, pagos, cancelaciones y seguridad con Dunas & Olas en Cartagena de Indias. Guía rápida para viajeros.",
     "keywords": "preguntas frecuentes Dunas Olas, FAQ tours Cartagena, reservar tour Cartagena, cancelación tours Cartagena, seguridad tours Cartagena",
@@ -312,10 +324,22 @@
     "url": "/galeria"
   },
   {
+    "title": "Golden Hours: Sunset + Beach Club | Tours en Cartagena",
+    "description": "Atardecer en lancha deportiva, música, coctelería y parada en beach club privado frente a Cartagena. Precio público desde $125.000 COP por persona. Reserva con orientación local en",
+    "keywords": "sunset Cartagena beach club, Golden Hours Cartagena, tour atardecer lancha Cartagena",
+    "url": "/golden-hours-cartagena"
+  },
+  {
     "title": "Islas del Rosario, Cartagena — Guía Completa y Tours",
     "description": "Islas del Rosario, Cartagena: guía completa del archipiélago. Pasadía, buceo y snorkel en el Parque Nacional. Tours desde $250.000 COP con Dunas & Olas.",
     "keywords": "islas del rosario cartagena, tour islas del rosario, que hacer islas del rosario, como llegar islas del rosario, parque nacional corales del rosario, isla grande cartagena, cholon cartagena",
     "url": "/islas-del-rosario"
+  },
+  {
+    "title": "Islas del Rosario + Oceanario | Tours en Cartagena",
+    "description": "Navega desde Cartagena, conoce el Oceanario de San Martín de Pajarales y disfruta un día de mar en las Islas del Rosario. Precio público desde $280.000 COP por persona. Reserva con",
+    "keywords": "Oceanario Islas del Rosario desde Cartagena, tour con delfines Cartagena, San Martín de Pajarales",
+    "url": "/islas-oceanario"
   },
   {
     "title": "Kitesurf en Cartagena: Cursos, Clases y Alquiler de Equipo",
@@ -328,6 +352,18 @@
     "description": "La Boquilla, Cartagena: el mejor spot de kitesurf de Colombia más cabalgata en la playa y manglares. A 10 min del Centro Histórico. Tours con Dunas & Olas.",
     "keywords": "la boquilla cartagena, kitesurf la boquilla, que hacer la boquilla cartagena, playa la boquilla, cabalgata la boquilla, manglares boquilla cartagena",
     "url": "/la-boquilla"
+  },
+  {
+    "title": "Mambo Beach Club por Lancha | Tours en Cartagena",
+    "description": "Llega a Playa Blanca navegando desde Cartagena y disfruta las instalaciones de Mambo Beach Club con almuerzo. Precio público desde $165.000 COP por persona. Reserva con orientación",
+    "keywords": "Mambo Beach por lancha Cartagena, pasadía Playa Blanca lancha, Mambo Ocean Cartagena",
+    "url": "/mambo-beach-lancha"
+  },
+  {
+    "title": "Mambo Beach Club por Tierra | Tours en Cartagena",
+    "description": "Pasadía en Playa Blanca con transporte climatizado, asoleadoras y bono de almuerzo en Mambo Beach Club. Precio público desde $130.000 COP por persona. Reserva con orientación local",
+    "keywords": "Mambo Beach Cartagena por tierra, pasadía Playa Blanca Mambo, beach club Barú desde Cartagena",
+    "url": "/mambo-beach-tierra"
   },
   {
     "title": "Namaste – Experiencia Holística en Tierra Bomba",
@@ -402,15 +438,207 @@
     "url": "/tirolesa"
   },
   {
+    "title": "3 LUXURY BEACH CLUBS | PDF to Flipbook",
+    "description": "",
+    "keywords": "",
+    "url": "/tmp/backpackers-web/3-luxury-info"
+  },
+  {
+    "title": "¿Qué incluye? | What s include?",
+    "description": "La experiencia más sofisticada y exclusiva para recorrer tres hermosas islas privadas en el Parque Corales del Rosario y Bocachica.",
+    "keywords": "",
+    "url": "/tmp/backpackers-web/3-luxury"
+  },
+  {
+    "title": "5 ISLAS STANDARD Instagram",
+    "description": "🌊 Descubre el Caribe a tu manera con el tour 5 ISLAS ESTÁNDAR. Una experiencia única donde podrás conocer los mejores destinos de en un mismo día. 🏝️",
+    "keywords": "",
+    "url": "/tmp/backpackers-web/5-islas-standard"
+  },
+  {
+    "title": "¿Qué incluye? | What s include?",
+    "description": "✨Descubre 5 increíbles lugares paradisiacos en ISLAS DEL ROSARIO en un mismo día: Isla Grande, Rosario de Mar, Isla Barú, Cholón, Isla Tierra Bomba.🚤",
+    "keywords": "",
+    "url": "/tmp/backpackers-web/5-islas-vip"
+  },
+  {
+    "title": "5 ISLAS STANDARD | PDF to Flipbook",
+    "description": "",
+    "keywords": "",
+    "url": "/tmp/backpackers-web/5-standard-info"
+  },
+  {
+    "title": "5 ISLAS VIP | PDF to Flipbook",
+    "description": "",
+    "keywords": "",
+    "url": "/tmp/backpackers-web/5-vip-info"
+  },
+  {
+    "title": "GOLDEN HOURS Instagram",
+    "description": "ARMA TU PARCHE! Ven con tus amigos o conócelos en esta increíble experiencia que combina atardecer, cócteles y una celebración en la hermosa Bahía.",
+    "keywords": "",
+    "url": "/tmp/backpackers-web/golden-hours"
+  },
+  {
+    "title": "GOLDEN HOUR | PDF to Flipbook",
+    "description": "",
+    "keywords": "",
+    "url": "/tmp/backpackers-web/golden-info"
+  },
+  {
+    "title": "¿Qué incluye? | What s include?",
+    "description": "🌊 Explora Islas + Oceanario: ¡un paraíso de naturaleza y aventura! 🏝️🐠✨",
+    "keywords": "",
+    "url": "/tmp/backpackers-web/islas-oceanario"
+  },
+  {
+    "title": "Your work",
+    "description": "",
+    "keywords": "",
+    "url": "/tmp/backpackers-web/mambo-adobe"
+  },
+  {
+    "title": "MAMBO BEACH CLUB Instagram",
+    "description": "Linktree. Make your link do more.",
+    "keywords": "",
+    "url": "/tmp/backpackers-web/mambo-beach"
+  },
+  {
+    "title": "Your work",
+    "description": "",
+    "keywords": "",
+    "url": "/tmp/backpackers-web/oceanario-adobe"
+  },
+  {
+    "title": "Your work",
+    "description": "",
+    "keywords": "",
+    "url": "/tmp/backpackers-web/volcan-adobe"
+  },
+  {
+    "title": "VOLCÁN DEL TOTUMO Instagram",
+    "description": "Relájate y exfóliate en un ambiente natural con propiedades milenarias que te harán sentir como nuev@.",
+    "keywords": "",
+    "url": "/tmp/backpackers-web/volcan-totumo"
+  },
+  {
+    "title": "Pixieset",
+    "description": "",
+    "keywords": "",
+    "url": "/tmp/goldenhourctg-alt"
+  },
+  {
+    "title": "3 LUXURY BEACH CLUBS by Galerías Backpackers",
+    "description": "Photo collection by Galerías Backpackers",
+    "keywords": "",
+    "url": "/tmp/pixieset-downloads/3-luxury-beach-clubs"
+  },
+  {
+    "title": "FAMILY ECO ROUTE - MAMBO + MANGLAR + SNORKEL + PLANCTON by Galerías Backpackers",
+    "description": "Photo collection by Galerías Backpackers",
+    "keywords": "",
+    "url": "/tmp/pixieset-downloads/family-eco-route"
+  },
+  {
+    "title": "TOUR ISLAS + OCEANARIO by Galerías Backpackers",
+    "description": "Photo collection by Galerías Backpackers",
+    "keywords": "",
+    "url": "/tmp/pixieset-downloads/islas-oceanario"
+  },
+  {
+    "title": "MAMBO OCEAN - MAMBO POR LANCHA by Galerías Backpackers",
+    "description": "Photo collection by Galerías Backpackers",
+    "keywords": "",
+    "url": "/tmp/pixieset-downloads/mambo-beach-lancha"
+  },
+  {
+    "title": "MAMBO BEACH CLUB | PLAYA BLANCA, BARÚ by Galerías Backpackers",
+    "description": "Photo collection by Galerías Backpackers",
+    "keywords": "",
+    "url": "/tmp/pixieset-downloads/mambo-beach-tierra"
+  },
+  {
+    "title": "TOUR 5 ISLAS STANDARD by Galerías Backpackers",
+    "description": "Photo collection by Galerías Backpackers",
+    "keywords": "",
+    "url": "/tmp/pixieset-downloads/tour-5-islas-standard"
+  },
+  {
+    "title": "TOUR 5 ISLAS VIP by Galerías Backpackers",
+    "description": "Photo collection by Galerías Backpackers",
+    "keywords": "",
+    "url": "/tmp/pixieset-downloads/tour-5-islas-vip"
+  },
+  {
+    "title": "TOUR MÁGICO POR LANCHA (MAMBO + MANGLAR + SNORKEL) by Galerías Backpackers",
+    "description": "Photo collection by Galerías Backpackers",
+    "keywords": "",
+    "url": "/tmp/pixieset-downloads/tour-magico-lancha"
+  },
+  {
+    "title": "TOUR MÁGICO (Mambo + Manglar + Snorkel) by Galerías Backpackers",
+    "description": "Photo collection by Galerías Backpackers",
+    "keywords": "",
+    "url": "/tmp/pixieset-downloads/tour-magico-tierra"
+  },
+  {
+    "title": "TOUR VOLCÁN DEL TOTUMO by Galerías Backpackers",
+    "description": "Photo collection by Galerías Backpackers",
+    "keywords": "",
+    "url": "/tmp/pixieset-downloads/volcan-del-totumo"
+  },
+  {
+    "title": "MAMBO OCEAN - MAMBO POR LANCHA by Galerías Backpackers",
+    "description": "Photo collection by Galerías Backpackers",
+    "keywords": "",
+    "url": "/tmp/pixieset-mambo"
+  },
+  {
+    "title": "TOUR 5 ISLAS STANDARD by Galerías Backpackers",
+    "description": "Photo collection by Galerías Backpackers",
+    "keywords": "",
+    "url": "/tmp/tour5islasstandard-alt"
+  },
+  {
+    "title": "Tour 5 Islas Standard desde Cartagena | Tours en Cartagena",
+    "description": "Un recorrido completo por Bocachica, Cocoliso, snorkel, Cholón, Mambo Beach y Sol y Papaya en lancha de pasajeros. Precio público desde $270.000 COP por persona. Reserva con orient",
+    "keywords": "tour 5 islas Cartagena precio, tour Islas del Rosario standard, Cholón Mambo Beach Cartagena",
+    "url": "/tour-5-islas-standard"
+  },
+  {
+    "title": "Tour 5 Islas VIP desde Cartagena | Tours en Cartagena",
+    "description": "Lancha deportiva, Cocoliso, snorkel, Cholón, Mambo Beach y club privado en un día completo por el Caribe. Precio público desde $320.000 COP por persona. Reserva con orientación loc",
+    "keywords": "tour 5 islas VIP Cartagena, Cocoliso Cholón Mambo Beach, Islas del Rosario VIP",
+    "url": "/tour-5-islas-vip"
+  },
+  {
     "title": "Tour Bahía en Yate – Yate Luna Mía en Cartagena",
     "description": "Tour Bahía en Yate Luna Mía: barra libre, DJ, animador y bartender. 3 salidas diarias desde el Muelle de los Pegasos. Desde $120.000 COP. Niños hasta 12 años al 50%.",
     "keywords": "tour bahia Cartagena yate, yate Luna Mia, paseo en yate Cartagena, fiesta en yate Cartagena, Muelle de los Pegasos, tour nocturno bahia Cartagena",
     "url": "/tour-bahia-yate"
   },
   {
+    "title": "Tour Mágico por Lancha: Mambo, Snorkel y Manglar | Tours en Cartagena",
+    "description": "Navega en lancha deportiva, haz snorkel, recorre el manglar y descansa en Mambo Beach Club. Precio público desde $220.000 COP por persona. Reserva con orientación local en Cartagen",
+    "keywords": "tour mágico por lancha Cartagena, Mambo snorkel manglar lancha, tour Barú lancha deportiva",
+    "url": "/tour-magico-lancha"
+  },
+  {
+    "title": "Tour Mágico por Tierra: Mambo, Snorkel y Manglar | Tours en Cartagena",
+    "description": "Combina Playa Blanca, recorrido por manglares y snorkeling con transporte terrestre desde Cartagena. Precio público desde $150.000 COP por persona. Reserva con orientación local en",
+    "keywords": "tour manglar Barú Cartagena, tour mágico Mambo snorkel, snorkeling Playa Blanca por tierra",
+    "url": "/tour-magico-tierra"
+  },
+  {
     "title": "Tritonia Beach Club desde Cartagena | Pasadía $470.000",
     "description": "Pasadía Tritonia Beach Club desde Cartagena vía Tolú: experiencia premium solo adultos en Tintipán, snack, transporte hotel-isla y retorno. $470.000 COP.",
     "keywords": "Tritonia Beach Club desde Cartagena, pasadía Tritonia Tintipán, beach club adultos Cartagena, tour Tintipán vía Tolú, pasadía premium pet friendly",
     "url": "/tritonia-beach-club"
+  },
+  {
+    "title": "Tour Volcán del Totumo desde Cartagena | Tours en Cartagena",
+    "description": "Vive el famoso baño de lodo del Volcán del Totumo en una salida guiada desde Cartagena. Precio público desde $110.000 COP por persona. Reserva con orientación local en Cartagena.",
+    "keywords": "Volcán del Totumo desde Cartagena, tour baño de lodo Cartagena, excursión Totumo precio",
+    "url": "/volcan-del-totumo"
   }
 ]

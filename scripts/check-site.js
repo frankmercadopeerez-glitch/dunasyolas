@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const root = path.resolve(__dirname, "..");
-const ignored = new Set(["node_modules", ".git"]);
+const ignored = new Set(["node_modules", ".git", "tmp"]);
 const failures = [];
 let pages = 0;
 

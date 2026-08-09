@@ -167,6 +167,18 @@ const TOURS = {
     unit: "persona",
   },
 
+  luxury_3: { name: "3 Luxury Beach Clubs Premium", price: 390000, unit: "persona" },
+  islas_vip_5: { name: "Tour 5 Islas VIP desde Cartagena", price: 320000, unit: "persona" },
+  islas_oceanario: { name: "Islas del Rosario + Oceanario", price: 280000, unit: "persona" },
+  islas_standard_5: { name: "Tour 5 Islas Standard desde Cartagena", price: 270000, unit: "persona" },
+  volcan_totumo: { name: "Tour Volcán del Totumo desde Cartagena", price: 110000, unit: "persona" },
+  mambo_tierra: { name: "Mambo Beach Club por Tierra", price: 130000, unit: "persona" },
+  mambo_lancha: { name: "Mambo Beach Club por Lancha", price: 165000, unit: "persona" },
+  tour_magico_tierra: { name: "Tour Mágico por Tierra: Mambo, Snorkel y Manglar", price: 150000, unit: "persona" },
+  tour_magico_lancha: { name: "Tour Mágico por Lancha: Mambo, Snorkel y Manglar", price: 220000, unit: "persona" },
+  family_eco_route: { name: "Family Eco-Route + Plancton", price: 200000, unit: "persona" },
+  golden_hours: { name: "Golden Hours: Sunset + Beach Club", price: 125000, unit: "persona" },
+
   /* ---- Cursos de Kitesurf (precio base, 1 persona) ---- */
   kitesurf_iniciacion: {
     name: 'Kitesurf — Clase de Iniciación (2 horas)',
