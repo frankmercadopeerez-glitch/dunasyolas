@@ -197,7 +197,9 @@ nav .hidden.md\:flex > a {
   .experiences-search-field .search-status-icon,
   .experiences-search-summary,
   .experiences-search-summary::before,
-  .catalog-card.search-result-enter { animation: none !important; transition: none !important; }
+  .catalog-card.search-result-enter,
+  .site-search-results,
+  .site-search-result { animation: none !important; transition: none !important; }
 }
 section:has(#newsletter-form) { display: none !important; }
 
@@ -206,11 +208,24 @@ section:has(#newsletter-form) { display: none !important; }
 .site-search-input { width: 100%; border: 1px solid rgba(255,255,255,.5); border-radius: 999px; background: rgba(255,255,255,.96); color: #10293a; padding: .85rem 3rem .85rem 2.85rem; box-shadow: 0 12px 32px rgba(4,18,28,.22); outline: none; }
 .site-search-input:focus { border-color: #f4cf6a; box-shadow: 0 0 0 4px rgba(244,207,106,.22), 0 12px 32px rgba(4,18,28,.22); }
 .site-search-results { position: fixed; top: var(--search-results-top, 0); left: var(--search-results-left, 1rem); right: auto; z-index: 20000; width: var(--search-results-width, calc(100vw - 2rem)); max-height: var(--search-results-height, min(420px, 55vh)); overflow-y: auto; overscroll-behavior: contain; border-radius: 1rem; background: #fff; box-shadow: 0 18px 48px rgba(4,18,28,.3); }
-.site-search-result { display: block; padding: .85rem 1rem; border-bottom: 1px solid #edf1f2; color: #10293a; }
+.site-search-results:not(.hidden) { animation: site-search-panel-in .22s ease both; }
+.site-search-result { display: grid; grid-template-columns: 76px minmax(0, 1fr); align-items: center; gap: .85rem; padding: .72rem .85rem; border-bottom: 1px solid #edf1f2; color: #10293a; animation: site-search-item-in .28s ease both; }
+.site-search-result:nth-child(2) { animation-delay: .025s; }
+.site-search-result:nth-child(3) { animation-delay: .05s; }
+.site-search-result:nth-child(4) { animation-delay: .075s; }
 .site-search-result:last-child { border-bottom: 0; }
 .site-search-result:hover, .site-search-result:focus { background: #f3faf9; }
+.site-search-result-image { width: 76px; height: 58px; object-fit: cover; border-radius: .7rem; background: #e8f3f3; }
+.site-search-result-copy { min-width: 0; }
 .site-search-result strong { display: block; font-size: .92rem; }
 .site-search-result span { display: block; margin-top: .18rem; color: #64748b; font-size: .76rem; line-height: 1.35; }
+.site-search-result .site-search-result-copy { margin-top: 0; color: inherit; }
+.site-search-result--empty { display: block; }
+@keyframes site-search-panel-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes site-search-item-in { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+.mobile-bar + .whatsapp-container,
+[class~="fixed"][class~="bottom-0"] + .whatsapp-container { display: none !important; }
 
 nav .hidden.md\:flex > a:not(#lang-switch):not([href*="arma-tu-viaje"]):not(.btn-primary) {
   position: relative;
@@ -549,6 +564,8 @@ button[data-filter].active, button[data-filter].active-filter,
   .home-hero .site-kicker { font-size: .64rem; padding: .48rem .7rem; }
   .home-hero #hero-content > span { font-size: .68rem !important; margin-bottom: .85rem !important; }
   .home-hero .site-search-results { border-radius: .95rem; }
+  .site-search-result { grid-template-columns: 64px minmax(0, 1fr); gap: .7rem; padding: .66rem .7rem; }
+  .site-search-result-image { width: 64px; height: 52px; }
   #cookie-consent-banner { padding: .55rem .65rem !important; gap: .45rem !important; font-size: .69rem !important; line-height: 1.35 !important; }
   #cookie-consent-banner > span { max-width: 100% !important; }
   #cookie-consent-accept { padding: .55rem 1.1rem !important; font-size: .72rem !important; }

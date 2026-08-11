@@ -13,6 +13,31 @@ function walk(dir) {
   });
 }
 function clean(text) { return String(text || "").replace(/<[^>]+>/g, " ").replace(/&amp;/g, "&").replace(/&[^;]+;/g, " ").replace(/\s+/g, " ").trim(); }
+function attribute(html, selector, name) {
+  const tags = html.match(new RegExp(`<${selector}\\b[^>]*>`, "gi")) || [];
+  for (const tag of tags) {
+    const match = tag.match(new RegExp(`${name}=["']([^"']+)["']`, "i"));
+    if (match) return match[1];
+  }
+  return "";
+}
+function searchImage(html, relative) {
+  const metaTags = html.match(/<meta\b[^>]*>/gi) || [];
+  let source = "";
+  for (const tag of metaTags) {
+    if (/property=["']og:image["']/i.test(tag)) {
+      source = (tag.match(/content=["']([^"']+)["']/i) || [])[1] || "";
+      if (source) break;
+    }
+  }
+  if (!source) source = attribute(html, "img", "src");
+  if (!source || /^(?:data:|javascript:)/i.test(source)) return "/images/logo-icon-nav-small.webp";
+  try {
+    return new URL(source, `https://dunasyolas.com/${relative}`).pathname || "/images/logo-icon-nav-small.webp";
+  } catch {
+    return "/images/logo-icon-nav-small.webp";
+  }
+}
 const items = walk(root).filter((file) => !skip.has(path.relative(root, file).replace(/\\/g, "/"))).map((file) => {
   const html = fs.readFileSync(file, "utf8");
   const relative = path.relative(root, file).replace(/\\/g, "/");
@@ -20,7 +45,8 @@ const items = walk(root).filter((file) => !skip.has(path.relative(root, file).re
   const description = clean((html.match(/<meta[^>]+name=["']description["'][^>]+content=["']([^"']+)/i) || html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+name=["']description["']/i) || [])[1]);
   const keywords = clean((html.match(/<meta[^>]+name=["']keywords["'][^>]+content=["']([^"']+)/i) || [])[1]);
   let url = "/" + relative.replace(/index\.html$/i, "").replace(/\.html$/i, "");
-  return { title, description: description.slice(0, 180), keywords, url };
+  const image = searchImage(html, relative);
+  return { title, description: description.slice(0, 180), keywords, url, image };
 }).filter((item) => item.title && item.url !== "/");
 fs.writeFileSync(path.join(root, "search-index.json"), JSON.stringify(items, null, 2) + "\n", "utf8");
 console.log(`Search index: ${items.length} pages`);
