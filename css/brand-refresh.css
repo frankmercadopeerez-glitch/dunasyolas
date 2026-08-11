@@ -2,7 +2,7 @@
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400 800;
-  font-display: swap;
+  font-display: optional;
   src: url("../fonts/manrope-latin-variable.woff2") format("woff2");
 }
 
@@ -10,7 +10,7 @@
   font-family: "Fraunces";
   font-style: normal;
   font-weight: 600 700;
-  font-display: swap;
+  font-display: optional;
   src: url("../fonts/fraunces-latin-variable.woff2") format("woff2");
 }
 
@@ -67,14 +67,13 @@ nav {
 nav > .container { min-height: 64px; }
 
 nav a[href$="index.html"] img,
-nav a[href="index.html"] img,
-nav a[href="../index.html"] img {
+nav a[href="index.html"] img {
   height: 2.85rem !important;
   width: auto !important;
 }
 
 nav a { letter-spacing: 0.035em; }
-nav a[href$="index.html"], nav a[href="../index.html"] { flex-shrink: 0; white-space: nowrap; }
+nav a[href$="index.html"] { flex-shrink: 0; white-space: nowrap; }
 nav a[class*="bg-yellow-500"] { white-space: nowrap; padding-left: 1rem !important; padding-right: 1rem !important; }
 
 nav .space-x-8 > :not([hidden]) ~ :not([hidden]),
@@ -269,8 +268,7 @@ nav .hidden.md\:flex > a.btn-primary {
 
 .brand-signature,
 nav a[href$="index.html"] .tracking-\[0\.3em\],
-nav a[href="index.html"] .tracking-\[0\.3em\],
-nav a[href="../index.html"] .tracking-\[0\.3em\] {
+nav a[href="index.html"] .tracking-\[0\.3em\] {
   color: #f4cf6a !important;
   letter-spacing: 0.14em !important;
   font-weight: 800 !important;
