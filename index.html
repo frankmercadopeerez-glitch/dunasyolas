@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin/>
-    <link rel="preload" as="image" href="images/catamaran-cartagena-atardecer.webp" fetchpriority="high"/>
+
+
+
+    <link rel="preload" as="image" href="images/catamaran-cartagena-atardecer-mobile.webp" media="(max-width: 767px)" fetchpriority="high"/>
+    <link rel="preload" as="image" href="images/catamaran-cartagena-atardecer.webp" media="(min-width: 768px)" fetchpriority="high"/>
     <meta
       name="description"
       content="Reserva tours en Cartagena con precios claros y orientación local de Nohemi, Mexicana en Cartagena. Islas, ciudad, gastronomía e itinerarios personalizados."
@@ -53,15 +54,9 @@
     <link rel="icon" href="images/favicon-circle.png" type="image/png" />
     <link rel="apple-touch-icon" href="images/favicon-circle.png"/>
     <meta name="theme-color" content="#10293A"/>
-    <link href="./css/tailwind.css" rel="stylesheet"/>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="./css/home.css?v=20260811a" rel="stylesheet"/>
+    <link rel="preload" href="css/fontawesome-local.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link rel="stylesheet" href="css/fontawesome-local.min.css"/></noscript>
+
     <style>
       body {
         font-family: "Montserrat", sans-serif;
@@ -94,6 +89,16 @@
         height: 100%;
         background-size: cover;
         background-position: center;
+      }
+
+      .home-hero-image {
+        background-image: url("images/catamaran-cartagena-atardecer-mobile.webp");
+      }
+
+      @media (min-width: 768px) {
+        .home-hero-image {
+          background-image: url("images/catamaran-cartagena-atardecer.webp");
+        }
       }
 
       .hero-video {
@@ -281,8 +286,8 @@
         }
       }
 
-      
-      
+
+
       /* Botón verde WhatsApp reutilizable (cotizar / más info) */
       .whatsapp-info-btn {
         width: 100%;
@@ -566,17 +571,16 @@
     <link rel="alternate" hreflang="es" href="https://dunasyolas.com/"/>
     <link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/"/>
     <link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/"/>
-    <link rel="stylesheet" href="css/brand-refresh.css?v=20260810a"/>
 </head>
   <body
-    class="bg-gray-50 text-gray-800 antialiased selection:bg-blue-200 selection:text-blue-900"
+    class="site-homepage bg-gray-50 text-gray-800 antialiased selection:bg-blue-200 selection:text-blue-900"
   >
     <nav
       id="navbar"
       class="fixed w-full z-50 transition-all duration-300 py-[2.5px] text-white border-b border-white/10"
     >
       <div class="container mx-auto px-6 flex justify-between items-center">
-        <a href="index.html" class="flex items-center gap-2 z-50 transform -translate-y-1"><picture><source srcset="images/logo-icon.webp" type="image/webp"/><img src="images/logo-icon.png" alt="Dunas & Olas - Agencia de tours y experiencias en Cartagena de Indias" width="984" height="444" class="h-9 md:h-10 w-auto object-contain" loading="eager" decoding="async"/></picture>
+        <a href="index.html" class="flex items-center gap-2 z-50 transform -translate-y-1"><picture><source srcset="images/logo-icon-nav-small.webp" type="image/webp"/><img src="images/logo-icon-nav-small.png" alt="Dunas & Olas - Agencia de tours y experiencias en Cartagena de Indias" width="184" height="83" class="h-9 md:h-10 w-auto object-contain" loading="eager" decoding="async"/></picture>
           <span class="leading-none select-none">
             <span class="block font-extrabold tracking-tight text-2xl md:text-3xl text-white">
               Dunas <span class="text-yellow-500">&amp; Olas</span>
@@ -691,10 +695,10 @@
       <!-- Imagen única para mantener legibilidad y una identidad consistente -->
       <div class="hero-slide active">
         <div
-          class="hero-bg-image"
+          class="hero-bg-image home-hero-image"
           role="img"
           aria-label="Catamarán navegando frente a Cartagena durante el atardecer"
-          style="background-image: url(&quot;images/catamaran-cartagena-atardecer.webp&quot;); background-position:center 58%;"
+          style="background-position:center 58%;"
         ></div>
       </div>
 
@@ -738,7 +742,7 @@
         <div class="site-search-shell" role="search">
           <i class="fas fa-search" aria-hidden="true"></i>
           <label for="site-search" class="sr-only">Buscar en Dunas y Olas</label>
-          <input id="site-search" class="site-search-input" type="search" autocomplete="off" placeholder="Busca Barú, Isla Palma, kitesurf, playas o guías…" aria-controls="site-search-results" aria-expanded="false" />
+          <input id="site-search" class="site-search-input" type="search" role="combobox" autocomplete="off" placeholder="Busca Barú, Isla Palma, kitesurf, playas o guías…" aria-controls="site-search-results" aria-expanded="false" aria-autocomplete="list" />
           <div id="site-search-results" class="site-search-results hidden" role="listbox" aria-label="Resultados de búsqueda"></div>
         </div>
       </div>
@@ -750,6 +754,7 @@
       </div>
     </header>
 
+    <main id="main-content">
     <!-- Tira de Confianza -->
     <section class="bg-white border-b border-gray-100 py-5">
       <div class="container mx-auto px-6">
@@ -864,10 +869,10 @@
           >
             <a href="atardeceres-bahia.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
             <img
-              src="images/cartagenasunset.webp"
+              src="images/cartagenasunset-card-small.webp"
               alt="Atardecer en bote por la Bahía de Cartagena"
               loading="lazy"
-              class="w-full h-full object-cover transition duration-700 group-hover:scale-105" width="1400" height="933" decoding="async"
+              class="w-full h-full object-cover transition duration-700 group-hover:scale-105" width="480" height="400" decoding="async"
             />
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
@@ -890,10 +895,10 @@
           >
             <a href="pasadia-islas-rosario.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
             <img
-              src="images/acuario.webp"
+              src="images/acuario-card-small.webp"
               alt="Pasadía a las Islas del Rosario desde Cartagena"
               loading="lazy"
-              class="w-full h-full object-cover transition duration-700 group-hover:scale-105" width="1400" height="933" decoding="async"
+              class="w-full h-full object-cover transition duration-700 group-hover:scale-105" width="480" height="400" decoding="async"
             />
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
@@ -916,10 +921,10 @@
           >
             <a href="kitesurf.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
             <img
-              src="images/kitesurf/salto.webp"
+              src="images/kitesurf/salto-card-small.webp"
               alt="Kitesurf en las playas de Cartagena"
               loading="lazy"
-              class="w-full h-full object-cover transition duration-700 group-hover:scale-105" width="4290" height="2860" decoding="async"
+              class="w-full h-full object-cover transition duration-700 group-hover:scale-105" width="480" height="400" decoding="async"
             />
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
@@ -942,10 +947,10 @@
           >
             <a href="buceo-snorkel.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
             <img
-              src="images/foto%20(10).webp"
+              src="images/foto-10-card-small.webp"
               alt="Buceo y snorkel en arrecifes de coral cerca de Cartagena"
               loading="lazy"
-              class="w-full h-full object-cover transition duration-700 group-hover:scale-105" width="1200" height="800" decoding="async"
+              class="w-full h-full object-cover transition duration-700 group-hover:scale-105" width="480" height="400" decoding="async"
             />
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
@@ -967,10 +972,10 @@
           >
             <a href="chiva-rumbera.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
             <img
-              src="images/chiva-rumbera.webp"
+              src="images/chiva-rumbera-card-small.webp"
               alt="Chiva Rumbera en Cartagena con discoteca Taboo"
               loading="lazy"
-              class="w-full h-full object-cover transition duration-700 group-hover:scale-105" width="1200" height="800" decoding="async"
+              class="w-full h-full object-cover transition duration-700 group-hover:scale-105" width="480" height="400" decoding="async"
             />
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
@@ -1523,7 +1528,7 @@
           <article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
             <a href="blog/cartagena-vs-cancun/index.html" class="block">
               <div class="overflow-hidden h-52">
-                <img src="images/cartagenasunset.webp" alt="Cartagena vs Cancún" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1" width="1400" height="933" decoding="async" loading="lazy"/>
+<img src="images/cartagenasunset-card-small.webp" alt="Cartagena vs Cancún" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1" width="480" height="400" decoding="async" loading="lazy"/>
               </div>
               <div class="p-5">
                 <span class="text-xs font-bold text-purple-600 uppercase tracking-wide">Comparativa</span>
@@ -1551,7 +1556,7 @@
           <article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
             <a href="blog/vida-nocturna-cartagena/index.html" class="block">
               <div class="overflow-hidden h-52">
-                <img src="images/chiva-rumbera.webp" alt="Vida nocturna en Cartagena" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1" width="1200" height="800" decoding="async" loading="lazy"/>
+<img src="images/chiva-rumbera-card-small.webp" alt="Vida nocturna en Cartagena" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1" width="480" height="400" decoding="async" loading="lazy"/>
               </div>
               <div class="p-5">
                 <span class="text-xs font-bold text-yellow-600 uppercase tracking-wide">Noche</span>
@@ -1739,6 +1744,8 @@
     </script>
 
 
+    </main>
+
     <footer class="bg-gray-900 text-white pt-12 pb-8 border-t border-gray-800">
       <div class="container mx-auto px-6 text-center md:text-left">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 md:mb-12">
@@ -1759,7 +1766,7 @@
           </div>
 
           <div class="hidden md:block">
-            <h4 class="text-white font-bold mb-4 text-sm">Explorar</h4>
+            <h3 class="text-white font-bold mb-4 text-sm">Explorar</h3>
             <ul class="space-y-2 text-gray-400 text-xs">
               <li>
                 <a href="arma-tu-viaje.html" class="hover:text-yellow-400">✦ Arma tu viaje</a>
@@ -1782,7 +1789,7 @@
           </div>
 
           <div>
-            <h4 class="text-white font-bold mb-4 text-sm">Contacto</h4>
+            <h3 class="text-white font-bold mb-4 text-sm">Contacto</h3>
             <ul
               class="space-y-2 text-gray-400 text-xs flex flex-col items-center md:items-start"
             >
@@ -1797,7 +1804,7 @@
           </div>
 
           <div>
-            <h4 class="text-white font-bold mb-4 text-sm">Redes</h4>
+            <h3 class="text-white font-bold mb-4 text-sm">Redes</h3>
             <div class="flex justify-center md:justify-start gap-2">
               <a
                 href="https://www.instagram.com/mexicanaencartagena?igsh=MTJ2MjZwdmU5NjZ4Nw=="
@@ -1847,7 +1854,7 @@
         </div>
 
         <div
-          class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-500 text-center"
+          class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-400 text-center"
         >
           <p>&copy; 2026 Dunas & Olas. Todos los derechos reservados.</p>
           <p class="mt-1">RNT No. 292710</p>
@@ -1862,11 +1869,11 @@
 
     <!-- WhatsApp Widget Multi-idioma -->
     <div class="whatsapp-container">
-      <button id="wa-main-btn" onclick="openWhatsApp('Hola, estoy interesado en alquilar un bote.')" class="whatsapp-float group focus:outline-none">
+      <button id="wa-main-btn" onclick="openWhatsApp('Hola, quiero reservar un tour o experiencia en Cartagena.')" class="whatsapp-float group focus:outline-none">
         <img
-          src="images/WhatsApp.svg.webp"
+          src="images/WhatsApp-96.webp"
           alt="WhatsApp"
-          class="whatsapp-icon" width="479" height="480" decoding="async" loading="lazy"
+          class="whatsapp-icon" width="96" height="96" decoding="async" loading="lazy"
         />
         <span class="whatsapp-text">Contactar / Contact</span>
       </button>

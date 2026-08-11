@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npm run check",
     "build:search": "node scripts/build-search-index.js",
-    "check": "npm run build:search && node scripts/check-site.js",
+    "build:home-css": "tailwindcss -i src/tailwind-input.css -o css/tailwind-home.css --minify --content \"./{index.html,en/index.html,js/**/*.js}\" && node scripts/build-home-css.js",
+    "check": "npm run build:search && npm run build:home-css && node scripts/check-site.js",
     "qa:google": "node scripts/qa-google-priority.mjs"
   },
   "repository": {

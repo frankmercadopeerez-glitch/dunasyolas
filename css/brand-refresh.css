@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("../fonts/manrope-latin-variable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 600 700;
+  font-display: swap;
+  src: url("../fonts/fraunces-latin-variable.woff2") format("woff2");
+}
+
+/* Defer layout and paint work for long homepage sections until visitors
+   approach them. This keeps the first screen fast without changing design. */
+.site-homepage > main > section:nth-of-type(n + 3),
+.site-homepage > footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}
+
 :root {
   --brand-ink: #10293a;
   --brand-ocean: #087f8c;
@@ -91,8 +115,23 @@ nav .hidden.md\:flex > a {
   border-radius: 999px;
   color: #5b3a82;
   background: rgba(91, 58, 130, .08);
-  pointer-events: none;
+  border: 0;
+  cursor: pointer;
+  pointer-events: auto;
   transition: color .2s ease, background .2s ease, transform .2s ease;
+}
+.experiences-search-field .search-status-icon:hover {
+  color: #fff;
+  background: #5b3a82;
+  transform: translateY(-50%) scale(1.05);
+}
+.experiences-search-field .search-status-icon:focus-visible {
+  outline: 3px solid rgba(91, 58, 130, .25);
+  outline-offset: 2px;
+}
+#experiences-grid > [data-category].is-filtered-out,
+#experiences-grid > [data-category].catalog-card.is-filtered-out {
+  display: none !important;
 }
 .experiences-search-field[data-search-state="searching"] .search-status-icon {
   color: var(--brand-ocean);
