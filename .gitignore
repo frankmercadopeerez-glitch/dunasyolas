@@ -6,3 +6,4 @@ package-lock.json
 _cmp/
 v-*.png
 tmp/
+!scripts/qa-google-priority.mjs

@@ -66,11 +66,11 @@ nav .hidden.md\:flex > a {
 #experiences-search { padding-left: 3rem !important; padding-right: 3rem !important; }
 section:has(#newsletter-form) { display: none !important; }
 
-.site-search-shell { position: relative; width: min(620px, calc(100vw - 2rem)); margin: 1.5rem auto 0; text-align: left; }
+.site-search-shell { position: relative; z-index: 70; width: min(620px, calc(100vw - 2rem)); margin: 1.5rem auto 0; text-align: left; }
 .site-search-shell > i { position: absolute; left: 1rem; top: 1.05rem; z-index: 2; color: #0f8f9d; }
 .site-search-input { width: 100%; border: 1px solid rgba(255,255,255,.5); border-radius: 999px; background: rgba(255,255,255,.96); color: #10293a; padding: .85rem 3rem .85rem 2.85rem; box-shadow: 0 12px 32px rgba(4,18,28,.22); outline: none; }
 .site-search-input:focus { border-color: #f4cf6a; box-shadow: 0 0 0 4px rgba(244,207,106,.22), 0 12px 32px rgba(4,18,28,.22); }
-.site-search-results { position: absolute; top: calc(100% + .55rem); left: 0; right: 0; z-index: 60; max-height: min(420px, 55vh); overflow-y: auto; border-radius: 1rem; background: #fff; box-shadow: 0 18px 48px rgba(4,18,28,.3); }
+.site-search-results { position: fixed; top: var(--search-results-top, 0); left: var(--search-results-left, 1rem); right: auto; z-index: 20000; width: var(--search-results-width, calc(100vw - 2rem)); max-height: var(--search-results-height, min(420px, 55vh)); overflow-y: auto; overscroll-behavior: contain; border-radius: 1rem; background: #fff; box-shadow: 0 18px 48px rgba(4,18,28,.3); }
 .site-search-result { display: block; padding: .85rem 1rem; border-bottom: 1px solid #edf1f2; color: #10293a; }
 .site-search-result:last-child { border-bottom: 0; }
 .site-search-result:hover, .site-search-result:focus { background: #f3faf9; }
@@ -349,6 +349,53 @@ button[data-filter].active, button[data-filter].active-filter,
   nav a[href$="index.html"] img { height: 2.35rem !important; }
   nav a[href$="index.html"] .text-2xl { font-size: 1.15rem !important; }
   nav a[href$="index.html"] .tracking-\[0\.3em\] { font-size: .43rem !important; letter-spacing: .08em !important; }
+  .catalog-page #navbar > .container {
+    width: 100%;
+    max-width: none;
+    padding-left: .75rem !important;
+    padding-right: .75rem !important;
+    gap: .55rem;
+  }
+  .catalog-page #navbar .catalog-brand {
+    min-width: 0;
+    max-width: calc(100% - 5.25rem);
+    gap: .45rem !important;
+    transform: none !important;
+  }
+  .catalog-page #navbar .catalog-brand picture { flex: 0 0 auto; }
+  .catalog-page #navbar .catalog-brand img {
+    width: 5.4rem !important;
+    max-width: 22vw;
+    height: 2.45rem !important;
+    object-fit: contain;
+  }
+  .catalog-page #navbar .catalog-brand > span { min-width: 0; }
+  .catalog-page #navbar .catalog-brand .text-2xl {
+    overflow: hidden;
+    font-size: clamp(1rem, 4.8vw, 1.25rem) !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .catalog-page #navbar .catalog-brand .tracking-\[0\.3em\] {
+    overflow: hidden;
+    font-size: .4rem !important;
+    letter-spacing: .055em !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .catalog-page #navbar .catalog-actions {
+    flex: 0 0 auto;
+    gap: .55rem !important;
+  }
+  .catalog-page #navbar .nav-cart-btn,
+  .catalog-page #navbar #mobile-menu-btn {
+    width: 2.1rem;
+    height: 2.75rem;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .catalog-page #navbar #mobile-menu-btn { display: inline-flex; }
   .whatsapp-container { right: 8px !important; bottom: 8px !important; }
   .whatsapp-text { display: none !important; }
   .whatsapp-icon { width: 42px !important; height: 42px !important; }
@@ -366,6 +413,7 @@ button[data-filter].active, button[data-filter].active-filter,
   .home-hero #hero-content > p { font-size: .98rem !important; line-height: 1.65 !important; margin-bottom: 1.6rem !important; }
   .home-hero .site-kicker { font-size: .64rem; padding: .48rem .7rem; }
   .home-hero #hero-content > span { font-size: .68rem !important; margin-bottom: .85rem !important; }
+  .home-hero .site-search-results { border-radius: .95rem; }
   #cookie-consent-banner { padding: .55rem .65rem !important; gap: .45rem !important; font-size: .69rem !important; line-height: 1.35 !important; }
   #cookie-consent-banner > span { max-width: 100% !important; }
   #cookie-consent-accept { padding: .55rem 1.1rem !important; font-size: .72rem !important; }

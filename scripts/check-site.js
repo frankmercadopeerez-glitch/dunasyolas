@@ -5,6 +5,7 @@ const root = path.resolve(__dirname, "..");
 const ignored = new Set(["node_modules", ".git", "tmp"]);
 const failures = [];
 let pages = 0;
+const indexableCanonicals = new Map();
 
 function walk(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
@@ -22,6 +23,22 @@ for (const file of walk(root).filter((file) => file.endsWith(".html"))) {
   if (!/<meta\s+[^>]*name=["']description["'][^>]*content=["'][^"']+/i.test(html)) failures.push(`${rel}: falta meta description`);
   if (!/<h1\b/i.test(html)) failures.push(`${rel}: falta h1`);
   if (/G-XXXXXXXXXX/i.test(html)) failures.push(`${rel}: contiene un ID ficticio de Analytics`);
+  if (/"contactOption"\s*:\s*"TollFree"/i.test(html)) failures.push(`${rel}: teléfono móvil marcado incorrectamente como TollFree`);
+
+  for (const match of html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
+    try {
+      JSON.parse(match[1]);
+    } catch (error) {
+      failures.push(`${rel}: JSON-LD inválido (${error.message})`);
+    }
+  }
+
+  const isNoindex = /<meta\s+[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html);
+  const canonical = html.match(/<link\s+[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)/i)?.[1];
+  if (!isNoindex && canonical) {
+    if (indexableCanonicals.has(canonical)) failures.push(`${rel}: canonical duplicado con ${indexableCanonicals.get(canonical)}`);
+    indexableCanonicals.set(canonical, rel);
+  }
   if (rel !== "404.html" && !/<link\s+[^>]*rel=["']canonical["'][^>]*href=["']https:\/\/dunasyolas\.com/i.test(html)) failures.push(`${rel}: falta canonical válido`);
 
   const ids = [...html.matchAll(/\bid=["']([^"']+)/gi)].map((match) => match[1]);
@@ -58,6 +75,33 @@ for (const file of walk(root).filter((file) => file.endsWith(".html"))) {
   }
 }
 
+const robots = fs.readFileSync(path.join(root, "robots.txt"), "utf8");
+if (!/^Sitemap:\s*https:\/\/dunasyolas\.com\/sitemap\.xml\s*$/im.test(robots)) failures.push("robots.txt: falta la URL canónica del sitemap");
+if (/^Disallow:\s*\/\s*$/im.test(robots)) failures.push("robots.txt: bloquea todo el sitio");
+
+const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
+if (!/<urlset\b/i.test(sitemap)) failures.push("sitemap.xml: formato de sitemap no reconocido");
+const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/gi)].map((match) => match[1].trim());
+const sitemapSet = new Set(sitemapUrls);
+if (sitemapSet.size !== sitemapUrls.length) failures.push("sitemap.xml: contiene URLs duplicadas");
+for (const url of sitemapUrls) {
+  if (!/^https:\/\/dunasyolas\.com\//.test(url)) failures.push(`sitemap.xml: URL fuera del dominio canónico ${url}`);
+  if (/\.html(?:$|[?#])/.test(url)) failures.push(`sitemap.xml: URL no limpia ${url}`);
+  if (!indexableCanonicals.has(url)) failures.push(`sitemap.xml: URL sin página indexable correspondiente ${url}`);
+}
+for (const [canonical, rel] of indexableCanonicals) {
+  if (!sitemapSet.has(canonical)) failures.push(`${rel}: canonical indexable ausente del sitemap (${canonical})`);
+}
+const today = new Date().toISOString().slice(0, 10);
+for (const match of sitemap.matchAll(/<lastmod>([^<]+)<\/lastmod>/gi)) {
+  if (match[1].trim() > today) failures.push(`sitemap.xml: lastmod futuro ${match[1].trim()}`);
+}
+
+for (const file of walk(path.join(root, "images")).filter((file) => /\.(?:avif|gif|jpe?g|png|webp)$/i.test(file))) {
+  const size = fs.statSync(file).size;
+  if (size > 200 * 1024) failures.push(`${path.relative(root, file).replaceAll("\\", "/")}: supera 200 KB (${Math.ceil(size / 1024)} KB)`);
+}
+
 const vercel = JSON.parse(fs.readFileSync(path.join(root, "vercel.json"), "utf8"));
 const securityHeaders = new Set((vercel.headers?.[0]?.headers || []).map((header) => header.key.toLowerCase()));
 for (const required of ["content-security-policy", "referrer-policy", "permissions-policy", "strict-transport-security", "x-content-type-options", "x-frame-options"]) {
@@ -70,4 +114,4 @@ if (failures.length) {
   console.error(`\n${failures.length} problema(s) en ${pages} páginas.`);
   process.exit(1);
 }
-console.log(`Sitio validado: ${pages} páginas, imágenes optimizadas y reglas de seguridad presentes.`);
+console.log(`Sitio validado: ${pages} páginas, ${sitemapUrls.length} URLs indexables, JSON-LD correcto, imágenes optimizadas y reglas de seguridad presentes.`);

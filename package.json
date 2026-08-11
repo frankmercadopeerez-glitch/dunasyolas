@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npm run check",
     "build:search": "node scripts/build-search-index.js",
-    "check": "npm run build:search && node scripts/check-site.js"
+    "check": "npm run build:search && node scripts/check-site.js",
+    "qa:google": "node scripts/qa-google-priority.mjs"
   },
   "repository": {
     "type": "git",
