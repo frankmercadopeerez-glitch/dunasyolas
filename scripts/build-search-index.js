@@ -6,7 +6,7 @@ function walk(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      if ([".git", "node_modules", "en", "api", "css", "images", "js", "scripts"].includes(entry.name)) return [];
+      if ([".git", ".vercel", "node_modules", "en", "api", "css", "docs", "images", "js", "scripts", "tmp"].includes(entry.name)) return [];
       return walk(full);
     }
     return entry.name.endsWith(".html") ? [full] : [];

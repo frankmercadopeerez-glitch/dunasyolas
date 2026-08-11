@@ -22,21 +22,25 @@
   <link href="./css/tailwind.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link href="./css/brand-refresh.css?v=20260805c" rel="stylesheet" />
+  <link href="./css/brand-refresh.css?v=20260811b" rel="stylesheet" />
   <style>
     body { margin: 0; background: #f7faf9; color: #10293a; font-family: Manrope, sans-serif; }
     .gallery-hero { min-height: 430px; display: grid; place-items: center; position: relative; background: linear-gradient(90deg, rgba(8,26,39,.84), rgba(8,26,39,.3)), url("images/isla-palma-4.webp") center/cover; }
     .gallery-hero h1 { font-family: Fraunces, serif; }
-    .gallery-page .gallery-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
-    .gallery-page .gallery-tile { grid-column: span 4; height: 310px; border-radius: 20px; overflow: hidden; background: #dbe7e8; cursor: zoom-in; box-shadow: 0 10px 28px rgba(16,41,58,.10); }
-    .gallery-page .gallery-tile.wide { grid-column: span 8; }
-    .gallery-page .gallery-tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
-    .gallery-page .gallery-tile:hover img { transform: scale(1.035); }
+    .gallery-page .gallery-grid,
+    #galeria .gallery-grid { display: block; columns: 3 280px; column-gap: 16px; grid-auto-rows: unset; }
+    .gallery-page .gallery-tile,
+    .gallery-page .gallery-tile.wide,
+    #galeria .gallery-grid .gallery-tile { display: block; width: 100%; height: auto; min-height: 0; margin: 0 0 16px; break-inside: avoid; border-radius: 20px; overflow: hidden; background: #dbe7e8; cursor: zoom-in; box-shadow: 0 10px 28px rgba(16,41,58,.10); }
+    .gallery-page .gallery-tile img,
+    #galeria .gallery-grid .gallery-tile img { display: block; width: 100%; height: auto; object-fit: contain; transition: filter .3s ease; }
+    .gallery-page .gallery-tile:hover img { transform: none; filter: saturate(1.04); }
+    .gallery-page .gallery-tile::after { position: static; inset: auto; display: block; border-radius: 0; padding: .8rem 1rem; background: #10293a; backdrop-filter: none; }
     .nav-active { color: #f4ce55 !important; }
     .gold-button { background: #e3b72d; color: #10293a !important; }
     nav #mobile-menu { background: #10293a !important; }
-    @media (max-width: 900px) { .gallery-page .gallery-tile, .gallery-page .gallery-tile.wide { grid-column: span 6; height: 270px; } }
-    @media (max-width: 640px) { .gallery-hero { min-height: 390px; } .gallery-page .gallery-tile, .gallery-page .gallery-tile.wide { grid-column: span 12; height: 245px; } }
+    @media (max-width: 900px) { .gallery-page .gallery-grid, #galeria .gallery-grid { columns: 2 240px; } }
+    @media (max-width: 640px) { .gallery-hero { min-height: 390px; } .gallery-page .gallery-grid, #galeria .gallery-grid { columns: 1; } }
   </style>
   <script type="application/ld+json">
   {
@@ -106,17 +110,6 @@
           <figure class="gallery-tile" data-label="Laguna de Isla Lizamar" data-gallery-src="images/isla-lizamar-laguna.webp"><img src="images/isla-lizamar-laguna.webp" alt="Lancha y aguas turquesa de Isla Lizamar" width="1280" height="720" loading="lazy" decoding="async" /></figure>
           <figure class="gallery-tile" data-label="Almuerzo en Isla Lizamar" data-gallery-src="images/isla-lizamar-restaurante.webp"><img src="images/isla-lizamar-restaurante.webp" alt="Restaurante de madera para el almuerzo buffet en Isla Lizamar" width="1280" height="720" loading="lazy" decoding="async" /></figure>
 
-          <figure class="gallery-tile wide" data-label="3 Luxury Beach Clubs Premium" data-gallery-src="images/backpackers/3-luxury-beach-clubs/01.webp"><img src="images/backpackers/3-luxury-beach-clubs/01.webp" alt="3 Luxury Beach Clubs Premium en Cartagena" width="1200" height="800" loading="lazy" decoding="async" /></figure>
-          <figure class="gallery-tile" data-label="Tour 5 Islas VIP desde Cartagena" data-gallery-src="images/backpackers/tour-5-islas-vip/01.webp"><img src="images/backpackers/tour-5-islas-vip/01.webp" alt="Tour 5 Islas VIP desde Cartagena en Cartagena" width="1200" height="800" loading="lazy" decoding="async" /></figure>
-          <figure class="gallery-tile" data-label="Islas del Rosario + Oceanario" data-gallery-src="images/backpackers/islas-oceanario/01.webp"><img src="images/backpackers/islas-oceanario/01.webp" alt="Islas del Rosario + Oceanario en Cartagena" width="1200" height="800" loading="lazy" decoding="async" /></figure>
-          <figure class="gallery-tile" data-label="Tour 5 Islas Standard desde Cartagena" data-gallery-src="images/backpackers/tour-5-islas-standard/01.webp"><img src="images/backpackers/tour-5-islas-standard/01.webp" alt="Tour 5 Islas Standard desde Cartagena en Cartagena" width="1200" height="800" loading="lazy" decoding="async" /></figure>
-          <figure class="gallery-tile wide" data-label="Tour Volcán del Totumo desde Cartagena" data-gallery-src="images/backpackers/volcan-del-totumo/01.webp"><img src="images/backpackers/volcan-del-totumo/01.webp" alt="Tour Volcán del Totumo desde Cartagena en Cartagena" width="1200" height="800" loading="lazy" decoding="async" /></figure>
-          <figure class="gallery-tile" data-label="Mambo Beach Club por Tierra" data-gallery-src="images/backpackers/mambo-beach-tierra/01.webp"><img src="images/backpackers/mambo-beach-tierra/01.webp" alt="Mambo Beach Club por Tierra en Cartagena" width="1200" height="800" loading="lazy" decoding="async" /></figure>
-          <figure class="gallery-tile" data-label="Mambo Beach Club por Lancha" data-gallery-src="images/backpackers/mambo-beach-lancha/01.webp"><img src="images/backpackers/mambo-beach-lancha/01.webp" alt="Mambo Beach Club por Lancha en Cartagena" width="1200" height="800" loading="lazy" decoding="async" /></figure>
-          <figure class="gallery-tile" data-label="Tour Mágico por Tierra: Mambo, Snorkel y Manglar" data-gallery-src="images/backpackers/tour-magico-tierra/01.webp"><img src="images/backpackers/tour-magico-tierra/01.webp" alt="Tour Mágico por Tierra: Mambo, Snorkel y Manglar en Cartagena" width="1200" height="800" loading="lazy" decoding="async" /></figure>
-          <figure class="gallery-tile wide" data-label="Tour Mágico por Lancha: Mambo, Snorkel y Manglar" data-gallery-src="images/backpackers/tour-magico-lancha/01.webp"><img src="images/backpackers/tour-magico-lancha/01.webp" alt="Tour Mágico por Lancha: Mambo, Snorkel y Manglar en Cartagena" width="1200" height="800" loading="lazy" decoding="async" /></figure>
-          <figure class="gallery-tile" data-label="Family Eco-Route + Plancton" data-gallery-src="images/backpackers/family-eco-route/01.webp"><img src="images/backpackers/family-eco-route/01.webp" alt="Family Eco-Route + Plancton en Cartagena" width="1200" height="800" loading="lazy" decoding="async" /></figure>
-          <figure class="gallery-tile" data-label="Golden Hours: Sunset + Beach Club" data-gallery-src="images/backpackers/golden-hours-cartagena/01.webp"><img src="images/backpackers/golden-hours-cartagena/01.webp" alt="Golden Hours: Sunset + Beach Club en Cartagena" width="1200" height="800" loading="lazy" decoding="async" /></figure>
 
           <figure class="gallery-tile wide" data-label="3 Luxury Beach Clubs Premium" data-gallery-src="images/backpackers/3-luxury-beach-clubs/01.webp"><img src="images/backpackers/3-luxury-beach-clubs/01.webp" alt="3 Luxury Beach Clubs Premium en Cartagena" width="1200" height="800" loading="lazy" decoding="async" /></figure>
           <figure class="gallery-tile" data-label="Tour 5 Islas VIP desde Cartagena" data-gallery-src="images/backpackers/tour-5-islas-vip/01.webp"><img src="images/backpackers/tour-5-islas-vip/01.webp" alt="Tour 5 Islas VIP desde Cartagena en Cartagena" width="1200" height="800" loading="lazy" decoding="async" /></figure>

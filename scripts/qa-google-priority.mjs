@@ -14,12 +14,18 @@ const routes = [
   "/pasadia-isla-palma.html",
   "/pasadia-isla-lizamar.html",
   "/pasadia-mucura-tintipan.html",
+  "/islas-del-rosario.html",
   "/tour-5-islas-vip.html",
+  "/tour-5-islas-standard.html",
+  "/volcan-del-totumo.html",
   "/3-luxury-beach-clubs.html",
   "/kitesurf.html",
   "/blog/mejor-epoca-para-visitar-cartagena/",
+  "/blog/viajar-cartagena-desde-mexico/",
+  "/blog/precios-tours-cartagena/",
   "/en/",
   "/en/experiences.html",
+  "/en/blog/cartagena-tour-prices/",
 ];
 
 const mime = {
@@ -93,21 +99,31 @@ try {
       if (response.status() !== 200 || !result.title || !result.h1 || result.overflow || result.missingImages.length || result.unnamedButtons || failed.length) {
         throw new Error(`${viewport.name} ${route}: ${JSON.stringify({ status: response.status(), ...result, failed })}`);
       }
-      if (viewport.name === "mobile" && ["/experiences.html", "/en/experiences.html"].includes(route)) {
+      if (["/experiences.html", "/en/experiences.html"].includes(route)) {
         const navbar = await page.evaluate(() => {
           const brand = document.querySelector("#navbar .catalog-brand")?.getBoundingClientRect();
           const actions = document.querySelector("#navbar .catalog-actions")?.getBoundingClientRect();
+          const nav = document.querySelector("#navbar")?.getBoundingClientRect();
+          const hero = document.querySelector(".hero-section")?.getBoundingClientRect();
           return brand && actions ? {
             brandLeft: brand.left,
             brandRight: brand.right,
             actionsLeft: actions.left,
             actionsRight: actions.right,
+            navTop: nav?.top,
+            navBottom: nav?.bottom,
+            heroTop: hero?.top,
+            scrollY: window.scrollY,
             viewport: innerWidth,
           } : null;
         });
-        if (!navbar || navbar.brandLeft < -0.5 || navbar.actionsRight > navbar.viewport + 0.5 || navbar.brandRight > navbar.actionsLeft + 0.5) {
+        if (!navbar || navbar.brandLeft < -0.5 || navbar.actionsRight > navbar.viewport + 0.5 || navbar.brandRight > navbar.actionsLeft + 0.5 || Math.abs(navbar.navTop) > 0.5 || Math.abs(navbar.heroTop + navbar.scrollY - navbar.navBottom) > 0.5) {
           throw new Error(`${viewport.name} ${route}: navbar recortado o solapado ${JSON.stringify(navbar)}`);
         }
+      }
+      if (["/islas-del-rosario.html", "/blog/viajar-cartagena-desde-mexico/", "/blog/precios-tours-cartagena/", "/en/blog/cartagena-tour-prices/"].includes(route)) {
+        const slug = route === "/islas-del-rosario.html" ? "islas-del-rosario" : route.split("/").filter(Boolean).at(-1);
+        await page.screenshot({ path: path.join(output, `${slug}-${viewport.name}.png`), fullPage: true });
       }
     }
     if (viewport.name === "mobile") {

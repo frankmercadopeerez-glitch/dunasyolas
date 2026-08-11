@@ -32,14 +32,14 @@
       .hero-section {
         position: relative;
         height: 60vh;
-        margin-top: 64px;
+        margin-top: 70px;
         overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
       }
       @media (max-width: 767px) {
-        .hero-section { margin-top: 60px; }
+        .hero-section { margin-top: 66px; }
       }
       .hero-bg {
         position: absolute;
@@ -408,19 +408,7 @@
       "logo": "https://dunasyolas.com/images/logo-badge.png",
       "description": "Experiencias seleccionadas en Cartagena con precios visibles, información clara y acompañamiento local: islas, Barú, gastronomía, kitesurf, ciudad y atardeceres.",
       "telephone": "+573163030589",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Manga",
-        "addressLocality": "Cartagena de Indias",
-        "addressRegion": "Bolívar",
-        "postalCode": "130015",
-        "addressCountry": "CO"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 10.3976,
-        "longitude": -75.5162
-      },
+
       "areaServed": [
         {
           "@type": "City",
@@ -437,10 +425,6 @@
         {
           "@type": "Place",
           "name": "Getsemaní"
-        },
-        {
-          "@type": "Place",
-          "name": "Manga"
         },
         {
           "@type": "Place",
@@ -1227,12 +1211,13 @@
     <link rel="alternate" hreflang="es" href="https://dunasyolas.com/experiences"/>
     <link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/experiences"/>
     <link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/experiences"/>
-    <link rel="stylesheet" href="css/brand-refresh.css?v=20260810a"/>
+    <link rel="stylesheet" href="css/brand-refresh.css?v=20260811a"/>
 </head>
   <body class="catalog-page bg-gray-50 text-gray-800 antialiased">
     <!-- Navbar -->
     <nav
       id="navbar"
+      style="top: 0"
       class="fixed w-full z-50 transition-all duration-300 py-[2.5px] text-white bg-gray-900/95 backdrop-blur-md shadow-lg"
     >
       <div class="container mx-auto px-6 flex justify-between items-center">
@@ -1377,6 +1362,7 @@
             experiencias al carrito para reservar y pagar en línea, o
             cotiza directamente por WhatsApp.
           </p>
+          <p class="mt-4 text-sm"><a href="blog/precios-tours-cartagena/index.html" class="font-bold text-purple-700 hover:underline"><i class="fas fa-tags mr-1"></i> Consulta la guía 2026 de precios, inclusiones y costos extra</a></p>
         </div>
 
         <div class="mb-10 bg-white rounded-xl border border-gray-100 shadow-sm p-4 md:p-5 space-y-4">
@@ -1384,25 +1370,28 @@
             <label for="experiences-search" class="block text-xs font-bold uppercase text-gray-500 mb-2">
               Busca tu próxima experiencia
             </label>
-            <div class="relative">
-              <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-[#5B3A82]" aria-hidden="true"></i>
+            <div id="experiences-search-field" class="relative experiences-search-field" data-search-state="idle">
               <input
                 id="experiences-search"
                 type="search"
                 autocomplete="off"
                 placeholder="Ej. Barú, snorkel, islas, adultos, gastronomía..."
-                class="w-full rounded-xl border border-gray-200 bg-gray-50 py-3 pl-11 pr-12 text-sm text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#5B3A82]/20 focus:border-[#5B3A82]"
+                class="w-full rounded-xl border border-gray-200 bg-gray-50 py-3 text-sm text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#5B3A82]/20 focus:border-[#5B3A82]"
+                aria-describedby="experiences-search-summary"
               />
               <button
                 id="experiences-search-clear"
                 type="button"
-                class="hidden absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full text-gray-400 hover:text-[#5B3A82] hover:bg-purple-50 transition"
+                class="hidden absolute right-12 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full text-gray-400 hover:text-[#5B3A82] hover:bg-purple-50 transition"
                 aria-label="Limpiar búsqueda"
               >
                 <i class="fas fa-times" aria-hidden="true"></i>
               </button>
+              <span class="search-status-icon" aria-hidden="true">
+                <i id="experiences-search-status-icon" class="fas fa-search"></i>
+              </span>
             </div>
-            <p id="experiences-search-summary" class="mt-2 text-xs text-gray-500" aria-live="polite">
+            <p id="experiences-search-summary" class="experiences-search-summary mt-2 text-xs text-gray-500" role="status" aria-live="polite" aria-atomic="true">
               Explora todas nuestras experiencias.
             </p>
           </div>
@@ -2164,7 +2153,7 @@
             class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center catalog-card"
           >
             <div class="md:w-1/2 catalog-media">
-              <img src="images/lunamia.webp" alt="Tour nocturno en Yate Luna Mía – fiesta de noche en Cartagena" class="w-full h-56 md:h-[340px] object-cover" width="1000" height="750" decoding="async" loading="lazy"/>
+              <img src="images/lunamia-noche-cartagena.webp" alt="Tour nocturno en el Yate Luna Mía con la bahía de Cartagena iluminada" class="w-full h-56 md:h-[340px] object-cover" width="1440" height="1080" decoding="async" loading="lazy"/>
             </div>
             <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
               <h3 class="text-2xl font-bold text-gray-900 mb-1">Tour Nocturno en Yate – Luna Mía 🌙</h3>
@@ -2240,8 +2229,8 @@
           >
             <div class="md:w-1/2 catalog-media">
               <img
-                src="images/playa-blanca-baru.webp"
-                alt="Playa Blanca en Barú, Puerto Medallo – pasadía con piscina frente al mar"
+                src="images/playa-blanca-piscina.webp"
+                alt="Piscina frente al mar de Puerto Medallo en Playa Blanca, Barú"
                 class="w-full h-56 md:h-[340px] object-cover" width="1200" height="800" decoding="async" loading="lazy"
               />
             </div>
@@ -2601,67 +2590,67 @@
           <!-- 3 Luxury Beach Clubs Premium -->
           <div id="experiencia-3-luxury-beach-clubs" data-category="pasadia" data-price="390000" data-order="40" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
             <div class="md:w-1/2 relative catalog-media"><img src="images/backpackers/3-luxury-beach-clubs/01.webp" alt="3 Luxury Beach Clubs Premium desde Cartagena" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"/><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Nuevo</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Premium · 3 islas privadas</div></div>
-            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">3 Luxury Beach Clubs Premium</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Tres islas privadas en un solo día, con lancha deportiva, almuerzo gourmet, cócteles y traslados desde tu hotel.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>Todo el día</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="390000">$390.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="3-luxury-beach-clubs.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('luxury_3',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp("Hola, vengo desde la web de Dunas y Olas y quiero más información sobre 3 Luxury Beach Clubs Premium.")" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">3 Luxury Beach Clubs Premium</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Tres islas privadas en un solo día, con lancha deportiva, almuerzo gourmet, cócteles y traslados desde tu hotel.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>Todo el día</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="390000">$390.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="3-luxury-beach-clubs.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('luxury_3',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp(&quot;Hola, vengo desde la web de Dunas y Olas y quiero más información sobre 3 Luxury Beach Clubs Premium.&quot;)" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
           </div>
 
           <!-- Tour 5 Islas VIP desde Cartagena -->
           <div id="experiencia-tour-5-islas-vip" data-category="pasadia" data-price="320000" data-order="41" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
-            <div class="md:w-1/2 relative catalog-media"><img src="images/backpackers/tour-5-islas-vip/01.webp" alt="Tour 5 Islas VIP desde Cartagena desde Cartagena" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"/><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Nuevo</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">VIP · Islas del Rosario y Barú</div></div>
-            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Tour 5 Islas VIP desde Cartagena</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Lancha deportiva, Cocoliso, snorkel, Cholón, Mambo Beach y club privado en un día completo por el Caribe.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>Todo el día</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="320000">$320.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="tour-5-islas-vip.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('islas_vip_5',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp("Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Tour 5 Islas VIP desde Cartagena.")" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
+            <div class="md:w-1/2 relative catalog-media"><img src="images/backpackers/tour-5-islas-vip/01.webp" alt="Tour 5 Islas VIP desde Cartagena" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"/><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Nuevo</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">VIP · Islas del Rosario y Barú</div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Tour 5 Islas VIP desde Cartagena</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Lancha deportiva, Cocoliso, snorkel, Cholón, Mambo Beach y club privado en un día completo por el Caribe.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>Todo el día</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="320000">$320.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="tour-5-islas-vip.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('islas_vip_5',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp(&quot;Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Tour 5 Islas VIP desde Cartagena.&quot;)" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
           </div>
 
           <!-- Islas del Rosario + Oceanario -->
           <div id="experiencia-islas-oceanario" data-category="pasadia" data-price="280000" data-order="42" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
             <div class="md:w-1/2 relative catalog-media"><img src="images/backpackers/islas-oceanario/01.webp" alt="Islas del Rosario + Oceanario desde Cartagena" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"/><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Nuevo</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Oceanario · Islas del Rosario</div></div>
-            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Islas del Rosario + Oceanario</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Navega desde Cartagena, conoce el Oceanario de San Martín de Pajarales y disfruta un día de mar en las Islas del Rosario.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>Todo el día</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="280000">$280.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="islas-oceanario.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('islas_oceanario',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp("Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Islas del Rosario + Oceanario.")" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Islas del Rosario + Oceanario</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Navega desde Cartagena, conoce el Oceanario de San Martín de Pajarales y disfruta un día de mar en las Islas del Rosario.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>Todo el día</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="280000">$280.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="islas-oceanario.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('islas_oceanario',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp(&quot;Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Islas del Rosario + Oceanario.&quot;)" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
           </div>
 
           <!-- Tour 5 Islas Standard desde Cartagena -->
           <div id="experiencia-tour-5-islas-standard" data-category="pasadia" data-price="270000" data-order="43" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
-            <div class="md:w-1/2 relative catalog-media"><img src="images/backpackers/tour-5-islas-standard/01.webp" alt="Tour 5 Islas Standard desde Cartagena desde Cartagena" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"/><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Nuevo</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">5 islas · Plan completo</div></div>
-            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Tour 5 Islas Standard desde Cartagena</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Un recorrido completo por Bocachica, Cocoliso, snorkel, Cholón, Mambo Beach y Sol y Papaya en lancha de pasajeros.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>Todo el día</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="270000">$270.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="tour-5-islas-standard.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('islas_standard_5',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp("Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Tour 5 Islas Standard desde Cartagena.")" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
+            <div class="md:w-1/2 relative catalog-media"><img src="images/backpackers/tour-5-islas-standard/01.webp" alt="Tour 5 Islas Standard desde Cartagena" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"/><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Nuevo</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">5 islas · Plan completo</div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Tour 5 Islas Standard desde Cartagena</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Un recorrido completo por Bocachica, Cocoliso, snorkel, Cholón, Mambo Beach y Sol y Papaya en lancha de pasajeros.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>Todo el día</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="270000">$270.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="tour-5-islas-standard.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('islas_standard_5',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp(&quot;Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Tour 5 Islas Standard desde Cartagena.&quot;)" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
           </div>
 
           <!-- Tour Volcán del Totumo desde Cartagena -->
           <div id="experiencia-volcan-del-totumo" data-category="cultural" data-price="110000" data-order="44" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
-            <div class="md:w-1/2 relative catalog-media"><img src="images/backpackers/volcan-del-totumo/01.webp" alt="Tour Volcán del Totumo desde Cartagena desde Cartagena" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"/><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Nuevo</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Naturaleza · Salida AM o PM</div></div>
-            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Tour Volcán del Totumo desde Cartagena</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Vive el famoso baño de lodo del Volcán del Totumo en una salida guiada desde Cartagena.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>Medio día</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="110000">$110.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="volcan-del-totumo.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('volcan_totumo',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp("Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Tour Volcán del Totumo desde Cartagena.")" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
+            <div class="md:w-1/2 relative catalog-media"><img src="images/backpackers/volcan-del-totumo/01.webp" alt="Tour Volcán del Totumo desde Cartagena" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"/><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Nuevo</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Naturaleza · Salida AM o PM</div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Tour Volcán del Totumo desde Cartagena</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Vive el famoso baño de lodo del Volcán del Totumo en una salida guiada desde Cartagena.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>Medio día</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="110000">$110.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="volcan-del-totumo.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('volcan_totumo',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp(&quot;Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Tour Volcán del Totumo desde Cartagena.&quot;)" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
           </div>
 
           <!-- Mambo Beach Club por Tierra -->
           <div id="experiencia-mambo-beach-tierra" data-category="pasadia" data-price="130000" data-order="45" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
             <div class="md:w-1/2 relative catalog-media"><img src="images/backpackers/mambo-beach-tierra/01.webp" alt="Mambo Beach Club por Tierra desde Cartagena" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"/><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Nuevo</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Playa Blanca · Por tierra</div></div>
-            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Mambo Beach Club por Tierra</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Pasadía en Playa Blanca con transporte climatizado, asoleadoras y bono de almuerzo en Mambo Beach Club.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>Todo el día</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="130000">$130.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="mambo-beach-tierra.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('mambo_tierra',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp("Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Mambo Beach Club por Tierra.")" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Mambo Beach Club por Tierra</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Pasadía en Playa Blanca con transporte climatizado, asoleadoras y bono de almuerzo en Mambo Beach Club.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>Todo el día</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="130000">$130.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="mambo-beach-tierra.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('mambo_tierra',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp(&quot;Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Mambo Beach Club por Tierra.&quot;)" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
           </div>
 
           <!-- Mambo Beach Club por Lancha -->
           <div id="experiencia-mambo-beach-lancha" data-category="pasadia" data-price="165000" data-order="46" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
             <div class="md:w-1/2 relative catalog-media"><img src="images/backpackers/mambo-beach-lancha/01.webp" alt="Mambo Beach Club por Lancha desde Cartagena" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"/><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Nuevo</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Playa Blanca · Por lancha</div></div>
-            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Mambo Beach Club por Lancha</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Llega a Playa Blanca navegando desde Cartagena y disfruta las instalaciones de Mambo Beach Club con almuerzo.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>Todo el día</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="165000">$165.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="mambo-beach-lancha.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('mambo_lancha',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp("Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Mambo Beach Club por Lancha.")" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Mambo Beach Club por Lancha</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Llega a Playa Blanca navegando desde Cartagena y disfruta las instalaciones de Mambo Beach Club con almuerzo.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>Todo el día</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="165000">$165.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="mambo-beach-lancha.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('mambo_lancha',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp(&quot;Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Mambo Beach Club por Lancha.&quot;)" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
           </div>
 
           <!-- Tour Mágico por Tierra: Mambo, Snorkel y Manglar -->
           <div id="experiencia-tour-magico-tierra" data-category="pasadia" data-price="150000" data-order="47" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
             <div class="md:w-1/2 relative catalog-media"><img src="images/backpackers/tour-magico-tierra/01.webp" alt="Tour Mágico por Tierra: Mambo, Snorkel y Manglar desde Cartagena" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"/><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Nuevo</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Manglar + snorkel · Por tierra</div></div>
-            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Tour Mágico por Tierra: Mambo, Snorkel y Manglar</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Combina Playa Blanca, recorrido por manglares y snorkeling con transporte terrestre desde Cartagena.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>Todo el día</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="150000">$150.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="tour-magico-tierra.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('tour_magico_tierra',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp("Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Tour Mágico por Tierra: Mambo, Snorkel y Manglar.")" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Tour Mágico por Tierra: Mambo, Snorkel y Manglar</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Combina Playa Blanca, recorrido por manglares y snorkeling con transporte terrestre desde Cartagena.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>Todo el día</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="150000">$150.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="tour-magico-tierra.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('tour_magico_tierra',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp(&quot;Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Tour Mágico por Tierra: Mambo, Snorkel y Manglar.&quot;)" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
           </div>
 
           <!-- Tour Mágico por Lancha: Mambo, Snorkel y Manglar -->
           <div id="experiencia-tour-magico-lancha" data-category="pasadia" data-price="220000" data-order="48" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
             <div class="md:w-1/2 relative catalog-media"><img src="images/backpackers/tour-magico-lancha/01.webp" alt="Tour Mágico por Lancha: Mambo, Snorkel y Manglar desde Cartagena" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"/><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Nuevo</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Manglar + snorkel · Por lancha</div></div>
-            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Tour Mágico por Lancha: Mambo, Snorkel y Manglar</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Navega en lancha deportiva, haz snorkel, recorre el manglar y descansa en Mambo Beach Club.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>Todo el día</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="220000">$220.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="tour-magico-lancha.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('tour_magico_lancha',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp("Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Tour Mágico por Lancha: Mambo, Snorkel y Manglar.")" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Tour Mágico por Lancha: Mambo, Snorkel y Manglar</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Navega en lancha deportiva, haz snorkel, recorre el manglar y descansa en Mambo Beach Club.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>Todo el día</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="220000">$220.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="tour-magico-lancha.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('tour_magico_lancha',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp(&quot;Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Tour Mágico por Lancha: Mambo, Snorkel y Manglar.&quot;)" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
           </div>
 
           <!-- Family Eco-Route + Plancton -->
           <div id="experiencia-family-eco-route" data-category="pasadia" data-price="200000" data-order="49" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
             <div class="md:w-1/2 relative catalog-media"><img src="images/backpackers/family-eco-route/01.webp" alt="Family Eco-Route + Plancton desde Cartagena" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"/><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Nuevo</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Eco ruta familiar · Plancton</div></div>
-            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Family Eco-Route + Plancton</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Un día completo con Mambo Beach, snorkel, manglar, atardecer y plancton bioluminiscente en Barú.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>Día y noche</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="200000">$200.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="family-eco-route.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('family_eco_route',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp("Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Family Eco-Route + Plancton.")" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Family Eco-Route + Plancton</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Un día completo con Mambo Beach, snorkel, manglar, atardecer y plancton bioluminiscente en Barú.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>Día y noche</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="200000">$200.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="family-eco-route.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('family_eco_route',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp(&quot;Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Family Eco-Route + Plancton.&quot;)" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
           </div>
 
           <!-- Golden Hours: Sunset + Beach Club -->
           <div id="experiencia-golden-hours-cartagena" data-category="agua" data-price="125000" data-order="50" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
             <div class="md:w-1/2 relative catalog-media"><img src="images/backpackers/golden-hours-cartagena/01.webp" alt="Golden Hours: Sunset + Beach Club desde Cartagena" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"/><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Nuevo</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Sunset · Beach club privado</div></div>
-            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Golden Hours: Sunset + Beach Club</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Atardecer en lancha deportiva, música, coctelería y parada en beach club privado frente a Cartagena.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>3 horas</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="125000">$125.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="golden-hours-cartagena.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('golden_hours',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp("Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Golden Hours: Sunset + Beach Club.")" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Golden Hours: Sunset + Beach Club</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Atardecer en lancha deportiva, música, coctelería y parada en beach club privado frente a Cartagena.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>3 horas</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="125000">$125.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="golden-hours-cartagena.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('golden_hours',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp(&quot;Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Golden Hours: Sunset + Beach Club.&quot;)" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
           </div>
 
         </div>
@@ -3147,6 +3136,9 @@
         var searchInput = document.getElementById("experiences-search");
         var searchClear = document.getElementById("experiences-search-clear");
         var searchSummary = document.getElementById("experiences-search-summary");
+        var searchField = document.getElementById("experiences-search-field");
+        var searchStatusIcon = document.getElementById("experiences-search-status-icon");
+        var searchTimer = null;
         var currentFilter = "all";
         var currentQuery = "";
 
@@ -3174,7 +3166,38 @@
           window.history.replaceState({}, "", url.pathname + url.search + url.hash);
         }
 
-        function applyFilter() {
+        function setSearchState(state) {
+          searchField.dataset.searchState = state;
+          searchInput.setAttribute("aria-busy", state === "searching" ? "true" : "false");
+          searchSummary.classList.toggle("is-searching", state === "searching");
+          searchSummary.classList.toggle("is-complete", state === "complete");
+
+          if (state === "searching") {
+            searchStatusIcon.className = "fas fa-circle-notch fa-spin";
+          } else if (state === "complete") {
+            searchStatusIcon.className = "fas fa-check";
+          } else {
+            searchStatusIcon.className = "fas fa-search";
+          }
+        }
+
+        function animateVisibleResults() {
+          cards.forEach(function (card, index) {
+            if (card.style.display === "none") return;
+            card.classList.remove("search-result-enter");
+            card.style.animationDelay = Math.min(index, 5) * 35 + "ms";
+            void card.offsetWidth;
+            card.classList.add("search-result-enter");
+          });
+          window.setTimeout(function () {
+            cards.forEach(function (card) {
+              card.classList.remove("search-result-enter");
+              card.style.removeProperty("animation-delay");
+            });
+          }, 650);
+        }
+
+        function applyFilter(animateResults) {
           var visibleCount = 0;
           var queryTerms = currentQuery ? currentQuery.split(" ") : [];
 
@@ -3198,6 +3221,8 @@
           } else {
             searchSummary.textContent = visibleCount + (visibleCount === 1 ? " experiencia disponible." : " experiencias disponibles.");
           }
+
+          if (animateResults) animateVisibleResults();
         }
 
         filterBtns.forEach(function (btn) {
@@ -3205,21 +3230,40 @@
             filterBtns.forEach(function (b) { b.classList.remove("active"); });
             btn.classList.add("active");
             currentFilter = btn.dataset.category;
-            applyFilter();
+            applyFilter(true);
+            setSearchState(searchInput.value.trim() ? "complete" : "idle");
           });
         });
 
         searchInput.addEventListener("input", function () {
-          currentQuery = normalizeText(searchInput.value);
-          updateSearchUrl();
-          applyFilter();
+          window.clearTimeout(searchTimer);
+          searchClear.classList.toggle("hidden", !searchInput.value);
+
+          if (!searchInput.value.trim()) {
+            currentQuery = "";
+            updateSearchUrl();
+            applyFilter(true);
+            setSearchState("idle");
+            return;
+          }
+
+          searchSummary.textContent = "Buscando experiencias...";
+          setSearchState("searching");
+          searchTimer = window.setTimeout(function () {
+            currentQuery = normalizeText(searchInput.value);
+            updateSearchUrl();
+            applyFilter(true);
+            setSearchState("complete");
+          }, 180);
         });
 
         searchClear.addEventListener("click", function () {
+          window.clearTimeout(searchTimer);
           searchInput.value = "";
           currentQuery = "";
           updateSearchUrl();
-          applyFilter();
+          applyFilter(true);
+          setSearchState("idle");
           searchInput.focus();
         });
 
@@ -3245,6 +3289,7 @@
           currentQuery = normalizeText(initialQuery);
         }
         applyFilter();
+        setSearchState(initialQuery ? "complete" : "idle");
       })();
     </script>
 

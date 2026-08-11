@@ -186,6 +186,12 @@
     "url": "/blog/playas-cartagena/"
   },
   {
+    "title": "Precios de tours en Cartagena 2026: qué incluyen",
+    "description": "Compara precios de tours en Cartagena en 2026: Islas del Rosario, 5 Islas, buceo, pasadías y Volcán del Totumo. Entiende inclusiones y costos extra.",
+    "keywords": "",
+    "url": "/blog/precios-tours-cartagena/"
+  },
+  {
     "title": "25 Planes Imperdibles en Cartagena de Indias: Guía Local para Turistas",
     "description": "Los 25 mejores planes en Cartagena de Indias según una guía local. Desde el Castillo de San Felipe hasta el kitesurf, pasadías a las islas y los restaurantes que ningún turista enc",
     "keywords": "qué hacer en cartagena de indias, planes cartagena, actividades cartagena turistas, lugares turísticos cartagena, cartagena turismo qué visitar",
@@ -193,7 +199,7 @@
   },
   {
     "title": "Requisitos para Viajar a Colombia desde México o Estados Unidos en 2026",
-    "description": "Todo lo que necesitas saber para viajar a Colombia desde México o Estados Unidos en 2026: pasaporte, visa, Check-Mig, vacunas y requisitos de aduana. Guía actualizada para tu viaje",
+    "description": "Requisitos actualizados para viajar a Colombia desde México o Estados Unidos en 2026: pasaporte, visa, Check-Mig opcional, tiquete de salida y controles migratorios.",
     "keywords": "requisitos para viajar a colombia 2026, check-mig colombia, visa para colombia desde mexico, visa para colombia desde estados unidos, documentos para entrar a colombia",
     "url": "/blog/requisitos-viajar-colombia-2026/"
   },
@@ -220,6 +226,12 @@
     "description": "Aprende a moverte por Cartagena de forma segura y económica: taxis, mototaxis, carros de caballo, plataformas digitales y tips de una local.",
     "keywords": "transporte cartagena de indias, taxis cartagena, indriver cartagena, mototaxis cartagena, cómo moverse cartagena, transporte turista cartagena",
     "url": "/blog/transporte-cartagena/"
+  },
+  {
+    "title": "Viajar a Cartagena desde México: requisitos y tours 2026",
+    "description": "Guía 2026 para viajar a Cartagena desde México: requisitos de entrada, itinerario de 4 días, precios de tours y cómo reservar con una agencia local registrada.",
+    "keywords": "",
+    "url": "/blog/viajar-cartagena-desde-mexico/"
   },
   {
     "title": "Viajar con un Local en Cartagena: Por Qué Cambia Todo lo que Creías Saber",
@@ -330,8 +342,8 @@
     "url": "/golden-hours-cartagena"
   },
   {
-    "title": "Islas del Rosario, Cartagena — Guía Completa y Tours",
-    "description": "Islas del Rosario, Cartagena: guía completa del archipiélago. Pasadía, buceo y snorkel en el Parque Nacional. Tours desde $250.000 COP con Dunas & Olas.",
+    "title": "Tours Islas del Rosario desde Cartagena",
+    "description": "Compara tours a las Islas del Rosario desde Cartagena: 5 islas, pasadías familiares, snorkel y precios desde $250.000 COP. Orientación local.",
     "keywords": "islas del rosario cartagena, tour islas del rosario, que hacer islas del rosario, como llegar islas del rosario, parque nacional corales del rosario, isla grande cartagena, cholon cartagena",
     "url": "/islas-del-rosario"
   },
@@ -438,176 +450,14 @@
     "url": "/tirolesa"
   },
   {
-    "title": "3 LUXURY BEACH CLUBS | PDF to Flipbook",
-    "description": "",
-    "keywords": "",
-    "url": "/tmp/backpackers-web/3-luxury-info"
-  },
-  {
-    "title": "¿Qué incluye? | What s include?",
-    "description": "La experiencia más sofisticada y exclusiva para recorrer tres hermosas islas privadas en el Parque Corales del Rosario y Bocachica.",
-    "keywords": "",
-    "url": "/tmp/backpackers-web/3-luxury"
-  },
-  {
-    "title": "5 ISLAS STANDARD Instagram",
-    "description": "🌊 Descubre el Caribe a tu manera con el tour 5 ISLAS ESTÁNDAR. Una experiencia única donde podrás conocer los mejores destinos de en un mismo día. 🏝️",
-    "keywords": "",
-    "url": "/tmp/backpackers-web/5-islas-standard"
-  },
-  {
-    "title": "¿Qué incluye? | What s include?",
-    "description": "✨Descubre 5 increíbles lugares paradisiacos en ISLAS DEL ROSARIO en un mismo día: Isla Grande, Rosario de Mar, Isla Barú, Cholón, Isla Tierra Bomba.🚤",
-    "keywords": "",
-    "url": "/tmp/backpackers-web/5-islas-vip"
-  },
-  {
-    "title": "5 ISLAS STANDARD | PDF to Flipbook",
-    "description": "",
-    "keywords": "",
-    "url": "/tmp/backpackers-web/5-standard-info"
-  },
-  {
-    "title": "5 ISLAS VIP | PDF to Flipbook",
-    "description": "",
-    "keywords": "",
-    "url": "/tmp/backpackers-web/5-vip-info"
-  },
-  {
-    "title": "GOLDEN HOURS Instagram",
-    "description": "ARMA TU PARCHE! Ven con tus amigos o conócelos en esta increíble experiencia que combina atardecer, cócteles y una celebración en la hermosa Bahía.",
-    "keywords": "",
-    "url": "/tmp/backpackers-web/golden-hours"
-  },
-  {
-    "title": "GOLDEN HOUR | PDF to Flipbook",
-    "description": "",
-    "keywords": "",
-    "url": "/tmp/backpackers-web/golden-info"
-  },
-  {
-    "title": "¿Qué incluye? | What s include?",
-    "description": "🌊 Explora Islas + Oceanario: ¡un paraíso de naturaleza y aventura! 🏝️🐠✨",
-    "keywords": "",
-    "url": "/tmp/backpackers-web/islas-oceanario"
-  },
-  {
-    "title": "Your work",
-    "description": "",
-    "keywords": "",
-    "url": "/tmp/backpackers-web/mambo-adobe"
-  },
-  {
-    "title": "MAMBO BEACH CLUB Instagram",
-    "description": "Linktree. Make your link do more.",
-    "keywords": "",
-    "url": "/tmp/backpackers-web/mambo-beach"
-  },
-  {
-    "title": "Your work",
-    "description": "",
-    "keywords": "",
-    "url": "/tmp/backpackers-web/oceanario-adobe"
-  },
-  {
-    "title": "Your work",
-    "description": "",
-    "keywords": "",
-    "url": "/tmp/backpackers-web/volcan-adobe"
-  },
-  {
-    "title": "VOLCÁN DEL TOTUMO Instagram",
-    "description": "Relájate y exfóliate en un ambiente natural con propiedades milenarias que te harán sentir como nuev@.",
-    "keywords": "",
-    "url": "/tmp/backpackers-web/volcan-totumo"
-  },
-  {
-    "title": "Pixieset",
-    "description": "",
-    "keywords": "",
-    "url": "/tmp/goldenhourctg-alt"
-  },
-  {
-    "title": "3 LUXURY BEACH CLUBS by Galerías Backpackers",
-    "description": "Photo collection by Galerías Backpackers",
-    "keywords": "",
-    "url": "/tmp/pixieset-downloads/3-luxury-beach-clubs"
-  },
-  {
-    "title": "FAMILY ECO ROUTE - MAMBO + MANGLAR + SNORKEL + PLANCTON by Galerías Backpackers",
-    "description": "Photo collection by Galerías Backpackers",
-    "keywords": "",
-    "url": "/tmp/pixieset-downloads/family-eco-route"
-  },
-  {
-    "title": "TOUR ISLAS + OCEANARIO by Galerías Backpackers",
-    "description": "Photo collection by Galerías Backpackers",
-    "keywords": "",
-    "url": "/tmp/pixieset-downloads/islas-oceanario"
-  },
-  {
-    "title": "MAMBO OCEAN - MAMBO POR LANCHA by Galerías Backpackers",
-    "description": "Photo collection by Galerías Backpackers",
-    "keywords": "",
-    "url": "/tmp/pixieset-downloads/mambo-beach-lancha"
-  },
-  {
-    "title": "MAMBO BEACH CLUB | PLAYA BLANCA, BARÚ by Galerías Backpackers",
-    "description": "Photo collection by Galerías Backpackers",
-    "keywords": "",
-    "url": "/tmp/pixieset-downloads/mambo-beach-tierra"
-  },
-  {
-    "title": "TOUR 5 ISLAS STANDARD by Galerías Backpackers",
-    "description": "Photo collection by Galerías Backpackers",
-    "keywords": "",
-    "url": "/tmp/pixieset-downloads/tour-5-islas-standard"
-  },
-  {
-    "title": "TOUR 5 ISLAS VIP by Galerías Backpackers",
-    "description": "Photo collection by Galerías Backpackers",
-    "keywords": "",
-    "url": "/tmp/pixieset-downloads/tour-5-islas-vip"
-  },
-  {
-    "title": "TOUR MÁGICO POR LANCHA (MAMBO + MANGLAR + SNORKEL) by Galerías Backpackers",
-    "description": "Photo collection by Galerías Backpackers",
-    "keywords": "",
-    "url": "/tmp/pixieset-downloads/tour-magico-lancha"
-  },
-  {
-    "title": "TOUR MÁGICO (Mambo + Manglar + Snorkel) by Galerías Backpackers",
-    "description": "Photo collection by Galerías Backpackers",
-    "keywords": "",
-    "url": "/tmp/pixieset-downloads/tour-magico-tierra"
-  },
-  {
-    "title": "TOUR VOLCÁN DEL TOTUMO by Galerías Backpackers",
-    "description": "Photo collection by Galerías Backpackers",
-    "keywords": "",
-    "url": "/tmp/pixieset-downloads/volcan-del-totumo"
-  },
-  {
-    "title": "MAMBO OCEAN - MAMBO POR LANCHA by Galerías Backpackers",
-    "description": "Photo collection by Galerías Backpackers",
-    "keywords": "",
-    "url": "/tmp/pixieset-mambo"
-  },
-  {
-    "title": "TOUR 5 ISLAS STANDARD by Galerías Backpackers",
-    "description": "Photo collection by Galerías Backpackers",
-    "keywords": "",
-    "url": "/tmp/tour5islasstandard-alt"
-  },
-  {
-    "title": "Tour 5 Islas Standard desde Cartagena | Tours en Cartagena",
-    "description": "Un recorrido completo por Bocachica, Cocoliso, snorkel, Cholón, Mambo Beach y Sol y Papaya en lancha de pasajeros. Precio público desde $270.000 COP por persona. Reserva con orient",
+    "title": "Tour 5 Islas Cartagena: precio y recorrido",
+    "description": "Tour 5 Islas desde Cartagena por $270.000 COP: Bocachica, Cocoliso, snorkel, Cholón y Mambo Beach. Consulta inclusiones y disponibilidad.",
     "keywords": "tour 5 islas Cartagena precio, tour Islas del Rosario standard, Cholón Mambo Beach Cartagena",
     "url": "/tour-5-islas-standard"
   },
   {
-    "title": "Tour 5 Islas VIP desde Cartagena | Tours en Cartagena",
-    "description": "Lancha deportiva, Cocoliso, snorkel, Cholón, Mambo Beach y club privado en un día completo por el Caribe. Precio público desde $320.000 COP por persona. Reserva con orientación loc",
+    "title": "Tour 5 Islas VIP Cartagena: precio e incluye",
+    "description": "Tour 5 Islas VIP desde Cartagena por $320.000 COP: lancha deportiva, Cocoliso, snorkel, Cholón y Mambo Beach. Confirma inclusiones y extras.",
     "keywords": "tour 5 islas VIP Cartagena, Cocoliso Cholón Mambo Beach, Islas del Rosario VIP",
     "url": "/tour-5-islas-vip"
   },
@@ -636,8 +486,8 @@
     "url": "/tritonia-beach-club"
   },
   {
-    "title": "Tour Volcán del Totumo desde Cartagena | Tours en Cartagena",
-    "description": "Vive el famoso baño de lodo del Volcán del Totumo en una salida guiada desde Cartagena. Precio público desde $110.000 COP por persona. Reserva con orientación local en Cartagena.",
+    "title": "Tour Volcán del Totumo desde Cartagena",
+    "description": "Tour al Volcán del Totumo desde Cartagena desde $110.000 COP. Incluye traslado guiado y baño de lodo. Confirma horario, cupo y valor final.",
     "keywords": "Volcán del Totumo desde Cartagena, tour baño de lodo Cartagena, excursión Totumo precio",
     "url": "/volcan-del-totumo"
   }

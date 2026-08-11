@@ -35,14 +35,14 @@
       .hero-section {
         position: relative;
         height: 60vh;
-        margin-top: 64px;
+        margin-top: 70px;
         overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
       }
       @media (max-width: 767px) {
-        .hero-section { margin-top: 60px; }
+        .hero-section { margin-top: 66px; }
       }
       .hero-bg {
         position: absolute;
@@ -252,25 +252,12 @@
       "logo": "https://dunasyolas.com/images/logo-badge.png",
       "description": "Selected experiences in Cartagena with visible prices, practical details and bilingual local support: islands, Barú, food, kitesurfing, city tours and sunsets.",
       "telephone": "+573163030589",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Manga",
-        "addressLocality": "Cartagena de Indias",
-        "addressRegion": "Bolívar",
-        "postalCode": "130015",
-        "addressCountry": "CO"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 10.3976,
-        "longitude": -75.5162
-      },
+
       "areaServed": [
         { "@type": "City", "name": "Cartagena de Indias" },
         { "@type": "Place", "name": "Bocagrande" },
         { "@type": "Place", "name": "Historic Center (Walled City)" },
         { "@type": "Place", "name": "Getsemaní" },
-        { "@type": "Place", "name": "Manga" },
         { "@type": "Place", "name": "La Boquilla" },
         { "@type": "Place", "name": "Rosario Islands" },
         { "@type": "Place", "name": "Castillogrande" }
@@ -447,6 +434,7 @@
     <!-- Navbar -->
     <nav
       id="navbar"
+      style="top: 0"
       class="fixed w-full z-50 transition-all duration-300 py-[2.5px] text-white bg-gray-900/95 backdrop-blur-md shadow-lg"
     >
       <div class="container mx-auto px-6 flex justify-between items-center">
@@ -659,6 +647,7 @@
             to the cart to book and pay online, or get a quote directly via
             WhatsApp.
           </p>
+          <p class="mt-4 text-sm"><a href="blog/cartagena-tour-prices/index.html" class="font-bold text-purple-700 hover:underline"><i class="fas fa-tags mr-1"></i> Read the 2026 guide to tour prices, inclusions and extra costs</a></p>
         </div>
 
         <div class="mb-10 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between bg-white rounded-xl border border-gray-100 shadow-sm p-4">

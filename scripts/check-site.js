@@ -23,6 +23,8 @@ for (const file of walk(root).filter((file) => file.endsWith(".html"))) {
   if (!/<meta\s+[^>]*name=["']description["'][^>]*content=["'][^"']+/i.test(html)) failures.push(`${rel}: falta meta description`);
   if (!/<h1\b/i.test(html)) failures.push(`${rel}: falta h1`);
   if (/G-XXXXXXXXXX/i.test(html)) failures.push(`${rel}: contiene un ID ficticio de Analytics`);
+  if (/onclick="openWhatsApp\("|onclick='openWhatsApp\('/i.test(html)) failures.push(`${rel}: comillas inválidas en un botón de WhatsApp`);
+  if (/desde Cartagena desde Cartagena/i.test(html)) failures.push(`${rel}: texto duplicado "desde Cartagena"`);
   if (/"contactOption"\s*:\s*"TollFree"/i.test(html)) failures.push(`${rel}: teléfono móvil marcado incorrectamente como TollFree`);
 
   for (const match of html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
