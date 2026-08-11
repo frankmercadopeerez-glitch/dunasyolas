@@ -64,7 +64,20 @@ nav .hidden.md\:flex > a {
 }
 
 #experiences-search { padding-left: 1rem !important; padding-right: 5.75rem !important; }
-#experiences-search::-webkit-search-cancel-button { appearance: none; }
+#experiences-search::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+#experiences-search-clear {
+  position: absolute;
+  right: 3.15rem;
+  top: 50%;
+  width: 2rem;
+  height: 2rem;
+  z-index: 2;
+  transform: translateY(-50%);
+}
 .experiences-search-field .search-status-icon {
   position: absolute;
   right: .65rem;
