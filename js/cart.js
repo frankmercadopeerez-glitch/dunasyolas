@@ -100,6 +100,16 @@ const TOURS = {
     price: 45000,
     unit: "persona",
   },
+  recorrido_gastronomico: {
+    name: "Recorrido Gastronómico por Cartagena",
+    price: 140000,
+    unit: "persona",
+  },
+  sabores_locales: {
+    name: "Sabores Locales: Cocina Caribeña",
+    price: 150000,
+    unit: "persona",
+  },
   playablanca: {
     name: "Puerto Medallo – Playa Blanca, Barú",
     price: 190000,
