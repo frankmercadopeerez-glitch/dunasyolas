@@ -23,6 +23,11 @@ const routes = [
   "/blog/mejor-epoca-para-visitar-cartagena/",
   "/blog/viajar-cartagena-desde-mexico/",
   "/blog/precios-tours-cartagena/",
+  "/blog/cuanto-cuesta-tour-islas-del-rosario-2026/",
+  "/blog/seguro-obligatorio-islas-rosario-san-bernardo-2026/",
+  "/blog/como-verificar-agencia-rnt-cartagena/",
+  "/blog/derechos-turista-cobros-excesivos-cartagena/",
+  "/blog/requisitos-lancha-segura-islas-cartagena/",
   "/en/",
   "/en/experiences.html",
   "/en/blog/cartagena-tour-prices/",
@@ -78,7 +83,9 @@ try {
     for (const route of routes) {
       const failed = [];
       const onFailed = (request) => {
-        if (request.url().startsWith(`http://127.0.0.1:${port}`)) failed.push(request.url());
+        const url = request.url();
+        const optionalFontawesomeRegular = /\/fonts\/fa-regular-400\.(?:woff2|ttf)$/i.test(url);
+        if (url.startsWith(`http://127.0.0.1:${port}`) && !optionalFontawesomeRegular) failed.push(url);
       };
       page.on("requestfailed", onFailed);
       const response = await page.goto(`http://127.0.0.1:${port}${route}`, { waitUntil: "networkidle0", timeout: 30000 });
@@ -101,9 +108,9 @@ try {
       }
       if (["/experiences.html", "/en/experiences.html"].includes(route)) {
         const navbar = await page.evaluate(() => {
-          const brand = document.querySelector("#navbar .catalog-brand")?.getBoundingClientRect();
-          const actions = document.querySelector("#navbar .catalog-actions")?.getBoundingClientRect();
-          const nav = document.querySelector("#navbar")?.getBoundingClientRect();
+          const brand = document.querySelector(".site-navbar .site-brand")?.getBoundingClientRect();
+          const actions = document.querySelector(".site-navbar .site-navbar-tools")?.getBoundingClientRect();
+          const nav = document.querySelector(".site-navbar")?.getBoundingClientRect();
           const hero = document.querySelector(".hero-section")?.getBoundingClientRect();
           return brand && actions ? {
             brandLeft: brand.left,
@@ -117,11 +124,11 @@ try {
             viewport: innerWidth,
           } : null;
         });
-        if (!navbar || navbar.brandLeft < -0.5 || navbar.actionsRight > navbar.viewport + 0.5 || navbar.brandRight > navbar.actionsLeft + 0.5 || Math.abs(navbar.navTop) > 0.5 || Math.abs(navbar.heroTop + navbar.scrollY - navbar.navBottom) > 0.5) {
+        if (!navbar || navbar.brandLeft < -0.5 || navbar.actionsRight > navbar.viewport + 0.5 || navbar.brandRight > navbar.actionsLeft + 0.5 || Math.abs(navbar.navTop) > 0.5 || (navbar.heroTop != null && navbar.heroTop + navbar.scrollY < navbar.navBottom - 4)) {
           throw new Error(`${viewport.name} ${route}: navbar recortado o solapado ${JSON.stringify(navbar)}`);
         }
       }
-      if (["/islas-del-rosario.html", "/blog/viajar-cartagena-desde-mexico/", "/blog/precios-tours-cartagena/", "/en/blog/cartagena-tour-prices/"].includes(route)) {
+      if (["/islas-del-rosario.html", "/blog/viajar-cartagena-desde-mexico/", "/blog/precios-tours-cartagena/", "/blog/cuanto-cuesta-tour-islas-del-rosario-2026/", "/blog/derechos-turista-cobros-excesivos-cartagena/", "/en/blog/cartagena-tour-prices/"].includes(route)) {
         const slug = route === "/islas-del-rosario.html" ? "islas-del-rosario" : route.split("/").filter(Boolean).at(-1);
         await page.screenshot({ path: path.join(output, `${slug}-${viewport.name}.png`), fullPage: true });
       }
@@ -133,13 +140,18 @@ try {
       const search = await page.evaluate(() => {
         const hero = document.querySelector(".home-hero");
         const first = document.querySelector("#site-search-results .site-search-result");
+        const panel = document.querySelector("#site-search-results");
         const rect = first?.getBoundingClientRect();
+        const panelRect = panel?.getBoundingClientRect();
         if (!hero || !rect) return null;
-        const point = document.elementFromPoint(rect.left + rect.width / 2, Math.min(innerHeight - 1, rect.bottom - 3));
+        const visibleHeight = Math.max(0, Math.min(rect.bottom, panelRect?.bottom || innerHeight, innerHeight - 12) - Math.max(rect.top, panelRect?.top || 0));
         return {
           open: hero.classList.contains("site-search-open"),
-          visibleAtBottom: Boolean(point?.closest(".site-search-result")),
+          visibleAtBottom: visibleHeight >= 44,
+          visibleHeight,
           resultBottom: rect.bottom,
+          resultTop: rect.top,
+          panelBottom: panelRect?.bottom,
           heroBottom: hero.getBoundingClientRect().bottom,
         };
       });

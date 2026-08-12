@@ -10,9 +10,12 @@
     if (results.classList.contains("hidden")) return;
     var rect = input.getBoundingClientRect();
     var gap = 9;
-    var roomBelow = window.innerHeight - rect.bottom - gap - 8;
-    var available = Math.max(150, Math.min(420, roomBelow));
-    results.style.setProperty("--search-results-top", rect.bottom + gap + "px");
+    var safeBottom = 12;
+    var desiredHeight = Math.min(420, Math.max(220, window.innerHeight * 0.4));
+    var roomBelow = window.innerHeight - rect.bottom - gap - safeBottom;
+    var available = Math.min(desiredHeight, Math.max(120, roomBelow));
+    var top = Math.min(rect.bottom + gap, window.innerHeight - available - safeBottom);
+    results.style.setProperty("--search-results-top", Math.max(8, top) + "px");
     results.style.setProperty("--search-results-left", Math.max(8, rect.left) + "px");
     results.style.setProperty("--search-results-width", Math.min(rect.width, window.innerWidth - 16) + "px");
     results.style.setProperty("--search-results-height", available + "px");
@@ -21,11 +24,12 @@
     window.clearTimeout(revealTimer);
     revealTimer = window.setTimeout(function () {
       var rect = input.getBoundingClientRect();
-      var desiredRoom = Math.min(340, Math.max(230, window.innerHeight * 0.36));
+      var desiredRoom = Math.min(320, Math.max(200, window.innerHeight * 0.33));
       var roomBelow = window.innerHeight - rect.bottom - 18;
       if (roomBelow >= desiredRoom) return;
       var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      window.scrollBy({ top: desiredRoom - roomBelow, behavior: reduceMotion ? "auto" : "smooth" });
+      window.scrollBy({ top: desiredRoom - roomBelow + 12, behavior: reduceMotion ? "auto" : "smooth" });
+      window.setTimeout(positionResults, reduceMotion ? 0 : 260);
     }, 90);
   }
   function normalize(value) { return String(value || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); }

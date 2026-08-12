@@ -86,6 +86,158 @@ nav .hidden.md\:flex > a {
   line-height: 1.2;
 }
 
+/* Cabecera canonica. site-refresh.js reemplaza las distintas cabeceras
+   heredadas con esta misma estructura en todo el sitio. */
+.site-navbar {
+  min-height: 72px;
+  background: rgba(12, 30, 44, .98) !important;
+  color: #fff;
+}
+
+.site-navbar-inner {
+  width: min(100%, 1540px);
+  min-height: 72px;
+  margin: 0 auto;
+  padding: 0 1.35rem;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(1rem, 2.25vw, 2.25rem);
+}
+
+.site-brand {
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: .72rem;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.site-brand picture { display: flex; width: 6.25rem; height: 3.5rem; align-items: center; justify-content: center; flex: 0 0 auto; }
+.site-brand img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.site-brand-copy { min-width: 0; line-height: 1; }
+.site-brand-copy strong { display: block; color: #fff; font-size: clamp(1.08rem, 1.5vw, 1.48rem); font-style: normal; font-weight: 800; letter-spacing: -.035em; }
+.site-brand-copy em { color: #e0ad2f; font-style: normal; }
+.site-brand-copy small { display: block; margin-top: .42rem; color: #f4cf6a; font-size: .55rem; font-weight: 800; letter-spacing: .14em; line-height: 1; }
+
+.site-navbar-links {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(.8rem, 1.45vw, 1.45rem);
+}
+
+.site-nav-link {
+  position: relative;
+  padding: .62rem .04rem;
+  color: rgba(255,255,255,.86);
+  font-size: clamp(.78rem, .86vw, .94rem);
+  font-weight: 800;
+  letter-spacing: .015em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.site-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: .18rem;
+  height: 2px;
+  border-radius: 999px;
+  background: #f4cf6a;
+  transition: left .2s ease, right .2s ease;
+}
+
+.site-nav-link:hover,
+.site-nav-link.is-active { color: #fff; }
+.site-nav-link:hover::after,
+.site-nav-link.is-active::after { left: 0; right: 0; }
+
+.site-navbar-tools { display: flex; align-items: center; justify-content: flex-end; gap: .7rem; }
+.site-language-link {
+  display: inline-grid;
+  min-width: 2.7rem;
+  height: 2.65rem;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: .7rem;
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 800;
+}
+.site-language-link:hover { border-color: #f4cf6a; color: #f4cf6a; }
+.site-planner-cta {
+  min-height: 2.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .65rem 1.25rem;
+  border-radius: 999px;
+  background: #e0ad2f;
+  color: #10293a;
+  font-size: .78rem;
+  font-weight: 900;
+  letter-spacing: .015em;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(224,173,47,.18);
+}
+.site-planner-cta:hover { background: #f4cf6a; transform: translateY(-1px); }
+.site-cart-button,
+.site-menu-button {
+  position: relative;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: .8rem;
+  color: #fff;
+  background: rgba(255,255,255,.05);
+  font-size: 1.05rem;
+}
+.site-cart-button:hover,
+.site-menu-button:hover { border-color: #f4cf6a; color: #f4cf6a; }
+.site-cart-badge {
+  position: absolute;
+  top: -.35rem;
+  right: -.35rem;
+  min-width: 1.2rem;
+  height: 1.2rem;
+  display: grid;
+  place-items: center;
+  padding: 0 .25rem;
+  border-radius: 999px;
+  background: #e0ad2f;
+  color: #10293a;
+  font-size: .65rem;
+  font-weight: 900;
+}
+.site-menu-button { display: none; }
+.site-mobile-menu {
+  position: fixed;
+  inset: 72px 0 auto;
+  z-index: 100;
+  max-height: calc(100vh - 72px);
+  overflow-y: auto;
+  padding: 1.2rem 1.35rem 1.6rem;
+  background: rgba(12,30,44,.995);
+  border-top: 1px solid rgba(255,255,255,.1);
+  box-shadow: 0 22px 45px rgba(4,18,28,.32);
+}
+.site-mobile-menu.hidden { display: none !important; }
+.site-mobile-menu.is-open { display: grid; gap: .35rem; }
+.site-mobile-menu-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: .35rem; color: #fff; font-weight: 800; }
+.site-mobile-menu-head strong { color: #e0ad2f; }
+.site-mobile-menu-head button { width: 2.6rem; height: 2.6rem; color: #fff; font-size: 2rem; line-height: 1; }
+.site-mobile-link { padding: .85rem .25rem; border-bottom: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.88); font-size: 1rem; font-weight: 800; letter-spacing: .03em; }
+.site-mobile-link.is-active { color: #f4cf6a; }
+.site-mobile-language { color: #a5e2e2; }
+.site-mobile-planner { margin-top: .65rem; padding: .9rem 1rem; border: 0; border-radius: 999px; background: #e0ad2f; color: #10293a; text-align: center; }
+
 #experiences-search { padding-left: 1rem !important; padding-right: 5.75rem !important; }
 #experiences-search::-webkit-search-cancel-button {
   -webkit-appearance: none;
@@ -263,12 +415,6 @@ section:has(#newsletter-form) { display: none !important; }
   margin-top: 1.25rem !important;
 }
 
-/* Las fichas antiguas incluian una segunda barra fija de reserva que competia
-   con el WhatsApp flotante. La accion principal ya vive dentro de la ficha. */
-body > div[class~="fixed"][class~="bottom-0"]:has(button[onclick*="addToCart"]) {
-  display: none !important;
-}
-
 .site-footer .social-badge {
   width: 48px;
   height: 48px;
@@ -286,6 +432,132 @@ body > div[class~="fixed"][class~="bottom-0"]:has(button[onclick*="addToCart"]) 
   opacity: .86;
   transform: scale(1.08);
 }
+
+.site-footer .site-social-links { flex-wrap: wrap; }
+.site-footer .social-badge-image { overflow: hidden; background: #fff; padding: .42rem; }
+.site-footer .social-badge-image img { width: 100%; height: 100%; object-fit: contain; border-radius: .35rem; }
+.site-footer .social-badge-youtube { background: #ff0033; }
+
+/* Fichas de experiencia: la tarjeta lateral vuelve al flujo normal y la
+   unica accion persistente vive en la barra inferior compartida. */
+.experience-detail-page .booking-inline-shell,
+.experience-detail-page .booking-inline-card {
+  position: static !important;
+  top: auto !important;
+  height: auto !important;
+  max-height: none !important;
+  transform: none !important;
+}
+.experience-detail-page .booking-inline-shell { align-self: start !important; overflow: visible !important; }
+.experience-detail-page .booking-inline-card { z-index: auto !important; }
+.experience-detail-page.has-experience-booking-bar { padding-bottom: 78px; }
+.experience-booking-bar {
+  position: fixed !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 900 !important;
+  min-height: 72px;
+  display: flex !important;
+  align-items: center;
+  gap: 1rem;
+  padding: .72rem clamp(1rem, 2vw, 2rem) !important;
+  background: rgba(255,255,255,.98) !important;
+  border-top: 1px solid #dfe7ea !important;
+  box-shadow: 0 -12px 32px rgba(16,41,58,.12) !important;
+  backdrop-filter: blur(12px);
+}
+.experience-booking-bar > .shrink-0:first-child,
+.experience-booking-summary { margin-right: auto; min-width: 0; }
+.experience-booking-summary { display: grid; line-height: 1.05; }
+.experience-booking-summary span { color: #8794a5; font-size: .65rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+.experience-booking-summary strong { margin-top: .35rem; color: #3f2761; font-size: clamp(1rem, 1.55vw, 1.45rem); font-weight: 900; white-space: nowrap; }
+.experience-booking-actions,
+.experience-booking-bar > .flex:last-child { display: flex; align-items: center; justify-content: flex-end; gap: .65rem; margin-left: auto; }
+.experience-booking-primary,
+.experience-booking-whatsapp {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  margin: 0 !important;
+  padding: .72rem 1.35rem !important;
+  border-radius: 999px !important;
+  color: #fff !important;
+  font-size: .86rem !important;
+  font-weight: 850 !important;
+  line-height: 1 !important;
+  white-space: nowrap;
+}
+.experience-booking-primary { background: #4b2d70 !important; }
+.experience-booking-whatsapp { background: #16bd62 !important; }
+.experience-booking-bar > .flex:last-child > button,
+.experience-booking-bar > .flex:last-child > a {
+  min-height: 46px !important;
+  margin: 0 !important;
+  padding: .72rem 1.25rem !important;
+  border-radius: 999px !important;
+  line-height: 1 !important;
+}
+.experience-detail-page.has-experience-booking-bar .whatsapp-container { bottom: 86px !important; }
+.experience-detail-page footer { padding-bottom: 2rem !important; }
+
+/* Carruseles y galerias interiores proporcionados: las miniaturas no recortan
+   la fotografia y el visor principal ocupa menos altura. */
+.experience-detail-page .ps-wrap {
+  width: min(100%, 1040px) !important;
+  height: clamp(240px, 35vw, 390px) !important;
+  margin-inline: auto !important;
+  background: #10293a !important;
+}
+.experience-detail-page .ps-slide img {
+  object-fit: contain !important;
+  background: #10293a;
+}
+.experience-detail-page main .gallery img {
+  height: clamp(118px, 13vw, 170px) !important;
+  object-fit: contain !important;
+  background: #e7f0f1;
+}
+
+.catalog-page #experiences-grid { gap: 2rem !important; }
+.catalog-page .catalog-card { border: 1px solid rgba(16,41,58,.08); box-shadow: 0 14px 36px rgba(16,41,58,.09) !important; }
+.catalog-page .catalog-card > div:not(.catalog-media) { padding: clamp(.85rem, 1.35vw, 1.15rem) !important; }
+.catalog-page .catalog-card h3 { margin-bottom: .45rem !important; line-height: 1.08 !important; }
+.catalog-page .catalog-card h3 + p { margin-bottom: .58rem !important; line-height: 1.42 !important; }
+.catalog-page .catalog-card .grid { row-gap: .38rem !important; }
+.catalog-page .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid) {
+  width: min(100%, 520px) !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .48rem !important;
+}
+.catalog-page .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid) > * {
+  min-height: 40px !important;
+  margin: 0 !important;
+  padding: .58rem .72rem !important;
+  font-size: .76rem !important;
+  line-height: 1.15 !important;
+}
+.catalog-page .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid) > .whatsapp-info-btn {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 1280px) {
+  .catalog-page .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid) {
+    width: min(100%, 680px) !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .catalog-page .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid) > .whatsapp-info-btn {
+    grid-column: auto;
+  }
+}
+
+.site-whatsapp-widget { z-index: 1000 !important; }
+.site-whatsapp-widget .whatsapp-float { display: grid !important; place-items: center !important; gap: 0 !important; padding: 0 !important; border: 0 !important; background: transparent !important; }
+.site-whatsapp-widget .whatsapp-text { display: none !important; }
+.site-whatsapp-widget .whatsapp-icon { display: block !important; width: 50px !important; height: 50px !important; object-fit: contain !important; filter: drop-shadow(0 5px 12px rgba(0,0,0,.22)); }
 
 .site-search-shell { position: relative; z-index: 70; width: min(620px, calc(100vw - 2rem)); margin: 1.5rem auto 0; text-align: left; }
 .site-search-shell > i { position: absolute; left: 1rem; top: 1.05rem; z-index: 2; color: #0f8f9d; }
@@ -307,9 +579,6 @@ body > div[class~="fixed"][class~="bottom-0"]:has(button[onclick*="addToCart"]) 
 .site-search-result--empty { display: block; }
 @keyframes site-search-panel-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes site-search-item-in { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
-
-.mobile-bar + .whatsapp-container,
-[class~="fixed"][class~="bottom-0"] + .whatsapp-container { display: none !important; }
 
 nav .hidden.md\:flex > a:not(#lang-switch):not([href*="arma-tu-viaje"]):not(.btn-primary) {
   position: relative;
@@ -570,6 +839,25 @@ button[data-filter].active, button[data-filter].active-filter,
 .gallery-lightbox img { max-width: min(1100px, 94vw); max-height: 86vh; object-fit: contain; border-radius: 1rem; }
 .gallery-lightbox button { position: absolute; top: 1.25rem; right: 1.25rem; width: 46px; height: 46px; border-radius: 50%; background: #fff; color: var(--brand-ink); font-size: 1.4rem; }
 
+.gallery-page .gallery-tile,
+.gallery-page .gallery-tile.wide {
+  height: auto !important;
+  min-height: 0 !important;
+}
+.gallery-page .gallery-tile img,
+.gallery-page .gallery-tile.wide img {
+  width: 100%;
+  height: auto !important;
+  object-fit: contain !important;
+}
+.gallery-page .gallery-final-cta {
+  background: linear-gradient(135deg, #10293a 0%, #123e50 100%) !important;
+  color: #fff !important;
+}
+.gallery-page .gallery-final-cta h2 { color: #fff !important; text-shadow: 0 2px 20px rgba(0,0,0,.25); }
+.gallery-page .gallery-final-cta p { color: rgba(255,255,255,.84) !important; }
+.gallery-page .gallery-final-cta a:last-child { border-color: rgba(255,255,255,.82) !important; color: #fff !important; }
+
 @media (min-width: 768px) {
   .whatsapp-container { right: 18px !important; bottom: 18px !important; }
   .whatsapp-icon { width: 50px !important; height: 50px !important; }
@@ -577,7 +865,22 @@ button[data-filter].active, button[data-filter].active-filter,
 }
 
 @media (max-width: 767px) {
-  nav { min-height: 60px; }
+  nav { min-height: 64px; }
+  .site-navbar { min-height: 64px; }
+  .site-navbar-inner { min-height: 64px; padding: 0 .85rem; grid-template-columns: minmax(0, 1fr) auto; gap: .65rem; }
+  .site-brand { gap: .48rem; min-width: 0; }
+  .site-brand picture { width: 5.55rem; height: 3rem; }
+  .site-brand-copy { overflow: hidden; }
+  .site-brand-copy strong { overflow: hidden; font-size: clamp(.94rem, 4.6vw, 1.18rem); text-overflow: ellipsis; }
+  .site-brand-copy small { overflow: hidden; font-size: .43rem; letter-spacing: .085em; text-overflow: ellipsis; }
+  .site-navbar-links,
+  .site-language-link,
+  .site-planner-cta { display: none; }
+  .site-navbar-tools { gap: .45rem; }
+  .site-menu-button { display: inline-grid; }
+  .site-cart-button,
+  .site-menu-button { width: 2.45rem; height: 2.45rem; border-radius: .72rem; }
+  .site-mobile-menu { inset: 64px 0 auto; max-height: calc(100vh - 64px); }
   nav > .container { min-height: 60px; padding-left: 1rem !important; padding-right: 1rem !important; }
   nav a[href$="index.html"] img { height: 2.35rem !important; }
   nav a[href$="index.html"] .text-2xl { font-size: 1.15rem !important; }
@@ -651,9 +954,42 @@ button[data-filter].active, button[data-filter].active-filter,
   #cookie-consent-banner { padding: .55rem .65rem !important; gap: .45rem !important; font-size: .69rem !important; line-height: 1.35 !important; }
   #cookie-consent-banner > span { max-width: 100% !important; }
   #cookie-consent-accept { padding: .55rem 1.1rem !important; font-size: .72rem !important; }
+  .experience-detail-page.has-experience-booking-bar { padding-bottom: 66px; }
+  .experience-booking-bar { min-height: 60px; gap: .5rem; padding: .5rem .7rem !important; }
+  .experience-booking-bar .hidden { display: none !important; }
+  .experience-booking-bar > .shrink-0:first-child,
+  .experience-booking-summary { max-width: 38%; }
+  .experience-booking-summary span,
+  .experience-booking-bar > .shrink-0:first-child > :first-child { display: none; }
+  .experience-booking-summary strong,
+  .experience-booking-bar > .shrink-0:first-child .price-value { margin: 0; font-size: clamp(.84rem, 3.8vw, 1rem) !important; white-space: nowrap; }
+  .experience-booking-actions,
+  .experience-booking-bar > .flex:last-child { gap: .38rem; }
+  .experience-booking-primary,
+  .experience-booking-whatsapp,
+  .experience-booking-bar > .flex:last-child button {
+    min-height: 42px;
+    padding: .62rem .78rem !important;
+    border-radius: 999px !important;
+    font-size: .75rem !important;
+  }
+  .experience-booking-primary span,
+  .experience-booking-whatsapp span { display: inline; }
+  .experience-detail-page.has-experience-booking-bar .whatsapp-container { bottom: 72px !important; }
+  .experience-detail-page .ps-wrap { width: calc(100% - 1rem) !important; height: clamp(205px, 61vw, 280px) !important; }
+  .experience-detail-page main .gallery img { height: 120px !important; }
+  .site-whatsapp-widget .whatsapp-icon { width: 44px !important; height: 44px !important; }
 }
 
 @media (min-width: 768px) and (max-width: 1320px) {
+  .site-navbar-inner { padding-inline: .85rem; gap: .9rem; }
+  .site-brand picture { width: 5.35rem; }
+  .site-brand-copy strong { font-size: 1.02rem; }
+  .site-brand-copy small { font-size: .44rem; letter-spacing: .08em; }
+  .site-navbar-links { gap: .72rem; }
+  .site-nav-link { font-size: .72rem; }
+  .site-planner-cta { padding-inline: .9rem; font-size: .7rem; }
+  .site-language-link { min-width: 2.35rem; }
   nav .container { padding-left: 1rem !important; padding-right: 1rem !important; }
   nav .hidden.md\:flex > a { font-size: .95rem !important; }
   nav .space-x-8 > :not([hidden]) ~ :not([hidden]),

@@ -145,21 +145,22 @@
       @media (min-width: 768px) {
         #experiences-grid > [data-category].catalog-card {
           display: grid !important;
-          grid-template-columns: minmax(300px, 40%) minmax(0, 60%);
-          align-items: stretch !important;
+          grid-template-columns: minmax(290px, 40%) minmax(0, 60%);
+          align-items: center !important;
+          min-height: 0;
         }
         #experiences-grid > [data-category].catalog-card > .catalog-media {
           width: 100% !important;
-          height: 100%;
-          min-height: 360px;
-          align-self: stretch;
+          height: clamp(225px, 17vw, 270px);
+          min-height: 0;
+          align-self: center;
           overflow: hidden;
           background: #eef3f4;
         }
         #experiences-grid > [data-category].catalog-card > .catalog-media img {
           width: 100%;
           height: 100% !important;
-          min-height: 360px;
+          min-height: 0;
           object-fit: cover;
         }
         #experiences-grid
@@ -172,9 +173,9 @@
       }
       @media (min-width: 1024px) {
         #experiences-grid > [data-category].catalog-card {
-          height: 540px;
-          min-height: 540px;
-          max-height: 540px;
+          height: auto;
+          min-height: 270px;
+          max-height: none;
         }
         .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid) {
           display: grid !important;
@@ -221,8 +222,8 @@
         #experiences-grid > [data-category].catalog-card > .catalog-media,
         #experiences-grid > [data-category].catalog-card > .catalog-media img {
           width: 100% !important;
-          height: 230px !important;
-          min-height: 230px;
+          height: 178px !important;
+          min-height: 178px;
           object-fit: cover;
         }
         .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid) {
@@ -1205,7 +1206,7 @@
     <link rel="alternate" hreflang="es" href="https://dunasyolas.com/experiences"/>
     <link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/experiences"/>
     <link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/experiences"/>
-    <link rel="stylesheet" href="css/brand-refresh.css?v=20260811j"/>
+    <link rel="stylesheet" href="css/brand-refresh.css?v=20260812m"/>
 </head>
   <body class="catalog-page bg-gray-50 text-gray-800 antialiased">
     <!-- Navbar -->
@@ -2649,7 +2650,7 @@
 
           <!-- Golden Hours: Sunset + Beach Club -->
           <div id="experiencia-golden-hours-cartagena" data-category="agua" data-price="125000" data-order="50" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
-            <div class="md:w-1/2 relative catalog-media"><img src="images/backpackers/golden-hours-cartagena/01.webp" alt="Golden Hours: Sunset + Beach Club desde Cartagena" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"/><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Nuevo</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Sunset · Beach club privado</div></div>
+            <div class="md:w-1/2 relative catalog-media"><img src="images/catamaran-cartagena-atardecer.webp" alt="Golden Hours: Sunset + Beach Club desde Cartagena" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"/><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Nuevo</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Sunset · Beach club privado</div></div>
             <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Golden Hours: Sunset + Beach Club</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Atardecer en lancha deportiva, música, coctelería y parada en beach club privado frente a Cartagena.</p><div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700"><span><i class="fas fa-clock text-[#5B3A82] mr-1"></i>3 horas</span><span><i class="fas fa-map-marker-alt text-[#5B3A82] mr-1"></i>Desde Cartagena</span><span><i class="fas fa-user-check text-[#5B3A82] mr-1"></i>Acompañamiento</span><span><i class="fas fa-camera text-[#5B3A82] mr-1"></i>Fotos reales</span></div><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">Precio público · por persona</span><span class="price-value" data-cop-val="125000">$125.000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="golden-hours-cartagena.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a><button onclick="addToCart('golden_hours',this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button><button onclick="openWhatsApp(&quot;Hola, vengo desde la web de Dunas y Olas y quiero más información sobre Golden Hours: Sunset + Beach Club.&quot;)" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button></div></div></div>
           </div>
 
@@ -3388,6 +3389,6 @@
 <script src="js/cart.js?v=20260804"></script>
       <script src="js/currency.js"></script>
       <script src="js/cookie-consent.js"></script>
-    <script src="js/site-refresh.js?v=20260806a" defer></script>
+    <script src="js/site-refresh.js?v=20260812m" defer></script>
 </body>
 </html>

@@ -420,7 +420,7 @@ function articleHtml(article) {
   <link href="../../css/tailwind.css" rel="stylesheet"/>
   <link rel="preload" href="../../css/fontawesome-local.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
   <noscript><link rel="stylesheet" href="../../css/fontawesome-local.min.css"/></noscript>
-  <link rel="stylesheet" href="../../css/brand-refresh.css?v=20260812a"/>
+  <link rel="stylesheet" href="../../css/brand-refresh.css?v=20260812m"/>
   <script type="application/ld+json">${schema(article)}</script>
   <style>
     :root{--ink:#102535;--gold:#d5aa22;--teal:#0f8f9d;--paper:#f7f3ed}
@@ -434,6 +434,7 @@ function articleHtml(article) {
     .article-content li{margin:.45rem 0}.article-content h2{font-family:Georgia,serif;font-size:clamp(1.65rem,3vw,2.25rem);line-height:1.2;margin:2.6rem 0 1rem;color:#102535}
     .article-content h3{font-size:1.15rem;font-weight:800;margin:1.5rem 0 .55rem;color:#19364a}
     .article-content a{color:#087f8c;text-decoration:underline;text-underline-offset:3px;font-weight:650}
+    .article-content table{width:100%;border-collapse:collapse;margin:1.2rem 0 1.8rem;font-size:.98rem}.article-content th,.article-content td{padding:.85rem .75rem;border-bottom:1px solid #dbe4e8;text-align:left;vertical-align:top}.article-content th{background:#edf7f6;color:#102535;font-weight:800}.article-content tr:last-child td{border-bottom:0}
     .notice,.tip-box{border-radius:16px;padding:1.1rem 1.25rem;margin:1.5rem 0}.notice{background:#fff4cf;border:1px solid #e7c655;color:#5b4810}.tip-box{background:#eaf8f7;border-left:5px solid #0f8f9d}
     .notice p,.tip-box p{margin:0;color:inherit}.schedule-grid{display:grid;gap:.55rem}.schedule-grid p{margin:0;padding:.7rem 1rem;background:#f7f3ed;border-radius:10px}
     .article-cover{margin:1.75rem 0 0}.article-cover figcaption{font-size:.75rem;color:#718096;margin-top:.45rem;text-align:center}
@@ -445,7 +446,7 @@ function articleHtml(article) {
     .meta-row{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;color:#d9e4ea;font-size:.9rem;margin-top:1rem}
     .breadcrumb{max-width:1180px;margin:0 auto;padding:1rem 1.5rem;font-size:.82rem;color:#617584}.breadcrumb a{color:#087f8c}
     @media(max-width:900px){.article-shell{grid-template-columns:1fr}.side-card{position:static}.article-hero{padding-top:5.8rem}.article-content{border-radius:18px}.article-hero h1{font-size:2.3rem}}
-    @media(max-width:520px){.article-shell{padding:2rem .85rem}.article-hero h1{font-size:1.95rem}.article-content p,.article-content li{font-size:1rem}.article-content{padding:1.25rem}.article-hero img{height:250px}}
+    @media(max-width:520px){.article-shell{padding:2rem .85rem}.article-hero h1{font-size:1.95rem}.article-content p,.article-content li{font-size:1rem}.article-content{padding:1.25rem}.article-hero img{height:250px}.article-content table{font-size:.88rem}.article-content th,.article-content td{padding:.65rem .45rem}}
   </style>
 </head>
 <body>
@@ -476,15 +477,9 @@ function articleHtml(article) {
   <footer class="bg-gray-900 text-white py-12"><div class="container mx-auto px-6 text-center"><img src="../../images/logo-icon-nav-small.webp" alt="Dunas & Olas" width="184" height="83" class="h-14 w-auto mx-auto mb-3" loading="lazy" decoding="async"/><p>Mexicana en Cartagena · RNT No. 292710</p><p class="text-gray-400 text-sm mt-3"><a href="../../policies.html">Términos</a> · <a href="../../privacy.html">Privacidad</a> · <a href="../../faq.html">Preguntas frecuentes</a></p></div></footer>
   <div class="whatsapp-container"><button id="wa-main-btn" onclick="openWhatsApp('Hola, vengo desde la web de Dunas y Olas y quiero más información sobre ${esc(article.shortTitle)}.')" class="whatsapp-float" aria-label="Contactar a Dunas y Olas por WhatsApp"><img src="../../images/WhatsApp-96.webp" alt="WhatsApp" class="whatsapp-icon" width="96" height="96" loading="lazy" decoding="async"/><span class="whatsapp-text">Contactar / Contact</span></button></div>
   <script>const WHATSAPP_NUMBER="573163030589";function openWhatsApp(msg){window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(msg),"_blank","noopener")};document.getElementById("mobile-menu-btn")?.addEventListener("click",()=>{const m=document.getElementById("mobile-menu");m.classList.remove("hidden");setTimeout(()=>m.classList.remove("opacity-0"),10)});document.getElementById("close-menu-btn")?.addEventListener("click",()=>{const m=document.getElementById("mobile-menu");m.classList.add("opacity-0");setTimeout(()=>m.classList.add("hidden"),250)});</script>
-  <script src="../../js/currency.js"></script><script src="../../js/cookie-consent.js"></script><script src="../../js/site-refresh.js?v=20260812a" defer></script>
+  <script src="../../js/currency.js"></script><script src="../../js/cookie-consent.js"></script><script src="../../js/site-refresh.js?v=20260812m" defer></script>
 </body>
 </html>`;
-}
-
-for (const article of articles) {
-  const dir = path.join(root, "blog", article.slug);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, "index.html"), articleHtml(article), "utf8");
 }
 
 function blogCard(article) {
@@ -559,8 +554,17 @@ function updateSitemap() {
   fs.writeFileSync(file, xml, "utf8");
 }
 
-updateBlogIndex();
-updateHomepage();
-updateSitemap();
+function buildCurrentBlog() {
+  for (const article of articles) {
+    const dir = path.join(root, "blog", article.slug);
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, "index.html"), articleHtml(article), "utf8");
+  }
+  updateBlogIndex();
+  updateHomepage();
+  updateSitemap();
+}
 
-module.exports = { articles };
+if (require.main === module) buildCurrentBlog();
+
+module.exports = { articles, articleHtml, blogCard, buildCurrentBlog };

@@ -1158,4 +1158,46 @@
     <priority>0.8</priority>
   </url>
 <!-- CURRENT-2026-BLOG:END -->
+<!-- TOURIST-RULES-2026-BLOG:START -->
+  <url>
+    <loc>https://dunasyolas.com/blog/cuanto-cuesta-tour-islas-del-rosario-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://dunasyolas.com/blog/cuanto-cuesta-tour-islas-del-rosario-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cuanto-cuesta-tour-islas-del-rosario-2026/"/>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/seguro-obligatorio-islas-rosario-san-bernardo-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://dunasyolas.com/blog/seguro-obligatorio-islas-rosario-san-bernardo-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/seguro-obligatorio-islas-rosario-san-bernardo-2026/"/>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/como-verificar-agencia-rnt-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://dunasyolas.com/blog/como-verificar-agencia-rnt-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/como-verificar-agencia-rnt-cartagena/"/>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/derechos-turista-cobros-excesivos-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://dunasyolas.com/blog/derechos-turista-cobros-excesivos-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/derechos-turista-cobros-excesivos-cartagena/"/>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/requisitos-lancha-segura-islas-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://dunasyolas.com/blog/requisitos-lancha-segura-islas-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/requisitos-lancha-segura-islas-cartagena/"/>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<!-- TOURIST-RULES-2026-BLOG:END -->
 </urlset>

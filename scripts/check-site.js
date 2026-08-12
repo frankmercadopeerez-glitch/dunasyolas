@@ -22,6 +22,7 @@ for (const file of walk(root).filter((file) => file.endsWith(".html"))) {
   if (!/<title>\s*[^<]+/i.test(html)) failures.push(`${rel}: falta title`);
   if (!/<meta\s+[^>]*name=["']description["'][^>]*content=["'][^"']+/i.test(html)) failures.push(`${rel}: falta meta description`);
   if (!/<h1\b/i.test(html)) failures.push(`${rel}: falta h1`);
+  if (!/<script\s+[^>]*src=["'][^"']*js\/site-refresh\.js(?:\?[^"']*)?["']/i.test(html)) failures.push(`${rel}: falta la cabecera y el pie compartidos`);
   if (/G-XXXXXXXXXX/i.test(html)) failures.push(`${rel}: contiene un ID ficticio de Analytics`);
   if (/onclick="openWhatsApp\("|onclick='openWhatsApp\('/i.test(html)) failures.push(`${rel}: comillas inválidas en un botón de WhatsApp`);
   if (/desde Cartagena desde Cartagena/i.test(html)) failures.push(`${rel}: texto duplicado "desde Cartagena"`);
