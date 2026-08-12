@@ -45,6 +45,96 @@
     });
   }
 
+  function initSiteFooter() {
+    var footer = document.querySelector("footer");
+    if (!footer) {
+      footer = document.createElement("footer");
+      var whatsapp = document.querySelector(".whatsapp-container");
+      if (whatsapp) whatsapp.before(footer);
+      else document.body.appendChild(footer);
+    }
+    var isEnglish = (document.documentElement.lang || "es").toLowerCase().indexOf("en") === 0;
+    var copy = isEnglish ? {
+      signature: "Mexican in Cartagena",
+      tagline: "The warmth of the north, the magic of the Caribbean.",
+      explore: "Explore",
+      planner: "Plan your trip",
+      experiences: "Experiences",
+      about: "About us",
+      contact: "Contact",
+      social: "Social media",
+      rights: "All rights reserved.",
+      terms: "Terms and Conditions",
+      privacy: "Privacy Policy",
+      faq: "Frequently Asked Questions",
+    } : {
+      signature: "Mexicana en Cartagena",
+      tagline: "La calidez del norte, la magia del Caribe.",
+      explore: "Explorar",
+      planner: "Arma tu viaje",
+      experiences: "Experiencias",
+      about: "Nosotros",
+      contact: "Contacto",
+      social: "Redes",
+      rights: "Todos los derechos reservados.",
+      terms: "Terminos y Condiciones",
+      privacy: "Politica de Privacidad",
+      faq: "Preguntas Frecuentes",
+    };
+
+    footer.className = "site-footer bg-gray-900 text-white pt-12 pb-8 border-t border-gray-800";
+    footer.innerHTML = `
+      <div class="container mx-auto px-6 text-center md:text-left">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 md:mb-12">
+          <div class="flex flex-col items-center md:items-start">
+            <picture><source srcset="/images/logo-master.webp" type="image/webp"/><img src="/images/logo-master.png" alt="Dunas & Olas - ${copy.signature}" width="315" height="148" class="h-12 w-auto object-contain mb-2" loading="lazy" decoding="async"/></picture>
+            <span class="block mb-4 leading-none select-none">
+              <span class="block font-extrabold tracking-tight text-xl text-white">Dunas <span class="text-yellow-500">&amp; Olas</span></span>
+              <span class="brand-signature block text-[9px] uppercase tracking-[0.25em] text-gray-400 font-semibold mt-1">${copy.signature}</span>
+            </span>
+            <p class="text-gray-400 text-xs leading-relaxed max-w-xs">${copy.tagline}</p>
+          </div>
+          <div>
+            <h3 class="text-white font-bold mb-4 text-sm">${copy.explore}</h3>
+            <ul class="space-y-2 text-gray-400 text-xs">
+              <li><a href="/arma-tu-viaje" class="hover:text-yellow-400">&#10022; ${copy.planner}</a></li>
+              <li><a href="/experiences" class="hover:text-blue-400">${copy.experiences}</a></li>
+              <li><a href="/galeria" class="hover:text-blue-400">${isEnglish ? "Gallery" : "Galeria"}</a></li>
+              <li><a href="/kitesurf" class="hover:text-blue-400">Kitesurf</a></li>
+              <li><a href="${isEnglish ? "/en/about" : "/about"}" class="hover:text-blue-400">${copy.about}</a></li>
+              <li><a href="${isEnglish ? "/en/blog/" : "/blog/"}" class="hover:text-blue-400">Blog</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white font-bold mb-4 text-sm">${copy.contact}</h3>
+            <ul class="space-y-2 text-gray-400 text-xs flex flex-col items-center md:items-start">
+              <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2 text-blue-500"></i>Manga, Cartagena</li>
+              <li class="flex items-center"><i class="fab fa-whatsapp mr-2 text-blue-500"></i>+57 316 303 0589</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white font-bold mb-4 text-sm">${copy.social}</h3>
+            <div class="flex justify-center md:justify-start gap-2">
+              <a href="https://www.instagram.com/mexicanaencartagena?igsh=MTJ2MjZwdmU5NjZ4Nw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="transition hover:opacity-80"><img src="/images/instagram-logo.png" alt="Instagram" class="w-12 h-12 hover:scale-110 transition transform" width="512" height="512" loading="lazy" decoding="async"/></a>
+              <a href="https://www.facebook.com/share/1aQqHEvkyG/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="transition hover:opacity-80"><img src="/images/logo-facebook.png" alt="Facebook" class="w-12 h-12 hover:scale-110 transition transform" width="512" height="512" loading="lazy" decoding="async"/></a>
+              <a href="https://www.tiktok.com/@mexicanaencartagena?_r=1&amp;_t=ZS-97Sfx04blGW" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="social-badge transition hover:opacity-80" style="background:#000"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-400 text-center">
+          <p>&copy; 2026 Dunas &amp; Olas. ${copy.rights}</p>
+          <p class="mt-1">RNT No. 292710</p>
+          <div class="mt-2 space-x-3"><a href="/policies" class="hover:text-white">${copy.terms}</a> &middot; <a href="/privacy" class="hover:text-white">${copy.privacy}</a> &middot; <a href="/faq" class="hover:text-white">${copy.faq}</a></div>
+        </div>
+      </div>`;
+  }
+
+  function removeLegacyBookingBars() {
+    document.querySelectorAll('body > div[class~="fixed"][class~="bottom-0"]').forEach(function (bar) {
+      if (bar.querySelector('button[onclick*="addToCart"]')) bar.remove();
+    });
+  }
+
   function initWhatsAppMessages() {
     var nativeOpen = window.open.bind(window);
     var clickContext = "";
@@ -240,9 +330,9 @@
 
   if (document.readyState === "loading") {
     initWhatsAppMessages();
-    document.addEventListener("DOMContentLoaded", function () { initBrandIdentity(); initGalleryNavigation(); removeNewsletterSections(); addMarineSectionTransitions(); initReveal(); initGallery(); });
+    document.addEventListener("DOMContentLoaded", function () { initBrandIdentity(); initGalleryNavigation(); removeNewsletterSections(); initSiteFooter(); removeLegacyBookingBars(); addMarineSectionTransitions(); initReveal(); initGallery(); });
   } else {
     initWhatsAppMessages();
-    initBrandIdentity(); initGalleryNavigation(); removeNewsletterSections(); addMarineSectionTransitions(); initReveal(); initGallery();
+    initBrandIdentity(); initGalleryNavigation(); removeNewsletterSections(); initSiteFooter(); removeLegacyBookingBars(); addMarineSectionTransitions(); initReveal(); initGallery();
   }
 })();

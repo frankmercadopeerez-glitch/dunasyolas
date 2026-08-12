@@ -264,6 +264,91 @@ nav .hidden.md\:flex > a {
 }
 section:has(#newsletter-form) { display: none !important; }
 
+/* Un solo widget flotante para todo el sitio. Algunas experiencias antiguas
+   traian coordenadas y tamanos propios; los !important evitan que vuelvan a
+   desplazarlo o agrandarlo sobre el contenido. */
+.whatsapp-container {
+  position: fixed !important;
+  right: 18px !important;
+  bottom: 18px !important;
+  z-index: 1000 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.whatsapp-float {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  border: 0;
+  padding: 0;
+  background: transparent !important;
+  cursor: pointer;
+  animation: dyo-whatsapp-float 3s ease-in-out infinite;
+  transition: transform .2s ease;
+}
+
+.whatsapp-float:hover {
+  animation-play-state: paused;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.whatsapp-icon {
+  width: 50px !important;
+  height: 50px !important;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 12px rgba(4, 18, 28, .24));
+}
+
+.whatsapp-text {
+  margin-top: .35rem;
+  padding: .28rem .7rem;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--brand-ink);
+  box-shadow: 0 5px 16px rgba(4, 18, 28, .18);
+  font-size: .72rem;
+  font-weight: 800;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+@keyframes dyo-whatsapp-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* Aire entre la accion de consulta y la explicacion previa al pago. */
+.booking .wa-btn + .notice,
+.booking .btn + .notice {
+  margin-top: 1.25rem !important;
+}
+
+/* Las fichas antiguas incluian una segunda barra fija de reserva que competia
+   con el WhatsApp flotante. La accion principal ya vive dentro de la ficha. */
+body > div[class~="fixed"][class~="bottom-0"]:has(button[onclick*="addToCart"]) {
+  display: none !important;
+}
+
+.site-footer .social-badge {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 22px;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.site-footer .social-badge:hover {
+  opacity: .86;
+  transform: scale(1.08);
+}
+
 .site-search-shell { position: relative; z-index: 70; width: min(620px, calc(100vw - 2rem)); margin: 1.5rem auto 0; text-align: left; }
 .site-search-shell > i { position: absolute; left: 1rem; top: 1.05rem; z-index: 2; color: #0f8f9d; }
 .site-search-input { width: 100%; border: 1px solid rgba(255,255,255,.5); border-radius: 999px; background: rgba(255,255,255,.96); color: #10293a; padding: .85rem 3rem .85rem 2.85rem; box-shadow: 0 12px 32px rgba(4,18,28,.22); outline: none; }
@@ -606,10 +691,9 @@ button[data-filter].active, button[data-filter].active-filter,
     justify-content: center;
   }
   .catalog-page #navbar #mobile-menu-btn { display: inline-flex; }
-  .whatsapp-container { right: 8px !important; bottom: 8px !important; }
+  .whatsapp-container { right: 10px !important; bottom: 10px !important; }
   .whatsapp-text { display: none !important; }
   .whatsapp-icon { width: 42px !important; height: 42px !important; }
-  .catalog-page .whatsapp-container { display: none !important; }
   .gallery-tile { min-height: 210px; }
   #galeria { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
   #galeria .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 205px; gap: .9rem; }
