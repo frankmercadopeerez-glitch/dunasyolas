@@ -1076,4 +1076,86 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+<!-- CURRENT-2026-BLOG:START -->
+  <url>
+    <loc>https://dunasyolas.com/blog/festival-nautico-cartagena-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://dunasyolas.com/blog/festival-nautico-cartagena-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/festival-nautico-cartagena-2026/"/>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/fiestas-independencia-cartagena-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://dunasyolas.com/blog/fiestas-independencia-cartagena-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/fiestas-independencia-cartagena-2026/"/>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/horarios-playas-cartagena-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://dunasyolas.com/blog/horarios-playas-cartagena-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/horarios-playas-cartagena-2026/"/>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/pico-y-placa-cartagena-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://dunasyolas.com/blog/pico-y-placa-cartagena-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/pico-y-placa-cartagena-2026/"/>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/cartagena-noviembre-clima-que-llevar/</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://dunasyolas.com/blog/cartagena-noviembre-clima-que-llevar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cartagena-noviembre-clima-que-llevar/"/>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/zarpar-seguro-islas-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://dunasyolas.com/blog/zarpar-seguro-islas-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/zarpar-seguro-islas-cartagena/"/>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/navidad-cartagena-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://dunasyolas.com/blog/navidad-cartagena-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/navidad-cartagena-2026/"/>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/festival-pastel-cartagenero-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://dunasyolas.com/blog/festival-pastel-cartagenero-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/festival-pastel-cartagenero-2026/"/>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/temporada-lluvias-cartagena-tours/</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://dunasyolas.com/blog/temporada-lluvias-cartagena-tours/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/temporada-lluvias-cartagena-tours/"/>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/calendario-eventos-cartagena-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://dunasyolas.com/blog/calendario-eventos-cartagena-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/calendario-eventos-cartagena-2026/"/>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<!-- CURRENT-2026-BLOG:END -->
 </urlset>
