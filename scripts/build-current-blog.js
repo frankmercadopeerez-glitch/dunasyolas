@@ -57,10 +57,13 @@ const articles = [
     category: "Eventos de Cartagena",
     categoryClass: "text-fuchsia-700",
     cardCategory: "actualidad destacado",
-    image: "images/chiva-rumbera.webp",
-    imageWidth: 1200,
-    imageHeight: 800,
-    alt: "Celebración cultural y festiva en Cartagena de Indias",
+    image: "images/blog/fiestas-independencia-cartagena-2026.webp",
+    cardImage: "images/blog/fiestas-independencia-cartagena-2026-card.webp",
+    imageWidth: 1600,
+    imageHeight: 900,
+    alt: "Comparsa de bailarines y músicos celebrando las Fiestas de Independencia en el Centro Histórico de Cartagena",
+    imageStyle: "height:clamp(260px,35vw,460px);object-position:center 46%",
+    coverStyle: "max-width:1180px;overflow:hidden;border-radius:24px 24px 0 0",
     reading: "10 min",
     event: { name: "Fiestas de Independencia de Cartagena 2026", startDate: "2026-11-01", endDate: "2026-11-15" },
     intro: "Las Fiestas de Independencia del 11 de Noviembre son una celebración cultural de ciudad, no solo una noche de fiesta. En 2026, la programación oficial se extiende durante la primera mitad de noviembre con cabildos, desfiles, música, Festival Náutico y coronación. Aquí tienes un calendario práctico para elegir fechas y reservar con criterio.",
@@ -460,7 +463,7 @@ function articleHtml(article) {
   <div id="mobile-menu" class="fixed inset-0 bg-gray-900/95 z-[10000] hidden flex flex-col justify-center items-center gap-8 opacity-0 transition-opacity"><a href="../../index.html" class="text-2xl font-bold text-white">Inicio</a><a href="../../experiences.html" class="text-2xl font-bold text-white">Experiencias</a><a href="../../galeria.html" class="text-2xl font-bold text-white">Galería</a><a href="../../about.html" class="text-2xl font-bold text-white">Nosotros</a><a href="../index.html" class="text-2xl font-bold text-white">Blog</a><button aria-label="Cerrar menú" id="close-menu-btn" class="absolute top-6 right-6 text-white text-3xl"><i class="fas fa-times"></i></button></div>
   <header class="article-hero">
     <div class="max-w-5xl mx-auto text-center px-6 pb-9"><span class="text-yellow-300 font-bold uppercase tracking-[.16em] text-xs">${esc(article.category)}</span><h1 class="font-serif text-4xl md:text-6xl font-bold leading-tight mt-4">${esc(article.title)}</h1><div class="meta-row"><span>Por Nohemi</span><span>Actualizado: 12 de agosto de 2026</span><span>${article.reading} de lectura</span></div></div>
-    <figure class="article-cover max-w-[1600px] mx-auto"><img src="../../${article.image}" alt="${esc(article.alt)}" width="${article.imageWidth}" height="${article.imageHeight}" loading="eager" decoding="async" fetchpriority="high"/>${eventImageNote}</figure>
+    <figure class="article-cover max-w-[1600px] mx-auto"${article.coverStyle ? ` style="${article.coverStyle}"` : ""}><img src="../../${article.image}" alt="${esc(article.alt)}" width="${article.imageWidth}" height="${article.imageHeight}" loading="eager" decoding="async" fetchpriority="high"${article.imageStyle ? ` style="${article.imageStyle}"` : ""}/>${eventImageNote}</figure>
   </header>
   <nav class="breadcrumb" aria-label="Migas de pan"><a href="../../index.html">Inicio</a> / <a href="../index.html">Blog</a> / <span>${esc(article.shortTitle)}</span></nav>
   <main class="article-shell">
