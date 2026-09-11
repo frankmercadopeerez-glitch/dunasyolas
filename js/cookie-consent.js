@@ -1,5 +1,5 @@
 (function () {
-  if (localStorage.getItem("nohemi_cookie_consent")) return;
+  try { if (localStorage.getItem("nohemi_cookie_consent")) return; } catch (_) {}
 
   var isEnglish = document.documentElement.lang === "en";
   var privacyHref = isEnglish ? "/en/privacy.html" : "/privacy.html";
@@ -24,9 +24,17 @@
   }
 
   document.body.appendChild(banner);
+  function updateNoticeHeight() {
+    document.documentElement.style.setProperty("--site-bottom-notice", banner.getBoundingClientRect().height + "px");
+  }
+  updateNoticeHeight();
+  var observer = typeof ResizeObserver !== "undefined" ? new ResizeObserver(updateNoticeHeight) : null;
+  if (observer) observer.observe(banner);
 
   document.getElementById("cookie-consent-accept").addEventListener("click", function () {
-    localStorage.setItem("nohemi_cookie_consent", "true");
+    try { localStorage.setItem("nohemi_cookie_consent", "true"); } catch (_) {}
+    if (observer) observer.disconnect();
     banner.remove();
+    document.documentElement.style.removeProperty("--site-bottom-notice");
   });
 })();

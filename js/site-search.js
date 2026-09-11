@@ -5,6 +5,7 @@
   if (!input || !results) return;
   var hero = input.closest(".home-hero");
   var index = [];
+  var english = document.documentElement.lang.indexOf("en") === 0;
   var revealTimer = 0;
   function positionResults() {
     if (results.classList.contains("hidden")) return;
@@ -52,7 +53,9 @@
     }).slice(0, 8);
     results.innerHTML = "";
     if (!matches.length) {
-      results.innerHTML = '<div class="site-search-result site-search-result--empty"><strong>Sin coincidencias</strong><span>Prueba con isla, Barú, playa, kitesurf, comida o Cartagena.</span></div>';
+      results.innerHTML = english
+        ? '<div class="site-search-result site-search-result--empty"><strong>No results</strong><span>Try islands, beach, kitesurf, food or Cartagena.</span></div>'
+        : '<div class="site-search-result site-search-result--empty"><strong>Sin coincidencias</strong><span>Prueba con isla, Barú, playa, kitesurf, comida o Cartagena.</span></div>';
     } else {
       matches.forEach(function (item) {
         var link = document.createElement("a"); link.className = "site-search-result"; link.href = item.url; link.setAttribute("role", "option");
@@ -75,11 +78,28 @@
     positionResults();
     revealResultsBelowInput();
   }
-  fetch("/search-index.json").then(function (response) { return response.json(); }).then(function (data) {
+  fetch(english ? "/en/search-index.json" : "/search-index.json").then(function (response) { if (!response.ok) throw new Error("Search unavailable"); return response.json(); }).then(function (data) {
     index = Array.isArray(data) ? data : []; input.addEventListener("input", render); input.addEventListener("focus", render);
-  }).catch(function () { input.placeholder = "Busca experiencias en nuestro catálogo"; });
+  }).catch(function () { input.placeholder = english ? "Browse our experiences catalog" : "Busca experiencias en nuestro catálogo"; });
   document.addEventListener("click", function (event) { if (!event.target.closest(".site-search-shell")) close(); });
-  input.addEventListener("keydown", function (event) { if (event.key === "Escape") close(); });
+  input.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") close();
+    if (event.key === "ArrowDown" && !results.classList.contains("hidden")) {
+      var first = results.querySelector("a");
+      if (first) { event.preventDefault(); first.focus(); }
+    }
+  });
+  results.addEventListener("keydown", function (event) {
+    var links = Array.from(results.querySelectorAll("a"));
+    var position = links.indexOf(document.activeElement);
+    if (event.key === "Escape") { close(); input.focus(); }
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      event.preventDefault();
+      var next = position + (event.key === "ArrowDown" ? 1 : -1);
+      if (next < 0) input.focus();
+      else if (links[next]) links[next].focus();
+    }
+  });
   window.addEventListener("resize", positionResults, { passive: true });
   window.addEventListener("scroll", positionResults, { passive: true });
 })();

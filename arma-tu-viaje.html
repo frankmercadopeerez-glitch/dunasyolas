@@ -45,7 +45,7 @@
   }
   </script>
   <link href="./css/tailwind.css" rel="stylesheet"/>
-  <link rel="preload" href="css/fontawesome-local.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link rel="stylesheet" href="css/fontawesome-local.min.css"/></noscript>
+  <link rel="preload" href="css/fontawesome-local.min.css?v=20260911a" as="style" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link rel="stylesheet" href="css/fontawesome-local.min.css?v=20260911a"/></noscript>
 
 
   <style>
@@ -331,7 +331,7 @@
       .pkg-card { height: 378px; }
     }
   </style>
-  <link rel="stylesheet" href="css/brand-refresh.css?v=20260812m"/>
+  <link rel="stylesheet" href="css/brand-refresh.css?v=20260911a"/>
 </head>
 
 <body class="bg-gray-50">
@@ -1265,10 +1265,14 @@ function getDays() {
   const days = [];
   const d = new Date(start);
   while (d < end) {
-    days.push(d.toISOString().split('T')[0]);
+    days.push(localDateKey(d));
     d.setDate(d.getDate() + 1);
   }
   return days;
+}
+
+function localDateKey(date) {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
 }
 
 function formatDate(iso) {
@@ -2046,7 +2050,7 @@ function openWhatsApp(msg) {
 // ─────────────────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   // Set min date to today
-  const today = new Date().toISOString().split('T')[0];
+  const today = localDateKey(new Date());
   document.getElementById('trip-arrival').min   = today;
   document.getElementById('trip-departure').min  = today;
 
@@ -2090,7 +2094,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <script src="js/currency.js"></script>
-<script src="js/cookie-consent.js"></script>
+<script src="js/cookie-consent.js?v=20260911a"></script>
 
 <script>
 // ── Preferencias de moneda (popup primera visita) ──────────────────────────
@@ -2197,6 +2201,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })();
 </script>
-  <script src="js/site-refresh.js?v=20260812m" defer></script>
+  <script src="js/site-refresh.js?v=20260911a" defer></script>
 </body>
 </html>

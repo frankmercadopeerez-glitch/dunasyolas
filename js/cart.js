@@ -484,10 +484,10 @@ function renderCart() {
           `<p class="font-semibold text-gray-900 text-sm">${d.name}</p>` +
           `<p class="text-xs text-gray-400 mb-2">${displayAmount(d.unitPrice)}${unitLabel}</p>` +
           '<div class="flex items-center gap-2">' +
-          `<button class="cart-qty-btn" onclick="changeQty('${id}', -1)">−</button>` +
+          `<button type="button" aria-label="Reducir cantidad" class="cart-qty-btn" onclick="changeQty('${id}', -1)">−</button>` +
           `<span class="text-sm font-bold w-6 text-center">${d.qty}</span>` +
-          `<button class="cart-qty-btn" onclick="changeQty('${id}', 1)">+</button>` +
-          `<button class="text-xs text-red-400 hover:text-red-600 ml-3" onclick="removeFromCart('${id}')"><i class="fas fa-trash-alt"></i></button>` +
+          `<button type="button" aria-label="Aumentar cantidad" class="cart-qty-btn" onclick="changeQty('${id}', 1)">+</button>` +
+          `<button type="button" aria-label="Eliminar experiencia" class="cart-qty-btn text-red-400 ml-3" onclick="removeFromCart('${id}')"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>` +
           "</div>" +
           "</div>" +
           `<div class="font-bold text-[#3F2761] text-sm whitespace-nowrap">${displayAmount(subtotal)}</div>` +
@@ -511,16 +511,25 @@ function renderCart() {
   }
 }
 
+let cartOpener;
 function toggleCart(open) {
   const overlay = document.getElementById("cart-overlay");
   const drawer = document.getElementById("cart-drawer");
   if (!overlay || !drawer) return;
   if (open) {
+    cartOpener = document.activeElement;
+    drawer.setAttribute("role", "dialog");
+    drawer.setAttribute("aria-modal", "true");
+    drawer.setAttribute("aria-label", "Carrito de experiencias");
     overlay.classList.add("active");
     drawer.classList.add("active");
+    document.body.style.overflow = "hidden";
+    requestAnimationFrame(() => drawer.querySelector("button")?.focus());
   } else {
     overlay.classList.remove("active");
     drawer.classList.remove("active");
+    document.body.style.overflow = "";
+    cartOpener?.focus();
   }
 }
 
@@ -655,6 +664,20 @@ if (typeof window !== "undefined") {
 
 if (typeof document !== "undefined") {
   document.addEventListener("DOMContentLoaded", renderCart);
+  document.addEventListener("keydown", function (event) {
+    const checkout = document.querySelector("#checkout-overlay.active");
+    const drawer = document.querySelector("#cart-drawer.active");
+    const dialog = checkout || drawer;
+    if (!dialog) return;
+    if (event.key === "Escape") { if (checkout) closeCheckout(); else toggleCart(false); }
+    if (event.key === "Tab") {
+      const controls = Array.from(dialog.querySelectorAll('button:not([disabled]), a[href], input, select, textarea')).filter(el => el.getClientRects().length && getComputedStyle(el).visibility !== 'hidden');
+      const first = controls[0], last = controls[controls.length - 1];
+      if (!first) return;
+      if (event.shiftKey && (document.activeElement === first || !dialog.contains(document.activeElement))) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && (document.activeElement === last || !dialog.contains(document.activeElement))) { event.preventDefault(); first.focus(); }
+    }
+  });
 }
 
 if (typeof module !== "undefined" && module.exports) {

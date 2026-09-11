@@ -84,8 +84,7 @@ try {
       const failed = [];
       const onFailed = (request) => {
         const url = request.url();
-        const optionalFontawesomeRegular = /\/fonts\/fa-regular-400\.(?:woff2|ttf)$/i.test(url);
-        if (url.startsWith(`http://127.0.0.1:${port}`) && !optionalFontawesomeRegular) failed.push(url);
+        if (url.startsWith(`http://127.0.0.1:${port}`)) failed.push(url);
       };
       page.on("requestfailed", onFailed);
       const response = await page.goto(`http://127.0.0.1:${port}${route}`, { waitUntil: "networkidle0", timeout: 30000 });

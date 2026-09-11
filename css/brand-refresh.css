@@ -34,6 +34,29 @@
 }
 
 html { scroll-behavior: smooth; }
+html { scroll-padding-top: 88px; }
+body.site-menu-open { overflow: hidden; }
+.site-cart-badge.hidden { display: none !important; }
+.site-mobile-menu.is-open { animation: site-search-panel-in .2s ease both; }
+.hero-section .text-blue-400 { color: #f4cf6a !important; }
+.site-whatsapp-widget.whatsapp-container {
+  bottom: calc(var(--site-bottom-notice, 0px) + 18px) !important;
+}
+body:has(.experience-booking-bar) .site-whatsapp-widget.whatsapp-container {
+  bottom: calc(var(--site-bottom-notice, 0px) + 86px) !important;
+}
+.experience-booking-bar { bottom: var(--site-bottom-notice, 0px) !important; }
+.trip-hero { background: linear-gradient(135deg, #10293a, #075e68) !important; }
+.trip-hero > .absolute.inset-0 { background: linear-gradient(to bottom, rgba(16,41,58,.2), rgba(16,41,58,.7)) !important; }
+.booking .price { color: var(--brand-ink) !important; }
+.gallery-hero { padding-top: 112px; padding-bottom: 56px; }
+header .text-blue-400, .page-header .text-blue-400, .home-hero .text-blue-400 { color: #f4cf6a !important; }
+.text-blue-600, .text-purple-600, .text-purple-700 { color: #075e68 !important; }
+@media (min-width: 768px) and (max-width: 1100px) {
+  .site-navbar-inner { grid-template-columns: minmax(0, 1fr) auto !important; }
+  .site-navbar-links, .site-planner-cta { display: none !important; }
+  .site-menu-button { display: inline-grid !important; }
+}
 
 body {
   font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
@@ -264,8 +287,8 @@ nav .hidden.md\:flex > a {
   justify-content: center;
   transform: translateY(-50%);
   border-radius: 999px;
-  color: #5b3a82;
-  background: rgba(91, 58, 130, .08);
+  color: #075e68;
+  background: rgba(8, 127, 140, .08);
   border: 0;
   cursor: pointer;
   pointer-events: auto;
@@ -273,11 +296,11 @@ nav .hidden.md\:flex > a {
 }
 .experiences-search-field .search-status-icon:hover {
   color: #fff;
-  background: #5b3a82;
+  background: #075e68;
   transform: translateY(-50%) scale(1.05);
 }
 .experiences-search-field .search-status-icon:focus-visible {
-  outline: 3px solid rgba(91, 58, 130, .25);
+  outline: 3px solid rgba(8, 127, 140, .25);
   outline-offset: 2px;
 }
 #experiences-grid > [data-category].is-filtered-out,
@@ -471,7 +494,7 @@ section:has(#newsletter-form) { display: none !important; }
 .experience-booking-summary { margin-right: auto; min-width: 0; }
 .experience-booking-summary { display: grid; line-height: 1.05; }
 .experience-booking-summary span { color: #8794a5; font-size: .65rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
-.experience-booking-summary strong { margin-top: .35rem; color: #3f2761; font-size: clamp(1rem, 1.55vw, 1.45rem); font-weight: 900; white-space: nowrap; }
+.experience-booking-summary strong { margin-top: .35rem; color: #10293a; font-size: clamp(1rem, 1.55vw, 1.45rem); font-weight: 900; white-space: nowrap; }
 .experience-booking-actions,
 .experience-booking-bar > .flex:last-child { display: flex; align-items: center; justify-content: flex-end; gap: .65rem; margin-left: auto; }
 .experience-booking-primary,
@@ -835,7 +858,7 @@ button[data-filter].active, button[data-filter].active-filter,
   visibility: hidden;
   transition: opacity .2s ease, visibility .2s ease;
 }
-.gallery-lightbox.is-open { opacity: 1; visibility: visible; }
+.gallery-lightbox.is-open { opacity: 1; visibility: visible; transition: opacity .2s ease; }
 .gallery-lightbox img { max-width: min(1100px, 94vw); max-height: 86vh; object-fit: contain; border-radius: 1rem; }
 .gallery-lightbox button { position: absolute; top: 1.25rem; right: 1.25rem; width: 46px; height: 46px; border-radius: 50%; background: #fff; color: var(--brand-ink); font-size: 1.4rem; }
 

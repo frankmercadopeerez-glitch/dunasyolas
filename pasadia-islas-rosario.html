@@ -26,9 +26,9 @@
     <link rel="icon" href="images/favicon-circle.png" type="image/png"/>
     <meta name="theme-color" content="#5B3A82"/>
     <link href="./css/tailwind.css" rel="stylesheet"/>
-    <link rel="preload" href="css/fontawesome-local.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link rel="stylesheet" href="css/fontawesome-local.min.css"/></noscript>
+    <link rel="preload" href="css/fontawesome-local.min.css?v=20260911a" as="style" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link rel="stylesheet" href="css/fontawesome-local.min.css?v=20260911a"/></noscript>
 
-    <link rel="stylesheet" href="css/cart.css"/>
+    <link rel="stylesheet" href="css/cart.css?v=20260911a"/>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -134,7 +134,7 @@
       .ps-dot.active { background:#fff; transform:scale(1.4); }
       .ps-counter { position:absolute; top:1rem; right:1.25rem; background:rgba(0,0,0,0.52); backdrop-filter:blur(4px); color:#fff; font-size:0.7rem; font-weight:700; padding:4px 11px; border-radius:20px; z-index:10; letter-spacing:.05em; }
     </style>
-    <link rel="stylesheet" href="css/brand-refresh.css?v=20260812m"/>
+    <link rel="stylesheet" href="css/brand-refresh.css?v=20260911a"/>
 </head>
   <body class="bg-gray-50 text-gray-800">
 
@@ -562,9 +562,9 @@
       function openWhatsApp(msg){window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(msg),"_blank")}
       function submitNewsletter(e){e.preventDefault();var emailInput=document.getElementById("newsletter-email"),msg=document.getElementById("newsletter-msg"),email=emailInput.value.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.textContent="Por favor ingresa un correo válido.";msg.classList.remove("hidden");return false;}openWhatsApp("Hola, quiero suscribirme para recibir ofertas de Dunas & Olas. Mi correo es: "+email);msg.textContent="¡Gracias! Te contactaremos por WhatsApp.";msg.classList.remove("hidden");emailInput.value="";return false;}
     </script>
-    <script src="js/cart.js"></script>
+    <script src="js/cart.js?v=20260911a"></script>
     <script src="js/currency.js"></script>
-    <script src="js/cookie-consent.js"></script>
+    <script src="js/cookie-consent.js?v=20260911a"></script>
     <script>
       // ── Photo slideshow con miniaturas ─────────────────────────
       (function () {
@@ -661,6 +661,6 @@
         }, { passive: true });
       })();
     </script>
-    <script src="js/site-refresh.js?v=20260812m" defer></script>
+    <script src="js/site-refresh.js?v=20260911a" defer></script>
 </body>
 </html>

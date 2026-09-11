@@ -1,4 +1,4 @@
-const { TOURS } = require("../js/cart.js");
+const { TOURS } = require("../js/cart.js?v=20260911a");
 
 const MAX_ITEMS = 20;
 const MAX_QTY = 20;

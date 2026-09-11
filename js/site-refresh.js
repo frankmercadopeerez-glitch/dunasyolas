@@ -65,7 +65,7 @@
       { key: "about", href: root + "/about" },
       { key: "blog", href: root + "/blog/" }
     ];
-    var sharedAssetVersion = "20260812m";
+    var sharedAssetVersion = "20260911a";
     var sharedStyles = document.querySelector('link[href*="brand-refresh.css"]');
     if (sharedStyles) {
       sharedStyles.setAttribute("data-site-brand-refresh", "");
@@ -81,6 +81,11 @@
       : (["/", "/experiences", "/kitesurf", "/about", "/blog"].indexOf(routePath) >= 0
           ? "/en" + (routePath === "/" ? "/" : routePath)
           : "/en/experiences");
+    var translation = document.querySelector('link[rel="alternate"][hreflang="' + (isEnglish ? 'es' : 'en') + '"]');
+    if (translation) {
+      var translatedUrl = new URL(translation.href, window.location.href);
+      languageHref = translatedUrl.pathname + translatedUrl.search + translatedUrl.hash;
+    }
     var desktopLinks = links.map(function (item) {
       var current = active === item.key;
       return '<a class="site-nav-link' + (current ? ' is-active' : '') + '" href="' + item.href + '"' +
@@ -123,10 +128,13 @@
     var mobileMenu = nav.querySelector("#mobile-menu");
     var closeButton = nav.querySelector("[data-close-menu]");
     function setMenu(open) {
+      var wasOpen = mobileMenu.classList.contains("is-open");
       mobileMenu.classList.toggle("hidden", !open);
       mobileMenu.classList.toggle("is-open", open);
       menuButton.setAttribute("aria-expanded", String(open));
       document.body.classList.toggle("site-menu-open", open);
+      if (open) closeButton.focus();
+      else if (wasOpen) menuButton.focus();
     }
     menuButton.addEventListener("click", function () { setMenu(mobileMenu.classList.contains("hidden")); });
     closeButton.addEventListener("click", function () { setMenu(false); });
@@ -134,7 +142,18 @@
       link.addEventListener("click", function () { setMenu(false); });
     });
     document.addEventListener("keydown", function (event) {
+      if (!mobileMenu.classList.contains("is-open")) return;
       if (event.key === "Escape") setMenu(false);
+      if (event.key === "Tab") {
+        var focusable = [menuButton].concat(Array.from(mobileMenu.querySelectorAll('a[href], button')));
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      }
+    });
+    window.addEventListener("resize", function () {
+      if (getComputedStyle(menuButton).display === "none") setMenu(false);
     });
 
     var cartTrigger = nav.querySelector("[data-site-cart-button]");
@@ -472,6 +491,8 @@
   function initReveal() {
     if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     var nodes = document.querySelectorAll("main section, body > section, article:not(.article-content)");
+    // Keep the first viewport visible; only animate content entering below it.
+    nodes = Array.from(nodes).filter(function (node) { return node.getBoundingClientRect().top >= window.innerHeight; });
     nodes.forEach(function (node) { node.classList.add("reveal-ready"); });
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -496,12 +517,20 @@
     document.body.appendChild(box);
     var image = box.querySelector("img");
     var close = box.querySelector("button");
-    function hide() { box.classList.remove("is-open"); document.body.style.overflow = ""; }
+    var opener;
+    var previousOverflow = "";
+    function hide() {
+      if (!box.classList.contains("is-open")) return;
+      box.classList.remove("is-open"); document.body.style.overflow = previousOverflow;
+      if (opener) opener.focus();
+    }
     tiles.forEach(function (tile) {
       tile.setAttribute("tabindex", "0");
       tile.setAttribute("role", "button");
       tile.setAttribute("aria-label", "Ver " + (tile.getAttribute("data-label") || "fotografía") + " en tamaño completo");
       function show() {
+        opener = tile;
+        previousOverflow = document.body.style.overflow;
         image.src = tile.getAttribute("data-gallery-src");
         image.alt = tile.querySelector("img")?.alt || "Fotografía de una experiencia en Cartagena";
         box.classList.add("is-open");
@@ -513,7 +542,11 @@
     });
     close.addEventListener("click", hide);
     box.addEventListener("click", function (event) { if (event.target === box) hide(); });
-    document.addEventListener("keydown", function (event) { if (event.key === "Escape") hide(); });
+    document.addEventListener("keydown", function (event) {
+      if (!box.classList.contains("is-open")) return;
+      if (event.key === "Escape") hide();
+      if (event.key === "Tab") { event.preventDefault(); close.focus(); }
+    });
   }
 
   if (document.readyState === "loading") {

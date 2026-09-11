@@ -38,7 +38,8 @@ function searchImage(html, relative) {
     return "/images/logo-icon-nav-small.webp";
   }
 }
-const items = walk(root).filter((file) => !skip.has(path.relative(root, file).replace(/\\/g, "/"))).map((file) => {
+function buildIndex(directory, output) {
+const items = walk(directory).filter((file) => !skip.has(path.basename(file))).map((file) => {
   const html = fs.readFileSync(file, "utf8");
   const relative = path.relative(root, file).replace(/\\/g, "/");
   const title = clean((html.match(/<title>([\s\S]*?)<\/title>/i) || [])[1]).replace(/\s*\|\s*Dunas\s*&\s*Olas.*$/i, "");
@@ -47,6 +48,9 @@ const items = walk(root).filter((file) => !skip.has(path.relative(root, file).re
   let url = "/" + relative.replace(/index\.html$/i, "").replace(/\.html$/i, "");
   const image = searchImage(html, relative);
   return { title, description: description.slice(0, 180), keywords, url, image };
-}).filter((item) => item.title && item.url !== "/");
-fs.writeFileSync(path.join(root, "search-index.json"), JSON.stringify(items, null, 2) + "\n", "utf8");
-console.log(`Search index: ${items.length} pages`);
+}).filter((item) => item.title && item.url !== "/" && item.url !== "/en/");
+fs.writeFileSync(path.join(root, output), JSON.stringify(items, null, 2) + "\n", "utf8");
+console.log(`Search index ${output}: ${items.length} pages`);
+}
+buildIndex(root, "search-index.json");
+buildIndex(path.join(root, "en"), "en/search-index.json");
