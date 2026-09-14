@@ -60,12 +60,12 @@
     var links = [
       { key: "home", href: root + "/" },
       { key: "experiences", href: root + "/experiences" },
-      { key: "gallery", href: "/galeria" },
+      { key: "gallery", href: root + "/galeria" },
       { key: "kitesurf", href: root + "/kitesurf" },
       { key: "about", href: root + "/about" },
       { key: "blog", href: root + "/blog/" }
     ];
-    var sharedAssetVersion = "20260911a";
+    var sharedAssetVersion = "20260911b";
     var sharedStyles = document.querySelector('link[href*="brand-refresh.css"]');
     if (sharedStyles) {
       sharedStyles.setAttribute("data-site-brand-refresh", "");
@@ -97,7 +97,7 @@
         (current ? ' aria-current="page"' : '') + '>' + labels[item.key] + '</a>';
     }).join("");
     var plannerDesktop = isPlanner ? "" :
-      '<a class="site-planner-cta" href="/arma-tu-viaje">&#10022; ' + labels.planner + '</a>';
+      '<a class="site-planner-cta" href="' + root + '/arma-tu-viaje">&#10022; ' + labels.planner + '</a>';
     var plannerMobile = isPlanner ? "" :
       '<a class="site-mobile-link site-mobile-planner" href="/arma-tu-viaje">&#10022; ' + labels.planner + '</a>';
     var cartButton = isCatalog
@@ -227,10 +227,10 @@
           <div>
             <h3 class="text-white font-bold mb-4 text-sm">${copy.explore}</h3>
             <ul class="space-y-2 text-gray-400 text-xs">
-              <li><a href="/arma-tu-viaje" class="hover:text-yellow-400">&#10022; ${copy.planner}</a></li>
-              <li><a href="/experiences" class="hover:text-blue-400">${copy.experiences}</a></li>
-              <li><a href="/galeria" class="hover:text-blue-400">${isEnglish ? "Gallery" : "Galeria"}</a></li>
-              <li><a href="/kitesurf" class="hover:text-blue-400">Kitesurf</a></li>
+              <li><a href="${isEnglish ? "/en" : ""}/arma-tu-viaje" class="hover:text-yellow-400">&#10022; ${copy.planner}</a></li>
+              <li><a href="${isEnglish ? "/en" : ""}/experiences" class="hover:text-blue-400">${copy.experiences}</a></li>
+              <li><a href="${isEnglish ? "/en" : ""}/galeria" class="hover:text-blue-400">${isEnglish ? "Gallery" : "Galeria"}</a></li>
+              <li><a href="${isEnglish ? "/en" : ""}/kitesurf" class="hover:text-blue-400">Kitesurf</a></li>
               <li><a href="${isEnglish ? "/en/about" : "/about"}" class="hover:text-blue-400">${copy.about}</a></li>
               <li><a href="${isEnglish ? "/en/blog/" : "/blog/"}" class="hover:text-blue-400">Blog</a></li>
             </ul>
@@ -238,7 +238,7 @@
           <div>
             <h3 class="text-white font-bold mb-4 text-sm">${copy.contact}</h3>
             <ul class="space-y-2 text-gray-400 text-xs flex flex-col items-center md:items-start">
-              <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2 text-blue-500"></i>Manga, Cartagena</li>
+              <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2 text-blue-500"></i>Getsemaní, Cartagena</li>
               <li class="flex items-center"><i class="fab fa-whatsapp mr-2 text-blue-500"></i>+57 316 303 0589</li>
             </ul>
           </div>
@@ -255,7 +255,7 @@
         <div class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-400 text-center">
           <p>&copy; 2026 Dunas &amp; Olas. ${copy.rights}</p>
           <p class="mt-1">RNT No. 292710</p>
-          <div class="mt-2 space-x-3"><a href="/policies" class="hover:text-white">${copy.terms}</a> &middot; <a href="/privacy" class="hover:text-white">${copy.privacy}</a> &middot; <a href="/faq" class="hover:text-white">${copy.faq}</a></div>
+          <div class="mt-2 space-x-3"><a href="${isEnglish ? "/en" : ""}/policies" class="hover:text-white">${copy.terms}</a> &middot; <a href="${isEnglish ? "/en" : ""}/privacy" class="hover:text-white">${copy.privacy}</a> &middot; <a href="${isEnglish ? "/en" : ""}/faq" class="hover:text-white">${copy.faq}</a> &middot; <a href="${isEnglish ? "/en" : ""}/creditos-fotograficos">${isEnglish ? "Photo credits" : "Créditos fotográficos"}</a></div>
         </div>
       </div>`;
   }

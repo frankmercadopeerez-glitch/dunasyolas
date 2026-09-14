@@ -6,3 +6,7 @@ package-lock.json
 src
 tailwind.config.js
 _cmp
+
+tmp
+scripts
+docs

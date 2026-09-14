@@ -49,7 +49,10 @@ const items = walk(directory).filter((file) => !skip.has(path.basename(file))).m
   const image = searchImage(html, relative);
   return { title, description: description.slice(0, 180), keywords, url, image };
 }).filter((item) => item.title && item.url !== "/" && item.url !== "/en/");
-fs.writeFileSync(path.join(root, output), JSON.stringify(items, null, 2) + "\n", "utf8");
+const target = path.join(root, output);
+const staged = target + ".tmp";
+fs.writeFileSync(staged, JSON.stringify(items, null, 2) + "\n", "utf8");
+fs.renameSync(staged, target);
 console.log(`Search index ${output}: ${items.length} pages`);
 }
 buildIndex(root, "search-index.json");

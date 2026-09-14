@@ -1,5 +1,12 @@
 [
   {
+    "title": "Three Luxury Beach Clubs Premium",
+    "description": "Visit three private islands in one day, with a speedboat, gourmet lunch, cocktails and hotel transfers.",
+    "keywords": "",
+    "url": "/en/3-luxury-beach-clubs",
+    "image": "/images/backpackers/3-luxury-beach-clubs/01.webp"
+  },
+  {
     "title": "Meet Nohemi and Dunas & Olas | Cartagena travel agency",
     "description": "Meet Nohemi and Dunas & Olas, a multicultural Cartagena travel agency focused on honest guidance, custom itineraries and clear costs.",
     "keywords": "",
@@ -7,46 +14,81 @@
     "image": "/images/cartagenacentro.webp"
   },
   {
+    "title": "Plan your Cartagena trip",
+    "description": "Create your Cartagena itinerary with dates, day trips and activities. Confirm availability and your final quote with Nohemi.",
+    "keywords": "",
+    "url": "/en/arma-tu-viaje",
+    "image": "/images/cartagenasunset.webp"
+  },
+  {
     "title": "Magical Sunsets in Cartagena Bay (Bay Tour)",
     "description": "Experience an unforgettable sunset sailing Cartagena Bay: 3 hours facing Bocagrande, the Old Town and Castillogrande. Perfect for proposals, romantic dinners and birthdays. Book wi",
-    "keywords": "Cartagena sunset boat tour, bay tour Cartagena, sunset cruise Cartagena, Cartagena bay tour, marriage proposal boat Cartagena",
+    "keywords": "",
     "url": "/en/atardeceres-bahia",
     "image": "/images/cartagenasunset.webp"
   },
   {
+    "title": "Polo Beach and the National Aviary",
+    "description": "Combine Playa Tranquila and the National Aviary in Barú, with air-conditioned bus transport, a guide and lunch. Separate Colombian-resident and international-visitor rates apply.",
+    "keywords": "",
+    "url": "/en/baru-polo-beach-aviario",
+    "image": "/images/polo-beach.webp"
+  },
+  {
+    "title": "Polo Beach — Playa Tranquila, Barú",
+    "description": "A day at Polo Beach with air-conditioned bus transport, a guide and a choice of lunch.",
+    "keywords": "",
+    "url": "/en/baru-polo-beach",
+    "image": "/images/polo-beach.webp"
+  },
+  {
     "title": "Barú, Cartagena — Beach Guide & Tours",
     "description": "Barú, Cartagena: complete guide to its beaches, tours and things to do. Playa Blanca, Polo Beach and the National Aviary — with available tours from Cartagena. Book with Dunas & Ol",
-    "keywords": "Baru Cartagena, Playa Blanca Baru, Polo Beach Baru, things to do Baru Cartagena, Baru island Colombia, how to get to Baru Cartagena, Baru day trip Cartagena",
+    "keywords": "",
     "url": "/en/baru",
     "image": "/images/playa-blanca-baru.webp"
   },
   {
     "title": "Magical Sunsets Over Cartagena Bay: Complete Tour Guide",
     "description": "Discover the best sunset tour in Cartagena de Indias. Route, schedules, what to expect, and why the sunset over the bay is the city",
-    "keywords": "cartagena sunset tour, sunset boat ride cartagena, what to do at sunset cartagena, cartagena bay tour, cartagena bay sunset",
+    "keywords": "",
     "url": "/en/blog/atardeceres-magicos/",
     "image": "/images/atardecer.webp"
   },
   {
+    "title": "Cartagena Events: October to December 2026",
+    "description": "Plan around Cartagena’s cultural calendar, with time for the city and the islands.",
+    "keywords": "",
+    "url": "/en/blog/calendario-eventos-cartagena-2026/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
     "title": "Currency Exchange in Cartagena: The Definitive Guide to Not Losing Money",
     "description": "Everything you need to know about exchanging money in Cartagena de Indias. Where to exchange, what to avoid, how to check the rate, and how much cash to carry.",
-    "keywords": "currency exchange cartagena, exchange house cartagena, dollar to colombian peso cartagena, how much is the dollar worth in cartagena, exchange euros cartagena",
+    "keywords": "",
     "url": "/en/blog/cambio-de-moneda-cartagena/",
     "image": "/images/cartagena.webp"
   },
   {
     "title": "Cartagena with Kids: The Best Family Plans in the Caribbean",
     "description": "Complete guide to traveling to Cartagena de Indias with kids: safe plans, the Rosario Islands Aquarium, boat rides, kid-friendly beaches, and how to plan the perfect 3-day family t",
-    "keywords": "cartagena with kids, family plans cartagena, cartagena family trip, rosario islands aquarium kids, boat ride cartagena kids, cartagena safe for families",
+    "keywords": "",
     "url": "/en/blog/cartagena-con-ninos/",
     "image": "/images/acuario.webp"
   },
   {
     "title": "Cartagena Cruise Port Guide: What to Do in One Day",
     "description": "Is your cruise stopping in Cartagena? Practical guide for your day ashore: getting to the Old Town, itineraries based on your hours in port, boat tours and tips to get back on time",
-    "keywords": "cartagena cruise port, cartagena shore excursion, things to do in cartagena in one day, cartagena cruise terminal, cartagena day trip from cruise ship",
+    "keywords": "",
     "url": "/en/blog/cartagena-en-un-dia-crucero/",
     "image": "/images/cartagenasunset.webp"
+  },
+  {
+    "title": "Cartagena in November: Weather, Events and Packing",
+    "description": "Prepare for warm days, rain and a busy cultural calendar.",
+    "keywords": "",
+    "url": "/en/blog/cartagena-noviembre-clima-que-llevar/",
+    "image": "/images/logo-icon-nav-small.webp"
   },
   {
     "title": "Cartagena Tour Prices 2026: What Is Included",
@@ -58,63 +100,126 @@
   {
     "title": "Cartagena vs. Cancún: Which Caribbean Destination Should You Choose?",
     "description": "We compare Cartagena de Indias and Cancún on price, beaches, culture, nightlife and safety. Discover why Cartagena, Colombia is becoming a favorite Caribbean alternative for travel",
-    "keywords": "cartagena vs cancun, cartagena colombia vs cancun mexico, best caribbean destination, alternative to cancun, cartagena colombia vacation",
+    "keywords": "",
     "url": "/en/blog/cartagena-vs-cancun/",
     "image": "/images/cartagena.webp"
   },
   {
     "title": "Flavors of the Colombian Caribbean: The Dishes You Must Eat in Cartagena",
     "description": "Discover Colombian Caribbean cuisine: classic dishes, unique ingredients, where to eat authentic food in Cartagena, and why coastal cooking is unlike anything you know.",
-    "keywords": "colombian caribbean cuisine, typical dishes cartagena, coastal colombian cooking, traditional food cartagena, coconut rice cartagena, fish sancocho",
+    "keywords": "",
     "url": "/en/blog/cocinas-del-caribe/",
     "image": "/images/cocinacaribe.webp"
   },
   {
     "title": "How to Get from the Airport to Your Hotel in Cartagena",
     "description": "A complete guide to getting from Rafael Núñez International Airport in Cartagena to your hotel: transport options, approximate prices, travel times, and safety tips for your arriva",
-    "keywords": "Cartagena airport to hotel, Cartagena airport transport, taxi Rafael Núñez airport, how to get to Cartagena from the airport, airport transfer Cartagena",
+    "keywords": "",
     "url": "/en/blog/como-llegar-aeropuerto-cartagena/",
     "image": "/images/cartagenacentro.webp"
   },
   {
+    "title": "How to Check a Cartagena Travel Agency’s RNT",
+    "description": "Verify the provider behind the offer before paying a deposit.",
+    "keywords": "",
+    "url": "/en/blog/como-verificar-agencia-rnt-cartagena/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
+    "title": "Shopping in Cartagena: Crafts and Souvenirs",
+    "description": "Choose souvenirs with a clear origin and a price you understand.",
+    "keywords": "",
+    "url": "/en/blog/compras-artesanias-cartagena/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
     "title": "How Much Does a Trip to Cartagena Cost? Real Budget for 2025-2026",
     "description": "Real budget guide for traveling to Cartagena de Indias: flights, accommodation, food, tours, and daily expenses. How much you need for each type of trip.",
-    "keywords": "how much does it cost to travel to cartagena, cartagena colombia trip budget, cartagena tourism prices, cost of trip to cartagena de indias, cartagena tourism prices 2025",
+    "keywords": "",
     "url": "/en/blog/costo-viaje-cartagena/",
     "image": "/images/cartagena.webp"
   },
   {
+    "title": "Rosario Islands Day Trip Prices in 2026",
+    "description": "Compare the full package, not only the headline price.",
+    "keywords": "",
+    "url": "/en/blog/cuanto-cuesta-tour-islas-del-rosario-2026/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
+    "title": "ATV Adventures near Cartagena",
+    "description": "Beach, trails and hills in a different kind of Caribbean outing.",
+    "keywords": "",
+    "url": "/en/blog/cuatrimotos-cartagena/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
+    "title": "Unexpected Tourist Charges in Cartagena: Practical Steps",
+    "description": "Agree on prices clearly and keep a record of what you purchased.",
+    "keywords": "",
+    "url": "/en/blog/derechos-turista-cobros-excesivos-cartagena/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
     "title": "Bocagrande, Old Town or Getsemaní: Where to Stay in Cartagena?",
     "description": "Bocagrande, the Old Town or Getsemaní? We compare the best neighborhoods to stay in Cartagena, Colombia based on your budget, travel style and what you want to do.",
-    "keywords": "where to stay in cartagena, best area to stay in cartagena, bocagrande vs old town, getsemani cartagena, cartagena neighborhoods guide",
+    "keywords": "",
     "url": "/en/blog/donde-alojarse-en-cartagena/",
     "image": "/images/atardecer.webp"
   },
   {
+    "title": "Cartagena Nautical Festival 2026",
+    "description": "Fit the waterfront celebrations into your Cartagena itinerary.",
+    "keywords": "",
+    "url": "/en/blog/festival-nautico-cartagena-2026/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
+    "title": "Pastel Cartagenero Festival 2026",
+    "description": "Discover a local food tradition during Cartagena’s December celebrations.",
+    "keywords": "",
+    "url": "/en/blog/festival-pastel-cartagenero-2026/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
+    "title": "Cartagena Independence Festivities 2026",
+    "description": "A practical guide to enjoying the city’s November celebrations.",
+    "keywords": "",
+    "url": "/en/blog/fiestas-independencia-cartagena-2026/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
     "title": "Where to Eat Fresh Lobster in the Rosario Islands: Complete Guide",
     "description": "The most complete guide to eating fresh lobster in the Rosario Islands. Stilt-house eateries, seasons, prices, how to get there, and what other seafood to try.",
-    "keywords": "fresh lobster rosario islands, stilt house restaurants cartagena, where to eat lobster cartagena, fresh seafood rosario islands, rosario islands gastronomy",
+    "keywords": "",
     "url": "/en/blog/gastronomia-cartagena/",
     "image": "/images/acuario.webp"
   },
   {
     "title": "US Traveler's Guide to Cartagena, Colombia: Everything You Need to Know",
     "description": "Complete guide for US travelers: direct flights, entry requirements, money, language, safety and the best experiences in Cartagena de Indias, Colombia.",
-    "keywords": "cartagena colombia for americans, traveling to cartagena from the us, flights miami to cartagena, do americans need a visa for colombia, cartagena travel guide",
+    "keywords": "",
     "url": "/en/blog/guia-viajeros-estados-unidos-cartagena/",
     "image": "/images/cartagenacentro.webp"
   },
   {
     "title": "Why Is It Called Cartagena de Indias? History, Pirates, and the City's Secrets",
     "description": "Discover the origin of the name Cartagena de Indias: the 1533 Spanish founding, the Calamari people, the pirates, and why this city was the most coveted treasure of the New World.",
-    "keywords": "history of cartagena de indias, why is it called cartagena de indias, founding of cartagena 1533, origin of the name cartagena, pedro de heredia cartagena, cartagena pirates",
+    "keywords": "",
     "url": "/en/blog/historia-nombre-cartagena/",
     "image": "/images/cartagenacentro.webp"
   },
   {
+    "title": "Cartagena Beach Hours and Temporary Closures",
+    "description": "Check the current conditions before setting out for a beach day.",
+    "keywords": "",
+    "url": "/en/blog/horarios-playas-cartagena-2026/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
     "title": "How to Spot a Pirate Boat in Cartagena: 10 Warning Signs",
     "description": "Learn how to tell a legal tour operator apart from a",
-    "keywords": "pirate boats cartagena, tourist scams cartagena, legal tour operators cartagena, how not to get scammed in cartagena, boat tour safety cartagena",
+    "keywords": "",
     "url": "/en/blog/identificar-lancha-pirata/",
     "image": "/images/cartagena.webp"
   },
@@ -128,107 +233,268 @@
   {
     "title": "3-Day Itinerary for Cartagena: What to Do Day by Day",
     "description": "A complete 3-day itinerary for Cartagena de Indias: the Historic Center and Getsemaní, a boat trip to the Rosario Islands, and a day of beach and kitesurfing in La Boquilla. Day by",
-    "keywords": "3 days in Cartagena itinerary, what to do in Cartagena in 3 days, Cartagena travel plan, Cartagena de Indias route, Cartagena in a few days, Cartagena Colombia itinerary",
+    "keywords": "",
     "url": "/en/blog/itinerario-3-dias-cartagena/",
     "image": "/images/cartagena.webp"
   },
   {
     "title": "Kitesurfing in Cartagena: A Complete Guide for Beginners and Advanced Riders",
     "description": "Everything you need to know about kitesurfing in Cartagena de Indias: the best spots, wind seasons, course levels, prices, and what to expect from your first lesson.",
-    "keywords": "kitesurf cartagena, kitesurf lessons cartagena, where to kitesurf cartagena, kitesurfing colombia caribbean, manzanillo del mar kitesurf, kitesurf course cartagena beginners",
+    "keywords": "",
     "url": "/en/blog/kitesurf-cartagena/",
     "image": "/images/cartagenasunset.webp"
   },
   {
     "title": "What's the Best Time to Visit Cartagena de Indias?",
     "description": "When should you travel to Cartagena de Indias? Everything about the dry season, the rainy season, weather month by month, the best time for kitesurfing, and when there are fewer to",
-    "keywords": "best time to visit Cartagena, Cartagena weather, when to go to Cartagena, Cartagena rainy season, Cartagena dry season, best month to visit Cartagena, Cartagena weather by month",
+    "keywords": "",
     "url": "/en/blog/mejor-epoca-para-visitar-cartagena/",
     "image": "/images/atardecer.webp"
   },
   {
     "title": "The Best Rosario Islands: A Complete Guide for Your Perfect Day Trip",
     "description": "Complete guide to the Rosario Islands in Cartagena. Which islands to visit, what to do, how to get there, how much it costs, and why they",
-    "keywords": "rosario islands cartagena, best rosario islands, what to do rosario islands, how to get to rosario islands, corales del rosario park, playa blanca baru",
+    "keywords": "",
     "url": "/en/blog/mejores-islas-rosario/",
     "image": "/images/acuario.webp"
   },
   {
+    "title": "Where to Enjoy Sunset in Cartagena",
+    "description": "Choose a waterfront viewpoint or a bay experience that fits your evening.",
+    "keywords": "",
+    "url": "/en/blog/miradores-atardeceres-cartagena/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
+    "title": "Christmas in Cartagena 2026",
+    "description": "Combine festive city plans with a comfortable Caribbean holiday.",
+    "keywords": "",
+    "url": "/en/blog/navidad-cartagena-2026/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
+    "title": "Skydiving in Cartagena: Before You Book",
+    "description": "Understand the tandem jump, the requirements and the day’s logistics.",
+    "keywords": "",
+    "url": "/en/blog/paracaidismo-cartagena/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
+    "title": "Driving Restrictions in Cartagena in 2026",
+    "description": "Check the current pico y placa rules before driving in the city.",
+    "keywords": "",
+    "url": "/en/blog/pico-y-placa-cartagena-2026/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
+    "title": "Planning a Weekend in the Rosario Islands",
+    "description": "Balance island travel, beach time and the activities you really want.",
+    "keywords": "",
+    "url": "/en/blog/plan-finde-islas-rosario/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
     "title": "The Best Beaches in Cartagena and Surrounding Areas: Complete Guide",
     "description": "Complete guide to the best beaches in Cartagena de Indias: Bocagrande, Playa Blanca, Islas del Rosario, La Boquilla and more. How to get there, what to expect, and which one to cho",
-    "keywords": "best beaches cartagena, cartagena colombia beaches, playa blanca baru, islas del rosario beach, bocagrande cartagena beach, la boquilla cartagena",
+    "keywords": "",
     "url": "/en/blog/playas-cartagena/",
     "image": "/images/acuario.webp"
   },
   {
     "title": "25 Unmissable Things to Do in Cartagena de Indias: A Local's Guide for Tourists",
     "description": "The 25 best things to do in Cartagena de Indias according to a local guide. From the San Felipe Castle to kitesurfing, island day trips and the restaurants no tourist finds on thei",
-    "keywords": "things to do in cartagena de indias, cartagena plans, activities for tourists cartagena, tourist spots cartagena, cartagena tourism what to visit",
+    "keywords": "",
     "url": "/en/blog/que-hacer-cartagena/",
     "image": "/images/cartagenacentro.webp"
   },
   {
+    "title": "Choosing a Boat Trip to Cartagena’s Islands",
+    "description": "Check the operator, departure arrangements and basic safety provisions.",
+    "keywords": "",
+    "url": "/en/blog/requisitos-lancha-segura-islas-cartagena/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
     "title": "Travel Requirements for Colombia from Mexico or the US in 2026",
     "description": "Updated 2026 Colombia entry requirements for travelers from Mexico or the United States: passport, visa, optional Check-Mig, onward ticket and immigration checks.",
-    "keywords": "colombia travel requirements 2026, check-mig colombia, do mexicans need a visa for colombia, do americans need a visa for colombia, documents to enter colombia",
+    "keywords": "",
     "url": "/en/blog/requisitos-viajar-colombia-2026/",
     "image": "/images/acuario.webp"
   },
   {
+    "title": "Eating in Cartagena: How to Choose Your Meal",
+    "description": "Find food that suits your plans, budget and dietary needs.",
+    "keywords": "",
+    "url": "/en/blog/restaurantes-cartagena/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
     "title": "Safety in Cartagena de Indias: The Real Guide for Smart Travelers",
     "description": "Is Cartagena safe for tourists? The honest guide to safety in Cartagena: safe areas, what to avoid, tips for solo women travelers and how to enjoy your trip worry-free.",
-    "keywords": "safety in cartagena de indias, is cartagena dangerous, cartagena safety tips, safe areas cartagena, cartagena colombia safe tourism",
+    "keywords": "",
     "url": "/en/blog/seguridad-cartagena/",
     "image": "/images/cartagenacentro.webp"
   },
   {
+    "title": "Insurance for Rosario and San Bernardo Island Visits",
+    "description": "Confirm the insurance arrangements for your national park visit.",
+    "keywords": "",
+    "url": "/en/blog/seguro-obligatorio-islas-rosario-san-bernardo-2026/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
+    "title": "Rain in Cartagena: What Happens to Your Excursion?",
+    "description": "Plan flexibly and distinguish a rainy forecast from a departure decision.",
+    "keywords": "",
+    "url": "/en/blog/temporada-lluvias-cartagena-tours/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
+    "title": "Ziplining near Cartagena",
+    "description": "Know what the five-zipline experience includes before you go.",
+    "keywords": "",
+    "url": "/en/blog/tirolesa-cartagena/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
+    "title": "Tour or day trip: what is the difference?",
+    "description": "Understand what you are booking in Cartagena: the itinerary, time at each stop and what your chosen plan includes.",
+    "keywords": "",
+    "url": "/en/blog/tour-o-pasadia/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
+    "title": "Getting Around Cartagena",
+    "description": "Plan each journey around the destination, time and group size.",
+    "keywords": "",
+    "url": "/en/blog/transporte-cartagena/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
+    "title": "Visiting Cartagena from Mexico",
+    "description": "Organize your arrival, documents and experiences before traveling.",
+    "keywords": "",
+    "url": "/en/blog/viajar-cartagena-desde-mexico/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
     "title": "Traveling with a Local in Cartagena: Why It Changes Everything You Thought You Knew",
     "description": "Discover why traveling with a local guide in Cartagena completely transforms the experience. What Google does not tell you, what hotels do not show you, and what only Nohemi knows.",
-    "keywords": "local guide cartagena, tour with local cartagena, authentic experience cartagena, travel cartagena local, nohemi tours cartagena guide",
+    "keywords": "",
     "url": "/en/blog/viajar-con-un-local-cartagena/",
     "image": "/images/cartagenasunset.webp"
   },
   {
+    "title": "Cartagena at Night: Planning Your Evening",
+    "description": "Choose between a city outing, a party bus and a bay experience.",
+    "keywords": "",
+    "url": "/en/blog/vida-nocturna-cartagena/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
     "title": "Wing Foil vs Kitesurf in La Boquilla: Which to Choose?",
     "description": "Wing foil or kitesurf in La Boquilla, Cartagena? We compare equipment, learning curve, wind conditions, and costs to help you choose the right water sport for you.",
-    "keywords": "wing foil Cartagena, kitesurf vs wing foil, wing foil La Boquilla, wind sports Cartagena, learn kitesurf or wing foil",
+    "keywords": "",
     "url": "/en/blog/wing-foil-vs-kitesurf-cartagena/",
     "image": "/images/kitesurf/foil.webp"
   },
   {
+    "title": "Before Sailing to Cartagena’s Islands",
+    "description": "A short planning checklist for your island departure.",
+    "keywords": "",
+    "url": "/en/blog/zarpar-seguro-islas-cartagena/",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
     "title": "Diving & Snorkeling in Cartagena: Underwater Adventure",
     "description": "Diving and snorkeling in the Rosario Islands National Park coral reefs, Cartagena. Certified instructor, full gear and private guide. From $250,000 COP per person.",
-    "keywords": "diving cartagena, snorkeling cartagena, rosario islands diving, coral reefs cartagena, snorkel rosario islands",
+    "keywords": "",
     "url": "/en/buceo-snorkel",
-    "image": "/images/foto%20(10).webp"
+    "image": "/images/backpackers/family-eco-route/02.webp"
+  },
+  {
+    "title": "Beach Horseback Riding in La Boquilla",
+    "description": "A one-hour horseback ride along La Boquilla beach. Published operating hours are 8 am to 5 pm; confirm your preferred time.",
+    "keywords": "",
+    "url": "/en/cabalgata-playa",
+    "image": "/images/tourcaballo%20(1).webp"
   },
   {
     "title": "Sunset Catamaran Cartagena – Open Bar, DJ & Night Party",
     "description": "Sunset catamaran Cartagena: open bar, live DJ, bartender and entertainment on board. Silver Membership $100,000 COP – Gold Membership with tasting $180,000 COP. Departures from Mue",
-    "keywords": "sunset catamaran Cartagena, catamaran tour Cartagena, open bar catamaran Cartagena, catamaran party Cartagena, Cartagena boat party, sunset cruise Cartagena",
+    "keywords": "",
     "url": "/en/catamaran-atardecer",
     "image": "/images/cartagenasunset.webp"
   },
   {
     "title": "Chiva Rumbera Cartagena – Party Bus + Taboo Nightclub",
     "description": "Cartagena",
-    "keywords": "Chiva Rumbera Cartagena, party bus Cartagena, Chiva bus Cartagena, Cartagena nightlife tour, Taboo nightclub Cartagena, night tour Cartagena",
+    "keywords": "",
     "url": "/en/chiva-rumbera",
     "image": "/images/chiva-rumbera.webp"
   },
   {
-    "title": "Cartagena City Tour – Historical Sightseeing with Lunch or Dinner",
-    "description": "Cartagena city tour with hotel pickup, audio-guided history, lunch or dinner included. Basic Plan $140,000 COP – Full Plan with San Felipe Castle entry $180,000 COP. Daily departur",
-    "keywords": "Cartagena city tour, historical tour Cartagena, Cartagena sightseeing, San Felipe Castle tour, Getsemani tour, Cartagena tour with lunch",
-    "url": "/en/city-tour-roa",
-    "image": "/images/cartagenacentro.webp"
+    "title": "City Bahía by ROA — Lunch and Sunset",
+    "description": "Visit Cartagena landmarks, enjoy lunch and finish with a speedboat sunset trip and two hours of selected drinks. A separate Full option includes the castle.",
+    "keywords": "",
+    "url": "/en/city-bahia",
+    "image": "/images/cartagenasunset.webp"
   },
   {
-    "title": "Selected tours and local experiences in Cartagena",
-    "description": "Compare selected Cartagena experiences with clear pricing and local support: Rosario Islands, Barú, food, kitesurfing, city tours and sunsets.",
+    "title": "Barranquilla and Cartagena City Tour",
+    "description": "Explore landmarks in both cities in one day, with lunch in Barranquilla, dinner in Cartagena, air-conditioned transport and a guide.",
+    "keywords": "",
+    "url": "/en/city-tour-barranquilla-cartagena",
+    "image": "/images/shakira-real.webp"
+  },
+  {
+    "title": "Barranquilla and Santa Marta City Tour",
+    "description": "Visit landmarks in Barranquilla and Santa Marta with beach and pool time, breakfast and lunch. Confirm the departure for your chosen date.",
+    "keywords": "",
+    "url": "/en/city-tour-barranquilla-santa-marta",
+    "image": "/images/santa-marta-bahia-real.webp"
+  },
+  {
+    "title": "Cartagena City Tour – Historical Sightseeing with Lunch or Dinner",
+    "description": "Cartagena city tour with hotel pickup, audio-guided history, lunch or dinner included. Basic Plan $140,000 COP – Full Plan with San Felipe Castle entry $180,000 COP. Daily departur",
+    "keywords": "",
+    "url": "/en/city-tour-roa",
+    "image": "/images/castillo-real.webp"
+  },
+  {
+    "title": "Corona Island — Adults-only Day Trip",
+    "description": "An adults-only experience for guests aged 18 and over, with a speedboat transfer, a three-course lunch, unlimited Corona beer, kayaking and paddleboarding.",
+    "keywords": "",
+    "url": "/en/corona-island",
+    "image": "/images/corona-island/corona-island-card.webp"
+  },
+  {
+    "title": "Photo credits",
+    "description": "Authors and licenses for destination photographs.",
+    "keywords": "",
+    "url": "/en/creditos-fotograficos",
+    "image": "/images/logo-icon-nav-small.webp"
+  },
+  {
+    "title": "Cartagena ATV Tour — Beach and Trails",
+    "description": "A 2.5-hour ATV adventure through beaches, hills and trails north of Cartagena. Lunch, a drink and transport are included.",
+    "keywords": "",
+    "url": "/en/cuatrimotos-atv",
+    "image": "/images/atv-cuatrimotos.webp"
+  },
+  {
+    "title": "Experiences and day trips in Cartagena",
+    "description": "Explore island day trips, city tours, water sports and Paratrike flights in Cartagena. Compare plans and confirm availability with Nohemi.",
     "keywords": "",
     "url": "/en/experiences",
     "image": "/images/atardecer.webp"
+  },
+  {
+    "title": "Family Eco-Route and Bioluminescent Plankton",
+    "description": "A full day in Barú with Mambo Beach, snorkeling, mangroves, sunset and a bioluminescent-plankton experience.",
+    "keywords": "",
+    "url": "/en/family-eco-route",
+    "image": "/images/plancton-referencia.webp"
   },
   {
     "title": "Frequently Asked Questions (FAQ)",
@@ -238,59 +504,192 @@
     "image": "/images/cartagena.webp"
   },
   {
+    "title": "Cartagena photo gallery",
+    "description": "Explore photographs of the islands, beaches and experiences in our Cartagena catalog.",
+    "keywords": "",
+    "url": "/en/galeria",
+    "image": "/images/isla-palma-4.webp"
+  },
+  {
+    "title": "Golden Hours — Sunset and Beach Club",
+    "description": "A speedboat sunset outing with music, cocktails and a stop at a private beach club near Cartagena.",
+    "keywords": "",
+    "url": "/en/golden-hours-cartagena",
+    "image": "/images/backpackers/golden-hours-cartagena/01.webp"
+  },
+  {
     "title": "Rosario Islands, Cartagena — Complete Guide & Tours",
     "description": "Rosario Islands, Cartagena: complete guide to Colombia",
-    "keywords": "Rosario Islands Cartagena, Rosario Islands tour, things to do Rosario Islands, how to get to Rosario Islands, Corales del Rosario National Park, Isla Grande Cartagena, Cholon Cartagena Colombia",
+    "keywords": "",
     "url": "/en/islas-del-rosario",
     "image": "/images/islastour%20(2).webp"
   },
   {
+    "title": "Rosario Islands and Oceanarium",
+    "description": "Sail from Cartagena to the San Martín de Pajarales Oceanarium and enjoy a day in the Rosario Islands.",
+    "keywords": "",
+    "url": "/en/islas-oceanario",
+    "image": "/images/backpackers/islas-oceanario/01.webp"
+  },
+  {
     "title": "Kitesurfing in Cartagena: Courses, Lessons & Gear Rental",
     "description": "Kitesurfing in La Boquilla, Cartagena: lessons for all levels, gear rental, wing foil and SUP with IKO certified instructors. Book with Dunas & Olas.",
-    "keywords": "kitesurf Cartagena, kitesurfing Cartagena, kitesurf lessons Cartagena, kitesurf school La Boquilla, kite course Cartagena, kitesurf gear rental Cartagena, kite Cartagena, wing foil Cartagena, kitesurfing Colombia, kitesurf La Boquilla, certified kitesurf instructors Cartagena",
+    "keywords": "",
     "url": "/en/kitesurf",
     "image": "/images/kitesurf/salto.webp"
   },
   {
     "title": "La Boquilla, Cartagena — Kitesurfing, Beach & Mangroves",
     "description": "La Boquilla, Cartagena: complete guide to Colombia",
-    "keywords": "La Boquilla Cartagena, kitesurfing La Boquilla, kitesurf Cartagena, La Boquilla beach Cartagena, horseback riding La Boquilla, things to do La Boquilla, mangroves Cartagena",
+    "keywords": "",
     "url": "/en/la-boquilla",
     "image": "/images/kitesurf/jump.webp"
   },
   {
+    "title": "Mambo Beach Club by Boat",
+    "description": "Travel from Cartagena to Playa Blanca by boat and enjoy Mambo Beach Club facilities with lunch.",
+    "keywords": "",
+    "url": "/en/mambo-beach-lancha",
+    "image": "/images/backpackers/mambo-beach-lancha/01.webp"
+  },
+  {
+    "title": "Mambo Beach Club by Land",
+    "description": "A Playa Blanca day trip with air-conditioned transport, sun loungers and a lunch credit at Mambo Beach Club.",
+    "keywords": "",
+    "url": "/en/mambo-beach-tierra",
+    "image": "/images/backpackers/mambo-beach-tierra/01.webp"
+  },
+  {
+    "title": "Namaste — Holistic Tierra Bomba Experience",
+    "description": "Yoga, meditation, a massage, pool access, a detox juice and a consumption credit. Published rates are non-refundable; confirm all conditions before booking.",
+    "keywords": "",
+    "url": "/en/namaste-holistica",
+    "image": "/images/namaste-2.webp"
+  },
+  {
+    "title": "Fly Cartagena · Paratrike over the Caribbean",
+    "description": "Fly over La Boquilla with 5, 10 or 15-minute flights. Choose your flight, with optional GoPro video and return transport.",
+    "keywords": "",
+    "url": "/en/paratrike-cartagena",
+    "image": "/images/paratrike-01.webp"
+  },
+  {
+    "title": "Isla Lizamar — Pools and Beach Day",
+    "description": "Enjoy Isla Grande, swimming pools, a slide into the sea, buffet lunch, a bilingual guide and a panoramic Rosario Islands boat trip. Optional services cost extra.",
+    "keywords": "",
+    "url": "/en/pasadia-isla-lizamar",
+    "image": "/images/isla-lizamar-piscina.webp"
+  },
+  {
+    "title": "Isla Palma Nature Reserve Day Trip",
+    "description": "Visit Hotel Isla Palma, with a panoramic boat journey through the Rosario and San Bernardo islands, gourmet lunch, beach access and a hotel-to-pier transfer. Port fees and insuranc",
+    "keywords": "",
+    "url": "/en/pasadia-isla-palma",
+    "image": "/images/isla-palma-4.webp"
+  },
+  {
     "title": "Rosario Islands Day Trip from Cartagena (Sunny Day)",
     "description": "4 Rosario Islands in one day: Isla Grande, Cholón, Barú & Bocachica. Lunch, snorkeling and open bar included. Only 12 spots per departure. From $300,000 COP.",
-    "keywords": "rosario islands cartagena, rosario islands day trip, playa blanca baru, rosario islands tour, excursion rosario islands from cartagena",
+    "keywords": "",
     "url": "/en/pasadia-islas-rosario",
     "image": "/images/acuario.webp"
   },
   {
+    "title": "Múcura, Tintipán and Santa Cruz del Islote",
+    "description": "Explore Tintipán, Casa en el Agua, Santa Cruz del Islote and Múcura with lunch. Port fees and insurance are not included.",
+    "keywords": "",
+    "url": "/en/pasadia-mucura-tintipan",
+    "image": "/images/mucura-tintipan-1.webp"
+  },
+  {
     "title": "Playa Blanca Barú Day Trip – Beach Club with Lunch & Pool",
     "description": "Playa Blanca Barú day trip from Cartagena (Puerto Medallo): round-trip land transport, welcome cocktail, lunch of your choice, pool access and sun loungers facing the Caribbean. Fr",
-    "keywords": "Playa Blanca Baru day trip, Playa Blanca Cartagena, Puerto Medallo Baru, Baru beach club, Baru day pass, day trip Baru from Cartagena",
+    "keywords": "",
     "url": "/en/playa-blanca-baru",
     "image": "/images/playa-blanca-piscina.webp"
   },
   {
-    "title": "Cartagena Food Tour: Local Cuisine & Culture",
-    "description": "Walking food tour through Cartagena",
-    "keywords": "cartagena food tour, cartagena gastronomic tour, traditional food cartagena, old town food tour, what to eat in cartagena",
-    "url": "/en/recorrido-gastronomico",
-    "image": "/images/cocinacaribe.webp"
+    "title": "Puerto Medallo, Islands and Snorkeling",
+    "description": "Combine Puerto Medallo with a panoramic island trip, a wildlife excursion and snorkeling. Transport, lunch and pool access are included.",
+    "keywords": "",
+    "url": "/en/puerto-medallo-islas",
+    "image": "/images/playa-blanca-baru.webp"
   },
   {
     "title": "Local Flavors: Home Dining & Cuisine in Cartagena",
     "description": "Local Flavors at Home: a feast with the Afro, indigenous and Arab heritage of Colombian Caribbean cuisine, prepared by local cooks in the warmth of a traditional Cartagena home. Bo",
-    "keywords": "home dining cartagena, culinary experience cartagena, private dinner cartagena, colombian caribbean cuisine, local food cartagena",
+    "keywords": "",
     "url": "/en/sabores-locales",
     "image": "/images/cartagenacentro.webp"
   },
   {
+    "title": "Tandem Skydiving over the Caribbean",
+    "description": "A tandem jump from 10,000 feet with a certified instructor and Caribbean Sea views. Photos and video are included in the published package.",
+    "keywords": "",
+    "url": "/en/salto-paracaidismo",
+    "image": "/images/paracaidismo.webp"
+  },
+  {
+    "title": "Tamarindo Beach House — Tierra Bomba",
+    "description": "A Tierra Bomba beach club with a pool, lounge bed, welcome cocktail, lunch and a semi-private beach. Transport is included.",
+    "keywords": "",
+    "url": "/en/tamarindo-beach-house",
+    "image": "/images/tamarindo-1.webp"
+  },
+  {
+    "title": "Cartagena Zipline Tour",
+    "description": "A two-hour experience with five ziplines above the trees and Caribbean views. Lunch and transport are included.",
+    "keywords": "",
+    "url": "/en/tirolesa",
+    "image": "/images/tirolesa.webp"
+  },
+  {
+    "title": "Five Islands Standard Day Trip",
+    "description": "Travel by passenger boat to Bocachica, Cocoliso, a snorkeling stop, Cholón, Mambo Beach and Sol y Papaya.",
+    "keywords": "",
+    "url": "/en/tour-5-islas-standard",
+    "image": "/images/backpackers/tour-5-islas-standard/01.webp"
+  },
+  {
+    "title": "Five Islands VIP Day Trip from Cartagena",
+    "description": "A full Caribbean day by speedboat with Cocoliso, snorkeling, Cholón, Mambo Beach and a private beach club.",
+    "keywords": "",
+    "url": "/en/tour-5-islas-vip",
+    "image": "/images/backpackers/tour-5-islas-vip/01.webp"
+  },
+  {
     "title": "Cartagena Bay Yacht Tour – Luna Mía",
     "description": "Cartagena Bay yacht tour aboard Luna Mía: 2-hour cruise with open bar, DJ, entertainer and bartender. Kids under 12 pay 50%. Departures from Muelle de los Pegasos. From $120,000 CO",
-    "keywords": "yacht tour Cartagena, Cartagena bay tour yacht, Luna Mia yacht Cartagena, Cartagena boat party, yacht cruise Cartagena, Muelle de los Pegasos tour",
+    "keywords": "",
     "url": "/en/tour-bahia-yate",
     "image": "/images/lunamia.webp"
+  },
+  {
+    "title": "Magic Tour by Boat — Beach, Snorkeling and Mangroves",
+    "description": "Travel by speedboat, go snorkeling, explore the mangroves and relax at Mambo Beach Club.",
+    "keywords": "",
+    "url": "/en/tour-magico-lancha",
+    "image": "/images/backpackers/tour-magico-lancha/01.webp"
+  },
+  {
+    "title": "Magic Tour by Land — Beach, Snorkeling and Mangroves",
+    "description": "Combine Playa Blanca, a mangrove excursion and snorkeling with land transport from Cartagena.",
+    "keywords": "",
+    "url": "/en/tour-magico-tierra",
+    "image": "/images/backpackers/tour-magico-tierra/01.webp"
+  },
+  {
+    "title": "Tritonia Beach Club — Adults-only Day Trip",
+    "description": "An adults-only beach club in Tintipán, reached by hotel pickup, bus and boat via Tolú. Includes a snack and return transport to Cartagena. The published plan welcomes pets.",
+    "keywords": "",
+    "url": "/en/tritonia-beach-club",
+    "image": "/images/tritonia/tritonia-card.webp"
+  },
+  {
+    "title": "Totumo Mud Volcano Tour",
+    "description": "Experience the Totumo mud volcano on a guided excursion from Cartagena.",
+    "keywords": "",
+    "url": "/en/volcan-del-totumo",
+    "image": "/images/backpackers/volcan-del-totumo/01.webp"
   }
 ]

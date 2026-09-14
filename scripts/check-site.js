@@ -44,7 +44,7 @@ for (const file of walk(root).filter((file) => file.endsWith(".html"))) {
   }
   if (rel !== "404.html" && !/<link\s+[^>]*rel=["']canonical["'][^>]*href=["']https:\/\/dunasyolas\.com/i.test(html)) failures.push(`${rel}: falta canonical válido`);
 
-  const ids = [...html.matchAll(/\bid=["']([^"']+)/gi)].map((match) => match[1]);
+  const ids = [...html.matchAll(/\sid=["']([^"']+)/gi)].map((match) => match[1]);
   for (const id of new Set(ids.filter((id, index) => ids.indexOf(id) !== index))) failures.push(`${rel}: id duplicado ${id}`);
 
   for (const match of html.matchAll(/<img\b[^>]*>/gi)) {

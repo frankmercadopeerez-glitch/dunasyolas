@@ -1,0 +1,388 @@
+/* Generated from cart.js by scripts/build-cart-en.js. */
+/* ======================================================
+   CARRITO DE COMPRAS COMPARTIDO — Dunas & Olas
+   Catálogo único de experiencias, cursos, botes y
+   adicionales. Se usa en experiences.html y fleet.html
+   para que el carrito (guardado en localStorage) se vea
+   igual sin importar desde qué página se agregó un ítem.
+
+   Para ajustar precios, edita data/catalog.json y ejecuta npm run check.
+   ====================================================== */
+
+const TOURS = typeof window === 'undefined' ? require('../data/catalog.json').products : window.DYO_CATALOG.products;
+
+const CART_KEY = "dunas-olas-cart";
+const COUPLE_DISCOUNT = 0.1; // 10% de descuento al reservar un curso en pareja
+
+function loadCart() {
+  try {
+    return JSON.parse(localStorage.getItem(CART_KEY)) || {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function saveCart(cart) {
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
+}
+
+function formatCOP(amount) {
+  return (
+    "$" +
+    Math.round(amount).toLocaleString("es-CO", { maximumFractionDigits: 0 }) +
+    " COP"
+  );
+}
+
+/* Formatea un monto (en COP) según la moneda seleccionada en el
+   selector de moneda (COP/USD/MXN, ver js/currency.js). Si ese
+   script no está disponible, se muestra siempre en COP. */
+function displayAmount(amount) {
+  if (typeof window.formatPrice === "function") {
+    return window.formatPrice(amount);
+  }
+  return formatCOP(amount);
+}
+
+/* Una entrada del carrito puede ser:
+   - un número  -> cantidad de un ítem del catálogo TOURS
+   - un objeto  -> { qty, name, unitPrice, unitLabel } para
+                   ítems con precio calculado (p.ej. cursos
+                   reservados para 2 personas con descuento) */
+function entryDetails(id, value) {
+  if (typeof value === "number") {
+    const tour = TOURS[id];
+    if (!tour) return null;
+    return {
+      name: tour.name,
+      unitPrice: tour.price,
+      unitLabel: tour.unit,
+      qty: value,
+      custom: false,
+    };
+  }
+  if (value && typeof value === "object" && value.qty > 0) {
+    return {
+      name: value.name,
+      unitPrice: value.unitPrice,
+      unitLabel: value.unitLabel || "",
+      qty: value.qty,
+      custom: true,
+    };
+  }
+  return null;
+}
+
+function addToCart(tourId, btnEl) {
+  const cart = loadCart();
+  const current = cart[tourId];
+  if (typeof current === "object" && current) {
+    current.qty += 1;
+  } else {
+    cart[tourId] = (current || 0) + 1;
+  }
+  saveCart(cart);
+  renderCart();
+  toggleCart(true);
+  flashAdded(btnEl);
+}
+
+/* Agrega un ítem con precio calculado dinámicamente, por
+   ejemplo un curso de kitesurf reservado para 2 personas
+   con el descuento de pareja ya aplicado. */
+function addCustomToCart(id, name, unitPrice, unitLabel, qty, btnEl) {
+  const cart = loadCart();
+  const current = cart[id];
+  if (current && typeof current === "object") {
+    current.qty += qty;
+    current.unitPrice = unitPrice;
+    current.name = name;
+    current.unitLabel = unitLabel;
+  } else {
+    cart[id] = { qty, name, unitPrice, unitLabel };
+  }
+  saveCart(cart);
+  renderCart();
+  toggleCart(true);
+  flashAdded(btnEl);
+}
+
+function flashAdded(btnEl) {
+  if (!btnEl) return;
+  const original = btnEl.innerHTML;
+  btnEl.classList.add("added");
+  btnEl.innerHTML = '<i class="fas fa-check"></i> Added';
+  setTimeout(() => {
+    btnEl.classList.remove("added");
+    btnEl.innerHTML = original;
+  }, 1400);
+}
+
+function changeQty(id, delta) {
+  const cart = loadCart();
+  const value = cart[id];
+  if (value === undefined) return;
+
+  if (typeof value === "object" && value) {
+    value.qty += delta;
+    if (value.qty <= 0) delete cart[id];
+  } else {
+    cart[id] = (value || 0) + delta;
+    if (cart[id] <= 0) delete cart[id];
+  }
+  saveCart(cart);
+  renderCart();
+}
+
+function removeFromCart(id) {
+  const cart = loadCart();
+  delete cart[id];
+  saveCart(cart);
+  renderCart();
+}
+
+function cartEntries(cart) {
+  return Object.entries(cart)
+    .map(([id, value]) => [id, entryDetails(id, value)])
+    .filter(([, details]) => details !== null);
+}
+
+function cartTotal(cart) {
+  return cartEntries(cart).reduce(
+    (sum, [, d]) => sum + d.unitPrice * d.qty,
+    0
+  );
+}
+
+function cartItemCount(cart) {
+  return cartEntries(cart).reduce((sum, [, d]) => sum + d.qty, 0);
+}
+
+function renderCart() {
+  const cart = loadCart();
+  const itemsEl = document.getElementById("cart-items");
+  const totalEl = document.getElementById("cart-total");
+  const badgeEl = document.getElementById("cart-badge");
+  const checkoutBtn = document.getElementById("cart-checkout-btn");
+  if (!itemsEl || !totalEl || !badgeEl || !checkoutBtn) return;
+
+  const entries = cartEntries(cart);
+
+  if (entries.length === 0) {
+    itemsEl.innerHTML =
+      '<div class="text-center text-gray-400 py-16">' +
+      '<i class="fas fa-shopping-cart text-4xl mb-3"></i>' +
+      "<p>Your cart is empty.<br/>Add an experience to get started.</p>" +
+      "</div>";
+    checkoutBtn.disabled = true;
+    checkoutBtn.classList.add("opacity-50", "cursor-not-allowed");
+  } else {
+    itemsEl.innerHTML = entries
+      .map(([id, d]) => {
+        const subtotal = d.unitPrice * d.qty;
+        const unitLabel = d.unitLabel ? ` / ${d.unitLabel}` : "";
+        return (
+          '<div class="cart-line">' +
+          '<div class="flex-1">' +
+          `<p class="font-semibold text-gray-900 text-sm">${d.name}</p>` +
+          `<p class="text-xs text-gray-400 mb-2">${displayAmount(d.unitPrice)}${unitLabel}</p>` +
+          '<div class="flex items-center gap-2">' +
+          `<button type="button" aria-label="Decrease quantity" class="cart-qty-btn" onclick="changeQty('${id}', -1)">−</button>` +
+          `<span class="text-sm font-bold w-6 text-center">${d.qty}</span>` +
+          `<button type="button" aria-label="Increase quantity" class="cart-qty-btn" onclick="changeQty('${id}', 1)">+</button>` +
+          `<button type="button" aria-label="Remove experience" class="cart-qty-btn text-red-400 ml-3" onclick="removeFromCart('${id}')"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>` +
+          "</div>" +
+          "</div>" +
+          `<div class="font-bold text-[#3F2761] text-sm whitespace-nowrap">${displayAmount(subtotal)}</div>` +
+          "</div>"
+        );
+      })
+      .join("");
+    checkoutBtn.disabled = false;
+    checkoutBtn.classList.remove("opacity-50", "cursor-not-allowed");
+  }
+
+  const total = cartTotal(cart);
+  const count = cartItemCount(cart);
+  totalEl.textContent = displayAmount(total);
+
+  if (count > 0) {
+    badgeEl.textContent = count;
+    badgeEl.classList.remove("hidden");
+  } else {
+    badgeEl.classList.add("hidden");
+  }
+}
+
+let cartOpener;
+function toggleCart(open) {
+  const overlay = document.getElementById("cart-overlay");
+  const drawer = document.getElementById("cart-drawer");
+  if (!overlay || !drawer) return;
+  if (open) {
+    cartOpener = document.activeElement;
+    drawer.setAttribute("role", "dialog");
+    drawer.setAttribute("aria-modal", "true");
+    drawer.setAttribute("aria-label", "Experience cart");
+    overlay.classList.add("active");
+    drawer.classList.add("active");
+    document.body.style.overflow = "hidden";
+    requestAnimationFrame(() => drawer.querySelector("button")?.focus());
+  } else {
+    overlay.classList.remove("active");
+    drawer.classList.remove("active");
+    document.body.style.overflow = "";
+    cartOpener?.focus();
+  }
+}
+
+/* ── Checkout ─────────────────────────────── */
+function buildOrderSummary() {
+  const cart = loadCart();
+  const entries = cartEntries(cart);
+  const lines = entries.map(([, d]) => {
+    const unitLabel = d.unitLabel ? ` / ${d.unitLabel}` : "";
+    return `${d.qty} x ${d.name} (${displayAmount(d.unitPrice)}${unitLabel}) = ${displayAmount(d.unitPrice * d.qty)}`;
+  });
+  return { entries, lines, total: cartTotal(cart) };
+}
+
+function renderCheckoutSummary() {
+  const summaryEl = document.getElementById("checkout-summary");
+  if (!summaryEl) return;
+  const { entries, lines, total } = buildOrderSummary();
+  if (entries.length === 0) return;
+
+  summaryEl.innerHTML =
+    lines.map((l) => `<div>${l}</div>`).join("") +
+    `<div class="font-bold text-[#3F2761] pt-2 mt-2 border-t border-gray-200">Estimated total: ${displayAmount(total)}</div>`;
+}
+
+function openCheckout() {
+  const { entries } = buildOrderSummary();
+  if (entries.length === 0) return;
+
+  renderCheckoutSummary();
+  document.getElementById("checkout-overlay").classList.add("active");
+}
+
+function closeCheckout() {
+  document.getElementById("checkout-overlay").classList.remove("active");
+}
+
+function getCheckoutFormData() {
+  return {
+    name: document.getElementById("ck-name").value.trim(),
+    phone: document.getElementById("ck-phone").value.trim(),
+    email: document.getElementById("ck-email").value.trim(),
+    date: document.getElementById("ck-date").value,
+    people: document.getElementById("ck-people").value || "1",
+    notes: document.getElementById("ck-notes").value.trim(),
+  };
+}
+
+function validateCheckoutForm(data) {
+  if (!data.name || !data.phone || !data.email) {
+    alert(
+      "Please enter your name, WhatsApp number and email address to continue."
+    );
+    return false;
+  }
+  return true;
+}
+
+function checkoutViaWhatsApp() {
+  const data = getCheckoutFormData();
+  if (!validateCheckoutForm(data)) return;
+
+  const { lines, total } = buildOrderSummary();
+  const currency =
+    typeof window.getCurrentCurrency === "function"
+      ? window.getCurrentCurrency()
+      : "COP";
+  const totalLine =
+    currency === "COP"
+      ? `Estimated total: ${formatCOP(total)}`
+      : `Estimated total: ${displayAmount(total)} (${formatCOP(total)})`;
+  const message =
+    `Hello, I would like to confirm my booking with Dunas & Olas:\n\n` +
+    lines.join("\n") +
+    `\n\n${totalLine}\n\n` +
+    `Name: ${data.name}\n` +
+    `WhatsApp/Phone: ${data.phone}\n` +
+    `Email: ${data.email}\n` +
+    (data.date ? `Preferred date: ${data.date}\n` : "") +
+    `Number of people: ${data.people}\n` +
+    (data.notes ? `Notes: ${data.notes}\n` : "");
+
+  openWhatsApp(message);
+}
+
+async function payWithMercadoPago() {
+  const data = getCheckoutFormData();
+  if (!validateCheckoutForm(data)) return;
+
+  const button = document.getElementById("mercadopago-pay-btn");
+  const original = button ? button.innerHTML : "";
+  if (button) {
+    button.disabled = true;
+    button.innerHTML =
+      '<i class="fas fa-spinner fa-spin mr-2"></i>Preparando pago seguro…';
+  }
+
+  try {
+    const response = await fetch("/api/create-mercadopago-preference", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ cart: loadCart(), customer: data }),
+    });
+    const result = await response.json().catch(() => ({}));
+
+    if (!response.ok || !result.checkoutUrl) {
+      const message =
+        result.code === "mercadopago_not_configured"
+          ? "Mercado Pago está preparado, pero aún falta activar la credencial de producción en el servidor. Puedes confirmar tu reserva por WhatsApp mientras terminamos la activación."
+          : result.error ||
+            "No pudimos iniciar el pago. Intenta de nuevo o confirma tu reserva por WhatsApp.";
+      alert(message);
+      return;
+    }
+
+    window.location.assign(result.checkoutUrl);
+  } catch (error) {
+    alert(
+      "No pudimos conectar con Mercado Pago. Revisa tu conexión o confirma la reserva por WhatsApp."
+    );
+  } finally {
+    if (button) {
+      button.disabled = false;
+      button.innerHTML = original;
+    }
+  }
+}
+
+if (typeof window !== "undefined") {
+  window.renderCheckoutSummary = renderCheckoutSummary;
+}
+
+if (typeof document !== "undefined") {
+  document.addEventListener("DOMContentLoaded", renderCart);
+  document.addEventListener("keydown", function (event) {
+    const checkout = document.querySelector("#checkout-overlay.active");
+    const drawer = document.querySelector("#cart-drawer.active");
+    const dialog = checkout || drawer;
+    if (!dialog) return;
+    if (event.key === "Escape") { if (checkout) closeCheckout(); else toggleCart(false); }
+    if (event.key === "Tab") {
+      const controls = Array.from(dialog.querySelectorAll('button:not([disabled]), a[href], input, select, textarea')).filter(el => el.getClientRects().length && getComputedStyle(el).visibility !== 'hidden');
+      const first = controls[0], last = controls[controls.length - 1];
+      if (!first) return;
+      if (event.shiftKey && (document.activeElement === first || !dialog.contains(document.activeElement))) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && (document.activeElement === last || !dialog.contains(document.activeElement))) { event.preventDefault(); first.focus(); }
+    }
+  });
+}
+
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { TOURS };
+}

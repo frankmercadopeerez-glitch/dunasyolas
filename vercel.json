@@ -58,5 +58,17 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/en/recorrido-gastronomico",
+      "destination": "/en/experiences",
+      "permanent": true
+    },
+    {
+      "source": "/recorrido-gastronomico",
+      "destination": "/experiences",
+      "permanent": true
+    }
   ]
 }

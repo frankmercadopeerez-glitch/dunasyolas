@@ -76,7 +76,7 @@
     document
       .querySelectorAll(".price-value, .addon-btn .font-bold, .food-price-value")
       .forEach(function (el) {
-        if (!el.dataset.copVal) {
+        if (!el.dataset.copVal && !el.hasAttribute("data-fixed-currencies")) {
           var v = parseCOP(el.textContent);
           if (v > 0) el.dataset.copVal = v;
         }

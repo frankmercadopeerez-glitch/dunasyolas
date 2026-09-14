@@ -1,25 +1,17 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 
-    <meta
-      name="description"
-      content="Compare selected Cartagena experiences with clear pricing and local support: Rosario Islands, Barú, food, kitesurfing, city tours and sunsets."
-    />
-    <title>Selected tours and local experiences in Cartagena | Dunas & Olas</title>
-    <link rel="icon" href="../images/favicon-circle.png" type="image/png" />
-    <link rel="apple-touch-icon" href="../images/favicon-circle.png"/>
-    <meta name="theme-color" content="#5B3A82"/>
-    <link rel="canonical" href="https://dunasyolas.com/en/experiences"/>
-    <link rel="alternate" hreflang="es" href="https://dunasyolas.com/experiences" />
-    <link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/experiences" />
-    <link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/experiences" />
-    <link href="../css/tailwind.css" rel="stylesheet"/>
-    <link rel="preload" href="../css/fontawesome-local.min.css?v=20260911a" as="style" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link rel="stylesheet" href="../css/fontawesome-local.min.css?v=20260911a"/></noscript>
+    <meta name="description" content="Explore island day trips, city tours, water sports and Paratrike flights in Cartagena. Compare plans and confirm availability with Nohemi.">
+    
+    <title>Experiences and day trips in Cartagena | Dunas &amp; Olas</title>
+    
+    
+    <meta name="theme-color" content="#5B3A82">
+    <link href="/./css/tailwind.css" rel="stylesheet">
+    <link rel="preload" href="/css/fontawesome-local.min.css?v=20260911a" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/fontawesome-local.min.css?v=20260911a"/></noscript>
 
     <style>
       body {
@@ -41,7 +33,7 @@
       .hero-bg {
         position: absolute;
         inset: 0;
-        background-image: url("../images/acuario.webp"); /* Imagen de fondo genérica para experiencias */
+        background-image: url("/images/acuario.webp"); /* Imagen de fondo genérica para experiencias */
         background-size: cover;
         background-position: center;
         z-index: 0;
@@ -84,6 +76,166 @@
         background: #5b3a82;
         color: #fff;
         border-color: #5b3a82;
+      }
+
+      /* Una sola gramática visual para el catálogo */
+      #experiences-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+      }
+      #experiences-grid > [data-category] {
+        margin: 0 !important;
+        border: 1px solid #ebe7f0;
+        box-shadow: 0 16px 38px rgba(31, 24, 45, 0.1);
+      }
+      .kitesurf-portal-cta {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 1rem;
+        padding: 1rem 1.15rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 0.85rem;
+        color: #fff;
+        background: linear-gradient(135deg, #5b3a82 0%, #34204f 100%);
+        box-shadow: 0 12px 26px rgba(63, 39, 97, 0.22);
+        transition: transform 180ms ease, box-shadow 180ms ease,
+          background 180ms ease;
+      }
+      .kitesurf-portal-cta:hover {
+        color: #fff;
+        background: linear-gradient(135deg, #6e469b 0%, #452b68 100%);
+        box-shadow: 0 16px 32px rgba(63, 39, 97, 0.3);
+        transform: translateY(-2px);
+      }
+      .kitesurf-portal-cta__copy {
+        display: flex;
+        min-width: 0;
+        flex-direction: column;
+        line-height: 1.15;
+      }
+      .kitesurf-portal-cta__title {
+        font-size: 1rem;
+        font-weight: 800;
+      }
+      .kitesurf-portal-cta__subtitle {
+        margin-top: 0.3rem;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 0.75rem;
+        font-weight: 500;
+      }
+      .kitesurf-portal-cta__icon {
+        display: grid;
+        width: 2.65rem;
+        height: 2.65rem;
+        flex: 0 0 2.65rem;
+        place-items: center;
+        border-radius: 999px;
+        color: #2a1a40;
+        background: #f3bd19;
+      }
+      @media (min-width: 768px) {
+        #experiences-grid > [data-category].catalog-card {
+          display: grid !important;
+          grid-template-columns: minmax(290px, 40%) minmax(0, 60%);
+          align-items: center !important;
+          min-height: 0;
+        }
+        #experiences-grid > [data-category].catalog-card > .catalog-media {
+          width: 100% !important;
+          height: clamp(225px, 17vw, 270px);
+          min-height: 0;
+          align-self: center;
+          overflow: hidden;
+          background: #eef3f4;
+        }
+        #experiences-grid > [data-category].catalog-card > .catalog-media img {
+          width: 100%;
+          height: 100% !important;
+          min-height: 0;
+          object-fit: cover;
+        }
+        #experiences-grid
+          > [data-category].catalog-card
+          > div:not(.catalog-media) {
+          width: 100% !important;
+          min-width: 0;
+          box-sizing: border-box;
+        }
+      }
+      @media (min-width: 1024px) {
+        #experiences-grid > [data-category].catalog-card {
+          height: auto;
+          min-height: 270px;
+          max-height: none;
+        }
+        .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid) {
+          display: grid !important;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 0.7rem !important;
+          flex: 1 1 320px;
+          width: auto !important;
+          min-width: 320px;
+          max-width: 510px;
+          margin-left: auto;
+          align-items: stretch !important;
+        }
+        .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid)
+          > .whatsapp-info-btn:last-child:nth-child(3) {
+          grid-column: 1 / -1;
+        }
+        .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid)
+          > .add-to-cart-btn,
+        .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid)
+          > .add-to-cart-btn-solid,
+        .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid)
+          > .whatsapp-info-btn {
+          width: 100%;
+          min-width: 0;
+          min-height: 46px;
+          padding: 0.65rem 0.8rem;
+          white-space: normal;
+          line-height: 1.2;
+        }
+        .catalog-card
+          > div:not(.catalog-media)
+          > div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid) {
+          flex: 0 0 auto;
+          width: 100% !important;
+          min-width: 0;
+          max-width: none;
+          margin-left: 0;
+        }
+      }
+      @media (max-width: 767px) {
+        #experiences-grid {
+          gap: 2rem;
+        }
+        #experiences-grid > [data-category].catalog-card > .catalog-media,
+        #experiences-grid > [data-category].catalog-card > .catalog-media img {
+          width: 100% !important;
+          height: 178px !important;
+          min-height: 178px;
+          object-fit: cover;
+        }
+        .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid) {
+          display: flex !important;
+          flex-direction: column !important;
+          width: 100% !important;
+        }
+        .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid)
+          > .add-to-cart-btn,
+        .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid)
+          > .add-to-cart-btn-solid,
+        .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid)
+          > .whatsapp-info-btn {
+          width: 100%;
+          justify-content: center;
+          white-space: normal;
+        }
       }
 
       /* --- Estilos WhatsApp Widget Multi-idioma --- */
@@ -230,260 +382,55 @@
       }
 /* Estilos del carrito de compras: ver css/cart.css */
     </style>
-    <link rel="stylesheet" href="../css/cart.css?v=20260911a" />
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": [
-        "TravelAgency",
-        "LocalBusiness"
-      ],
-      "@id": "https://dunasyolas.com/#org",
-      "name": "Dunas & Olas",
-      "url": "https://dunasyolas.com",
-      "logo": "https://dunasyolas.com/images/logo-badge.png",
-      "description": "Selected experiences in Cartagena with visible prices, practical details and bilingual local support: islands, Barú, food, kitesurfing, city tours and sunsets.",
-      "telephone": "+573163030589",
-
-      "areaServed": [
-        { "@type": "City", "name": "Cartagena de Indias" },
-        { "@type": "Place", "name": "Bocagrande" },
-        { "@type": "Place", "name": "Historic Center (Walled City)" },
-        { "@type": "Place", "name": "Getsemaní" },
-        { "@type": "Place", "name": "La Boquilla" },
-        { "@type": "Place", "name": "Rosario Islands" },
-        { "@type": "Place", "name": "Castillogrande" }
-      ],
-      "priceRange": "$$",
-      "currenciesAccepted": "COP",
-      "openingHours": "Mo-Su 08:00-20:00",
-      "sameAs": [
-        "https://www.instagram.com/mexicanaencartagena",
-        "https://www.facebook.com/dunasyolas"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://dunasyolas.com/#website",
-      "url": "https://dunasyolas.com",
-      "name": "Dunas & Olas",
-      "inLanguage": "es-CO"
-    },
-    {
-      "@type": "ItemList",
-      "name": "Experiences in Cartagena — Dunas & Olas",
-      "url": "https://dunasyolas.com/en/experiences",
-      "numberOfItems": 6,
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
-            "@type": "TouristTrip",
-            "name": "Gastronomic Tour of Cartagena",
-            "description": "Culinary tour through Caribbean cuisine, led by Nohemi.",
-            "provider": {
-              "@id": "https://dunasyolas.com/#org"
-            },
-            "offers": {
-              "@type": "Offer",
-              "price": "140000",
-              "priceCurrency": "COP",
-              "availability": "https://schema.org/InStock",
-              "url": "https://dunasyolas.com/en/experiences"
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "item": {
-            "@type": "TouristTrip",
-            "name": "Diving and Snorkeling in the Rosario Islands",
-            "description": "Underwater adventure in the Corales del Rosario Natural Park.",
-            "provider": {
-              "@id": "https://dunasyolas.com/#org"
-            },
-            "offers": {
-              "@type": "Offer",
-              "price": "250000",
-              "priceCurrency": "COP",
-              "availability": "https://schema.org/InStock",
-              "url": "https://dunasyolas.com/en/experiences"
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "item": {
-            "@type": "TouristTrip",
-            "name": "Kitesurfing and Water Sports in Cartagena",
-            "description": "Kitesurfing lessons for all levels.",
-            "provider": {
-              "@id": "https://dunasyolas.com/#org"
-            },
-            "offers": {
-              "@type": "Offer",
-              "price": "750000",
-              "priceCurrency": "COP",
-              "availability": "https://schema.org/InStock",
-              "url": "https://dunasyolas.com/en/experiences"
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "item": {
-            "@type": "TouristTrip",
-            "name": "Full-Day Trip to the Rosario Islands",
-            "description": "A full day on a private boat with snorkeling, beach time, and lunch.",
-            "provider": {
-              "@id": "https://dunasyolas.com/#org"
-            },
-            "offers": {
-              "@type": "Offer",
-              "price": "180000",
-              "priceCurrency": "COP",
-              "availability": "https://schema.org/InStock",
-              "url": "https://dunasyolas.com/en/experiences"
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "item": {
-            "@type": "TouristTrip",
-            "name": "Sunset Bay Tour",
-            "description": "A 3-hour cruise around the bay of Cartagena at sunset.",
-            "provider": {
-              "@id": "https://dunasyolas.com/#org"
-            },
-            "offers": {
-              "@type": "Offer",
-              "price": "120000",
-              "priceCurrency": "COP",
-              "availability": "https://schema.org/InStock",
-              "url": "https://dunasyolas.com/en/experiences"
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "item": {
-            "@type": "TouristTrip",
-            "name": "Local Flavors: A Caribbean Culinary Experience",
-            "description": "An immersion in Colombian Caribbean cuisine at a local home with Nohemi.",
-            "provider": {
-              "@id": "https://dunasyolas.com/#org"
-            },
-            "offers": {
-              "@type": "Offer",
-              "price": "150000",
-              "priceCurrency": "COP",
-              "availability": "https://schema.org/InStock",
-              "url": "https://dunasyolas.com/en/experiences"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://dunasyolas.com/en/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Experiences",
-          "item": "https://dunasyolas.com/en/experiences"
-        }
-      ]
-    }
-  ]
-}
-</script>
-      <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Experiences in Cartagena de Indias | Dunas & Olas"/>
-    <meta property="og:description" content="Kitesurfing, diving, gastronomic tours, sunset bay cruises, and full-day trips to the Rosario Islands. Unique experiences in Cartagena with a local guide."/>
-    <meta property="og:url" content="https://dunasyolas.com/en/experiences"/>
-    <meta property="og:image" content="https://dunasyolas.com/images/atardecer.webp"/>
-    <meta property="og:site_name" content="Dunas & Olas"/>
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="Experiences in Cartagena de Indias | Dunas & Olas"/>
-    <meta name="twitter:description" content="Kitesurfing, diving, gastronomic tours, sunset bay cruises, and full-day trips to the Rosario Islands. Unique experiences in Cartagena with a local guide."/>
-    <link rel="stylesheet" href="../css/brand-refresh.css?v=20260911a"/>
-</head>
+    <link rel="stylesheet" href="/css/cart.css?v=20260911a">
+  
+      <meta property="og:type" content="website">
+    <meta property="og:title" content="Experiences and day trips in Cartagena | Dunas &amp; Olas">
+    <meta property="og:description" content="Explore island day trips, city tours, water sports and Paratrike flights in Cartagena. Compare plans and confirm availability with Nohemi.">
+    <meta property="og:url" content="https://dunasyolas.com/en/experiences">
+    <meta property="og:image" content="https://dunasyolas.com/images/atardecer.webp">
+    <meta property="og:site_name" content="Dunas &amp; Olas">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Experiencias en Cartagena de Indias | Dunas &amp; Olas">
+    <meta name="twitter:description" content="Kitesurf, buceo, atardeceres en la bahía y pasadías a las Islas del Rosario. Experiencias únicas en Cartagena con guía local.">
+    <link rel="canonical" href="https://dunasyolas.com/en/experiences">
+    <link rel="alternate" hreflang="es" href="https://dunasyolas.com/experiences">
+    <link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/experiences">
+    <link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/experiences">
+    <link rel="stylesheet" href="/css/brand-refresh.css?v=20260911a">
+<script src="/js/catalog.js?v=20260911b"></script>
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" href="/images/favicon-192.png" sizes="192x192"><link rel="apple-touch-icon" href="/images/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"></head>
   <body class="catalog-page bg-gray-50 text-gray-800 antialiased">
     <!-- Navbar -->
-    <nav
-      id="navbar"
-      style="top: 0"
-      class="fixed w-full z-50 transition-all duration-300 py-[2.5px] text-white bg-gray-900/95 backdrop-blur-md shadow-lg"
-    >
+    <nav id="navbar" style="top: 0" class="fixed w-full z-50 transition-all duration-300 py-[2.5px] text-white bg-gray-900/95 backdrop-blur-md shadow-lg">
       <div class="container mx-auto px-6 flex justify-between items-center">
-        <a href="../index.html" class="catalog-brand flex items-center gap-2 z-50 transform -translate-y-1"><picture><source srcset="../images/logo-icon-nav-small.webp" type="image/webp"/><img src="../images/logo-icon-nav-small.png" alt="Dunas & Olas - Cartagena Colombia tours and experiences" width="184" height="83" class="h-9 md:h-10 w-auto object-contain" loading="eager" decoding="async"/></picture>
+        <a href="/en/index.html" class="catalog-brand flex items-center gap-2 z-50 transform -translate-y-1"><picture><img src="/images/logo-icon-nav-small.png" alt="Dunas &amp; Olas - Agencia de tours y experiencias en Cartagena de Indias" width="184" height="83" class="h-9 md:h-10 w-auto object-contain" loading="eager" decoding="async"></picture>
           <span class="leading-none select-none">
             <span class="block font-extrabold tracking-tight text-2xl md:text-3xl text-white">
               Dunas <span class="text-yellow-500">&amp; Olas</span>
             </span>
             <span class="block text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-gray-300/80 font-semibold mt-0.5">
-              Cartagena de Indias
+              Mexicana en Cartagena
             </span>
           </span>
         </a>
-        <div
-          class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide uppercase h-full"
-        >
-          <a href="../index.html" class="text-white hover:text-blue-400 transition"
-            >Home</a
-          >
-          <a href="experiences.html" class="text-blue-400 transition"
-            >Experiences</a
-          >
-          <a href="kitesurf.html" class="text-white hover:text-blue-400 transition"
-            >Kitesurf</a
-          >
-          <a href="about.html" class="text-white hover:text-blue-400 transition"
-            >About Us</a
-          >
-          <a
-            href="blog/index.html"
-            class="text-white hover:text-blue-400 transition"
-            >Blog</a
-          >
-          <a id="lang-switch" href="../experiences.html" class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1" title="Versión en español">ES</a>
+        <div class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide uppercase h-full">
+          <a href="/en/index.html" class="text-white hover:text-blue-400 transition">Inicio</a>
+          <a href="/en/experiences.html" class="text-blue-400 transition">Experiencias</a>
+<a href="/galeria.html" class="text-white hover:text-blue-400 transition">Galería</a>
+          <a href="/en/kitesurf.html" class="text-white hover:text-blue-400 transition">Kitesurf</a>
+          <a href="/en/about.html" class="text-white hover:text-blue-400 transition">Nosotros</a>
+          <a href="/en/blog/index.html" class="text-white hover:text-blue-400 transition">Blog</a>
+          <a id="lang-switch" href="/en/experiences.html" class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1" title="English version">EN</a>
 
-          <a
-            href="experiences.html"
-            class="btn-primary py-2 px-6 text-xs bg-blue-600 hover:bg-blue-700 border-none shadow-none text-white rounded"
-            >Book Now</a
-          >
+          <a href="/en/experiences.html" class="btn-primary py-2 px-6 text-xs bg-blue-600 hover:bg-blue-700 border-none shadow-none text-white rounded">Reservar</a>
         </div>
         <div class="catalog-actions flex items-center gap-4 md:gap-5">
-          <button
-            id="nav-cart-btn"
-            class="nav-cart-btn"
-            onclick="toggleCart(true)"
-            aria-label="View cart"
-          >
+          <button id="nav-cart-btn" class="nav-cart-btn" onclick="toggleCart(true)" aria-label="Ver carrito">
             <i class="fas fa-shopping-cart"></i>
             <span id="cart-badge" class="cart-badge hidden">0</span>
           </button>
-          <button aria-label="Open navigation menu"
-            id="mobile-menu-btn"
-            class="md:hidden z-50 focus:outline-none text-white"
-          >
+          <button aria-label="Abrir menú de navegación" id="mobile-menu-btn" class="md:hidden z-50 focus:outline-none text-white">
             <i class="fas fa-bars text-2xl"></i>
           </button>
         </div>
@@ -491,44 +438,15 @@
     </nav>
 
     <!-- Menú Móvil -->
-    <div
-      id="mobile-menu"
-      class="fixed inset-0 bg-gray-900/95 backdrop-blur-md z-[10000] hidden flex flex-col justify-center items-center space-y-8 opacity-0 transition-opacity duration-300"
-    >
-      <a
-        href="../index.html"
-        class="text-2xl font-bold text-white hover:text-blue-400"
-        >Home</a
-      >
-      <a
-        href="experiences.html"
-        class="text-2xl font-bold text-white hover:text-blue-400"
-        >Experiences</a
-      >
-      <a
-        href="kitesurf.html"
-        class="text-2xl font-bold text-white hover:text-blue-400"
-        >Kitesurf</a
-      >
-      <a
-        href="about.html"
-        class="text-2xl font-bold text-white hover:text-blue-400"
-        >About Us</a
-      >
-      <a
-        href="blog/index.html"
-        class="text-2xl font-bold text-white hover:text-blue-400"
-        >Blog</a
-      >
-      <a
-        href="../arma-tu-viaje.html"
-        class="text-2xl font-bold text-yellow-400 hover:text-yellow-300"
-        >✦ Arma tu viaje</a
-      >
-      <button aria-label="Close navigation menu"
-        id="close-menu-btn"
-        class="absolute top-6 right-6 text-white text-3xl"
-      >
+    <div id="mobile-menu" class="fixed inset-0 bg-gray-900/95 backdrop-blur-md z-[10000] hidden flex flex-col justify-center items-center space-y-8 opacity-0 transition-opacity duration-300">
+      <a href="/en/index.html" class="text-2xl font-bold text-white hover:text-blue-400">Inicio</a>
+      <a href="/en/experiences.html" class="text-2xl font-bold text-white hover:text-blue-400">Experiencias</a>
+<a href="/galeria.html" class="text-2xl font-bold text-white hover:text-blue-400">Galería</a>
+      <a href="/en/kitesurf.html" class="text-2xl font-bold text-white hover:text-blue-400">Kitesurf</a>
+      <a href="/en/about.html" class="text-2xl font-bold text-white hover:text-blue-400">Nosotros</a>
+      <a href="/en/blog/index.html" class="text-2xl font-bold text-white hover:text-blue-400">Blog</a>
+      <a href="/arma-tu-viaje.html" class="text-2xl font-bold text-yellow-400 hover:text-yellow-300">✦ Arma tu viaje</a>
+      <button aria-label="Cerrar menú de navegación" id="close-menu-btn" class="absolute top-6 right-6 text-white text-3xl">
         <i class="fas fa-times"></i>
       </button>
     </div>
@@ -538,281 +456,215 @@
       <div class="hero-bg"></div>
       <div class="hero-overlay"></div>
       <div class="relative z-10 text-center text-white px-4 max-w-4xl">
-        <span
-          class="text-blue-400 font-bold tracking-widest uppercase text-sm mb-2 block"
-          >Discover the Caribbean</span
-        >
+        <span class="site-kicker mb-5">Mexican in Cartagena · Selected by Nohemi</span>
+        <span class="text-blue-400 font-bold tracking-widest uppercase text-sm mb-2 block">Discover the Caribbean</span>
         <h1 class="text-4xl md:text-6xl font-bold mb-4">
-          Our Experiences
+          Experiences and day trips in Cartagena
         </h1>
         <p class="text-lg md:text-xl font-light text-gray-100">
-          More than a boat rental, we create unforgettable moments in the Caribbean.
+          Selected experiences with clear information and local support.
         </p>
       </div>
     </header>
-
-    <!-- Sección Gastronómica Premium -->
-    <section class="py-16 bg-white relative overflow-hidden">
-      <div
-        class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-50"
-      ></div>
-      <div class="container mx-auto px-6 relative z-10">
-        <div class="flex flex-col md:flex-row items-center gap-12">
-          <div class="md:w-1/2">
-            <span
-              class="text-blue-600 font-bold text-sm uppercase tracking-wide mb-2 block"
-              >Exclusivity Onboard</span
-            >
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">
-              Premium Gastronomic Experience
-            </h2>
-            <p class="text-gray-600 text-lg mb-8 leading-relaxed">
-              We take your experience onboard to the next level. With every
-              boat rental, you can request our exclusive catering service,
-              designed to satisfy even the most demanding palates while you
-              sail.
-            </p>
-
-            <div class="space-y-6">
-              <div class="flex items-start">
-                <div class="bg-blue-100 p-3 rounded-lg text-blue-600 mr-4 mt-1">
-                  <i class="fas fa-cheese text-xl"></i>
-                </div>
-                <div>
-                  <h3 class="font-bold text-lg text-gray-900">
-                    Cheese Boards
-                  </h3>
-                  <p class="text-sm text-gray-500">
-                    A gourmet selection of fine cheeses and charcuterie.
-                  </p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <div class="bg-blue-100 p-3 rounded-lg text-blue-600 mr-4 mt-1">
-                  <i class="fas fa-wine-glass-alt text-xl"></i>
-                </div>
-                <div>
-                  <h3 class="font-bold text-lg text-gray-900">
-                    Premium Drinks
-                  </h3>
-                  <p class="text-sm text-gray-500">
-                    Wines, champagnes, and top-shelf spirits.
-                  </p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <div class="bg-blue-100 p-3 rounded-lg text-blue-600 mr-4 mt-1">
-                  <i class="fas fa-utensils text-xl"></i>
-                </div>
-                <div>
-                  <h3 class="font-bold text-lg text-gray-900">
-                    Custom Catering
-                  </h3>
-                  <p class="text-sm text-gray-500">
-                    Lunches and appetizers prepared especially for you.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="md:w-1/2">
-            <img
-              src="../images/foto%20(18).webp"
-              alt="Premium catering and gastronomy for boat tours in Cartagena"
-              class="rounded-2xl shadow-2xl w-full h-[500px] object-cover transform md:rotate-2 hover:rotate-0 transition duration-500" width="1200" height="800" decoding="async" loading="eager"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Lista de Experiencias -->
     <section class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
           <h2 class="text-3xl font-bold text-gray-900">
-            Choose Your Next Adventure
+            Choose what to do in Cartagena
           </h2>
-          <p class="text-gray-500 mt-2">Plans designed for every occasion.</p>
+          <p class="text-gray-500 mt-2">Compare experiences by style, price and time available.</p>
           <p class="text-gray-400 text-xs mt-3 max-w-xl mx-auto">
             <i class="fas fa-circle-info mr-1"></i>
-            The prices shown are estimates and may vary depending on the
-            number of people, date, and availability. Add your experiences
-            to the cart to book and pay online, or get a quote directly via
-            WhatsApp.
+            Prices are estimates and may vary by date, group size and availability. Add experiences to your cart and request confirmation through WhatsApp.
           </p>
-          <p class="mt-4 text-sm"><a href="blog/cartagena-tour-prices/index.html" class="font-bold text-purple-700 hover:underline"><i class="fas fa-tags mr-1"></i> Read the 2026 guide to tour prices, inclusions and extra costs</a></p>
+          <p class="mt-4 text-sm"><a href="/en/blog/cartagena-tour-prices/" class="font-bold text-purple-700 hover:underline"><i class="fas fa-tags mr-1"></i> Read our guide to prices, inclusions and additional costs</a></p>
         </div>
 
-        <div class="mb-10 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between bg-white rounded-xl border border-gray-100 shadow-sm p-4">
-          <div class="flex flex-wrap items-center gap-2">
-            <span class="text-xs font-bold uppercase text-gray-400 mr-1">Category:</span>
-            <button class="fleet-filter-btn active" data-category="all">All</button>
-            <button class="fleet-filter-btn" data-category="agua">Water Activities</button>
-            <button class="fleet-filter-btn" data-category="pasadia">Boat Tours</button>
-            <button class="fleet-filter-btn" data-category="gastronomia">Gastronomy</button>
+        <div class="mb-10 bg-white rounded-xl border border-gray-100 shadow-sm p-4 md:p-5 space-y-4">
+          <div>
+            <label for="experiences-search" class="block text-xs font-bold uppercase text-gray-500 mb-2">
+              Find your next experience
+            </label>
+            <div id="experiences-search-field" class="relative experiences-search-field" data-search-state="idle">
+              <input id="experiences-search" type="search" autocomplete="off" placeholder="Search experiences" class="w-full rounded-xl border border-gray-200 bg-gray-50 py-3 text-sm text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#5B3A82]/20 focus:border-[#5B3A82]" aria-describedby="experiences-search-summary">
+              <button id="experiences-search-clear" type="button" class="hidden absolute right-12 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full text-gray-400 hover:text-[#5B3A82] hover:bg-purple-50 transition" aria-label="Clear search">
+                <i class="fas fa-times" aria-hidden="true"></i>
+              </button>
+              <button id="experiences-search-submit" type="button" class="search-status-icon" aria-label="Search experiences" title="Search experiences">
+                <i id="experiences-search-status-icon" class="fas fa-search"></i>
+              </button>
+            </div>
+            <p id="experiences-search-summary" class="experiences-search-summary mt-2 text-xs text-gray-500" role="status" aria-live="polite" aria-atomic="true">
+              Explore all our experiences.
+            </p>
           </div>
-          <div class="flex items-center gap-2">
-            <label for="experiences-sort" class="text-xs font-bold uppercase text-gray-400">Sort by:</label>
-            <select id="experiences-sort" class="text-sm border border-gray-200 rounded-lg px-3 py-2 text-gray-700 focus:outline-none focus:border-blue-500">
-              <option value="default">Recommended</option>
-              <option value="price-asc">Price: low to high</option>
-              <option value="price-desc">Price: high to low</option>
-            </select>
+          <div class="flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between border-t border-gray-100 pt-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-xs font-bold uppercase text-gray-400 mr-1">Category:</span>
+              <button class="fleet-filter-btn active" data-category="all">All</button>
+              <button class="fleet-filter-btn" data-category="agua">Water activities</button>
+              <button class="fleet-filter-btn" data-category="pasadia">Boat trips</button>
+              <button class="fleet-filter-btn" data-category="gastronomia">Food and cooking</button>
+              <button class="fleet-filter-btn" data-category="cultural">Culture and nightlife</button><button class="fleet-filter-btn" data-category="adventure">Adventure</button>
+            </div>
+            <div class="flex items-center gap-2">
+              <label for="experiences-sort" class="text-xs font-bold uppercase text-gray-400">Sort by:</label>
+              <select id="experiences-sort" class="text-sm border border-gray-200 rounded-lg px-3 py-2 text-gray-700 focus:outline-none focus:border-blue-500">
+                <option value="default">Recommended</option>
+                <option value="price-asc">Price: low to high</option>
+                <option value="price-desc">Price: high to low</option>
+              </select>
+            </div>
           </div>
         </div>
-        <p id="experiences-empty-msg" class="hidden text-center text-gray-500 py-10">
-          We don't have experiences in this category right now. Try another filter or
-          <a href="#" onclick="openWhatsApp('Hi, I am looking for a specific experience.'); return false;" class="text-blue-600 underline">message us on WhatsApp</a>.
-        </p>
+        <p id="experiences-empty-msg" class="hidden text-center text-gray-500 py-10">No experiences match your search. Try another keyword or contact us on WhatsApp.</p>
 
-        <div class="space-y-16" id="experiences-grid">
-          <!-- Experiencia 1: Bay Tour -->
-          <div
-            id="experiencia-atardecer"
-            data-category="pasadia" data-price="120000" data-order="1"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse"
-          >
-            <div class="md:w-2/5">
-              <img
-                src="../images/cartagenasunset.webp"
-                alt="Sunset boat tour over Cartagena Bay, Colombia"
-                class="w-full h-56 md:h-full object-cover" width="1400" height="933" decoding="async" loading="lazy"
-              />
-            </div>
-            <div class="p-5 md:p-6 md:w-3/5 flex flex-col justify-center">
-              <h3 class="text-2xl font-bold text-gray-900 mb-1">
-                Magical Sunsets in the Bay (BAY TOUR)
-              </h3>
-              <div
-                class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-2.5 py-1 rounded-full mb-2 w-fit"
-              >
-                <i class="fas fa-shield-heart text-[#C9A227]"></i>
-                Personally guided by Nohemi, with the agency's safety
-                backing
-              </div>
-              <p class="text-gray-600 mb-2 text-sm leading-relaxed">
-                Sail on the best boats through the inner bay of Cartagena —
-                framed by Manga, the Historic Center, Bocagrande and
-                Castillogrande — for an unforgettable sunset. Perfect for
-                proposals, birthdays or a special night with the people you
-                love most.
-              </p>
+        <div class="space-y-10" id="experiences-grid">
 
-              <div class="mb-2">
-                <span class="text-xs font-bold text-gray-500 uppercase"
-                  >Perfect for:</span
-                >
-                <div class="flex flex-wrap gap-2 mt-1.5">
-                  <span
-                    class="bg-pink-100 text-pink-600 text-xs px-3 py-1 rounded-full"
-                    >Marriage proposals</span
-                  >
-                  <span
-                    class="bg-pink-100 text-pink-600 text-xs px-3 py-1 rounded-full"
-                    >Romantic dinners</span
-                  >
-                  <span
-                    class="bg-purple-100 text-purple-600 text-xs px-3 py-1 rounded-full"
-                    >Birthdays</span
-                  >
-                  <span
-                    class="bg-indigo-100 text-indigo-600 text-xs px-3 py-1 rounded-full"
-                    >Pre-Party</span
-                  >
-                </div>
-              </div>
-
-              <div class="bg-purple-50 p-3 rounded-lg mb-2">
-                <h4 class="font-bold text-purple-900 text-sm mb-0.5">
-                  Schedule:
-                </h4>
-                <p class="text-sm text-purple-800">
-                  The rate includes a <strong>3-hour</strong> tour, to be
-                  enjoyed between <strong>6:00 PM and 12:00 AM</strong>.
-                </p>
-              </div>
-
-              <div class="mt-3 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
-                <div class="price-tag">
-                  <span class="price-label">Estimated price / person</span>
-                  <span class="price-value">$120.000 COP</span>
-                </div>
-                <div
-                  class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap"
-                >
-                  <button
-                    onclick="addToCart('atardecer', this)"
-                    class="add-to-cart-btn justify-center"
-                  >
-                    <i class="fas fa-cart-plus"></i> Add to Cart
-                  </button>
-                  <button
-                    onclick="openWhatsApp('Hi, I would like a quote for the Sunset Bay Tour.')"
-                    class="whatsapp-info-btn"
-                  >
-                    <i class="fab fa-whatsapp"></i> Get a Quote via WhatsApp
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Experiencia 2: Sunny Day -->
-          <div
-            id="experiencia-pasadia"
-            data-category="pasadia" data-price="180000" data-order="2"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row"
-          >
-            <div class="md:w-1/2 relative">
-              <img
-                src="../images/acuario.webp"
-                alt="Rosario Islands day trip from Cartagena, Colombia"
-                class="w-full h-56 md:h-full object-cover" width="1400" height="933" decoding="async" loading="lazy"
-              />
-              <div
-                class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase"
-              >
-                Most Popular
-              </div>
+          <!-- Pasadía Isla Palma -->
+          <div id="experiencia-isla-palma" data-category="pasadia" data-price="490000" data-order="1" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
+            <div class="md:w-1/2 relative catalog-media">
+              <img src="/images/isla-palma-4.webp" alt="Isla Palma Nature Reserve Day Trip" class="w-full h-64 md:h-full object-cover" width="1280" height="720" decoding="async" loading="eager">
+              <div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">New experience</div>
+              <div class="absolute bottom-4 left-4 bg-black/60 text-white text-xs font-bold px-3 py-1 rounded-full">Nature reserve · Daily departures</div>
             </div>
             <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
-              <h3 class="text-2xl font-bold text-gray-900 mb-1">
-                Rosario Islands Full-Day Trip (SUNNY DAY)
-              </h3>
-              <div
-                class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-2.5 py-1 rounded-full mb-2 w-fit"
-              >
-                <i class="fas fa-shield-heart text-[#C9A227]"></i>
-                Personally guided by Nohemi, with the agency's safety
-                backing
-              </div>
-              <p class="text-gray-600 mb-2 text-sm leading-relaxed">
-                Explore the Corales del Rosario y de San Bernardo National
-                Natural Park aboard our boats, fully equipped to enjoy every
-                destination we offer.
-              </p>
-
-              <div class="mt-3 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
-                <div class="price-tag">
-                  <span class="price-label">Estimated price / person</span>
-                  <span class="price-value">$180.000 COP</span>
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Isla Palma Nature Reserve Day Trip</h3>
+              <p class="text-gray-600 mb-4 text-sm leading-relaxed">Visit Hotel Isla Palma, with a panoramic boat journey through the Rosario and San Bernardo islands, gourmet lunch, beach access and a hotel-to-pier transfer. Port fees and insurance are additional.</p>
+              
+              <div class="rounded-lg bg-red-50 border border-red-100 px-3 py-2 mb-4 text-xs text-red-700"><strong>Not included:</strong>port fee and insurance: COP 37,000 per person.</div>
+              <div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
+                <div class="price-tag"><span class="price-label">From · per person</span><span class="price-value" data-cop-val="490000" data-product-id="isla_palma">$490,000 COP</span></div>
+                <div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto">
+                  <a href="/en/pasadia-isla-palma" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('isla_palma', this)" class="add-to-cart-btn justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Isla Palma Nature Reserve Day Trip.&quot;)" class="whatsapp-info-btn">Check availability</button>
                 </div>
-                <div
-                  class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap"
-                >
-                  <button
-                    onclick="addToCart('pasadia', this)"
-                    class="add-to-cart-btn justify-center"
-                  >
-                    <i class="fas fa-cart-plus"></i> Add to Cart
-                  </button>
-                  <button
-                    onclick="openWhatsApp('Hi, I would like a quote for the Full-Day Trip to the Rosario Islands.')"
-                    class="whatsapp-info-btn"
-                  >
-                    <i class="fab fa-whatsapp"></i> Get a Quote via WhatsApp
-                  </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pasadía Múcura, Tintipán y Santa Cruz del Islote -->
+          <div id="experiencia-mucura-tintipan" data-category="pasadia" data-price="320000" data-order="2" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
+            <div class="md:w-1/2 relative catalog-media">
+              <img src="/images/mucura-tintipan-1.webp" alt="Múcura, Tintipán and Santa Cruz del Islote" class="w-full h-64 md:h-full object-cover" width="1280" height="720" decoding="async" loading="lazy">
+              <div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">New experience</div>
+              <div class="absolute bottom-4 left-4 bg-black/60 text-white text-xs font-bold px-3 py-1 rounded-full">4 stops · Daily departures</div>
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Múcura, Tintipán and Santa Cruz del Islote</h3>
+              <p class="text-gray-600 mb-4 text-sm leading-relaxed">Explore Tintipán, Casa en el Agua, Santa Cruz del Islote and Múcura with lunch. Port fees and insurance are not included.</p>
+              
+              <div class="rounded-lg bg-red-50 border border-red-100 px-3 py-2 mb-4 text-xs text-red-700"><strong>Not included:</strong>port fee and insurance: COP 37,000 per person, plus the local aquarium admission.</div>
+              <div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
+                <div class="price-tag"><span class="price-label">From · per person</span><span class="price-value" data-cop-val="320000" data-product-id="mucura_tintipan">$320,000 COP</span></div>
+                <div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto">
+                  <a href="/en/pasadia-mucura-tintipan" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('mucura_tintipan', this)" class="add-to-cart-btn justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Múcura, Tintipán and Santa Cruz del Islote.&quot;)" class="whatsapp-info-btn">Check availability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pasadía Isla Lizamar -->
+          <div id="experiencia-isla-lizamar" data-category="pasadia" data-price="385000" data-order="2b" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
+            <div class="md:w-1/2 relative catalog-media">
+              <img src="/images/isla-lizamar-piscina.webp" alt="Isla Lizamar — Pools and Beach Day" class="w-full h-64 md:h-full object-cover" width="1280" height="720" decoding="async" loading="lazy">
+              <div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">New experience</div>
+              <div class="absolute bottom-4 left-4 bg-black/60 text-white text-xs font-bold px-3 py-1 rounded-full">Isla Grande · Bilingual guide</div>
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Isla Lizamar — Pools and Beach Day</h3>
+              <p class="text-gray-600 mb-4 text-sm leading-relaxed">Enjoy Isla Grande, swimming pools, a slide into the sea, buffet lunch, a bilingual guide and a panoramic Rosario Islands boat trip. Optional services cost extra.</p>
+              
+              <div class="rounded-lg bg-red-50 border border-red-100 px-3 py-2 mb-4 text-xs text-red-700"><strong>Not included:</strong>pier fee and optional activities such as the Oceanarium, snorkeling and diving.</div>
+              <div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
+                <div class="price-tag"><span class="price-label">From · per person</span><span class="price-value" data-cop-val="385000" data-product-id="isla_lizamar">$385,000 COP</span></div>
+                <div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto">
+                  <a href="/en/pasadia-isla-lizamar" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('isla_lizamar', this)" class="add-to-cart-btn justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Isla Lizamar — Pools and Beach Day.&quot;)" class="whatsapp-info-btn">Check availability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Corona Island -->
+          <div id="experiencia-corona-island" data-category="pasadia" data-price="800000" data-order="3" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
+            <div class="md:w-1/2 relative catalog-media">
+              <img src="/images/corona-island/corona-island-card.webp" alt="Corona Island — Adults-only Day Trip" class="w-full h-64 md:h-full object-cover" width="1200" height="720" decoding="async" loading="lazy">
+              <div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">New experience</div>
+              <div class="absolute bottom-4 left-4 bg-black/60 text-white text-xs font-bold px-3 py-1 rounded-full">Premium · Ages 18+</div>
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Corona Island — Adults-only Day Trip</h3>
+              <p class="text-gray-600 mb-4 text-sm leading-relaxed">An adults-only experience for guests aged 18 and over, with a speedboat transfer, a three-course lunch, unlimited Corona beer, kayaking and paddleboarding.</p>
+              
+              <div class="rounded-lg bg-yellow-50 border border-yellow-100 px-3 py-2 mb-4 text-xs text-yellow-800"><strong>Please note:</strong>taxes are included. Signature cocktails cost extra.</div>
+              <div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
+                <div class="price-tag"><span class="price-label">From · per person</span><span class="price-value" data-cop-val="800000" data-product-id="corona_island">$800,000 COP</span></div>
+                <div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto">
+                  <a href="/en/corona-island" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('corona_island', this)" class="add-to-cart-btn justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Corona Island — Adults-only Day Trip.&quot;)" class="whatsapp-info-btn">Check availability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tritonia Beach Club -->
+          <div id="experiencia-tritonia" data-category="pasadia" data-price="470000" data-order="4" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
+            <div class="md:w-1/2 relative catalog-media">
+              <img src="/images/tritonia/tritonia-card.webp" alt="Tritonia Beach Club — Adults-only Day Trip" class="w-full h-64 md:h-full object-cover" width="1200" height="720" decoding="async" loading="lazy">
+              <div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">New experience</div>
+              <div class="absolute bottom-4 left-4 bg-black/60 text-white text-xs font-bold px-3 py-1 rounded-full">Adults only · Pet friendly</div>
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Tritonia Beach Club — Adults-only Day Trip</h3>
+              <p class="text-gray-600 mb-4 text-sm leading-relaxed">An adults-only beach club in Tintipán, reached by hotel pickup, bus and boat via Tolú. Includes a snack and return transport to Cartagena. The published plan welcomes pets.</p>
+              
+              <div class="rounded-lg bg-yellow-50 border border-yellow-100 px-3 py-2 mb-4 text-xs text-yellow-800"><strong>Extended day:</strong>pickup from 4:30 am, returning to the hotel around 7:30 pm.</div>
+              <div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
+                <div class="price-tag"><span class="price-label">From · per person</span><span class="price-value" data-cop-val="470000" data-product-id="tritonia">$470,000 COP</span></div>
+                <div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto">
+                  <a href="/en/tritonia-beach-club" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('tritonia', this)" class="add-to-cart-btn justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Tritonia Beach Club — Adults-only Day Trip.&quot;)" class="whatsapp-info-btn">Check availability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experiencia 1: 4 Islas + Atardecer -->
+          <div id="experiencia-pasadia" data-category="pasadia" data-price="300000" data-order="2" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
+            <div class="md:w-1/2 relative catalog-media">
+              <img src="/images/islastour (7).webp" alt="Four Islands Day Trip and Bay Sunset" class="w-full h-56 md:h-full object-cover" width="1242" height="734" decoding="async" loading="eager">
+              <div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">
+                ★ Tour Premium
+              </div>
+              <div class="absolute bottom-4 left-4 bg-black/60 text-white text-xs font-bold px-3 py-1 rounded-full">Up to 12 guests per departure</div>
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Four Islands Day Trip and Bay Sunset</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">Visit Isla Grande, Cholón, Barú and Bocachica in one day, with lunch, selected drinks, snorkeling and a sunset cruise. The published plan is for up to 12 guests.</p>
+
+              
+
+              <div class="rounded-lg bg-[#F8F6FB] border border-[#E5DFF0] px-3 py-2.5 mb-4 text-xs text-[#3F2761]">
+                <strong>9 am departure</strong>from Muelle de los Pegasos · lunch, selected drinks, snorkeling and a local guide included.</div>
+
+              <div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
+                <div class="price-tag">
+                  <span class="price-label">From · per person</span>
+                  <span class="price-value" data-cop-val="300000" data-product-id="pasadia_cuatro_islas">$300,000 COP</span>
+                </div>
+                <div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto">
+                  <a href="/en/pasadia-islas-rosario" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('pasadia_cuatro_islas', this)" class="add-to-cart-btn justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Four Islands Day Trip and Bay Sunset.&quot;)" class="whatsapp-info-btn">Check availability</button>
                 </div>
               </div>
             </div>
@@ -821,142 +673,78 @@
           <!-- Experiencia 3: Kitesurf y Deportes Acuáticos (con tabla de precios) -->
           <div data-category="agua" data-price="750000" data-order="3" class="bg-white rounded-2xl overflow-hidden shadow-lg">
             <div class="flex flex-col md:flex-row md:items-center">
-              <div class="md:w-1/2">
-                <img
-                  src="../images/kitesurf/salto.webp"
-                  alt="Kitesurfing on the beaches of Cartagena"
-                  class="w-full h-56 md:h-[320px] object-cover" width="4290" height="2860" decoding="async" loading="lazy"
-                />
+              <div class="md:w-1/2 catalog-media">
+                <img src="/images/kitesurf/salto.webp" alt="Kitesurf en las playas de Cartagena" class="w-full h-56 md:h-[320px] object-cover" width="4290" height="2860" decoding="async" loading="lazy">
               </div>
               <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
                 <h3 class="text-2xl font-bold text-gray-900 mb-1">
-                  Kitesurfing and Water Sports
+                  Kitesurfing and water sports
                 </h3>
-                <div
-                  class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-2.5 py-1 rounded-full mb-2 w-fit"
-                >
-                  <i class="fas fa-shield-heart text-[#C9A227]"></i>
-                  Personally guided by Nohemi, with the agency's safety
-                  backing
-                </div>
                 <p class="text-gray-600 mb-2 text-sm leading-relaxed">
-                  The beaches north of Cartagena (La Boquilla) are one of
-                  the best kitesurfing spots in the Caribbean: steady winds
-                  and warm, flat waters, ideal for both beginners and
-                  advanced riders. We connect you with trusted certified
-                  schools and instructors.
+                  Discover kitesurfing in La Boquilla, north of Cartagena. Our team helps you choose a school and an instructor for your level, from first lessons to advanced riding.
                 </p>
                 <div class="bg-blue-50 p-3 rounded-lg">
                   <h4 class="font-bold text-blue-900 text-sm mb-0.5">
-                    Why do it with us:
+                    Why book with us:
                   </h4>
                   <p class="text-sm text-blue-800">
-                    We coordinate certified instructors, gear in great
-                    condition, and transport to the spot, so all you have to
-                    worry about is enjoying the Caribbean wind.
+                    We help coordinate instructors, equipment and transfers. Confirm the inclusions of your chosen course with our team.
                   </p>
                 </div>
-                <a
-                  href="kitesurf.html"
-                  class="inline-flex items-center gap-2 text-sm font-bold text-[#5B3A82] hover:text-[#3F2761] mt-3"
-                  >View the full Kitesurf portal <i class="fas fa-arrow-right"></i
-                ></a>
+                <a href="/en/kitesurf.html" class="kitesurf-portal-cta" aria-label="Explorar el portal completo de Kitesurf en Cartagena">
+                  <span class="kitesurf-portal-cta__copy">
+                    <span class="kitesurf-portal-cta__title">Explore our kitesurf portal</span>
+                    <span class="kitesurf-portal-cta__subtitle">Courses, levels and experiences in La Boquilla</span>
+                  </span>
+                  <span class="kitesurf-portal-cta__icon" aria-hidden="true">
+                    <i class="fas fa-arrow-right"></i>
+                  </span>
+                </a>
               </div>
             </div>
 
             <!-- Selector de cursos de Kitesurf -->
             <div class="px-6 md:px-7 pb-6 pt-4 border-t border-gray-100">
-              <h4
-                class="font-bold text-gray-900 text-sm mb-2 uppercase border-b pb-2 border-gray-100"
-              >
-                Choose Your Kitesurf Course
+              <h4 class="font-bold text-gray-900 text-sm mb-2 uppercase border-b pb-2 border-gray-100">
+                Choose your kitesurf course
               </h4>
               <div class="bg-[#F8F6FB] border border-[#E5DFF0] rounded-xl p-4">
                 <div class="grid sm:grid-cols-2 gap-4 mb-1">
                   <div>
-                    <label
-                      for="kite-course-select"
-                      class="block text-xs font-bold uppercase tracking-wide text-gray-500 mb-1"
-                      >Course</label
-                    >
+                    <label for="kite-course-select" class="block text-xs font-bold uppercase tracking-wide text-gray-500 mb-1">Course</label>
                     <div class="relative">
-                      <select
-                        id="kite-course-select"
-                        onchange="updateKiteTotalPreview()"
-                        class="w-full appearance-none border border-gray-200 rounded-lg pl-3 pr-9 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#5B3A82]/30 focus:border-[#5B3A82]"
-                      >
-                        <option value="kitesurf_iniciacion" data-price="750000" data-unit="persona">
-                          Beginner Class (2 hours) — $750,000 / person
-                        </option>
-                        <option value="kitesurf_refuerzo" data-price="400000" data-unit="persona">
-                          Refresher Class (1 hour) — $400,000 / person
-                        </option>
-                        <option value="kitesurf_grupal" data-price="320000" data-unit="persona">
-                          Group Class — $320,000 / person
-                        </option>
-                        <option value="kitesurf_foil" data-price="570000" data-unit="persona">
-                          Kite Foil (session) — $570,000 / person
-                        </option>
-                        <option value="kitesurf_rider" data-price="2850000" data-unit="persona">
-                          Full "Rider" Course (8 hours) — $2,850,000 / person
-                        </option>
-                        <option value="kitesurf_avanzado" data-price="3450000" data-unit="persona">
-                          Advanced Course (10 hours) — $3,450,000 / person
-                        </option>
-                        <option value="kitesurf_elite" data-price="3990000" data-unit="persona">
-                          Elite VIP Experience (12 hours) — $3,990,000 / person
-                        </option>
+                      <select id="kite-course-select" onchange="updateKiteTotalPreview()" class="w-full appearance-none border border-gray-200 rounded-lg pl-3 pr-9 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#5B3A82]/30 focus:border-[#5B3A82]">
+                        <option value="kitesurf_iniciacion" data-price="750000" data-unit="persona">Kitesurf Beginner Lesson — 2 Hours — $750,000 COP / person</option>
+                        <option value="kitesurf_refuerzo" data-price="400000" data-unit="persona">Kitesurf Refresher Lesson — 1 Hour — $400,000 COP / person</option>
+                        <option value="kitesurf_grupal" data-price="320000" data-unit="persona">Group Kitesurf Lesson — $320,000 COP / person</option>
+                        <option value="kitesurf_foil" data-price="570000" data-unit="persona">Kite Foil Session — $570,000 COP / person</option>
+                        <option value="kitesurf_rider" data-price="2850000" data-unit="persona">Rider Kitesurf Course — 8 Hours — $2,850,000 COP / person</option>
+                        <option value="kitesurf_avanzado" data-price="3450000" data-unit="persona">Advanced Kitesurf Course — 10 Hours — $3,450,000 COP / person</option>
+                        <option value="kitesurf_elite" data-price="3990000" data-unit="persona">Elite VIP Kitesurf Experience — 12 Hours — $3,990,000 COP / person</option>
                       </select>
                       <i class="fas fa-chevron-down absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs pointer-events-none"></i>
                     </div>
                   </div>
                   <div>
-                    <label
-                      for="kite-people"
-                      class="block text-xs font-bold uppercase tracking-wide text-gray-500 mb-1"
-                      >Number of people</label
-                    >
-                    <input
-                      type="number"
-                      id="kite-people"
-                      min="1"
-                      value="1"
-                      oninput="updateKiteTotalPreview()"
-                      class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#5B3A82]/30 focus:border-[#5B3A82]"
-                    />
-                    <p
-                      id="kite-couple-note"
-                      class="text-xs text-[#C9A227] font-semibold mt-1.5 hidden"
-                    >
-                      <i class="fas fa-heart mr-1"></i>Book as a couple! A 10% discount is applied automatically.
+                    <label for="kite-people" class="block text-xs font-bold uppercase tracking-wide text-gray-500 mb-1">Number of people</label>
+                    <input type="number" id="kite-people" min="1" value="1" oninput="updateKiteTotalPreview()" class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#5B3A82]/30 focus:border-[#5B3A82]">
+                    <p id="kite-couple-note" class="text-xs text-[#C9A227] font-semibold mt-1.5 hidden">
+                      <i class="fas fa-heart mr-1"></i>Book as a couple: a 10% discount is applied automatically.
                     </p>
                   </div>
                 </div>
-                <p class="text-xs text-gray-400 mt-2 mb-2">
-                  If <strong>2 people</strong> book together, we
-                  automatically apply a <strong>10% couples discount</strong>
-                  to the total. Nohemi and her team will confirm the final
-                  quote with you based on date and availability.
-                </p>
+                <p class="text-xs text-gray-400 mt-2 mb-2">For two people booking together, a 10% couple discount is applied. Our team confirms the final quote for your dates and availability.</p>
                 <div class="flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
                   <div class="price-tag">
                     <span class="price-label">Estimated total</span>
                     <span id="kite-total-preview" class="price-value">$750.000 COP</span>
                   </div>
-                  <div
-                    class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap"
-                  >
-                    <button
-                      onclick="addKiteCourseToCart(this)"
-                      class="add-to-cart-btn justify-center"
-                    >
-                      <i class="fas fa-cart-plus"></i> Add to Cart
+                  <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                    <button onclick="addKiteCourseToCart(this)" class="add-to-cart-btn justify-center">
+                      <i class="fas fa-cart-plus"></i> Add to cart
                     </button>
-                    <button
-                    onclick="quoteKiteCourseViaWhatsApp()"
-                    class="whatsapp-info-btn"
-                  >
-                    <i class="fab fa-whatsapp"></i> More Info via WhatsApp
+                    <button onclick="quoteKiteCourseViaWhatsApp()" class="whatsapp-info-btn">
+                    <i class="fab fa-whatsapp"></i> Request a quote on WhatsApp
                   </button>
                   </div>
                 </div>
@@ -964,213 +752,597 @@
             </div>
           </div>
 
-          <!-- Experiencia 4: Recorrido Gastronómico por la Ciudad -->
-          <div
-            id="experiencia-gastronomico"
-            data-category="gastronomia" data-price="140000" data-order="4"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center"
-          >
-            <div class="md:w-1/2 relative">
-              <img
-                src="../images/cocinacaribe.webp"
-                alt="Gastronomic tour through the historic center of Cartagena"
-                class="w-full h-56 md:h-[340px] object-cover" width="1024" height="1024" decoding="async" loading="lazy"
-              />
-              <div
-                class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase"
-              >
-                New
+
+          <!-- Experiencia 5: Buceo y Snorkel -->
+          <div id="experiencia-buceo" data-category="agua" data-price="250000" data-order="5" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse catalog-card">
+            <div class="md:w-2/5 relative catalog-media">
+              <img src="/images/foto%20(10).webp" alt="Scuba Diving and Snorkeling" class="w-full h-56 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy">
+              <div class="absolute top-4 left-4 bg-cyan-400 text-cyan-900 text-xs font-bold px-3 py-1 rounded-full uppercase">New</div>
+            </div>
+            <div class="p-5 md:p-6 md:w-3/5 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Scuba Diving and Snorkeling</h3>
+              <p class="text-gray-600 mb-2 text-sm leading-relaxed">Explore Caribbean coral reefs with a guided diving experience and island lunch. Confirm the number of dives, experience requirements and return time for your selected plan.</p>
+
+              <div class="mb-2">
+                
+                <div class="flex flex-wrap gap-2 mt-1.5">
+                  
+                  
+                  
+                  
+                </div>
+              </div>
+
+              <div class="mt-3 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
+                <div class="price-tag">
+                  <span class="price-label">From · per person</span>
+                  <span class="price-value" data-cop-val="250000" data-product-id="buceo">$250,000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <button onclick="addToCart('buceo', this)" class="add-to-cart-btn justify-center">Add to cart</button>
+                  <a class="add-to-cart-btn" href="/en/buceo-snorkel">View experience</a><button onclick="openWhatsApp(&quot;Hello, I would like information about Scuba Diving and Snorkeling.&quot;)" class="whatsapp-info-btn">Check availability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chiva Rumbera -->
+          <div id="experiencia-chiva" data-category="cultural" data-price="45000" data-order="7" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center catalog-card">
+            <div class="md:w-1/2 catalog-media">
+              <img src="/images/chiva-rumbera.webp" alt="Chiva Party Bus and Taboo Nightclub" class="w-full h-56 md:h-[340px] object-cover" width="1200" height="800" decoding="async" loading="lazy">
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Chiva Party Bus and Taboo Nightclub</h3>
+              <p class="text-gray-600 mb-2 text-sm leading-relaxed">A colorful evening tour past the Old Shoes monument, San Felipe Castle and Cartagena sign, with music, a bilingual host and entry to Taboo nightclub.</p>
+
+              
+
+              <div class="mt-1 flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="price-tag">
+                  <span class="price-label">From · per person</span>
+                  <span class="price-value">$45.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <a href="/en/chiva-rumbera" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('chiva', this)" class="add-to-cart-btn-solid justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Chiva Party Bus and Taboo Nightclub.&quot;)" class="whatsapp-info-btn">Check availability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- City Tour de Roa -->
+          <div id="experiencia-citytour" data-category="cultural" data-price="140000" data-order="8" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center catalog-card">
+            <div class="md:w-1/2 catalog-media">
+              <img src="/images/castillo-real.webp" alt="ROA Historic City Tour with Lunch" class="w-full h-56 md:h-[340px] object-cover" width="1400" height="1135" decoding="async" loading="lazy" srcset="">
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">ROA Historic City Tour with Lunch</h3>
+              <p class="text-gray-600 mb-2 text-sm leading-relaxed">Stops: Castillo Grande Bay, Palenquera Monument, Rafael Núñez House, Cartagena letters, La Popa, Old Shoes Monument, San Felipe Castle, Pastelillo Fort and a Getsemaní walk. Lunch or dinner included; admissions depend on your plan.</p><div class="price-tag"><span class="price-label">From · per person</span><span class="price-value" data-product-id="citytour_roa" data-cop-val="140000">$140,000 COP</span></div>
+              
+              <div class="mt-1 flex flex-col sm:flex-row gap-3 items-center flex-wrap">
+                <a href="/en/city-tour-roa" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('citytour_roa', this)" class="add-to-cart-btn-solid justify-center">Add to cart</button>
+                <button onclick="openWhatsApp(&quot;Hello, I would like information about ROA Historic City Tour with Lunch.&quot;)" class="whatsapp-info-btn">Check availability</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Catamarán Atardecer -->
+          <div id="experiencia-catamaran" data-category="pasadia" data-price="150000" data-order="9" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center catalog-card">
+            <div class="md:w-1/2 catalog-media">
+              <img src="/images/catamaran-cartagena-atardecer.webp" alt="Sunset Catamaran Cruise — Silver Package" class="w-full h-56 md:h-[340px] object-cover" width="1600" height="900" decoding="async" loading="lazy">
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Sunset Catamaran Cruise — Silver Package</h3>
+              <p class="text-gray-600 mb-2 text-sm leading-relaxed">Watch the sunset from the sea with selected unlimited drinks and a live DJ. A separate Gold package is also offered.</p><div class="price-tag"><span class="price-label">From · per person</span><span class="price-value" data-product-id="catamaran" data-cop-val="150000">$150,000 COP</span></div>
+              
+              <div class="mt-1 flex flex-col sm:flex-row gap-3 items-center flex-wrap">
+                <a href="/en/catamaran-atardecer" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('catamaran', this)" class="add-to-cart-btn-solid justify-center">Add to cart</button>
+                <button onclick="openWhatsApp(&quot;Hello, I would like information about Sunset Catamaran Cruise — Silver Package.&quot;)" class="whatsapp-info-btn">Check availability</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Salto en Paracaídas -->
+          <div id="experiencia-paracaidismo" data-category="agua" data-price="980000" data-order="10" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center catalog-card">
+            <div class="md:w-1/2 catalog-media">
+              <img src="/images/paracaidismo.webp" alt="Tandem Skydiving over the Caribbean" class="w-full h-56 md:h-[340px] object-cover" width="1200" height="800" decoding="async" loading="lazy">
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Tandem Skydiving over the Caribbean</h3>
+              <p class="text-gray-600 mb-2 text-sm leading-relaxed">A tandem jump from 10,000 feet with a certified instructor and Caribbean Sea views. Photos and video are included in the published package.</p>
+              <div class="mt-1 flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="price-tag">
+                  <span class="price-label">From · per person</span>
+                  <span class="price-value">$980.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <a href="/en/salto-paracaidismo" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('paracaidismo', this)" class="add-to-cart-btn-solid justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Tandem Skydiving over the Caribbean.&quot;)" class="whatsapp-info-btn">Check availability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- City Bahía de ROA -->
+          <div id="experiencia-citybahia" data-category="cultural" data-price="195000" data-order="11" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center catalog-card">
+            <div class="md:w-1/2 catalog-media">
+              <img src="/images/cartagenasunset.webp" alt="City Bahía by ROA — Lunch and Sunset" class="w-full h-56 md:h-[340px] object-cover" width="1200" height="800" decoding="async" loading="lazy" srcset="">
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">City Bahía by ROA — Lunch and Sunset</h3>
+              <p class="text-gray-600 mb-2 text-sm leading-relaxed">Visit Cartagena landmarks, enjoy lunch and finish with a speedboat sunset trip and two hours of selected drinks. A separate Full option includes the castle.</p>
+              <div class="mt-1 flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="price-tag">
+                  <span class="price-label">From · per person</span>
+                  <span class="price-value">$195.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <a href="/en/city-bahia" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('citybahia', this)" class="add-to-cart-btn-solid justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about City Bahía by ROA — Lunch and Sunset.&quot;)" class="whatsapp-info-btn">Check availability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tour Bahía en Yate -->
+          <div id="experiencia-yate" data-category="pasadia" data-price="120000" data-order="12" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center catalog-card">
+            <div class="md:w-1/2 catalog-media">
+              <img src="/images/lunamia.webp" alt="Cartagena Bay Yacht Tour — Luna Mía" class="w-full h-56 md:h-[340px] object-cover" width="1000" height="750" decoding="async" loading="lazy">
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Cartagena Bay Yacht Tour — Luna Mía</h3>
+              <p class="text-gray-600 mb-2 text-sm leading-relaxed">Cruise the bay with selected drinks, an onboard DJ, host and bartender. Departures are from Muelle de los Pegasos; confirm the time before booking.</p>
+              <div class="mt-1 flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="price-tag">
+                  <span class="price-label">From · per person</span>
+                  <span class="price-value">$120.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <a href="/en/tour-bahia-yate" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('yate', this)" class="add-to-cart-btn-solid justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Cartagena Bay Yacht Tour — Luna Mía.&quot;)" class="whatsapp-info-btn">Check availability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tour Nocturno Yate Luna Mía -->
+          <div id="experiencia-yate-noche" data-category="pasadia" data-price="120000" data-order="12b" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center catalog-card">
+            <div class="md:w-1/2 catalog-media">
+              <img src="/images/lunamia-noche-cartagena.webp" alt="Luna Mía Night Yacht Tour" class="w-full h-56 md:h-[340px] object-cover" width="1440" height="1080" decoding="async" loading="lazy">
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Luna Mía Night Yacht Tour</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">Enjoy an onboard DJ, selected drinks and Cartagena's illuminated skyline. Published evening slots are 7–9 pm and 9–11 pm, subject to confirmation.</p>
+              <div class="flex flex-wrap gap-2 mb-3">
+                
+                
+                
+              </div>
+              <div class="mt-1 flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="price-tag">
+                  <span class="price-label">From · per person</span>
+                  <span class="price-value">$120.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <a href="/en/tour-bahia-yate" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('yate_noche', this)" class="add-to-cart-btn-solid justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Luna Mía Night Yacht Tour.&quot;)" class="whatsapp-info-btn">Check availability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tour Nocturno Catamarán -->
+          <div id="experiencia-catamaran-noche" data-category="pasadia" data-price="150000" data-order="9b" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center catalog-card">
+            <div class="md:w-1/2 catalog-media">
+              <img src="/images/catamaran-cartagena-atardecer.webp" alt="Night Catamaran Cruise" class="w-full h-56 md:h-[340px] object-cover object-center" width="1600" height="900" decoding="async" loading="lazy">
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Night Catamaran Cruise</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">Music, cocktails, dancing and Cartagena's illuminated skyline. Choose a Silver or Gold package and confirm the evening departure.</p>
+              <div class="flex flex-wrap gap-2 mb-3">
+                
+                
+                
+                
+              </div>
+              <div class="mt-1 flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="price-tag">
+                  <span class="price-label">From · per person</span>
+                  <span class="price-value">$150.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <a href="/en/catamaran-atardecer" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('catamaran_noche', this)" class="add-to-cart-btn-solid justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Night Catamaran Cruise.&quot;)" class="whatsapp-info-btn">Check availability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Puerto Medallo – Playa Blanca, Barú -->
+          <div id="experiencia-playablanca" data-category="agua" data-price="190000" data-order="13" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center catalog-card">
+            <div class="md:w-1/2 catalog-media">
+              <img src="/images/playa-blanca-piscina.webp" alt="Puerto Medallo — Playa Blanca, Barú" class="w-full h-56 md:h-[340px] object-cover" width="1200" height="800" decoding="async" loading="lazy">
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Puerto Medallo — Playa Blanca, Barú</h3>
+              <p class="text-gray-600 mb-2 text-sm leading-relaxed">A beach day with land transport, a welcome cocktail, a choice of lunch, pool access and sunbeds by the Caribbean.</p>
+              <div class="mt-1 flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="price-tag">
+                  <span class="price-label">From · per person</span>
+                  <span class="price-value">$190.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <a href="/en/playa-blanca-baru" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('playablanca', this)" class="add-to-cart-btn-solid justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Puerto Medallo — Playa Blanca, Barú.&quot;)" class="whatsapp-info-btn">Check availability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Puerto Medallo + Islas + Snorkel -->
+          <div id="experiencia-medalloislas" data-category="agua" data-price="290000" data-order="14" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center catalog-card">
+            <div class="md:w-1/2 catalog-media">
+              <img src="/images/playa-blanca-baru.webp" alt="Puerto Medallo, Islands and Snorkeling" class="w-full h-56 md:h-[340px] object-cover" width="1200" height="800" decoding="async" loading="lazy">
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Puerto Medallo, Islands and Snorkeling</h3>
+              <p class="text-gray-600 mb-2 text-sm leading-relaxed">Combine Puerto Medallo with a panoramic island trip, a wildlife excursion and snorkeling. Transport, lunch and pool access are included.</p>
+              <div class="mt-1 flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="price-tag">
+                  <span class="price-label">From · per person</span>
+                  <span class="price-value">$290.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <a href="/en/puerto-medallo-islas" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('medalloislas', this)" class="add-to-cart-btn-solid justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Puerto Medallo, Islands and Snorkeling.&quot;)" class="whatsapp-info-btn">Check availability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cabalgata en la Playa -->
+          <div id="experiencia-cabalgata" data-category="agua" data-price="160000" data-order="15" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center catalog-card">
+            <div class="md:w-1/2 catalog-media">
+              <img src="/images/tourcaballo (1).webp" alt="Beach Horseback Riding in La Boquilla" class="w-full h-56 md:h-[340px] object-cover" width="1280" height="720" decoding="async" loading="lazy">
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Beach Horseback Riding in La Boquilla</h3>
+              <p class="text-gray-600 mb-2 text-sm leading-relaxed">A one-hour horseback ride along La Boquilla beach. Published operating hours are 8 am to 5 pm; confirm your preferred time.</p>
+              <div class="mt-1 flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="price-tag">
+                  <span class="price-label">From · per person</span>
+                  <span class="price-value">$160.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <a href="/en/cabalgata-playa" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('cabalgata', this)" class="add-to-cart-btn-solid justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Beach Horseback Riding in La Boquilla.&quot;)" class="whatsapp-info-btn">Check availability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Barú – Polo Beach + Aviario -->
+          <div id="experiencia-poloaviario" data-category="agua" data-price="240000" data-order="16" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center catalog-card">
+            <div class="md:w-1/2 catalog-media">
+              <img src="/images/polo-beach.webp" alt="Polo Beach and the National Aviary" class="w-full h-56 md:h-[340px] object-cover" width="1200" height="800" decoding="async" loading="lazy">
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Polo Beach and the National Aviary</h3>
+              <p class="text-gray-600 mb-2 text-sm leading-relaxed">Combine Playa Tranquila and the National Aviary in Barú, with air-conditioned bus transport, a guide and lunch. Separate Colombian-resident and international-visitor rates apply.</p>
+              <div class="mt-1 flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="price-tag">
+                  <span class="price-label">From · per person</span>
+                  <span class="price-value">$240.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <a href="/en/baru-polo-beach-aviario" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('poloaviario', this)" class="add-to-cart-btn-solid justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Polo Beach and the National Aviary.&quot;)" class="whatsapp-info-btn">Check availability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Barú – Playa Tranquila Polo Beach -->
+          <div id="experiencia-polobeach" data-category="agua" data-price="160000" data-order="17" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center catalog-card">
+            <div class="md:w-1/2 catalog-media">
+              <img src="/images/polo-beach.webp" alt="Polo Beach — Playa Tranquila, Barú" class="w-full h-56 md:h-[340px] object-cover" width="1200" height="800" decoding="async" loading="lazy">
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Polo Beach — Playa Tranquila, Barú</h3>
+              <p class="text-gray-600 mb-2 text-sm leading-relaxed">A day at Polo Beach with air-conditioned bus transport, a guide and a choice of lunch.</p>
+              <div class="mt-1 flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="price-tag">
+                  <span class="price-label">From · per person</span>
+                  <span class="price-value">$160.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <a href="/en/baru-polo-beach" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('polobeach', this)" class="add-to-cart-btn-solid justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Polo Beach — Playa Tranquila, Barú.&quot;)" class="whatsapp-info-btn">Check availability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- City Tour Barranquilla + Cartagena -->
+          <div id="experiencia-bqcartagena" data-category="cultural" data-price="350000" data-order="18" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center catalog-card">
+            <div class="md:w-1/2 catalog-media">
+              <img src="/images/shakira-real.webp" alt="Shakira monument on the Barranquilla riverfront" class="w-full h-56 md:h-[340px] object-cover" width="1200" height="800" decoding="async" loading="lazy" srcset="" style="object-position:center top">
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Barranquilla and Cartagena City Tour</h3>
+              <p class="text-gray-600 mb-2 text-sm leading-relaxed">Explore landmarks in both cities in one day, with lunch in Barranquilla, dinner in Cartagena, air-conditioned transport and a guide.</p>
+              <div class="mt-1 flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="price-tag">
+                  <span class="price-label">From · per person</span>
+                  <span class="price-value">$350.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <a href="/en/city-tour-barranquilla-cartagena" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('bqcartagena', this)" class="add-to-cart-btn-solid justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Barranquilla and Cartagena City Tour.&quot;)" class="whatsapp-info-btn">Check availability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- City Tour Barranquilla + Santa Marta -->
+          <div id="experiencia-bqsantamarta" data-category="cultural" data-price="260000" data-order="19" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center catalog-card">
+            <div class="md:w-1/2 catalog-media">
+              <img src="/images/santa-marta-bahia-real.webp" alt="Barranquilla and Santa Marta City Tour" class="w-full h-56 md:h-[340px] object-cover" width="1200" height="800" decoding="async" loading="lazy" srcset="">
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Barranquilla and Santa Marta City Tour</h3>
+              <p class="text-gray-600 mb-2 text-sm leading-relaxed">Visit landmarks in Barranquilla and Santa Marta with beach and pool time, breakfast and lunch. Confirm the departure for your chosen date.</p>
+              <div class="mt-1 flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="price-tag">
+                  <span class="price-label">From · per person</span>
+                  <span class="price-value">$260.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <a href="/en/city-tour-barranquilla-santa-marta" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('bqsantamarta', this)" class="add-to-cart-btn-solid justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Barranquilla and Santa Marta City Tour.&quot;)" class="whatsapp-info-btn">Check availability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cartagena ATV Tour -->
+          <div id="experiencia-atv" data-category="agua" data-price="220000" data-order="20" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center catalog-card">
+            <div class="md:w-1/2 relative catalog-media">
+              <img src="/images/atv-cuatrimotos.webp" alt="Cartagena ATV Tour — Beach and Trails" class="w-full h-56 md:h-[340px] object-cover" width="1200" height="800" decoding="async" loading="lazy">
+              <div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Top TripAdvisor ⭐</div>
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Cartagena ATV Tour — Beach and Trails</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">A 2.5-hour ATV adventure through beaches, hills and trails north of Cartagena. Lunch, a drink and transport are included.</p>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                
+                
+                
+              </div>
+              <div class="mt-3 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
+                <div class="price-tag">
+                  <span class="price-label">From · per person</span>
+                  <span class="price-value" data-cop-val="220000" data-product-id="atv">$220,000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <a href="/en/cuatrimotos-atv" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('atv', this)" class="add-to-cart-btn-solid justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Cartagena ATV Tour — Beach and Trails.&quot;)" class="whatsapp-info-btn">Check availability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tour de Tirolesa -->
+          <div id="experiencia-tirolesa" data-category="agua" data-price="200000" data-order="21" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center catalog-card">
+            <div class="md:w-1/2 relative catalog-media">
+              <img src="/images/tirolesa.webp" alt="Cartagena Zipline Tour" class="w-full h-56 md:h-[340px] object-cover" width="1200" height="800" decoding="async" loading="lazy">
+              <div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Top TripAdvisor ⭐</div>
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Cartagena Zipline Tour</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">A two-hour experience with five ziplines above the trees and Caribbean views. Lunch and transport are included.</p>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                
+                
+                
+              </div>
+              <div class="mt-3 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
+                <div class="price-tag">
+                  <span class="price-label">From · per person</span>
+                  <span class="price-value" data-cop-val="200000" data-product-id="tirolesa">$200,000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <a href="/en/tirolesa" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('tirolesa', this)" class="add-to-cart-btn-solid justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Cartagena Zipline Tour.&quot;)" class="whatsapp-info-btn">Check availability</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tamarindo Beach House -->
+          <div id="experiencia-tamarindo" data-category="pasadia" data-price="190000" data-order="22" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center catalog-card">
+            <div class="md:w-1/2 relative overflow-hidden catalog-media">
+              <div id="carousel-tamarindo" class="flex transition-transform duration-300 ease-in-out">
+                <img src="/images/tamarindo-1.webp" alt="Tamarindo Beach House — Tierra Bomba" class="min-w-full h-56 md:h-[340px] object-cover shrink-0" width="955" height="1000" decoding="async" loading="lazy">
+                <img src="/images/tamarindo-2.webp" alt="Tamarindo Beach House — Tierra Bomba" class="min-w-full h-56 md:h-[340px] object-cover shrink-0" loading="lazy" width="686" height="1000" decoding="async">
+                <img src="/images/tamarindo-3.webp" alt="Tamarindo Beach House — Tierra Bomba" class="min-w-full h-56 md:h-[340px] object-cover shrink-0" loading="lazy" width="1000" height="750" decoding="async">
+                <img src="/images/tamarindo-4.webp" alt="Tamarindo Beach House — Tierra Bomba" class="min-w-full h-56 md:h-[340px] object-cover shrink-0" loading="lazy" width="1000" height="750" decoding="async">
+              </div>
+              <div class="absolute top-4 left-4 bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase z-10">Beach Club 🏝️</div>
+              <button onclick="carouselPrev('tamarindo')" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full w-8 h-8 flex items-center justify-center z-10 text-xl leading-none" aria-label="Previous photo">‹</button>
+              <button onclick="carouselNext('tamarindo')" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full w-8 h-8 flex items-center justify-center z-10 text-xl leading-none" aria-label="Next photo">›</button>
+              <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+                
+                
+                
+                
               </div>
             </div>
             <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
-              <h3 class="text-2xl font-bold text-gray-900 mb-1">
-                Gastronomic Tour of the City
-              </h3>
-              <div
-                class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-2.5 py-1 rounded-full mb-2 w-fit"
-              >
-                <i class="fas fa-shield-heart text-[#C9A227]"></i>
-                Personally guided by Nohemi, with the agency's safety
-                backing
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Tamarindo Beach House — Tierra Bomba</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">A Tierra Bomba beach club with a pool, lounge bed, welcome cocktail, lunch and a semi-private beach. Transport is included.</p>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                
+                
+                
+                
               </div>
-              <p class="text-gray-600 mb-2 text-sm leading-relaxed">
-                Walk through the Historic Center and Getsemaní tasting
-                arepas de huevo, butifarras, carimañolas, and traditional
-                sweets. Nohemi and her team accompany you at every stop,
-                always making sure you pay the fair price, with no
-                surprises.
-              </p>
-
-              <div class="mb-2">
-                <span class="text-xs font-bold text-gray-500 uppercase"
-                  >Includes:</span
-                >
-                <div class="flex flex-wrap gap-1.5 mt-1.5">
-                  <span
-                    class="bg-yellow-100 text-yellow-700 text-xs px-2.5 py-0.5 rounded-full"
-                    >Guided walking tour</span
-                  >
-                  <span
-                    class="bg-yellow-100 text-yellow-700 text-xs px-2.5 py-0.5 rounded-full"
-                    >Tastings included</span
-                  >
-                  <span
-                    class="bg-orange-100 text-orange-700 text-xs px-2.5 py-0.5 rounded-full"
-                    >Local history and culture</span
-                  >
-                  <span
-                    class="bg-orange-100 text-orange-700 text-xs px-2.5 py-0.5 rounded-full"
-                    >Small or private groups</span
-                  >
-                </div>
-              </div>
-
-              <div class="mb-2">
-                <span class="text-xs font-bold text-gray-500 uppercase">
-                  Reference prices per bite:
-                </span>
-                <div class="grid grid-cols-3 gap-1.5 mt-1.5">
-                  <div class="flex flex-col gap-0.5 bg-gray-50 border border-gray-100 rounded-lg px-2 py-1.5 text-xs text-gray-700">
-                    <span>Egg arepa</span>
-                    <span class="font-bold food-price-value whitespace-nowrap">$4.000</span>
-                  </div>
-                  <div class="flex flex-col gap-0.5 bg-gray-50 border border-gray-100 rounded-lg px-2 py-1.5 text-xs text-gray-700">
-                    <span>Butifarra</span>
-                    <span class="font-bold food-price-value whitespace-nowrap">$3.000</span>
-                  </div>
-                  <div class="flex flex-col gap-0.5 bg-gray-50 border border-gray-100 rounded-lg px-2 py-1.5 text-xs text-gray-700">
-                    <span>Carimañola</span>
-                    <span class="font-bold food-price-value whitespace-nowrap">$3.500</span>
-                  </div>
-                  <div class="flex flex-col gap-0.5 bg-gray-50 border border-gray-100 rounded-lg px-2 py-1.5 text-xs text-gray-700">
-                    <span>Tropical fruit</span>
-                    <span class="font-bold food-price-value whitespace-nowrap">$3.000</span>
-                  </div>
-                  <div class="flex flex-col gap-0.5 bg-gray-50 border border-gray-100 rounded-lg px-2 py-1.5 text-xs text-gray-700">
-                    <span>Fresh juice</span>
-                    <span class="font-bold food-price-value whitespace-nowrap">$5.000</span>
-                  </div>
-                  <div class="flex flex-col gap-0.5 bg-gray-50 border border-gray-100 rounded-lg px-2 py-1.5 text-xs text-gray-700">
-                    <span>Traditional sweet</span>
-                    <span class="font-bold food-price-value whitespace-nowrap">$2.500</span>
-                  </div>
-                </div>
-              </div>
-
               <div class="mt-3 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
                 <div class="price-tag">
-                  <span class="price-label">Estimated price / person</span>
-                  <span class="price-value">$140.000 COP</span>
+                  <span class="price-label">From · per person</span>
+                  <span class="price-value" data-cop-val="190000" data-product-id="tamarindo">$190,000 COP</span>
                 </div>
-                <div
-                  class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap"
-                >
-                  <button
-                    onclick="addToCart('gastronomico', this)"
-                    class="add-to-cart-btn justify-center"
-                  >
-                    <i class="fas fa-cart-plus"></i> Add to Cart
-                  </button>
-                  <button
-                    onclick="openWhatsApp('Hi, I would like to book the Gastronomic Tour of the City with Nohemi.')"
-                    class="whatsapp-info-btn"
-                  >
-                    <i class="fab fa-whatsapp"></i> Get a Quote via WhatsApp
-                  </button>
+                <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <a href="/en/tamarindo-beach-house" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('tamarindo', this)" class="add-to-cart-btn-solid justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Tamarindo Beach House — Tierra Bomba.&quot;)" class="whatsapp-info-btn">Check availability</button>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Experiencia 5: Buceo y Snorkel -->
-          <div
-            id="experiencia-buceo"
-            data-category="agua" data-price="250000" data-order="5"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse"
-          >
-            <div class="md:w-2/5 relative">
-              <img
-                src="../images/foto%20(10).webp"
-                alt="Diving and snorkeling on coral reefs near Cartagena"
-                class="w-full h-56 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"
-              />
-              <div
-                class="absolute top-4 left-4 bg-cyan-400 text-cyan-900 text-xs font-bold px-3 py-1 rounded-full uppercase"
-              >
-                New
+          <!-- Namaste – Experiencia Holística -->
+          <div id="experiencia-namaste" data-category="pasadia" data-price="220000" data-order="23" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center catalog-card">
+            <div class="md:w-1/2 relative overflow-hidden catalog-media">
+              <div id="carousel-namaste" class="flex transition-transform duration-300 ease-in-out">
+                <img src="/images/namaste-2.webp" alt="Namaste — Holistic Tierra Bomba Experience" class="min-w-full h-56 md:h-[340px] object-cover shrink-0" width="1000" height="684" decoding="async" loading="lazy">
+                <img src="/images/namaste-1.webp" alt="Namaste — Holistic Tierra Bomba Experience" class="min-w-full h-56 md:h-[340px] object-cover shrink-0" loading="lazy" width="448" height="448" decoding="async">
+                <img src="/images/namaste-3.webp" alt="Namaste — Holistic Tierra Bomba Experience" class="min-w-full h-56 md:h-[340px] object-cover shrink-0" loading="lazy" width="449" height="1000" decoding="async">
+                <img src="/images/namaste-4.webp" alt="Namaste — Holistic Tierra Bomba Experience" class="min-w-full h-56 md:h-[340px] object-cover shrink-0" loading="lazy" width="754" height="1000" decoding="async">
+              </div>
+              <div class="absolute top-4 left-4 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase z-10">Wellness 🧘</div>
+              <button onclick="carouselPrev('namaste')" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full w-8 h-8 flex items-center justify-center z-10 text-xl leading-none" aria-label="Previous photo">‹</button>
+              <button onclick="carouselNext('namaste')" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full w-8 h-8 flex items-center justify-center z-10 text-xl leading-none" aria-label="Next photo">›</button>
+              <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+                
+                
+                
+                
               </div>
             </div>
-            <div class="p-5 md:p-6 md:w-3/5 flex flex-col justify-center">
-              <h3 class="text-2xl font-bold text-gray-900 mb-1">
-                Diving and Snorkeling: An Underwater Adventure
-              </h3>
-              <div
-                class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-2.5 py-1 rounded-full mb-2 w-fit"
-              >
-                <i class="fas fa-shield-heart text-[#C9A227]"></i>
-                Personally guided by Nohemi, with the agency's safety
-                backing
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Namaste — Holistic Tierra Bomba Experience</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">Yoga, meditation, a massage, pool access, a detox juice and a consumption credit. Published rates are non-refundable; confirm all conditions before booking.</p>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                
+                
+                
+                
               </div>
-              <p class="text-gray-600 mb-2 text-sm leading-relaxed">
-                Dive into the crystal-clear waters of the Corales del
-                Rosario y San Bernardo National Natural Park with
-                <strong>guided diving</strong> for all levels or
-                <strong>private snorkeling</strong> straight to the best
-                reefs, always with Nohemi coordinating your safety.
-              </p>
-
-              <div class="mb-2">
-                <span class="text-xs font-bold text-gray-500 uppercase"
-                  >Includes:</span
-                >
-                <div class="flex flex-wrap gap-2 mt-1.5">
-                  <span
-                    class="bg-cyan-100 text-cyan-700 text-xs px-3 py-1 rounded-full"
-                    >Full gear</span
-                  >
-                  <span
-                    class="bg-cyan-100 text-cyan-700 text-xs px-3 py-1 rounded-full"
-                    >Certified instructor</span
-                  >
-                  <span
-                    class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full"
-                    >Private snorkeling guide</span
-                  >
-                  <span
-                    class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full"
-                    >Small or private groups</span
-                  >
-                </div>
-              </div>
-
               <div class="mt-3 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
                 <div class="price-tag">
-                  <span class="price-label">Estimated price / person</span>
-                  <span class="price-value">$250.000 COP</span>
+                  <span class="price-label">From · per person</span>
+                  <span class="price-value" data-cop-val="220000" data-product-id="namaste">$220,000 COP</span>
                 </div>
-                <div
-                  class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap"
-                >
-                  <button
-                    onclick="addToCart('buceo', this)"
-                    class="add-to-cart-btn justify-center"
-                  >
-                    <i class="fas fa-cart-plus"></i> Add to Cart
-                  </button>
-                  <button
-                    onclick="openWhatsApp('Hi, I would like a quote for the Diving and Snorkeling tour.')"
-                    class="whatsapp-info-btn"
-                  >
-                    <i class="fab fa-whatsapp"></i> Get a Quote via WhatsApp
-                  </button>
+                <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <a href="/en/namaste-holistica" class="add-to-cart-btn justify-center text-center">View experience</a>
+                  <button onclick="addToCart('namaste', this)" class="add-to-cart-btn-solid justify-center">Add to cart</button>
+                  <button onclick="openWhatsApp(&quot;Hello, I would like information about Namaste — Holistic Tierra Bomba Experience.&quot;)" class="whatsapp-info-btn">Check availability</button>
                 </div>
               </div>
             </div>
           </div>
 
-        </div>
+
+          <!-- 3 Luxury Beach Clubs Premium -->
+          <div id="experiencia-3-luxury-beach-clubs" data-category="pasadia" data-price="390000" data-order="40" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
+            <div class="md:w-1/2 relative catalog-media"><img src="/images/backpackers/3-luxury-beach-clubs/01.webp" alt="Three Luxury Beach Clubs Premium" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">New</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Premium · 3 private islands</div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Three Luxury Beach Clubs Premium</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Visit three private islands in one day, with a speedboat, gourmet lunch, cocktails and hotel transfers.</p><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">From · per person</span><span class="price-value" data-cop-val="390000" data-product-id="luxury_3">$390,000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="/en/3-luxury-beach-clubs" class="add-to-cart-btn justify-center text-center">View experience</a><button onclick="addToCart('luxury_3',this)" class="add-to-cart-btn justify-center">Add to cart</button><button onclick="openWhatsApp(&quot;Hello, I would like information about Three Luxury Beach Clubs Premium.&quot;)" class="whatsapp-info-btn">Check availability</button></div></div></div>
+          </div>
+
+          <!-- Pasadía 5 Islas VIP desde Cartagena -->
+          <div id="experiencia-tour-5-islas-vip" data-category="pasadia" data-price="320000" data-order="41" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
+            <div class="md:w-1/2 relative catalog-media"><img src="/images/backpackers/tour-5-islas-vip/01.webp" alt="Five Islands VIP Day Trip from Cartagena" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">New</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">VIP · Rosario Islands and Barú</div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Five Islands VIP Day Trip from Cartagena</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">A full Caribbean day by speedboat with Cocoliso, snorkeling, Cholón, Mambo Beach and a private beach club.</p><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">From · per person</span><span class="price-value" data-cop-val="320000" data-product-id="islas_vip_5">$320,000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="/en/tour-5-islas-vip" class="add-to-cart-btn justify-center text-center">View experience</a><button onclick="addToCart('islas_vip_5',this)" class="add-to-cart-btn justify-center">Add to cart</button><button onclick="openWhatsApp(&quot;Hello, I would like information about Five Islands VIP Day Trip from Cartagena.&quot;)" class="whatsapp-info-btn">Check availability</button></div></div></div>
+          </div>
+
+          <!-- Islas del Rosario + Oceanario -->
+          <div id="experiencia-islas-oceanario" data-category="pasadia" data-price="280000" data-order="42" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
+            <div class="md:w-1/2 relative catalog-media"><img src="/images/backpackers/islas-oceanario/01.webp" alt="Rosario Islands and Oceanarium" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">New</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Oceanarium · Rosario Islands</div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Rosario Islands and Oceanarium</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Sail from Cartagena to the San Martín de Pajarales Oceanarium and enjoy a day in the Rosario Islands.</p><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">From · per person</span><span class="price-value" data-cop-val="280000" data-product-id="islas_oceanario">$280,000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="/en/islas-oceanario" class="add-to-cart-btn justify-center text-center">View experience</a><button onclick="addToCart('islas_oceanario',this)" class="add-to-cart-btn justify-center">Add to cart</button><button onclick="openWhatsApp(&quot;Hello, I would like information about Rosario Islands and Oceanarium.&quot;)" class="whatsapp-info-btn">Check availability</button></div></div></div>
+          </div>
+
+          <!-- Pasadía 5 Islas Standard desde Cartagena -->
+          <div id="experiencia-tour-5-islas-standard" data-category="pasadia" data-price="270000" data-order="43" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
+            <div class="md:w-1/2 relative catalog-media"><img src="/images/backpackers/tour-5-islas-standard/01.webp" alt="Five Islands Standard Day Trip" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">New</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">5 islands · Full day</div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Five Islands Standard Day Trip</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Travel by passenger boat to Bocachica, Cocoliso, a snorkeling stop, Cholón, Mambo Beach and Sol y Papaya.</p><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">From · per person</span><span class="price-value" data-cop-val="270000" data-product-id="islas_standard_5">$270,000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="/en/tour-5-islas-standard" class="add-to-cart-btn justify-center text-center">View experience</a><button onclick="addToCart('islas_standard_5',this)" class="add-to-cart-btn justify-center">Add to cart</button><button onclick="openWhatsApp(&quot;Hello, I would like information about Five Islands Standard Day Trip.&quot;)" class="whatsapp-info-btn">Check availability</button></div></div></div>
+          </div>
+
+          <!-- Tour Volcán del Totumo desde Cartagena -->
+          <div id="experiencia-volcan-del-totumo" data-category="cultural" data-price="110000" data-order="44" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
+            <div class="md:w-1/2 relative catalog-media"><img src="/images/backpackers/volcan-del-totumo/01.webp" alt="Totumo Mud Volcano Tour" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">New</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Nature · AM or PM departure</div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Totumo Mud Volcano Tour</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Experience the Totumo mud volcano on a guided excursion from Cartagena.</p><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">From · per person</span><span class="price-value" data-cop-val="110000" data-product-id="volcan_totumo">$110,000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="/en/volcan-del-totumo" class="add-to-cart-btn justify-center text-center">View experience</a><button onclick="addToCart('volcan_totumo',this)" class="add-to-cart-btn justify-center">Add to cart</button><button onclick="openWhatsApp(&quot;Hello, I would like information about Totumo Mud Volcano Tour.&quot;)" class="whatsapp-info-btn">Check availability</button></div></div></div>
+          </div>
+
+          <!-- Mambo Beach Club por Tierra -->
+          <div id="experiencia-mambo-beach-tierra" data-category="pasadia" data-price="130000" data-order="45" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
+            <div class="md:w-1/2 relative catalog-media"><img src="/images/backpackers/mambo-beach-tierra/01.webp" alt="Mambo Beach Club by Land" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">New</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Playa Blanca · By land</div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Mambo Beach Club by Land</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">A Playa Blanca day trip with air-conditioned transport, sun loungers and a lunch credit at Mambo Beach Club.</p><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">From · per person</span><span class="price-value" data-cop-val="130000" data-product-id="mambo_tierra">$130,000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="/en/mambo-beach-tierra" class="add-to-cart-btn justify-center text-center">View experience</a><button onclick="addToCart('mambo_tierra',this)" class="add-to-cart-btn justify-center">Add to cart</button><button onclick="openWhatsApp(&quot;Hello, I would like information about Mambo Beach Club by Land.&quot;)" class="whatsapp-info-btn">Check availability</button></div></div></div>
+          </div>
+
+          <!-- Mambo Beach Club por Lancha -->
+          <div id="experiencia-mambo-beach-lancha" data-category="pasadia" data-price="165000" data-order="46" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
+            <div class="md:w-1/2 relative catalog-media"><img src="/images/backpackers/mambo-beach-lancha/01.webp" alt="Mambo Beach Club by Boat" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">New</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Playa Blanca · By boat</div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Mambo Beach Club by Boat</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Travel from Cartagena to Playa Blanca by boat and enjoy Mambo Beach Club facilities with lunch.</p><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">From · per person</span><span class="price-value" data-cop-val="165000" data-product-id="mambo_lancha">$165,000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="/en/mambo-beach-lancha" class="add-to-cart-btn justify-center text-center">View experience</a><button onclick="addToCart('mambo_lancha',this)" class="add-to-cart-btn justify-center">Add to cart</button><button onclick="openWhatsApp(&quot;Hello, I would like information about Mambo Beach Club by Boat.&quot;)" class="whatsapp-info-btn">Check availability</button></div></div></div>
+          </div>
+
+          <!-- Tour Mágico por Tierra: Mambo, Snorkel y Manglar -->
+          <div id="experiencia-tour-magico-tierra" data-category="pasadia" data-price="150000" data-order="47" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
+            <div class="md:w-1/2 relative catalog-media"><img src="/images/backpackers/tour-magico-tierra/01.webp" alt="Magic Tour by Land — Beach, Snorkeling and Mangroves" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">New</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Mangroves + snorkeling · By land</div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Magic Tour by Land — Beach, Snorkeling and Mangroves</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Combine Playa Blanca, a mangrove excursion and snorkeling with land transport from Cartagena.</p><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">From · per person</span><span class="price-value" data-cop-val="150000" data-product-id="tour_magico_tierra">$150,000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="/en/tour-magico-tierra" class="add-to-cart-btn justify-center text-center">View experience</a><button onclick="addToCart('tour_magico_tierra',this)" class="add-to-cart-btn justify-center">Add to cart</button><button onclick="openWhatsApp(&quot;Hello, I would like information about Magic Tour by Land — Beach, Snorkeling and Mangroves.&quot;)" class="whatsapp-info-btn">Check availability</button></div></div></div>
+          </div>
+
+          <!-- Tour Mágico por Lancha: Mambo, Snorkel y Manglar -->
+          <div id="experiencia-tour-magico-lancha" data-category="pasadia" data-price="220000" data-order="48" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
+            <div class="md:w-1/2 relative catalog-media"><img src="/images/backpackers/tour-magico-lancha/01.webp" alt="Magic Tour by Boat — Beach, Snorkeling and Mangroves" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">New</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Mangroves + snorkeling · By boat</div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Magic Tour by Boat — Beach, Snorkeling and Mangroves</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Travel by speedboat, go snorkeling, explore the mangroves and relax at Mambo Beach Club.</p><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">From · per person</span><span class="price-value" data-cop-val="220000" data-product-id="tour_magico_lancha">$220,000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="/en/tour-magico-lancha" class="add-to-cart-btn justify-center text-center">View experience</a><button onclick="addToCart('tour_magico_lancha',this)" class="add-to-cart-btn justify-center">Add to cart</button><button onclick="openWhatsApp(&quot;Hello, I would like information about Magic Tour by Boat — Beach, Snorkeling and Mangroves.&quot;)" class="whatsapp-info-btn">Check availability</button></div></div></div>
+          </div>
+
+          <!-- Family Eco-Route + Plancton -->
+          <div id="experiencia-family-eco-route" data-category="pasadia" data-price="200000" data-order="49" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
+            <div class="md:w-1/2 relative catalog-media"><img src="/images/plancton-referencia.webp" alt="Family Eco-Route and Bioluminescent Plankton" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy" srcset=""><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">New</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Family eco route · Plankton</div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Family Eco-Route and Bioluminescent Plankton</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">A full day in Barú with Mambo Beach, snorkeling, mangroves, sunset and a bioluminescent-plankton experience.</p><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">From · per person</span><span class="price-value" data-cop-val="200000" data-product-id="family_eco_route">$200,000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="/en/family-eco-route" class="add-to-cart-btn justify-center text-center">View experience</a><button onclick="addToCart('family_eco_route',this)" class="add-to-cart-btn justify-center">Add to cart</button><button onclick="openWhatsApp(&quot;Hello, I would like information about Family Eco-Route and Bioluminescent Plankton.&quot;)" class="whatsapp-info-btn">Check availability</button></div></div></div>
+          <p class="photo-reference" style="padding:8px 16px;font-size:11px">Reference photograph: La Parguera, Puerto Rico. NASA/Milan Loiacono.</p></div>
+
+          <!-- Golden Hours: Sunset + Beach Club -->
+          <div id="experiencia-golden-hours-cartagena" data-category="agua" data-price="125000" data-order="50" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
+            <div class="md:w-1/2 relative catalog-media"><img src="/images/catamaran-cartagena-atardecer.webp" alt="Golden Hours — Sunset and Beach Club" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"><div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">New</div><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Sunset · Private beach club</div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Golden Hours — Sunset and Beach Club</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">A speedboat sunset outing with music, cocktails and a stop at a private beach club near Cartagena.</p><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">From · per person</span><span class="price-value" data-cop-val="125000" data-product-id="golden_hours">$125,000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="/en/golden-hours-cartagena" class="add-to-cart-btn justify-center text-center">View experience</a><button onclick="addToCart('golden_hours',this)" class="add-to-cart-btn justify-center">Add to cart</button><button onclick="openWhatsApp(&quot;Hello, I would like information about Golden Hours — Sunset and Beach Club.&quot;)" class="whatsapp-info-btn">Check availability</button></div></div></div>
+          </div>
+
+          <!-- Recorrido gastronómico por Cartagena -->
+          
+
+          <!-- Sabores locales en casa -->
+          <div id="experiencia-sabores-locales" data-category="gastronomia" data-price="150000" data-order="52" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
+            <div class="md:w-1/2 relative catalog-media"><img src="/images/cartagenacentro.webp" alt="Local Flavors — Caribbean Cooking" class="w-full h-64 md:h-full object-cover" width="1200" height="800" decoding="async" loading="lazy"><div class="absolute bottom-4 left-4 bg-black/65 text-white text-xs font-bold px-3 py-1 rounded-full">Caribbean cooking · Local home</div></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Local Flavors — Caribbean Cooking</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">Explore Caribbean cooking and local food traditions with guidance from our team.</p><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">From · per person</span><span class="price-value" data-cop-val="150000" data-product-id="sabores_locales">$150,000 COP</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="/en/sabores-locales" class="add-to-cart-btn justify-center text-center">View experience</a><button onclick="addToCart('sabores_locales',this)" class="add-to-cart-btn justify-center">Add to cart</button><button onclick="openWhatsApp(&quot;Hello, I would like information about Local Flavors — Caribbean Cooking.&quot;)" class="whatsapp-info-btn">Check availability</button></div></div></div>
+          </div>
+
+        <div id="experiencia-paratrike" data-category="adventure" data-price="150000" data-order="52" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card">
+            <div class="md:w-1/2 relative catalog-media"><img src="/images/paratrike-01.webp" alt="Fly Cartagena Paratrike" class="w-full h-64 md:h-full object-cover" width="1290" height="731" loading="lazy" decoding="async"></div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold text-gray-900 mb-1">Fly Cartagena · 5-Minute Paratrike Flight</h3><p class="text-gray-600 mb-4 text-sm leading-relaxed">5-minute Paratrike flight over La Boquilla. Weather dependent; maximum weight 100 kg. Video and transfers are optional.</p><div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4"><div class="price-tag"><span class="price-label">From · per person</span><span class="price-value" data-fixed-currencies="">$150.000 COP / 60 USD</span></div><div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto"><a href="/en/paratrike-cartagena" class="add-to-cart-btn justify-center text-center">View experience</a></div></div></div>
+          </div></div>
       </div>
     </section>
+
 
     <!-- Footer (Igual al Index) -->
     <!-- Newsletter: suscripción a ofertas vía WhatsApp -->
@@ -1179,29 +1351,14 @@
         <div class="max-w-2xl mx-auto text-center text-white">
           <h3 class="text-2xl md:text-3xl font-bold mb-2">
             <i class="fas fa-envelope-open-text text-yellow-400 mr-2"></i>
-            Don't Miss Our Deals
+            Stay up to date
           </h3>
           <p class="text-gray-200 text-sm mb-6">
-            Leave us your email and we'll let you know via WhatsApp about
-            promotions, seasonal discounts, and new experiences in
-            Cartagena.
+            Contact us to learn about seasonal offers and new experiences in Cartagena.
           </p>
-          <form
-            id="newsletter-form"
-            class="flex flex-col sm:flex-row gap-3 justify-center"
-            onsubmit="return submitNewsletter(event)"
-          >
-            <input
-              type="email"
-              id="newsletter-email"
-              required
-              placeholder="youremail@example.com"
-              class="flex-1 sm:max-w-xs rounded-lg px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-            />
-            <button
-              type="submit"
-              class="bg-yellow-500 hover:bg-yellow-400 text-purple-900 font-bold px-6 py-3 rounded-lg transition whitespace-nowrap"
-            >
+          <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 justify-center" onsubmit="return submitNewsletter(event)">
+            <input type="email" id="newsletter-email" required="" placeholder="you@example.com" class="flex-1 sm:max-w-xs rounded-lg px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            <button type="submit" class="bg-yellow-500 hover:bg-yellow-400 text-purple-900 font-bold px-6 py-3 rounded-lg transition whitespace-nowrap">
               <i class="fas fa-paper-plane mr-1"></i> Subscribe
             </button>
           </form>
@@ -1217,16 +1374,16 @@
         var email = emailInput.value.trim();
         var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
-          msg.textContent = "Please enter a valid email address.";
+          msg.textContent = "Por favor ingresa un correo válido.";
           msg.classList.remove("hidden");
           return false;
         }
         openWhatsApp(
-          "Hi, I would like to subscribe to receive offers and promotions from Dunas & Olas. My email is: " +
+          "Hello, I would like to receive offers from Dunas & Olas. My email is: " +
             email
         );
         msg.textContent =
-          "Thank you! We'll contact you on WhatsApp to confirm your subscription.";
+          "¡Gracias! Te contactaremos por WhatsApp para confirmar tu suscripción.";
         msg.classList.remove("hidden");
         emailInput.value = "";
         return false;
@@ -1237,10 +1394,8 @@
     <footer class="bg-gray-900 text-white pt-12 pb-8 border-t border-gray-800">
       <div class="container mx-auto px-6 text-center md:text-left">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 md:mb-12">
-          <div
-            class="col-span-1 md:col-span-1 flex flex-col items-center md:items-start"
-          >
-            <picture><source srcset="../images/logo-master.webp" type="image/webp"/><img src="../images/logo-master.png" alt="Dunas & Olas - Boat tours, kitesurf and experiences in Cartagena, Colombia" width="315" height="148" class="h-12 w-auto object-contain mb-2" loading="lazy" decoding="async"/></picture><span class="block mb-4 leading-none select-none">
+          <div class="col-span-1 md:col-span-1 flex flex-col items-center md:items-start">
+            <picture><img src="/images/logo-master.png" alt="Dunas &amp; Olas - Tours en bote, kitesurf y experiencias en Cartagena, Colombia" width="315" height="148" class="h-12 w-auto object-contain mb-2" loading="lazy" decoding="async"></picture><span class="block mb-4 leading-none select-none">
               <span class="block font-extrabold tracking-tight text-xl text-white">
                 Dunas <span class="text-yellow-500">&amp; Olas</span>
               </span>
@@ -1249,30 +1404,33 @@
               </span>
             </span>
             <p class="text-gray-400 text-xs leading-relaxed max-w-xs">
-              The warmth of the north, the magic of the Caribbean.
+              La calidez del norte, la magia del caribe.
             </p>
           </div>
 
           <div class="hidden md:block">
-            <h4 class="text-white font-bold mb-4 text-sm">Explore</h4>
+            <h4 class="text-white font-bold mb-4 text-sm">Explorar</h4>
             <ul class="space-y-2 text-gray-400 text-xs">
               <li>
-                <a href="about.html" class="hover:text-blue-400">About Us</a>
+                <a href="/en/experiences.html" class="hover:text-blue-400">Experiencias</a>
               </li>
               <li>
-                <a href="blog/index.html" class="hover:text-blue-400">Blog</a>
+                <a href="/en/kitesurf.html" class="hover:text-blue-400">Kitesurf</a>
+              </li>
+              <li>
+                <a href="/en/about.html" class="hover:text-blue-400">Nosotros</a>
+              </li>
+              <li>
+                <a href="/en/blog/index.html" class="hover:text-blue-400">Blog</a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 class="text-white font-bold mb-4 text-sm">Contact</h4>
-            <ul
-              class="space-y-2 text-gray-400 text-xs flex flex-col items-center md:items-start"
-            >
+            <h4 class="text-white font-bold mb-4 text-sm">Contacto</h4>
+            <ul class="space-y-2 text-gray-400 text-xs flex flex-col items-center md:items-start">
               <li class="flex items-center">
-                <i class="fas fa-map-marker-alt mr-2 text-blue-500"></i> Manga,
-                Cartagena
+                <i class="fas fa-map-marker-alt mr-2 text-blue-500"></i> Getsemaní, Cartagena
               </li>
               <li class="flex items-center">
                 <i class="fab fa-whatsapp mr-2 text-blue-500"></i> +57 316 303 0589
@@ -1281,64 +1439,32 @@
           </div>
 
           <div>
-            <h4 class="text-white font-bold mb-4 text-sm">Social Media</h4>
+            <h4 class="text-white font-bold mb-4 text-sm">Redes</h4>
             <div class="flex justify-center md:justify-start gap-2">
-              <a
-                href="https://www.instagram.com/mexicanaencartagena?igsh=MTJ2MjZwdmU5NjZ4Nw=="
-                target="_blank"
-                class="transition hover:opacity-80 group"
-               rel="noopener noreferrer">
-                <img
-                  src="../images/instagram-logo.png"
-                  alt="Instagram"
-                  class="w-12 h-12 hover:scale-110 transition transform" width="512" height="512" decoding="async" loading="lazy"
-                />
+              <a href="https://www.instagram.com/mexicanaencartagena?igsh=MTJ2MjZwdmU5NjZ4Nw==" target="_blank" class="transition hover:opacity-80 group" rel="noopener noreferrer">
+                <img src="/images/instagram-logo.png" alt="Instagram" class="w-12 h-12 hover:scale-110 transition transform" width="512" height="512" decoding="async" loading="lazy">
               </a>
-              <a
-                href="https://www.facebook.com/share/1aQqHEvkyG/"
-                target="_blank"
-                class="transition hover:opacity-80 group"
-               rel="noopener noreferrer">
-                <img
-                  src="../images/logo-facebook.png"
-                  alt="Facebook"
-                  class="w-12 h-12 hover:scale-110 transition transform" width="512" height="512" decoding="async" loading="lazy"
-                />
+              <a href="https://www.facebook.com/share/1aQqHEvkyG/" target="_blank" class="transition hover:opacity-80 group" rel="noopener noreferrer">
+                <img src="/images/logo-facebook.png" alt="Facebook" class="w-12 h-12 hover:scale-110 transition transform" width="512" height="512" decoding="async" loading="lazy">
               </a>
-              <a
-                href="https://www.tiktok.com/@mexicanaencartagena?_r=1&amp;_t=ZS-97Sfx04blGW"
-                target="_blank"
-                title="Follow us on TikTok: Mexicana en Cartagena" rel="noopener noreferrer"
-                class="social-badge transition hover:opacity-80"
-                style="background:#000000;"
-              >
+              <a href="https://www.tiktok.com/@mexicanaencartagena?_r=1&amp;_t=ZS-97Sfx04blGW" target="_blank" title="Síguenos en TikTok: Mexicana en Cartagena" rel="noopener noreferrer" class="social-badge transition hover:opacity-80" style="background:#000000;">
                 <i class="fab fa-tiktok"></i>
               </a>
-              <span
-                title="Coming soon: Dunas & Olas on YouTube"
-                class="social-badge transition hover:opacity-80"
-                style="background:#FF0000;" aria-disabled="true">
+              <span title="Próximamente: YouTube de Dunas &amp; Olas" class="social-badge transition hover:opacity-80" style="background:#FF0000;" aria-disabled="true">
                 <i class="fab fa-youtube"></i>
               </span>
-              <span
-                title="Coming soon: Dunas & Olas on X"
-                class="social-badge transition hover:opacity-80"
-                style="background:#000000;" aria-disabled="true">
+              <span title="Próximamente: X de Dunas &amp; Olas" class="social-badge transition hover:opacity-80" style="background:#000000;" aria-disabled="true">
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg>
               </span>
                         </div>
           </div>
         </div>
 
-        <div
-          class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-500 text-center"
-        >
-          <p>&copy; 2026 Dunas & Olas. All rights reserved.</p>
+        <div class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-500 text-center">
+          <p>© 2026 Dunas &amp; Olas. Todos los derechos reservados.</p>
           <p class="mt-1">RNT No. 292710</p>
           <div class="mt-2 space-x-3">
-            <a href="policies.html" class="hover:text-white"
-              >Terms and Conditions</a
-            > · <a href="privacy.html" class="hover:text-white">Privacy Policy</a> · <a href="faq.html" class="hover:text-white">FAQ</a>
+            <a href="/en/policies.html" class="hover:text-white">Términos y Condiciones</a> · <a href="/en/privacy.html" class="hover:text-white">Política de Privacidad</a> · <a href="/en/faq.html" class="hover:text-white">Preguntas Frecuentes</a>
           </div>
         </div>
       </div>
@@ -1347,35 +1473,21 @@
     <!-- WhatsApp Widget Multi-idioma -->
     <div class="whatsapp-container">
 
-      <button id="wa-main-btn" onclick="openWhatsApp('Hi, I am interested in an experience.')" class="whatsapp-float group focus:outline-none">
-        <img
-          src="../images/WhatsApp-96.webp"
-          alt="WhatsApp"
-          class="whatsapp-icon" width="96" height="96" decoding="async" loading="lazy"
-        />
-        <span class="whatsapp-text">Contactar / Contact</span>
+      <button id="wa-main-btn" onclick="openWhatsApp('Hello, I am interested in an experience.')" class="whatsapp-float group focus:outline-none">
+        <img src="/images/WhatsApp-96.webp" alt="WhatsApp" class="whatsapp-icon" width="96" height="96" decoding="async" loading="lazy">
+        <span class="whatsapp-text">Contact</span>
       </button>
     </div>
 
     <!-- Carrito: overlay + drawer -->
-    <div
-      id="cart-overlay"
-      class="cart-overlay"
-      onclick="toggleCart(false)"
-    ></div>
+    <div id="cart-overlay" class="cart-overlay" onclick="toggleCart(false)"></div>
     <aside id="cart-drawer" class="cart-drawer">
-      <div
-        class="flex items-center justify-between px-6 py-5 border-b border-gray-100"
-      >
+      <div class="flex items-center justify-between px-6 py-5 border-b border-gray-100">
         <h3 class="text-lg font-bold text-gray-900">
-          <i class="fas fa-shopping-cart text-[#5B3A82] mr-2"></i>Your Cart
+          <i class="fas fa-shopping-cart text-[#5B3A82] mr-2"></i>Your cart
         </h3>
         <div class="flex items-center gap-2">
-          <button
-            onclick="toggleCart(false)"
-            class="text-gray-400 hover:text-gray-700 text-xl leading-none"
-            aria-label="Close cart"
-          >
+          <button onclick="toggleCart(false)" class="text-gray-400 hover:text-gray-700 text-xl leading-none" aria-label="Close cart">
             <i class="fas fa-times"></i>
           </button>
         </div>
@@ -1386,33 +1498,20 @@
       </div>
 
       <div class="px-6 py-5 border-t border-gray-100">
-        <button
-          onclick="toggleCurrency()"
-          class="currency-switch-btn mb-4"
-          title="Cambiar moneda / Switch currency"
-        >
+        <button onclick="toggleCurrency()" class="currency-switch-btn mb-4" title="Cambiar moneda / Switch currency">
           <i class="fas fa-money-bill-transfer"></i>
-          Change payment currency:
+          Display currency:
           <span id="currency-toggle-cart" class="currency-switch-value"></span>
         </button>
         <div class="flex items-center justify-between mb-4">
-          <span class="text-sm font-bold uppercase text-gray-500"
-            >Estimated total</span
-          >
-          <span id="cart-total" class="text-2xl font-extrabold text-[#3F2761]"
-            >$0 COP</span
-          >
+          <span class="text-sm font-bold uppercase text-gray-500">Estimated total</span>
+          <span id="cart-total" class="text-2xl font-extrabold text-[#3F2761]">$0 COP</span>
         </div>
-        <button
-          id="cart-checkout-btn"
-          onclick="openCheckout()"
-          class="btn-primary w-full justify-center text-center cursor-pointer"
-        >
-          Continue to Payment
+        <button id="cart-checkout-btn" onclick="openCheckout()" class="btn-primary w-full justify-center text-center cursor-pointer">
+          Continue booking
         </button>
         <p class="text-xs text-gray-400 mt-3 text-center">
-          Prices are estimated per person. The final total will be confirmed
-          based on date, number of people, and availability.
+          Prices are estimates per person. The final total is confirmed for your date, group size and availability.
         </p>
       </div>
     </aside>
@@ -1422,31 +1521,20 @@
       <div class="checkout-modal">
         <div class="flex items-center justify-between mb-6">
           <h3 class="text-xl font-bold text-gray-900">
-            Complete Your Booking
+            Complete your booking
           </h3>
-          <button
-            onclick="closeCheckout()"
-            class="text-gray-400 hover:text-gray-700 text-xl leading-none"
-            aria-label="Close checkout"
-            >
+          <button onclick="closeCheckout()" class="text-gray-400 hover:text-gray-700 text-xl leading-none" aria-label="Close checkout">
             <i class="fas fa-times"></i>
           </button>
         </div>
 
-        <button
-          onclick="toggleCurrency()"
-          class="currency-switch-btn mb-4"
-          title="Cambiar moneda / Switch currency"
-        >
+        <button onclick="toggleCurrency()" class="currency-switch-btn mb-4" title="Cambiar moneda / Switch currency">
           <i class="fas fa-money-bill-transfer"></i>
-          Change payment currency:
+          Display currency:
           <span id="currency-toggle-checkout" class="currency-switch-value"></span>
         </button>
 
-        <div
-          id="checkout-summary"
-          class="bg-gray-50 rounded-xl p-4 mb-6 text-sm text-gray-700 space-y-1"
-        >
+        <div id="checkout-summary" class="bg-gray-50 rounded-xl p-4 mb-6 text-sm text-gray-700 space-y-1">
           <!-- Resumen del pedido, renderizado por JS -->
         </div>
 
@@ -1454,89 +1542,47 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label for="ck-name">Full name</label>
-              <input
-                type="text"
-                id="ck-name"
-                required
-                placeholder="Your name"
-              />
+              <input type="text" id="ck-name" required="" placeholder="Full name">
             </div>
             <div>
               <label for="ck-phone">WhatsApp / Phone</label>
-              <input
-                type="tel"
-                id="ck-phone"
-                required
-                placeholder="+57 300 000 0000"
-              />
+              <input type="tel" id="ck-phone" required="" placeholder="e.g. +1 202 555 0123">
             </div>
           </div>
           <div>
             <label for="ck-email">Email address</label>
-            <input
-              type="email"
-              id="ck-email"
-              required
-              placeholder="you@email.com"
-            />
+            <input type="email" id="ck-email" required="" placeholder="you@example.com">
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label for="ck-date">Preferred date</label>
-              <input type="date" id="ck-date" />
+              <input type="date" id="ck-date">
             </div>
             <div>
               <label for="ck-people">Number of people</label>
-              <input
-                type="number"
-                id="ck-people"
-                min="1"
-                value="1"
-              />
+              <input type="number" id="ck-people" min="1" value="1">
             </div>
           </div>
           <div>
             <label for="ck-notes">Additional notes (optional)</label>
-            <textarea
-              id="ck-notes"
-              rows="2"
-              placeholder="Allergies, special occasion, hotel where you're staying..."
-            ></textarea>
+            <textarea id="ck-notes" rows="2" placeholder="Tell us about your plans"></textarea>
           </div>
 
           <div class="flex items-start gap-2 bg-blue-50 border border-blue-100 rounded-lg p-3 text-xs text-gray-600">
             <i class="fas fa-shield-alt text-blue-600 mt-0.5"></i>
             <span>
-              Flexible cancellation: we reschedule at no cost if you let us
-              know in advance or if weather conditions don't allow for safe
-              sailing.
-              <a href="faq.html#cancellations" target="_blank" class="text-blue-600 underline hover:text-blue-800" rel="noopener noreferrer">View full policy</a>
+              Rescheduling depends on notice, the selected activity and weather conditions. Check the full policy before booking.
+              <a href="/en/policies" target="_blank" class="text-blue-600 underline hover:text-blue-800" rel="noopener noreferrer">Read the full policy</a>
             </span>
           </div>
 
           <div class="pt-2 space-y-3">
-            <button
-              id="mercadopago-pay-btn"
-              type="button"
-              onclick="payWithMercadoPago()"
-              class="btn-primary w-full justify-center text-center cursor-pointer"
-              style="background: #009ee3"
-            >
-              <i class="fas fa-lock mr-2"></i>Pay Online with Mercado Pago
-            </button>
-            <button
-              type="button"
-              onclick="checkoutViaWhatsApp()"
-              class="w-full justify-center text-center cursor-pointer add-to-cart-btn"
-              style="border-color: #25d366; color: #128c4a"
-            >
-              <i class="fab fa-whatsapp mr-2"></i>Confirm Booking via
-              WhatsApp
+            
+            <button type="button" onclick="checkoutViaWhatsApp()" class="w-full justify-center text-center cursor-pointer add-to-cart-btn" style="border-color: #25d366; color: #128c4a">
+              <i class="fab fa-whatsapp mr-2"></i>Confirm request on WhatsApp
             </button>
             <p class="text-xs text-gray-400 text-center">
-              Once confirmed, Nohemi and her team will get in touch with you
-              to check availability and complete the payment for your
-              booking.
+              Nohemi and her team will confirm availability and explain the payment arrangements.
             </p>
           </div>
         </form>
@@ -1616,7 +1662,7 @@
         let name = course.name;
         if (isCouple) {
           unitPrice = Math.round(course.price * (1 - COUPLE_DISCOUNT));
-          name += " (10% couples discount)";
+          name += " (10% couple discount)";
         }
         addCustomToCart(course.id, name, unitPrice, course.unit, people, btnEl);
       }
@@ -1625,9 +1671,9 @@
         const course = selectedKiteCourse();
         const people = kitePeopleCount();
         const isCouple = people === 2;
-        let message = `Hi, I would like more information about the Kitesurf course "${course.name}" for ${people} person${people === 1 ? "" : "s"}`;
-        if (isCouple) message += " (I saw that the 10% couples discount applies)";
-        message += ". Could you tell me more details, dates, and availability?";
+        let message = `Hello, I would like more information about the Kitesurf course "${course.name}" for ${people} ${people === 1 ? "person" : "people"}`;
+        if (isCouple) message += " (including the 10% couple discount)";
+        message += ". Could you share the details, dates and availability?";
         openWhatsApp(message);
       }
 
@@ -1642,16 +1688,145 @@
         var filterBtns = document.querySelectorAll(".fleet-filter-btn");
         var sortSelect = document.getElementById("experiences-sort");
         var emptyMsg = document.getElementById("experiences-empty-msg");
+        var searchInput = document.getElementById("experiences-search");
+        var searchClear = document.getElementById("experiences-search-clear");
+        var searchSummary = document.getElementById("experiences-search-summary");
+        var searchField = document.getElementById("experiences-search-field");
+        var searchSubmit = document.getElementById("experiences-search-submit");
+        var searchStatusIcon = document.getElementById("experiences-search-status-icon");
+        var searchTimer = null;
         var currentFilter = "all";
+        var currentQuery = "";
 
-        function applyFilter() {
-          var visibleCount = 0;
-          cards.forEach(function (card) {
-            var match = currentFilter === "all" || card.dataset.category === currentFilter;
-            card.style.display = match ? "" : "none";
-            if (match) visibleCount++;
+        function normalizeText(value) {
+          return (value || "")
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/\s+/g, " ")
+            .trim();
+        }
+
+        cards.forEach(function (card, index) {
+          var imageText = Array.prototype.map.call(card.querySelectorAll("img"), function (image) {
+            return image.alt || "";
+          }).join(" ");
+          var heading = card.querySelector("h2, h3");
+          card._originalIndex = index;
+          card._searchTitle = normalizeText(heading ? heading.textContent : "");
+          card._searchId = normalizeText(card.id);
+          card._searchIndex = normalizeText(
+            card.textContent + " " + imageText + " " + card.id + " " + (card.dataset.category || "")
+          );
+        });
+
+        function searchScore(card, queryTerms) {
+          if (!queryTerms.length) return 0;
+          var fullQuery = queryTerms.join(" ");
+          var score = 0;
+
+          if (card._searchTitle === fullQuery) score += 1200;
+          else if (card._searchTitle.indexOf(fullQuery) === 0) score += 700;
+          else if (card._searchTitle.indexOf(fullQuery) !== -1) score += 450;
+
+          if (card._searchId.indexOf(fullQuery) !== -1) score += 300;
+          queryTerms.forEach(function (term) {
+            if (card._searchTitle.indexOf(term) !== -1) score += 140;
+            if (card._searchId.indexOf(term) !== -1) score += 90;
+            if (card._searchIndex.indexOf(term) !== -1) score += 10;
           });
+          return score;
+        }
+
+        function baseSort(a, b) {
+          var val = sortSelect.value;
+          if (val === "price-asc") return Number(a.dataset.price) - Number(b.dataset.price);
+          if (val === "price-desc") return Number(b.dataset.price) - Number(a.dataset.price);
+          return a._originalIndex - b._originalIndex;
+        }
+
+        function updateSearchUrl() {
+          var url = new URL(window.location.href);
+          var rawValue = searchInput.value.trim();
+          if (rawValue) url.searchParams.set("buscar", rawValue);
+          else url.searchParams.delete("buscar");
+          window.history.replaceState({}, "", url.pathname + url.search + url.hash);
+        }
+
+        function setSearchState(state) {
+          searchField.dataset.searchState = state;
+          searchInput.setAttribute("aria-busy", state === "searching" ? "true" : "false");
+          searchSummary.classList.toggle("is-searching", state === "searching");
+          searchSummary.classList.toggle("is-complete", state === "complete");
+
+          if (state === "searching") {
+            searchStatusIcon.className = "fas fa-circle-notch fa-spin";
+            searchSubmit.setAttribute("aria-label", "Searching experiences");
+          } else if (state === "complete") {
+            searchStatusIcon.className = "fas fa-search";
+            searchSubmit.setAttribute("aria-label", "Search again");
+          } else {
+            searchStatusIcon.className = "fas fa-search";
+            searchSubmit.setAttribute("aria-label", "Search experiences");
+          }
+        }
+
+        function animateVisibleResults() {
+          cards.forEach(function (card, index) {
+            if (card.classList.contains("is-filtered-out")) return;
+            card.classList.remove("search-result-enter");
+            card.style.animationDelay = Math.min(index, 5) * 35 + "ms";
+            void card.offsetWidth;
+            card.classList.add("search-result-enter");
+          });
+          window.setTimeout(function () {
+            cards.forEach(function (card) {
+              card.classList.remove("search-result-enter");
+              card.style.removeProperty("animation-delay");
+            });
+          }, 650);
+        }
+
+        function applyFilter(animateResults) {
+          var visibleCount = 0;
+          var queryTerms = currentQuery ? currentQuery.split(" ") : [];
+          var visibleCards = [];
+
+          cards.forEach(function (card) {
+            var categoryMatch = currentFilter === "all" || card.dataset.category === currentFilter;
+            var searchMatch = !queryTerms.length || queryTerms.every(function (term) {
+              return card._searchIndex.indexOf(term) !== -1;
+            });
+            var match = categoryMatch && searchMatch;
+            card.classList.toggle("is-filtered-out", !match);
+            card.setAttribute("aria-hidden", match ? "false" : "true");
+            if (match) {
+              visibleCount++;
+              card._searchScore = searchScore(card, queryTerms);
+              visibleCards.push(card);
+            }
+          });
+
+          visibleCards.sort(function (a, b) {
+            if (queryTerms.length && b._searchScore !== a._searchScore) {
+              return b._searchScore - a._searchScore;
+            }
+            return baseSort(a, b);
+          });
+          visibleCards.forEach(function (card) { grid.appendChild(card); });
+
           emptyMsg.classList.toggle("hidden", visibleCount > 0);
+          searchClear.classList.toggle("hidden", !searchInput.value);
+
+          if (searchInput.value.trim()) {
+            searchSummary.textContent = visibleCount + (visibleCount === 1 ? " experience found for “" : " experiences found for “") + searchInput.value.trim() + "”.";
+          } else if (currentFilter !== "all") {
+            searchSummary.textContent = visibleCount + (visibleCount === 1 ? " experience in this category." : " experiences in this category.");
+          } else {
+            searchSummary.textContent = visibleCount + (visibleCount === 1 ? " experience available." : " experiences available.");
+          }
+
+          if (animateResults) animateVisibleResults();
         }
 
         filterBtns.forEach(function (btn) {
@@ -1659,26 +1834,104 @@
             filterBtns.forEach(function (b) { b.classList.remove("active"); });
             btn.classList.add("active");
             currentFilter = btn.dataset.category;
-            applyFilter();
+            applyFilter(true);
+            setSearchState(searchInput.value.trim() ? "complete" : "idle");
           });
+        });
+
+        searchInput.addEventListener("input", function () {
+          window.clearTimeout(searchTimer);
+          searchClear.classList.toggle("hidden", !searchInput.value);
+
+          if (!searchInput.value.trim()) {
+            currentQuery = "";
+            updateSearchUrl();
+            applyFilter(true);
+            setSearchState("idle");
+            return;
+          }
+
+          searchSummary.textContent = "Searching experiences...";
+          setSearchState("searching");
+          searchTimer = window.setTimeout(function () {
+            executeSearch();
+          }, 300);
+        });
+
+        function executeSearch() {
+          window.clearTimeout(searchTimer);
+          currentQuery = normalizeText(searchInput.value);
+          updateSearchUrl();
+          applyFilter(true);
+          setSearchState(currentQuery ? "complete" : "idle");
+        }
+
+        searchSubmit.addEventListener("click", function () {
+          if (!searchInput.value.trim()) {
+            searchInput.focus();
+            return;
+          }
+          setSearchState("searching");
+          executeSearch();
+        });
+
+        searchClear.addEventListener("click", function () {
+          window.clearTimeout(searchTimer);
+          searchInput.value = "";
+          currentQuery = "";
+          updateSearchUrl();
+          applyFilter(true);
+          setSearchState("idle");
+          searchInput.focus();
+        });
+
+        searchInput.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && searchInput.value) {
+            searchClear.click();
+          } else if (event.key === "Enter") {
+            event.preventDefault();
+            setSearchState("searching");
+            executeSearch();
+          }
         });
 
         sortSelect.addEventListener("change", function () {
-          var val = sortSelect.value;
-          var sorted = cards.slice().sort(function (a, b) {
-            if (val === "price-asc") return a.dataset.price - b.dataset.price;
-            if (val === "price-desc") return b.dataset.price - a.dataset.price;
-            return a.dataset.order - b.dataset.order;
-          });
-          sorted.forEach(function (card) { grid.appendChild(card); });
+          applyFilter(true);
         });
+
+        var initialQuery = new URLSearchParams(window.location.search).get("buscar") || "";
+        if (initialQuery) {
+          searchInput.value = initialQuery;
+          currentQuery = normalizeText(initialQuery);
+        }
+        applyFilter();
+        setSearchState(initialQuery ? "complete" : "idle");
       })();
     </script>
 
+    <!-- Carousel de imágenes para tarjetas con múltiples fotos -->
+    <script>
+      const _cs = {};
+      function carouselInit(id, total) { _cs[id] = { idx: 0, total }; }
+      function carouselGoTo(id, idx) {
+        const s = _cs[id]; if (!s) return;
+        s.idx = ((idx % s.total) + s.total) % s.total;
+        document.getElementById('carousel-' + id).style.transform = 'translateX(-' + (s.idx * 100) + '%)';
+        document.querySelectorAll('[data-carousel="' + id + '"]').forEach(function(d, i) {
+          d.style.background = i === s.idx ? 'rgba(255,255,255,1)' : 'rgba(255,255,255,0.4)';
+        });
+      }
+      function carouselNext(id) { carouselGoTo(id, (_cs[id] ? _cs[id].idx : 0) + 1); }
+      function carouselPrev(id) { carouselGoTo(id, (_cs[id] ? _cs[id].idx : 0) - 1); }
+      carouselInit('tamarindo', 4);
+      carouselInit('namaste', 4);
+    </script>
+
     <!-- Carrito de compras: catálogo y lógica compartidos (ver js/cart.js) -->
-    <script src="../js/cart.js?v=20260911a"></script>
-      <script src="../js/currency.js"></script>
-      <script src="../js/cookie-consent.js?v=20260911a"></script>
-    <script src="../js/site-refresh.js?v=20260911a" defer></script>
-</body>
-</html>
+<script src="/js/cart-en.js?v=20260911b"></script>
+      <script src="/js/currency.js"></script>
+      
+    <script src="/js/site-refresh.js?v=20260911b" defer=""></script>
+
+
+</body></html>

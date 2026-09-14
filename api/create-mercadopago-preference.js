@@ -1,4 +1,4 @@
-const { TOURS } = require("../js/cart.js");
+const { products: TOURS } = require("../data/catalog.json");
 
 const MAX_ITEMS = 20;
 const MAX_QTY = 20;
