@@ -65,7 +65,7 @@
       { key: "about", href: root + "/about" },
       { key: "blog", href: root + "/blog/" }
     ];
-    var sharedAssetVersion = "20260911b";
+    var sharedAssetVersion = "20260913a";
     var sharedStyles = document.querySelector('link[href*="brand-refresh.css"]');
     if (sharedStyles) {
       sharedStyles.setAttribute("data-site-brand-refresh", "");
