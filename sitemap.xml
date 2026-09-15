@@ -422,6 +422,12 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://dunasyolas.com/fr/blog/iles-du-rosaire-ou-baru"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dunasyolas.com/de/blog/rosario-inseln-baru-tierra-bomba"/>
   </url>
+  <url><loc>https://dunasyolas.com/de/bootsmiete</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/renta-de-botes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/private-boats"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dunasyolas.com/fr/location-bateau"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dunasyolas.com/de/bootsmiete"/>
+  </url>
   <url><loc>https://dunasyolas.com/de/cartagena-stadt-und-bucht</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/city-bahia"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/city-bahia"/>
@@ -977,6 +983,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/privacy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/privacy"/>
   </url>
+  <url><loc>https://dunasyolas.com/en/private-boats</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/renta-de-botes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/private-boats"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dunasyolas.com/fr/location-bateau"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dunasyolas.com/de/bootsmiete"/>
+  </url>
   <url><loc>https://dunasyolas.com/en/puerto-medallo-islas</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/puerto-medallo-islas"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/puerto-medallo-islas"/>
@@ -1179,6 +1191,12 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dunasyolas.com/de/kitesurfen-la-boquilla"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/kitesurf"/>
   </url>
+  <url><loc>https://dunasyolas.com/fr/location-bateau</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/renta-de-botes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/private-boats"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dunasyolas.com/fr/location-bateau"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dunasyolas.com/de/bootsmiete"/>
+  </url>
   <url><loc>https://dunasyolas.com/fr/namaste-tierra-bomba</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/namaste-holistica"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/namaste-holistica"/>
@@ -1323,6 +1341,12 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/puerto-medallo-islas"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/puerto-medallo-islas"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/puerto-medallo-islas"/>
+  </url>
+  <url><loc>https://dunasyolas.com/renta-de-botes</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/renta-de-botes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/private-boats"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dunasyolas.com/fr/location-bateau"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dunasyolas.com/de/bootsmiete"/>
   </url>
   <url><loc>https://dunasyolas.com/sabores-locales</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/sabores-locales"/>

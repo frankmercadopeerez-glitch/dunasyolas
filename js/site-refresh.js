@@ -30,6 +30,7 @@
     var isPlanner = routePath === "/arma-tu-viaje";
     var hasExperienceAction = !!document.querySelector('button[onclick*="addToCart"], .booking, [data-experience-name]');
     var active = routePath === "/" ? "home"
+      : (routePath === "/renta-de-botes" || routePath === "/private-boats") ? "boats"
       : routePath.indexOf("/galeria") === 0 ? "gallery"
       : routePath.indexOf("/kitesurf") === 0 ? "kitesurf"
       : routePath.indexOf("/about") === 0 ? "about"
@@ -42,6 +43,7 @@
       home: "HOME",
       experiences: "EXPERIENCES",
       gallery: "GALLERY",
+      boats: "PRIVATE BOATS",
       kitesurf: "KITESURF",
       about: "ABOUT US",
       blog: "BLOG",
@@ -52,6 +54,7 @@
       home: "INICIO",
       experiences: "EXPERIENCIAS",
       gallery: "GALERÍA",
+      boats: "BOTES PRIVADOS",
       kitesurf: "KITESURF",
       about: "NOSOTROS",
       blog: "BLOG",
@@ -62,12 +65,13 @@
     var links = [
       { key: "home", href: root + "/" },
       { key: "experiences", href: root + "/experiences" },
+      { key: "boats", href: isEnglish ? "/en/private-boats" : "/renta-de-botes" },
       { key: "gallery", href: root + "/galeria" },
       { key: "kitesurf", href: root + "/kitesurf" },
       { key: "about", href: root + "/about" },
       { key: "blog", href: root + "/blog/" }
     ];
-    var sharedAssetVersion = "20260914a";
+    var sharedAssetVersion = "20260915b";
     var sharedStyles = document.querySelector('link[href*="brand-refresh.css"]');
     if (sharedStyles) {
       sharedStyles.setAttribute("data-site-brand-refresh", "");
@@ -117,7 +121,7 @@
     nav.innerHTML =
       '<div class="site-navbar-inner">' +
         '<a class="site-brand" href="' + root + '/" aria-label="Dunas y Olas">' +
-          '<picture><source srcset="/images/logo-master.webp" type="image/webp"><img src="/images/logo-master.png" alt="" width="315" height="148"></picture>' +
+          '<picture><source srcset="/images/logo-master.webp" type="image/webp"><img src="/images/logo-master.png" alt="" width="315" height="148" decoding="async" loading="eager"></picture>' +
           '<span class="site-brand-copy"><strong>Dunas <em>&amp; Olas</em></strong><small>' + labels.signature + '</small></span>' +
         '</a>' +
         '<div class="site-navbar-links" aria-label="' + (isEnglish ? "Main navigation" : "Navegación principal") + '">' + desktopLinks + '</div>' +

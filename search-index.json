@@ -361,7 +361,7 @@
     "description": "Entiende qué estás reservando en Cartagena: el recorrido, el tiempo en cada lugar y lo que incluye tu plan.",
     "keywords": "",
     "url": "/blog/tour-o-pasadia/",
-    "image": "/images/logo-icon-nav-small.webp"
+    "image": "/images/logo-master.png"
   },
   {
     "title": "Cómo Moverse por Cartagena: Taxis, Mototaxis y Transporte Local",
@@ -473,7 +473,7 @@
     "description": "Autores y licencias de las fotografías de destinos.",
     "keywords": "",
     "url": "/creditos-fotograficos",
-    "image": "/images/logo-icon-nav-small.webp"
+    "image": "/images/logo-master.png"
   },
   {
     "title": "Cartagena ATV Tour – Cuatrimotos, Playa y Montañas",
@@ -571,7 +571,7 @@
     "description": "Vuela sobre La Boquilla en planes de 5, 10 o 15 minutos. Elige tu vuelo y añade video GoPro o transporte de ida y vuelta si lo necesitas.",
     "keywords": "",
     "url": "/paratrike-cartagena",
-    "image": "/images/paratrike-01.webp"
+    "image": "/images/logo-master.png"
   },
   {
     "title": "Pasadía Isla Lizamar desde Cartagena | Islas del Rosario",
@@ -614,6 +614,13 @@
     "keywords": "Puerto Medallo islas snorkel, Playa Blanca Baru tour islas, tour mapaches Baru, pasadia Baru con snorkel, Puerto Medallo panoramico islas",
     "url": "/puerto-medallo-islas",
     "image": "/images/playa-blanca-baru.webp"
+  },
+  {
+    "title": "Renta de botes privados en Cartagena",
+    "description": "Un día en el mar, a tu ritmo y con tu grupo. Cuéntanos cuántas personas viajan, la fecha y el recorrido que tienen en mente.",
+    "keywords": "Dunas y Olas Cartagena, agencia turística multicultural Cartagena, Nohemi Cartagena, acompañamiento local Cartagena, agencia RNT Cartagena",
+    "url": "/renta-de-botes",
+    "image": "/images/cartagenacentro.webp"
   },
   {
     "title": "Sabores Locales en Casa: Experiencia Culinaria en Cartagena",
