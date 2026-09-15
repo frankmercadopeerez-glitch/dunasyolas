@@ -13,7 +13,7 @@ for(const l of Object.keys(boatRoutes)){
 }
 for(const l of ['es','en']){
  const file=l==='es'?'index.html':'en/index.html',$=cheerio.load(fs.readFileSync(file,'utf8')),en=l==='en';
- $('.site-search-shell>i,.site-search-submit').remove();$('#site-search').after('<button type="button" class="site-search-submit" aria-label="'+(en?'Search':'Buscar')+'"><i class="fas fa-search" aria-hidden="true"></i></button>').attr('aria-autocomplete','list');$('script[src*="site-search.js"]').attr('src','/js/site-search.js?v=20260915d');
+ $('.site-search-shell>i,.site-search-submit').remove();$('#site-search').after('<button type="button" class="site-search-submit" aria-label="'+(en?'Search':'Buscar')+'"><i class="fas fa-search" aria-hidden="true"></i></button>').attr('aria-autocomplete','list');$('script[src*="site-search.js"]').attr('src','/js/site-search.js?v=20260915e');
  const sections=$('main>section');if(!$('#home-experiences').length){sections.eq(0).attr('id','home-trust');sections.eq(1).attr('id','home-nohemi');sections.eq(2).attr('id','home-experiences');}
  $('#home-trust').after($('#home-experiences'));$('.home-hero #hero-content>span').remove();$('.home-hero .animate-bounce').remove();
  const actions=$('.home-hero a').filter((i,e)=>/arma-tu-viaje/.test($(e).attr('href')||'')).parent();actions.addClass('hero-actions').html('<a class="hero-primary" href="'+(en?'/en':'')+'/experiences">'+(en?'Explore experiences':'Ver experiencias')+'</a><a class="hero-secondary" href="'+(en?'/en':'')+'/arma-tu-viaje">'+(en?'Plan my trip':'Armar mi viaje')+'</a>');

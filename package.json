@@ -7,7 +7,7 @@
     "test": "npm run check",
     "build:search": "node scripts/build-search-index.js",
     "build:home-css": "node scripts/build-home-css.js --prepare && tailwindcss -i src/tailwind-input.css -o css/tailwind-home.css --minify --content \"./{index.html,en/index.html,js/**/*.js}\" && node scripts/build-home-css.js",
-    "check": "node scripts/build-international.js && node scripts/build-catalog.js && node scripts/build-cart-en.js && node scripts/build-design.js && node scripts/build-search-index.js && node scripts/build-sitemap.js && node scripts/check-site.js && node scripts/check-international.js",
+    "check": "node scripts/build-international.js && node scripts/build-catalog.js && node scripts/build-cart-en.js && node scripts/build-design.js && node scripts/build-search-page.js && node scripts/build-search-index.js && node scripts/build-sitemap.js && node scripts/check-site.js && node scripts/check-international.js",
     "qa:google": "node scripts/qa-google-priority.mjs",
     "build:catalog": "node scripts/build-catalog.js && node scripts/build-cart-en.js",
     "build:international": "node scripts/build-international.js"

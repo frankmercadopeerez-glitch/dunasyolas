@@ -82,7 +82,7 @@
     index = Array.isArray(data) ? data : [];
   }).catch(function () { input.placeholder = english ? "Browse our experiences catalog" : "Busca experiencias en nuestro catálogo"; });
   document.addEventListener("click", function (event) { if (!event.target.closest(".site-search-shell")) close(); });
-  function search() { if (input.value.trim().length < 2) { input.focus(); return; } ready.then(function () { render(100); }); }
+  function search() { if (input.value.trim().length < 2) { input.focus(); return; } window.location.href = (english ? "/en/search" : "/buscar") + "?q=" + encodeURIComponent(input.value.trim()); }
   input.addEventListener("input", function () { ready.then(function () { render(3); }); });
   var submit = document.querySelector(".site-search-submit");
   if (submit) submit.addEventListener("click", search);
