@@ -43,14 +43,14 @@
     results.style.removeProperty("--search-results-width");
     results.style.removeProperty("--search-results-height");
   }
-  function render() {
+  function render(limit) {
     var query = normalize(input.value.trim());
     if (query.length < 2) { close(); return; }
     var terms = query.split(/\s+/).filter(Boolean);
     var matches = index.filter(function (item) {
       var haystack = normalize(item.title + " " + item.description + " " + item.keywords);
       return terms.every(function (term) { return haystack.indexOf(term) !== -1; });
-    }).slice(0, 8);
+    }).slice(0, limit);
     results.innerHTML = "";
     if (!matches.length) {
       results.innerHTML = english
@@ -76,14 +76,14 @@
     input.setAttribute("aria-expanded", "true");
     if (hero) hero.classList.add("site-search-open");
     positionResults();
-    revealResultsBelowInput();
+    if (limit !== 3) revealResultsBelowInput();
   }
   var ready = fetch(english ? "/en/search-index.json" : "/search-index.json").then(function (response) { if (!response.ok) throw new Error("Search unavailable"); return response.json(); }).then(function (data) {
     index = Array.isArray(data) ? data : [];
   }).catch(function () { input.placeholder = english ? "Browse our experiences catalog" : "Busca experiencias en nuestro catálogo"; });
   document.addEventListener("click", function (event) { if (!event.target.closest(".site-search-shell")) close(); });
-  function search() { if (input.value.trim().length < 2) { input.focus(); return; } ready.then(render); }
-  input.addEventListener("input", close);
+  function search() { if (input.value.trim().length < 2) { input.focus(); return; } ready.then(function () { render(100); }); }
+  input.addEventListener("input", function () { ready.then(function () { render(3); }); });
   var submit = document.querySelector(".site-search-submit");
   if (submit) submit.addEventListener("click", search);
   input.addEventListener("keydown", function (event) {
