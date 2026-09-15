@@ -78,11 +78,16 @@
     positionResults();
     revealResultsBelowInput();
   }
-  fetch(english ? "/en/search-index.json" : "/search-index.json").then(function (response) { if (!response.ok) throw new Error("Search unavailable"); return response.json(); }).then(function (data) {
-    index = Array.isArray(data) ? data : []; input.addEventListener("input", render); input.addEventListener("focus", render);
+  var ready = fetch(english ? "/en/search-index.json" : "/search-index.json").then(function (response) { if (!response.ok) throw new Error("Search unavailable"); return response.json(); }).then(function (data) {
+    index = Array.isArray(data) ? data : [];
   }).catch(function () { input.placeholder = english ? "Browse our experiences catalog" : "Busca experiencias en nuestro catálogo"; });
   document.addEventListener("click", function (event) { if (!event.target.closest(".site-search-shell")) close(); });
+  function search() { if (input.value.trim().length < 2) { input.focus(); return; } ready.then(render); }
+  input.addEventListener("input", close);
+  var submit = document.querySelector(".site-search-submit");
+  if (submit) submit.addEventListener("click", search);
   input.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") { event.preventDefault(); search(); }
     if (event.key === "Escape") close();
     if (event.key === "ArrowDown" && !results.classList.contains("hidden")) {
       var first = results.querySelector("a");
