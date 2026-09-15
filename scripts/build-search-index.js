@@ -6,7 +6,7 @@ function walk(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      if ([".git", ".vercel", "node_modules", "en", "api", "css", "docs", "images", "js", "scripts", "tmp"].includes(entry.name)) return [];
+      if ([".git", ".vercel", "node_modules", "en", "fr", "de", "api", "css", "docs", "images", "js", "scripts", "tmp"].includes(entry.name)) return [];
       return walk(full);
     }
     return entry.name.endsWith(".html") ? [full] : [];
@@ -57,3 +57,4 @@ console.log(`Search index ${output}: ${items.length} pages`);
 }
 buildIndex(root, "search-index.json");
 buildIndex(path.join(root, "en"), "en/search-index.json");
+for (const language of ["fr", "de"]) buildIndex(path.join(root, language), language + "/search-index.json");

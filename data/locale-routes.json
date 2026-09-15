@@ -1,0 +1,148 @@
+{
+  "home": {
+    "es": "/",
+    "en": "/en/",
+    "fr": "/fr/",
+    "de": "/de/"
+  },
+  "catalog": {
+    "es": "/experiences",
+    "en": "/en/experiences",
+    "fr": "/fr/excursions",
+    "de": "/de/ausfluege"
+  },
+  "islands": {
+    "es": "/islas-del-rosario",
+    "en": "/en/islas-del-rosario",
+    "fr": "/fr/iles-du-rosaire",
+    "de": "/de/rosario-inseln"
+  },
+  "about": {
+    "es": "/about",
+    "en": "/en/about",
+    "fr": "/fr/a-propos",
+    "de": "/de/ueber-uns"
+  },
+  "blog": {
+    "es": "/blog/",
+    "en": "/en/blog/",
+    "fr": "/fr/blog/",
+    "de": "/de/blog/"
+  },
+  "booking": {
+    "fr": "/fr/reserver",
+    "de": "/de/anfrage"
+  },
+  "credits": {
+    "es": "/creditos-fotograficos",
+    "en": "/en/creditos-fotograficos",
+    "fr": "/fr/credits-photos",
+    "de": "/de/bildnachweise"
+  },
+  "pasadia_cuatro_islas": {
+    "es": "/pasadia-islas-rosario",
+    "en": "/en/pasadia-islas-rosario",
+    "fr": "/fr/journee-quatre-iles",
+    "de": "/de/vier-inseln-tagesausflug"
+  },
+  "islas_vip_5": {
+    "es": "/tour-5-islas-vip",
+    "en": "/en/tour-5-islas-vip",
+    "fr": "/fr/journee-cinq-iles-vip",
+    "de": "/de/fuenf-inseln-vip"
+  },
+  "islas_standard_5": {
+    "es": "/tour-5-islas-standard",
+    "en": "/en/tour-5-islas-standard",
+    "fr": "/fr/journee-cinq-iles-standard",
+    "de": "/de/fuenf-inseln-standard"
+  },
+  "citytour_roa": {
+    "es": "/city-tour-roa",
+    "en": "/en/city-tour-roa",
+    "fr": "/fr/visite-carthagene-roa",
+    "de": "/de/stadtrundfahrt-cartagena-roa"
+  },
+  "citybahia": {
+    "es": "/city-bahia",
+    "en": "/en/city-bahia",
+    "fr": "/fr/carthagene-ville-et-baie",
+    "de": "/de/cartagena-stadt-und-bucht"
+  },
+  "catamaran": {
+    "es": "/catamaran-atardecer",
+    "en": "/en/catamaran-atardecer",
+    "fr": "/fr/catamaran-coucher-de-soleil",
+    "de": "/de/katamaran-sonnenuntergang"
+  },
+  "tamarindo": {
+    "es": "/tamarindo-beach-house",
+    "en": "/en/tamarindo-beach-house",
+    "fr": "/fr/tamarindo-tierra-bomba",
+    "de": "/de/tamarindo-tierra-bomba"
+  },
+  "namaste": {
+    "es": "/namaste-holistica",
+    "en": "/en/namaste-holistica",
+    "fr": "/fr/namaste-tierra-bomba",
+    "de": "/de/namaste-tierra-bomba"
+  },
+  "family_eco_route": {
+    "es": "/family-eco-route",
+    "en": "/en/family-eco-route",
+    "fr": "/fr/baru-plancton-bioluminescent",
+    "de": "/de/baru-leuchtendes-plankton"
+  },
+  "kitesurf_iniciacion": {
+    "es": "/kitesurf",
+    "en": "/en/kitesurf",
+    "fr": "/fr/kitesurf-la-boquilla",
+    "de": "/de/kitesurfen-la-boquilla"
+  },
+  "paratrike_5": {
+    "es": "/paratrike-cartagena",
+    "en": "/en/paratrike-cartagena",
+    "fr": "/fr/vol-paratrike-carthagene",
+    "de": "/de/paratrike-flug-cartagena"
+  },
+  "buceo": {
+    "es": "/buceo-snorkel",
+    "en": "/en/buceo-snorkel",
+    "fr": "/fr/plongee-snorkeling-carthagene",
+    "de": "/de/tauchen-schnorcheln-cartagena"
+  },
+  "isla_palma": {
+    "es": "/pasadia-isla-palma",
+    "en": "/en/pasadia-isla-palma",
+    "fr": "/fr/journee-isla-palma",
+    "de": "/de/isla-palma-tagesausflug"
+  },
+  "corona_island": {
+    "es": "/corona-island",
+    "en": "/en/corona-island",
+    "fr": "/fr/corona-island-adultes",
+    "de": "/de/corona-island-erwachsene"
+  },
+  "volcan_totumo": {
+    "es": "/volcan-del-totumo",
+    "en": "/en/volcan-del-totumo",
+    "fr": "/fr/volcan-totumo",
+    "de": "/de/totumo-schlammvulkan"
+  },
+  "guide-islands": {
+    "fr": "/fr/blog/iles-du-rosaire-ou-baru",
+    "de": "/de/blog/rosario-inseln-baru-tierra-bomba"
+  },
+  "guide-budget": {
+    "fr": "/fr/blog/budget-excursions-carthagene",
+    "de": "/de/blog/ausfluege-cartagena-kosten"
+  },
+  "guide-itinerary": {
+    "fr": "/fr/blog/carthagene-en-trois-jours",
+    "de": "/de/blog/cartagena-in-drei-tagen"
+  },
+  "guide-booking": {
+    "fr": "/fr/blog/reserver-excursion-carthagene",
+    "de": "/de/blog/ausflug-cartagena-buchen"
+  }
+}

@@ -198,7 +198,10 @@
       "plannerId": "citybahia",
       "route": "/city-bahia",
       "description": "Íconos de Cartagena, almuerzo y atardecer en bote deportivo con 2 horas de barra libre. Básico $195k / Full con Castillo $235k",
-      "image": "/images/cartagenasunset.webp"
+      "image": "/images/cartagenasunset.webp",
+      "variants": {
+        "full": 235000
+      }
     },
     "yate": {
       "name": "Tour Bahía en Yate (Luna Mía)",
@@ -416,7 +419,10 @@
       "plannerId": "citytour",
       "route": "/city-tour-roa",
       "description": "Recorrido histórico por Cartagena con guía, audio e historia incluidos. Dos horarios diarios: mañana o tarde",
-      "image": "/images/castillo-real.webp"
+      "image": "/images/castillo-real.webp",
+      "variants": {
+        "full": 180000
+      }
     },
     "catamaran": {
       "name": "Catamarán Atardecer – Membresía Plata",
@@ -433,7 +439,10 @@
       "plannerId": "catamaran",
       "route": "/catamaran-atardecer",
       "description": "Bebidas ilimitadas, DJ en vivo y el mejor atardecer de Cartagena desde el mar. Membresía Plata $150k / Oro $180k",
-      "image": "/images/cartagenasunset.webp"
+      "image": "/images/cartagenasunset.webp",
+      "variants": {
+        "gold": 180000
+      }
     },
     "atv": {
       "name": "Cartagena ATV Tour – Cuatrimotos, Playa y Montañas (2.5 h)",
@@ -488,7 +497,12 @@
       "plannerId": "tamarindo",
       "route": "/tamarindo-beach-house",
       "description": "Beach club en Tierra Bomba: piscina, cama lounge, cóctel de bienvenida, almuerzo y playa semiprivada. Transporte incluido.",
-      "image": "/images/tamarindo-1.webp"
+      "image": "/images/tamarindo-1.webp",
+      "variants": {
+        "child": 140000,
+        "pasadiaII": 220000,
+        "bachelorette": 220000
+      }
     },
     "namaste": {
       "name": "Namaste – Experiencia Holística en Tierra Bomba",

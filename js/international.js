@@ -1,0 +1,6 @@
+(function(){'use strict';
+const search=document.getElementById('intl-search'),count=document.getElementById('intl-count');
+if(search&&count){const cards=Array.from(document.querySelectorAll('[data-search]'));const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();search.addEventListener('input',()=>{const q=normalize(search.value.trim());let n=0;cards.forEach(card=>{card.hidden=!normalize(card.dataset.search).includes(q);if(!card.hidden)n++;});count.textContent=n?n+' '+count.dataset.unit:count.dataset.empty;});}
+const form=document.getElementById('intl-request');if(form)form.addEventListener('submit',event=>{event.preventDefault();if(!form.reportValidity())return;const data=new FormData(form),message=[form.dataset.greeting,form.dataset.name+': '+data.get('name'),form.dataset.date+': '+data.get('date'),form.dataset.people+': '+data.get('people'),form.dataset.message+': '+data.get('message')].join('\n');window.open('https://wa.me/573163030589?text='+encodeURIComponent(message),'_blank','noopener,noreferrer');});
+document.addEventListener('keydown',event=>{if(event.key==='Escape')document.querySelectorAll('details[open]').forEach(d=>{d.open=false;d.querySelector('summary').focus();});});
+})();

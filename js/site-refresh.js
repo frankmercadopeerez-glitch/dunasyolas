@@ -2,6 +2,8 @@
   "use strict";
 
   document.documentElement.classList.add("brand-refresh-active");
+  // French and German pages ship their complete localized navigation in HTML.
+  if (/^(fr|de)(-|$)/i.test(document.documentElement.lang)) return;
 
   function initBrandIdentity() {
     document.querySelectorAll("nav span").forEach(function (node) {
@@ -65,7 +67,7 @@
       { key: "about", href: root + "/about" },
       { key: "blog", href: root + "/blog/" }
     ];
-    var sharedAssetVersion = "20260913a";
+    var sharedAssetVersion = "20260914a";
     var sharedStyles = document.querySelector('link[href*="brand-refresh.css"]');
     if (sharedStyles) {
       sharedStyles.setAttribute("data-site-brand-refresh", "");
@@ -91,6 +93,12 @@
       return '<a class="site-nav-link' + (current ? ' is-active' : '') + '" href="' + item.href + '"' +
         (current ? ' aria-current="page"' : '') + '>' + labels[item.key] + '</a>';
     }).join("");
+    var languageLinks = [["es", "Español", "/"], ["en", "English", "/en/"], ["fr", "Français", "/fr/"], ["de", "Deutsch", "/de/"]].map(function (item) {
+      var alternate = document.querySelector('link[rel="alternate"][hreflang="' + item[0] + '"]');
+      var target = alternate ? new URL(alternate.href).pathname : item[2];
+      return '<a href="' + target + '" lang="' + item[0] + '" hreflang="' + item[0] + '">' + item[1] + (alternate ? '' : (isEnglish ? ' · Home' : ' · Inicio')) + '</a>';
+    }).join("");
+    var languageMenu = '<details class="site-language-menu"><summary aria-label="' + (isEnglish ? 'Language' : 'Idioma') + '">' + (isEnglish ? 'EN' : 'ES') + ' ▾</summary><div>' + languageLinks + '</div></details>';
     var mobileLinks = links.map(function (item) {
       var current = active === item.key;
       return '<a class="site-mobile-link' + (current ? ' is-active' : '') + '" href="' + item.href + '"' +
@@ -99,7 +107,7 @@
     var plannerDesktop = isPlanner ? "" :
       '<a class="site-planner-cta" href="' + root + '/arma-tu-viaje">&#10022; ' + labels.planner + '</a>';
     var plannerMobile = isPlanner ? "" :
-      '<a class="site-mobile-link site-mobile-planner" href="/arma-tu-viaje">&#10022; ' + labels.planner + '</a>';
+      '<a class="site-mobile-link site-mobile-planner" href="' + root + '/arma-tu-viaje">&#10022; ' + labels.planner + '</a>';
     var cartButton = isCatalog
       ? '<button class="site-cart-button" type="button" aria-label="' + (isEnglish ? "Open cart" : "Abrir carrito") + '" data-site-cart-button>' +
           '<i class="fas fa-shopping-cart" aria-hidden="true"></i><span id="cart-badge" class="site-cart-badge hidden">0</span></button>'
@@ -114,7 +122,7 @@
         '</a>' +
         '<div class="site-navbar-links" aria-label="' + (isEnglish ? "Main navigation" : "Navegación principal") + '">' + desktopLinks + '</div>' +
         '<div class="site-navbar-tools">' +
-          '<a class="site-language-link" href="' + languageHref + '" aria-label="' + (isEnglish ? "Cambiar a español" : "Switch to English") + '">' + labels.language + '</a>' +
+          languageMenu +
           plannerDesktop + cartButton +
           '<button class="site-menu-button" id="mobile-menu-btn" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="' + (isEnglish ? "Open menu" : "Abrir menú") + '"><i class="fas fa-bars" aria-hidden="true"></i></button>' +
         '</div>' +

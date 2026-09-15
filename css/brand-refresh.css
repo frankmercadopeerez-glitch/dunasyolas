@@ -1069,3 +1069,6 @@ button[data-filter].active, button[data-filter].active-filter,
 @media (prefers-reduced-motion: reduce) {
   .dyo-wave-divider svg { animation: none !important; }
 }
+
+/* Four-language navigation */
+.site-language-menu{position:relative;color:#fff;font-size:13px;font-weight:700}.site-language-menu summary{cursor:pointer;list-style:none;padding:9px;border:1px solid #ffffff55;border-radius:8px}.site-language-menu summary::-webkit-details-marker{display:none}.site-language-menu>div{position:absolute;right:0;top:calc(100% + 8px);min-width:180px;padding:8px;background:#fff;border:1px solid #dce4e7;border-radius:8px;box-shadow:0 8px 20px #10263225;z-index:80}.site-language-menu a{display:block;padding:10px;color:#102c3a!important;text-decoration:none}.site-language-menu a:hover{background:#edf5f5}.site-language-menu summary:focus-visible,.site-language-menu a:focus-visible{outline:3px solid #e6b632;outline-offset:2px}
