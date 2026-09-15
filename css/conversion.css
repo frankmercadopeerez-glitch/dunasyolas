@@ -50,3 +50,7 @@ a,button,summary{touch-action:manipulation}a:focus-visible,button:focus-visible,
 
 .fleet-filter-btn{border-radius:6px!important;background:#fff!important;color:#08283e!important;border:1px solid #a7bcc8!important}.fleet-filter-btn.active,.fleet-filter-btn:hover{background:#006b83!important;color:#fff!important;border-color:#006b83!important}.catalog-page main{background:#fff!important}
 
+/* Crisp metadata and a vivid booking action across experience pages. */
+body main span.rounded-full[class*="bg-blue-100"],body main span.rounded-full[class*="bg-purple-100"],body main span.rounded-full[class*="bg-yellow-100"],body main span.rounded-full[class*="bg-green-100"]{background:#fff!important;color:#08283e!important;border:1px solid #8a9eac!important;border-radius:4px!important;font-weight:600}
+body .experience-booking-primary{background:#ffc52b!important;color:#08283e!important;border:2px solid #ffc52b!important;box-shadow:none!important}
+body .experience-booking-primary:hover{background:#ffda63!important;border-color:#ffda63!important;color:#08283e!important}
