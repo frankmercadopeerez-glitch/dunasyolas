@@ -14,8 +14,8 @@
     var safeBottom = 12;
     var desiredHeight = Math.min(420, Math.max(220, window.innerHeight * 0.4));
     var roomBelow = window.innerHeight - rect.bottom - gap - safeBottom;
-    var available = Math.min(desiredHeight, Math.max(120, roomBelow));
-    var top = Math.min(rect.bottom + gap, window.innerHeight - available - safeBottom);
+    var available = Math.min(desiredHeight, Math.max(0, roomBelow));
+    var top = rect.bottom + gap;
     results.style.setProperty("--search-results-top", Math.max(8, top) + "px");
     results.style.setProperty("--search-results-left", Math.max(8, rect.left) + "px");
     results.style.setProperty("--search-results-width", Math.min(rect.width, window.innerWidth - 16) + "px");
@@ -76,7 +76,7 @@
     input.setAttribute("aria-expanded", "true");
     if (hero) hero.classList.add("site-search-open");
     positionResults();
-    if (limit !== 3) revealResultsBelowInput();
+    revealResultsBelowInput();
   }
   var ready = fetch(english ? "/en/search-index.json" : "/search-index.json").then(function (response) { if (!response.ok) throw new Error("Search unavailable"); return response.json(); }).then(function (data) {
     index = Array.isArray(data) ? data : [];
