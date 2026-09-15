@@ -721,7 +721,7 @@
     },
     "kitesurf_iniciacion": {
       "name": "Kitesurf — Clase de Iniciación (2 horas)",
-      "price": 750000,
+      "price": 650000,
       "unit": "persona",
       "planner": {
         "emoji": "🪁",
@@ -739,42 +739,42 @@
     },
     "kitesurf_refuerzo": {
       "name": "Kitesurf — Clase de Refuerzo (1 hora)",
-      "price": 400000,
+      "price": 280000,
       "unit": "persona"
     },
     "kitesurf_grupal": {
       "name": "Kitesurf — Clase Grupal",
-      "price": 320000,
+      "price": 250000,
       "unit": "persona"
     },
     "kitesurf_foil": {
       "name": "Kitesurf — Kite Foil (sesión)",
-      "price": 570000,
+      "price": 450000,
       "unit": "persona"
     },
     "kitesurf_rider": {
       "name": "Kitesurf — Curso Completo \"Rider\" (8 horas)",
-      "price": 2850000,
+      "price": 2400000,
       "unit": "persona"
     },
     "kitesurf_avanzado": {
       "name": "Kitesurf — Curso Avanzado (10 horas)",
-      "price": 3450000,
+      "price": 2900000,
       "unit": "persona"
     },
     "kitesurf_elite": {
       "name": "Kitesurf — Experiencia Elite VIP (12 horas)",
-      "price": 3990000,
+      "price": 3400000,
       "unit": "persona"
     },
     "kitesurf_wingfoil": {
       "name": "Kitesurf — Clase de Wing Foil (1 hora)",
-      "price": 400000,
+      "price": 350000,
       "unit": "hora"
     },
     "kitesurf_sup": {
       "name": "Alquiler de Tabla SUP (Stand Up Paddle)",
-      "price": 100000,
+      "price": 90000,
       "unit": "hora"
     },
     "kitesurf_downwind": {
@@ -789,7 +789,7 @@
     },
     "kitesurf_alquiler_supervisado": {
       "name": "Kitesurf — Alquiler de Equipo + Supervisión",
-      "price": 250000,
+      "price": 220000,
       "unit": "hora"
     },
     "kitesurf_alquiler_equipo": {
@@ -877,6 +877,11 @@
       "route": "/paratrike-cartagena",
       "image": "/images/paratrike-01.webp",
       "description": "Vuelo en Paratrike de 15 minutos sobre La Boquilla. Sujeto al clima; peso máximo 100 kg. Video y transporte opcionales."
+    },
+    "kitesurf_medio": {
+      "name": "Kitesurf — Curso Medio (4 horas)",
+      "price": 1310000,
+      "unit": "persona"
     }
   },
   "paratrike": {
