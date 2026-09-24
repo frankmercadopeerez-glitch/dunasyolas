@@ -68,6 +68,86 @@
       "source": "/recorrido-gastronomico",
       "destination": "/experiences",
       "permanent": true
+    },
+    {
+      "source": "/sabores-locales",
+      "destination": "/experiences",
+      "permanent": true
+    },
+    {
+      "source": "/sabores-locales.html",
+      "destination": "/experiences",
+      "permanent": true
+    },
+    {
+      "source": "/en/sabores-locales",
+      "destination": "/en/experiences",
+      "permanent": true
+    },
+    {
+      "source": "/en/sabores-locales.html",
+      "destination": "/en/experiences",
+      "permanent": true
+    },
+    {
+      "source": "/pasadia-islas-rosario",
+      "destination": "/islas-del-rosario",
+      "permanent": true
+    },
+    {
+      "source": "/en/pasadia-islas-rosario",
+      "destination": "/en/islas-del-rosario",
+      "permanent": true
+    },
+    {
+      "source": "/tour-5-islas-vip",
+      "destination": "/islas-del-rosario",
+      "permanent": true
+    },
+    {
+      "source": "/en/tour-5-islas-vip",
+      "destination": "/en/islas-del-rosario",
+      "permanent": true
+    },
+    {
+      "source": "/tour-5-islas-standard",
+      "destination": "/islas-del-rosario",
+      "permanent": true
+    },
+    {
+      "source": "/en/tour-5-islas-standard",
+      "destination": "/en/islas-del-rosario",
+      "permanent": true
+    },
+    {
+      "source": "/fr/journee-quatre-iles",
+      "destination": "/fr/iles-du-rosaire",
+      "permanent": true
+    },
+    {
+      "source": "/fr/journee-cinq-iles-vip",
+      "destination": "/fr/iles-du-rosaire",
+      "permanent": true
+    },
+    {
+      "source": "/fr/journee-cinq-iles-standard",
+      "destination": "/fr/iles-du-rosaire",
+      "permanent": true
+    },
+    {
+      "source": "/de/vier-inseln-tagesausflug",
+      "destination": "/de/rosario-inseln",
+      "permanent": true
+    },
+    {
+      "source": "/de/fuenf-inseln-vip",
+      "destination": "/de/rosario-inseln",
+      "permanent": true
+    },
+    {
+      "source": "/de/fuenf-inseln-standard",
+      "destination": "/de/rosario-inseln",
+      "permanent": true
     }
   ]
 }

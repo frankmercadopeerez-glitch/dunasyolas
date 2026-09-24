@@ -28,8 +28,6 @@ El mensaje central recomendado es: **tours en Cartagena elegidos con orientació
 | 1 | tours en Cartagena | tours Cartagena Colombia, tours seguros, agencia local, tours con precios | `/` | Mantener como página principal del tema general |
 | 1 | tours en Cartagena precios | reservar tours Cartagena, catálogo de tours, experiencias Cartagena | `/experiences` | Reforzar filtros, precios e información previa al pago |
 | 1 | tour Islas del Rosario desde Cartagena | pasadía Islas del Rosario, precios, qué incluye, cómo llegar | `/islas-del-rosario` | Convertir en comparador comercial y guía de elección |
-| 1 | tour 5 islas Cartagena precio | tour 5 islas VIP, Cocoliso, Cholón, Mambo Beach | `/tour-5-islas-vip` | Enfocar título, descripción, FAQ e inclusiones |
-| 1 | tour 5 islas Cartagena | tour 5 islas standard, económico, recorrido completo | `/tour-5-islas-standard` | Diferenciar claramente del VIP |
 | 1 | pasadía Isla Lizamar | Isla Lizamar precio, plan familiar Islas del Rosario | `/pasadia-isla-lizamar` | Enfatizar familias, piscinas, buffet y gastos aparte |
 | 1 | tour Playa Blanca Barú desde Cartagena | pasadía Barú, Playa Blanca precio | `/baru` y `/playa-blanca-baru` | Usar `/baru` como guía y la experiencia para reservar |
 | 2 | qué hacer en Cartagena | planes Cartagena, cosas que hacer, actividades | `/blog/que-hacer-cartagena/` | Actualizar precios y enlazar a páginas comerciales |
@@ -60,7 +58,6 @@ No conviene traducir automáticamente nuevas páginas sin revisar disponibilidad
 | Competidor observado | Fortaleza | Aprendizaje aplicable |
 |---|---|---|
 | [Tours Cartagena Colombia](https://tourscartagenacolombia.com/) | Catálogo amplio y fuerte repetición temática de islas, Barú, botes y recorridos urbanos | Cubrir categorías sin perder una propuesta de confianza propia |
-| [Tour 5 Islas](https://tour5islas.com/producto/tour-5-islas/) | Página exacta para la consulta, precio, itinerario e inclusiones | Dar a VIP y Standard una intención distinta y datos completos |
 | [Tu Tour en Cartagena](https://tutourencartagena.com/) | Muchas opciones, categorías, precios y reseñas | Facilitar comparación sin convertir el sitio en un catálogo impersonal |
 | [Cartagena Explorer](https://www.cartagenaexplorer.com/islas-del-rosario-guia/) | Guía extensa, práctica, actualizada y basada en experiencia local | Mostrar autoría, fecha y experiencia de primera mano |
 | [Cartagena Day Tours](https://cartagenadaytours.com/pages/cartagena-island-tours) | Oferta inglesa organizada por tipo de viajero y respuesta rápida | Consolidar las páginas inglesas prioritarias antes de ampliar traducciones |
@@ -76,7 +73,7 @@ La brecha aprovechable es **claridad más acompañamiento humano**: decir para q
 - `/experiences` debe concentrar “tours en Cartagena con precios” y búsquedas de catálogo.
 - `/islas-del-rosario` debe concentrar “tour Islas del Rosario desde Cartagena”.
 - `/blog/mejores-islas-rosario/` debe responder “cuáles son las mejores islas”, no intentar vender con el mismo título de la página comercial.
-- Cada producto debe concentrar su combinación exacta: Tour 5 Islas VIP, Standard, Lizamar, Oceanario, etc.
+- Cada producto debe concentrar su combinación exacta: los productos, precios e inclusiones vigentes del catálogo, etc.
 - Los artículos deben usar enlaces descriptivos hacia el producto o comparador correspondiente.
 
 No se recomienda crear páginas casi idénticas para singular/plural, “precio/precios” o cada nacionalidad. Google puede entender esas variantes dentro de una misma página útil.

@@ -28,24 +28,6 @@
       "price": 180000,
       "unit": "persona"
     },
-    "pasadia_cuatro_islas": {
-      "name": "Pasadía 4 Islas del Rosario + Atardecer en la Bahía",
-      "price": 300000,
-      "unit": "persona",
-      "planner": {
-        "emoji": "🏝️",
-        "duration": "Todo el día",
-        "category": "water",
-        "slots": [
-          "morning"
-        ],
-        "allDay": true
-      },
-      "plannerId": "pasadia",
-      "route": "/pasadia-islas-rosario",
-      "description": "4 destinos en un día: Isla Grande, Cholón, Barú y Bocachica. Almuerzo, barra libre, snorkel y atardecer. Solo 12 cupos.",
-      "image": "/images/islastour (2).webp"
-    },
     "isla_palma": {
       "name": "Pasadía Isla Palma – Reserva Natural",
       "price": 490000,
@@ -157,7 +139,7 @@
       "plannerId": "buceo",
       "route": "/buceo-snorkel",
       "description": "Incluye 3 inmersiones en arrecifes de coral, almuerzo en las islas y regreso a las 16:00 h al Muelle La Bodeguita",
-      "image": "/images/backpackers/family-eco-route/02.webp"
+      "image": "/images/buceo-snorkel-cartagena.webp"
     },
     "kitesurf": {
       "name": "Kitesurf y Deportes Acuáticos",
@@ -272,11 +254,6 @@
       "description": "El tour más cartagenero: Zapatos Viejos, Castillo de San Felipe y Letras de Cartagena, con música crossover, animación bilingüe y entrada a la discoteca Taboo",
       "image": "/images/chiva-rumbera.webp"
     },
-    "sabores_locales": {
-      "name": "Sabores Locales: Cocina Caribeña",
-      "price": 150000,
-      "unit": "persona"
-    },
     "playablanca": {
       "name": "Puerto Medallo – Playa Blanca, Barú",
       "price": 190000,
@@ -293,7 +270,7 @@
       "plannerId": "playablanca",
       "route": "/playa-blanca-baru",
       "description": "Día de playa en Playa Blanca: transporte terrestre, cóctel de bienvenida, almuerzo a elegir, piscina y camas asoleadoras frente al Caribe",
-      "image": "/images/playa-blanca-piscina.webp"
+      "image": "/images/puerto-medallo/01-puerto-medallo-beach-club.webp"
     },
     "medalloislas": {
       "name": "Puerto Medallo + Islas + Mapaches y Snorkel",
@@ -311,7 +288,7 @@
       "plannerId": "medalloislas",
       "route": "/puerto-medallo-islas",
       "description": "Día de playa en Puerto Medallo + tour panorámico por las islas + tour de mapaches con snorkel. Transporte, almuerzo y piscina incluidos",
-      "image": "/images/playa-blanca-baru.webp"
+      "image": "/images/puerto-medallo/03-puerto-medallo-pool.webp"
     },
     "cabalgata": {
       "name": "Cabalgata en la Playa (La Boquilla)",
@@ -541,24 +518,6 @@
       "description": "Tres islas privadas en un solo día, con lancha deportiva, almuerzo gourmet, cócteles y traslados desde tu hotel.",
       "image": "/images/backpackers/3-luxury-beach-clubs/01.webp"
     },
-    "islas_vip_5": {
-      "name": "Pasadía 5 Islas VIP desde Cartagena",
-      "price": 320000,
-      "unit": "persona",
-      "planner": {
-        "emoji": "🚤",
-        "duration": "Todo el día",
-        "category": "water",
-        "slots": [
-          "morning"
-        ],
-        "allDay": true
-      },
-      "plannerId": "islas_vip_5",
-      "route": "/tour-5-islas-vip",
-      "description": "Lancha deportiva, Cocoliso, snorkel, Cholón, Mambo Beach y club privado en un día completo por el Caribe.",
-      "image": "/images/backpackers/tour-5-islas-vip/01.webp"
-    },
     "islas_oceanario": {
       "name": "Islas del Rosario + Oceanario",
       "price": 280000,
@@ -576,24 +535,6 @@
       "route": "/islas-oceanario",
       "description": "Navega desde Cartagena, conoce el Oceanario de San Martín de Pajarales y disfruta un día de mar en las Islas del Rosario.",
       "image": "/images/backpackers/islas-oceanario/01.webp"
-    },
-    "islas_standard_5": {
-      "name": "Pasadía 5 Islas Standard desde Cartagena",
-      "price": 270000,
-      "unit": "persona",
-      "planner": {
-        "emoji": "🌴",
-        "duration": "Todo el día",
-        "category": "water",
-        "slots": [
-          "morning"
-        ],
-        "allDay": true
-      },
-      "plannerId": "islas_standard_5",
-      "route": "/tour-5-islas-standard",
-      "description": "Un recorrido completo por Bocachica, Cocoliso, snorkel, Cholón, Mambo Beach y Sol y Papaya en lancha de pasajeros.",
-      "image": "/images/backpackers/tour-5-islas-standard/01.webp"
     },
     "volcan_totumo": {
       "name": "Tour Volcán del Totumo desde Cartagena",
@@ -952,12 +893,12 @@
     "islas-cultura": {
       "activities": [
         "citytour",
-        "pasadia",
+        "tamarindo",
         "yate_noche"
       ],
       "slotPrefs": {
         "citytour": "morning",
-        "pasadia": "morning",
+        "tamarindo": "morning",
         "yate_noche": "night"
       },
       "days": 2

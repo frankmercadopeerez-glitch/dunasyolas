@@ -57,7 +57,7 @@
   },
   {
     "title": "Rosario-Inseln, Barú oder Tierra Bomba: Was passt zu Ihnen?",
-    "description": "Ein guter Ausflug beginnt mit dem passenden Tagesablauf. Inselhopping, ein Beachclub-Tag und ein per Straße erreichbarer Strand erfüllen unterschiedliche Reisewünsche.",
+    "description": "Ein guter Ausflug beginnt mit dem passenden Tagesablauf. Ein Tag im Beachclub und ein per Straße erreichbarer Strand erfüllen unterschiedliche Reisewünsche.",
     "keywords": "",
     "url": "/de/blog/rosario-inseln-baru-tierra-bomba",
     "image": "/images/cartagenasunset.webp"
@@ -82,20 +82,6 @@
     "keywords": "",
     "url": "/de/corona-island-erwachsene",
     "image": "/images/corona-island/corona-island-card.webp"
-  },
-  {
-    "title": "Fünf Inseln: Tagesausflug in der Standard-Variante",
-    "description": "Die Standard-Variante umfasst eine Fahrt im Passagierboot mit Bocachica, Cocoliso, einem Schnorchelstopp, Cholón, Mambo Beach und Sol y Papaya im Programm. Der Angebotsname entspri",
-    "keywords": "",
-    "url": "/de/fuenf-inseln-standard",
-    "image": "/images/backpackers/tour-5-islas-standard/01.webp"
-  },
-  {
-    "title": "VIP-Tagesausflug zu fünf Inseln ab Cartagena",
-    "description": "Die VIP-Variante verbindet eine Schnellbootfahrt mit Cocoliso, Schnorcheln, Cholón, Mambo Beach und einem privaten Beachclub. Vergleichen Sie die einzelnen Leistungen: Die Bezeichn",
-    "keywords": "",
-    "url": "/de/fuenf-inseln-vip",
-    "image": "/images/backpackers/tour-5-islas-vip/01.webp"
   },
   {
     "title": "Ausflüge in Cartagena mit persönlicher Beratung",
@@ -165,7 +151,7 @@
     "description": "Entdecken Sie karibische Riffe mit einem begleiteten Taucherlebnis und einem Inselmittagessen gemäß gewähltem Angebot. Gerätetauchen und Schnorcheln sind unterschiedliche Aktivität",
     "keywords": "",
     "url": "/de/tauchen-schnorcheln-cartagena",
-    "image": "/images/backpackers/family-eco-route/02.webp"
+    "image": "/images/buceo-snorkel-cartagena.webp"
   },
   {
     "title": "Ausflug zum Schlammvulkan El Totumo",
@@ -182,10 +168,10 @@
     "image": "/images/cartagenasunset.webp"
   },
   {
-    "title": "Vier Inseln und Sonnenuntergang ab Cartagena",
-    "description": "Dieser Tagesausflug verbindet Isla Grande, Cholón, Barú und Bocachica mit einer Fahrt zum Sonnenuntergang. Das Programm richtet sich an Reisende, die an einem Tag mehrere unterschi",
+    "title": "Apartments und Studios in Cartagena",
+    "description": "Entdecken Sie Apartments und Studios aus dem Dunas-&-Olas-Katalog. Fragen Sie auf WhatsApp nach Preisen je Reisedatum, Verfügbarkeit und Zusatzkosten.",
     "keywords": "",
-    "url": "/de/vier-inseln-tagesausflug",
-    "image": "/images/islastour%20(2).webp"
+    "url": "/de/unterkuenfte-cartagena",
+    "image": "/images/hospedaje/apartaestudio-1.webp"
   }
 ]

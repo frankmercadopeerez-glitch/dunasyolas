@@ -410,7 +410,7 @@
     "description": "Diving and snorkeling in the Rosario Islands National Park coral reefs, Cartagena. Certified instructor, full gear and private guide. From $250,000 COP per person.",
     "keywords": "",
     "url": "/en/buceo-snorkel",
-    "image": "/images/backpackers/family-eco-route/02.webp"
+    "image": "/images/buceo-snorkel-cartagena.webp"
   },
   {
     "title": "Beach Horseback Riding in La Boquilla",
@@ -418,6 +418,13 @@
     "keywords": "",
     "url": "/en/cabalgata-playa",
     "image": "/images/logo-master.png"
+  },
+  {
+    "title": "Apartments and studio rentals in Cartagena",
+    "description": "Browse the apartments and studio rentals in the Dunas & Olas catalogue. Ask about date-based rates, availability and extra fees on WhatsApp.",
+    "keywords": "",
+    "url": "/en/cartagena-accommodations",
+    "image": "/images/hospedaje/apartaestudio-1.webp"
   },
   {
     "title": "Sunset Catamaran Cartagena – Open Bar, DJ & Night Party",
@@ -693,13 +700,6 @@
     "image": "/images/logo-master.png"
   },
   {
-    "title": "Rosario Islands Day Trip from Cartagena (Sunny Day)",
-    "description": "4 Rosario Islands in one day: Isla Grande, Cholón, Barú & Bocachica. Lunch, snorkeling and open bar included. Only 12 spots per departure. From $300,000 COP.",
-    "keywords": "",
-    "url": "/en/pasadia-islas-rosario",
-    "image": "/images/acuario.webp"
-  },
-  {
     "title": "Múcura, Tintipán and Santa Cruz del Islote",
     "description": "Explore Tintipán, Casa en el Agua, Santa Cruz del Islote and Múcura with lunch. Port fees and insurance are not included.",
     "keywords": "",
@@ -711,7 +711,7 @@
     "description": "Playa Blanca Barú day trip from Cartagena (Puerto Medallo): round-trip land transport, welcome cocktail, lunch of your choice, pool access and sun loungers facing the Caribbean. Fr",
     "keywords": "",
     "url": "/en/playa-blanca-baru",
-    "image": "/images/playa-blanca-piscina.webp"
+    "image": "/images/puerto-medallo/01-puerto-medallo-beach-club.webp"
   },
   {
     "title": "Private boat rentals in Cartagena",
@@ -726,13 +726,6 @@
     "keywords": "",
     "url": "/en/puerto-medallo-islas",
     "image": "/images/logo-master.png"
-  },
-  {
-    "title": "Local Flavors: Home Dining & Cuisine in Cartagena",
-    "description": "Local Flavors at Home: a feast with the Afro, indigenous and Arab heritage of Colombian Caribbean cuisine, prepared by local cooks in the warmth of a traditional Cartagena home. Bo",
-    "keywords": "",
-    "url": "/en/sabores-locales",
-    "image": "/images/cartagenacentro.webp"
   },
   {
     "title": "Tandem Skydiving over the Caribbean",
@@ -760,20 +753,6 @@
     "description": "A two-hour experience with five ziplines above the trees and Caribbean views. Lunch and transport are included.",
     "keywords": "",
     "url": "/en/tirolesa",
-    "image": "/images/logo-master.png"
-  },
-  {
-    "title": "Five Islands Standard Day Trip",
-    "description": "Travel by passenger boat to Bocachica, Cocoliso, a snorkeling stop, Cholón, Mambo Beach and Sol y Papaya.",
-    "keywords": "",
-    "url": "/en/tour-5-islas-standard",
-    "image": "/images/logo-master.png"
-  },
-  {
-    "title": "Five Islands VIP Day Trip from Cartagena",
-    "description": "A full Caribbean day by speedboat with Cocoliso, snorkeling, Cholón, Mambo Beach and a private beach club.",
-    "keywords": "",
-    "url": "/en/tour-5-islas-vip",
     "image": "/images/logo-master.png"
   },
   {

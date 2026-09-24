@@ -16,4 +16,5 @@ for(const group of Object.values(groups))for(const [lang,route]of Object.entries
   checked++;
  }
 }
-assert.equal(checked,52);console.log('International QA: 52 pages, reciprocal language links, canonical URLs and complete static content verified.');
+const expected=Object.values(groups).reduce((count,group)=>count+Object.keys(group).filter(lang=>['fr','de'].includes(lang)).length,0);
+assert.equal(checked,expected);console.log(`International QA: ${checked} pages, reciprocal language links, canonical URLs and complete static content verified.`);

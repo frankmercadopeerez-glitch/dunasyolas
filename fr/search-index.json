@@ -29,7 +29,7 @@
   },
   {
     "title": "Îles du Rosaire, Barú ou Tierra Bomba : que choisir ?",
-    "description": "Une excursion réussie commence par le choix du bon rythme. Un parcours avec plusieurs îles, une journée dans un beach club et une plage accessible par la route répondent à des envi",
+    "description": "Une excursion réussie commence par le choix du bon rythme. Une journée dans un beach club et une plage accessible par la route répondent à des envies différentes.",
     "keywords": "",
     "url": "/fr/blog/iles-du-rosaire-ou-baru",
     "image": "/images/cartagenasunset.webp"
@@ -84,6 +84,13 @@
     "image": "/images/cartagenasunset.webp"
   },
   {
+    "title": "Appartements et studios à Carthagène",
+    "description": "Découvrez les appartements et studios du catalogue Dunas & Olas. Demandez les tarifs selon les dates, la disponibilité et les frais sur WhatsApp.",
+    "keywords": "",
+    "url": "/fr/hebergements-carthagene",
+    "image": "/images/hospedaje/apartaestudio-1.webp"
+  },
+  {
     "title": "Quel pasadía choisir dans les îles du Rosaire ?",
     "description": "Comparez les journées avec plusieurs arrêts et les séjours dans un beach club. Le bon choix dépend du temps que vous souhaitez passer en bateau, à la plage et dans les activités.",
     "keywords": "",
@@ -98,32 +105,11 @@
     "image": "/images/cartagenasunset.webp"
   },
   {
-    "title": "Pasadía dans cinq îles : formule Standard",
-    "description": "Cette formule prévoit un bateau de passagers et un parcours comprenant Bocachica, Cocoliso, un arrêt snorkeling, Cholón, Mambo Beach et Sol y Papaya. Le nom commercial du plan ne c",
-    "keywords": "",
-    "url": "/fr/journee-cinq-iles-standard",
-    "image": "/images/backpackers/tour-5-islas-standard/01.webp"
-  },
-  {
-    "title": "Pasadía VIP dans cinq îles au départ de Carthagène",
-    "description": "Le programme VIP associe une traversée en bateau rapide, Cocoliso, du snorkeling, Cholón, Mambo Beach et un beach club privé. Comparez les arrêts et les prestations avant de choisi",
-    "keywords": "",
-    "url": "/fr/journee-cinq-iles-vip",
-    "image": "/images/backpackers/tour-5-islas-vip/01.webp"
-  },
-  {
     "title": "Isla Palma : journée plage et réserve naturelle",
     "description": "Rejoignez l’hôtel Isla Palma pour une journée associant traversée panoramique, déjeuner gourmet et accès à la plage. Le parcours maritime passe par les secteurs du Rosaire et de Sa",
     "keywords": "",
     "url": "/fr/journee-isla-palma",
     "image": "/images/isla-palma-4.webp"
-  },
-  {
-    "title": "Journée dans quatre îles avec coucher de soleil",
-    "description": "Une journée qui associe Isla Grande, Cholón, Barú et Bocachica, puis une sortie au coucher du soleil. Ce pasadía convient aux voyageurs qui souhaitent découvrir plusieurs ambiances",
-    "keywords": "",
-    "url": "/fr/journee-quatre-iles",
-    "image": "/images/islastour%20(2).webp"
   },
   {
     "title": "Initiation au kitesurf à La Boquilla, Carthagène",
@@ -151,7 +137,7 @@
     "description": "Découvrez les récifs caribéens avec une expérience de plongée accompagnée et un déjeuner sur une île selon la formule choisie. La plongée avec bouteille et le snorkeling sont deux ",
     "keywords": "",
     "url": "/fr/plongee-snorkeling-carthagene",
-    "image": "/images/backpackers/family-eco-route/02.webp"
+    "image": "/images/buceo-snorkel-cartagena.webp"
   },
   {
     "title": "Préparer votre réservation à Carthagène",

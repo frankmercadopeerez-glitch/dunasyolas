@@ -13,8 +13,7 @@
     'index.html', 'experiences.html', 'about.html', 'faq.html',
     'policies.html', 'privacy.html', 'kitesurf.html',
     'atardeceres-bahia.html', 'buceo-snorkel.html',
-    'recorrido-gastronomico.html', 'sabores-locales.html',
-    'pasadia-islas-rosario.html', 'fleet.html'
+    'fleet.html'
   ];
 
   var browserLang = ((navigator.language || navigator.userLanguage || 'es') + '').substring(0, 2).toLowerCase();

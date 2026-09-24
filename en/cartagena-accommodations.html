@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="en" class="brand-refresh-active"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <meta name="description" content="Browse the apartments and studio rentals in the Dunas &amp; Olas catalogue. Ask about date-based rates, availability and extra fees on WhatsApp.">
+    <title>Apartments and studio rentals in Cartagena | Dunas &amp; Olas</title>
+    <link rel="canonical" href="https://dunasyolas.com/en/cartagena-accommodations">
+
+
+
+
+
+    <meta name="theme-color" content="#08283e">
+    <link href="../css/tailwind.css?v=20260913a" rel="stylesheet">
+    <link rel="preload" href="../css/fontawesome-local.min.css?v=20260913a" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="../css/fontawesome-local.min.css?v=20260913a"/></noscript>
+
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      .page-header {
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("../images/foto (6).webp");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .btn-primary {
+        background-color: #5B3A82;
+        color: white;
+        font-weight: 600;
+        padding: 0.75rem 2rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px -1px rgba(91, 58, 130, 0.3);
+        display: inline-block;
+      }
+      .btn-primary:hover {
+        background-color: #3F2761;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(91, 58, 130, 0.4);
+      }
+
+      /* --- Multi-language WhatsApp Widget Styles --- */
+      .whatsapp-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+      }
+      .wa-options {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      }
+      .wa-options.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      .wa-item {
+        display: flex;
+        align-items: center;
+        background: white;
+        padding: 10px 15px;
+        border-radius: 12px;
+        text-decoration: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        transition:
+          transform 0.2s,
+          background-color 0.2s;
+        min-width: 210px;
+        border-left: 4px solid #25d366;
+      }
+      .wa-item:hover {
+        transform: translateX(-5px);
+        background-color: #f0fdf4;
+      }
+      .wa-flag {
+        font-size: 24px;
+        margin-right: 12px;
+      }
+      .wa-info {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+      .wa-title {
+        font-size: 13px;
+        font-weight: 700;
+        color: #111827;
+        line-height: 1.2;
+      }
+      .wa-number {
+        font-size: 11px;
+        color: #6b7280;
+        margin-top: 2px;
+      }
+
+      @keyframes bounce-slow {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+      }
+      .whatsapp-float {
+        background: transparent;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s;
+        animation: bounce-slow 3s infinite ease-in-out;
+      }
+      .whatsapp-float:hover {
+        transform: scale(1.05);
+        animation: none;
+      }
+      .wa-options.active + .whatsapp-float {
+        animation: none;
+      }
+      .whatsapp-icon {
+        width: 58px;
+        height: 58px;
+        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+      }
+      .whatsapp-text {
+        background-color: #fff;
+        color: #111827;
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 700;
+        margin-top: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 768px) {
+        .whatsapp-container {
+          bottom: 14px;
+          right: 14px;
+        }
+        .whatsapp-icon {
+          width: 40px;
+          height: 40px;
+        }
+        .whatsapp-text {
+          font-size: 8px;
+          padding: 2px 7px;
+          margin-top: 4px;
+        }
+      }
+
+      /* Social network badges in the footer (placeholders ready to link) */
+      .social-badge {
+        width: 48px;
+        flex-shrink: 0;
+        height: 48px;
+        border-radius: 12px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: #fff;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+      .social-badge:hover {
+        transform: scale(1.1);
+        opacity: 0.85;
+      }
+</style>
+
+      <meta property="og:type" content="profile">
+    <meta property="og:title" content="Apartments and studio rentals in Cartagena | Dunas &amp; Olas">
+    <meta property="og:description" content="Browse the apartments and studio rentals in the Dunas &amp; Olas catalogue. Ask about date-based rates, availability and extra fees on WhatsApp.">
+    <meta property="og:url" content="https://dunasyolas.com/en/cartagena-accommodations">
+    <meta property="og:image" content="https://dunasyolas.com/images/hospedaje/apartaestudio-1.webp">
+    <meta property="og:site_name" content="Dunas &amp; Olas">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Meet Nohemi — Your Local Guide in Cartagena | Dunas &amp; Olas">
+    <meta name="twitter:description" content="A Mexican-born Cartagena resident and founder of Dunas &amp; Olas. Discover her honest, hands-on approach to planning each trip.">
+    <link rel="stylesheet" href="/css/brand-refresh.css?v=20260915f" data-site-brand-refresh="">
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" href="/images/favicon-192.png" sizes="192x192"><link rel="apple-touch-icon" href="/images/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="stylesheet" href="/css/conversion.css?v=20260915f"><link rel="alternate" hreflang="es" href="https://dunasyolas.com/hospedaje-cartagena"><link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/cartagena-accommodations"><link rel="alternate" hreflang="fr" href="https://dunasyolas.com/fr/hebergements-carthagene"><link rel="alternate" hreflang="de" href="https://dunasyolas.com/de/unterkuenfte-cartagena"><link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/hospedaje-cartagena"><link rel="stylesheet" href="/css/accommodations.css?v=20260924a"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dunasyolas.com/en/"},{"@type":"ListItem","position":2,"name":"Apartments and studio rentals in Cartagena","item":"https://dunasyolas.com/en/cartagena-accommodations"}]},{"@context":"https://schema.org","@type":"CollectionPage","name":"Apartments and studio rentals in Cartagena","description":"Browse the apartments and studio rentals in the Dunas & Olas catalogue. Ask about date-based rates, availability and extra fees on WhatsApp.","url":"https://dunasyolas.com/en/cartagena-accommodations","inLanguage":"en","mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Accommodation","name":"Studio apartment · Unit 1","description":"A single-room studio with Wi-Fi, air conditioning and a basic kitchenette. The building has a pool and is one block from the beach.","image":"https://dunasyolas.com/images/hospedaje/apartaestudio-1.webp"}},{"@type":"ListItem","position":2,"item":{"@type":"Accommodation","name":"Studio apartment · Unit 2","description":"A second studio listed in the catalogue, with its own layout and photo. It has one room, Wi-Fi, air conditioning and a basic kitchenette; the building has a pool and is one block from the beach.","image":"https://dunasyolas.com/images/hospedaje/apartaestudio-cocina.webp"}},{"@type":"ListItem","position":3,"item":{"@type":"Accommodation","name":"One-bedroom apartment","description":"One-bedroom apartment with additional sleeping space in the living room and a basic equipped kitchen.","image":"https://dunasyolas.com/images/hospedaje/apartamento-una-habitacion-a.webp"}},{"@type":"ListItem","position":4,"item":{"@type":"Accommodation","name":"One-bedroom apartment · Living-room sleeping space","description":"A separate unit listed in the catalogue: one bedroom, additional sleeping space in the living room and a basic equipped kitchen. It is kept as a distinct accommodation.","image":"https://dunasyolas.com/images/hospedaje/apartamento-una-habitacion-b.webp"}},{"@type":"ListItem","position":5,"item":{"@type":"Accommodation","name":"Two-bedroom apartment · Up to 6 guests","description":"Two-bedroom apartment for up to six guests, with a basic equipped kitchen.","image":"https://dunasyolas.com/images/hospedaje/apartamento-dos-habitaciones.webp"}}]}}]</script></head>
+  <body class="bg-gray-50 text-gray-800"><nav class="site-navbar fixed top-0 left-0 right-0 z-50" data-static-nav="true"><div class="site-navbar-inner"><a class="site-brand" href="/en/" aria-label="Dunas y Olas"><picture><source srcset="/images/logo-master.webp" type="image/webp"><img src="/images/logo-master.png" alt="" width="315" height="148" decoding="async" loading="eager"></picture><span class="site-brand-copy"><strong>Dunas <em>&amp; Olas</em></strong><small>MEXICAN IN CARTAGENA</small></span></a><div class="site-navbar-links" aria-label="Main navigation"><a class="site-nav-link" href="/en/">HOME</a><a class="site-nav-link" href="/en/experiences">EXPERIENCES</a><a class="site-nav-link" href="/en/private-boats">PRIVATE BOATS</a><a class="site-nav-link" href="/en/galeria">GALLERY</a><a class="site-nav-link" href="/en/kitesurf">KITESURF</a><a class="site-nav-link" href="/en/about">ABOUT US</a><a class="site-nav-link" href="/en/blog/">BLOG</a></div><div class="site-navbar-tools"><details class="site-language-menu"><summary aria-label="Language">EN ▾</summary><div><a href="/about" lang="es" hreflang="es">Español</a><a href="/en/about" lang="en" hreflang="en">English</a><a href="/fr/a-propos" lang="fr" hreflang="fr">Français</a><a href="/de/ueber-uns" lang="de" hreflang="de">Deutsch</a></div></details><a class="site-planner-cta" href="/en/arma-tu-viaje">✦ PLAN YOUR TRIP</a><button class="site-menu-button" id="mobile-menu-btn" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><i class="fas fa-bars" aria-hidden="true"></i></button></div></div><div class="site-mobile-menu hidden" id="mobile-menu"><div class="site-mobile-menu-head"><span>Dunas <strong>&amp; Olas</strong></span><button type="button" data-close-menu="" aria-label="Close menu">×</button></div><a class="site-mobile-link" href="/en/">HOME</a><a class="site-mobile-link" href="/en/experiences">EXPERIENCES</a><a class="site-mobile-link" href="/en/private-boats">PRIVATE BOATS</a><a class="site-mobile-link" data-lodging-link="" href="/en/cartagena-accommodations">Stays</a><a class="site-mobile-link" href="/en/galeria">GALLERY</a><a class="site-mobile-link" href="/en/kitesurf">KITESURF</a><a class="site-mobile-link" href="/en/about">ABOUT US</a><a class="site-mobile-link" href="/en/blog/">BLOG</a><a class="site-mobile-link site-mobile-language" href="/about">ESPAÑOL</a><a class="site-mobile-link site-mobile-planner" href="/en/arma-tu-viaje">✦ PLAN YOUR TRIP</a></div></nav><main class="stay-page" id="main"><div class="stay-hero"><div><p class="stay-eyebrow">Dunas &amp; Olas · Cartagena</p><h1>Apartments and studio rentals in Cartagena</h1><p class="stay-intro">Find a practical stay near the beach. The catalogue includes two different studios, one-bedroom apartments and a two-bedroom option.</p><p class="stay-seasonal">Nightly rates depend on your dates. Confirm availability and the total price before booking.</p><a class="stay-catalog-link" href="https://wa.me/c/573163030589" target="_blank" rel="noopener noreferrer">View this stay in the catalogue</a></div><img src="/images/hospedaje/apartaestudio-1.webp" alt="Studio apartment · Unit 1" width="994" height="607" loading="eager" fetchpriority="high" decoding="async"></div><section class="stay-grid" aria-label="Apartments and studio rentals in Cartagena"><article class="stay-card"><img src="/images/hospedaje/apartaestudio-1.webp" alt="Studio apartment · Unit 1" width="994" height="607" loading="lazy" decoding="async"><div class="stay-card-content"><p class="stay-catalog-name">Apartaestudio</p><h2>Studio apartment · Unit 1</h2><p class="stay-copy">A single-room studio with Wi-Fi, air conditioning and a basic kitchenette. The building has a pool and is one block from the beach.</p><p class="stay-rate"><span>Nightly rate</span><strong>Ask for the rate</strong></p><div class="stay-card-fees"><h3>Catalogue-listed extra fees</h3><p><span>Final cleaning and registration</span><strong>$90,000 COP <small>per stay</small></strong></p></div><a class="stay-button" href="https://wa.me/573163030589?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20this%20Dunas%20%26%20Olas%20accommodation%3A%20Studio%20apartment%20%C2%B7%20Unit%201.%20Nightly%20rates%20depend%20on%20your%20dates.%20Send%20check-in%20and%20check-out%20dates%20and%20guest%20count%20to%20confirm%20availability%2C%20price%20and%20extra%20fees." target="_blank" rel="noopener noreferrer">Ask about availability</a></div></article><article class="stay-card"><img src="/images/hospedaje/apartaestudio-cocina.webp" alt="Studio apartment · Unit 2" width="1280" height="824" loading="lazy" decoding="async"><div class="stay-card-content"><p class="stay-catalog-name">Apartaestudio</p><h2>Studio apartment · Unit 2</h2><p class="stay-copy">A second studio listed in the catalogue, with its own layout and photo. It has one room, Wi-Fi, air conditioning and a basic kitchenette; the building has a pool and is one block from the beach.</p><p class="stay-rate"><span>Nightly rate</span><strong>Ask for the rate</strong></p><div class="stay-card-fees"><h3>Catalogue-listed extra fees</h3><p><span>Final cleaning and registration</span><strong>$90,000 COP <small>per stay</small></strong></p></div><a class="stay-button" href="https://wa.me/573163030589?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20this%20Dunas%20%26%20Olas%20accommodation%3A%20Studio%20apartment%20%C2%B7%20Unit%202.%20Nightly%20rates%20depend%20on%20your%20dates.%20Send%20check-in%20and%20check-out%20dates%20and%20guest%20count%20to%20confirm%20availability%2C%20price%20and%20extra%20fees." target="_blank" rel="noopener noreferrer">Ask about availability</a></div></article><article class="stay-card"><img src="/images/hospedaje/apartamento-una-habitacion-a.webp" alt="One-bedroom apartment" width="1400" height="934" loading="lazy" decoding="async"><div class="stay-card-content"><p class="stay-catalog-name">Apartamento 1 sola habitación</p><h2>One-bedroom apartment</h2><p class="stay-copy">One-bedroom apartment with additional sleeping space in the living room and a basic equipped kitchen.</p><p class="stay-rate"><span>Nightly rate</span><strong>Ask for the rate</strong></p><div class="stay-card-fees"><h3>Catalogue-listed extra fees</h3><p><span>Cleaning</span><strong>$50,000 COP <small>per stay</small></strong></p><p><span>Guest wristbands per group</span><strong>$35,000 COP <small>per group</small></strong></p></div><a class="stay-button" href="https://wa.me/573163030589?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20this%20Dunas%20%26%20Olas%20accommodation%3A%20One-bedroom%20apartment.%20Nightly%20rates%20depend%20on%20your%20dates.%20Send%20check-in%20and%20check-out%20dates%20and%20guest%20count%20to%20confirm%20availability%2C%20price%20and%20extra%20fees." target="_blank" rel="noopener noreferrer">Ask about availability</a></div></article><article class="stay-card"><img src="/images/hospedaje/apartamento-una-habitacion-b.webp" alt="One-bedroom apartment · Living-room sleeping space" width="928" height="596" loading="lazy" decoding="async"><div class="stay-card-content"><p class="stay-catalog-name">Apartamento 1 habitación acomodación en sala</p><h2>One-bedroom apartment · Living-room sleeping space</h2><p class="stay-copy">A separate unit listed in the catalogue: one bedroom, additional sleeping space in the living room and a basic equipped kitchen. It is kept as a distinct accommodation.</p><p class="stay-rate"><span>Nightly rate</span><strong>Ask for the rate</strong></p><div class="stay-card-fees"><h3>Catalogue-listed extra fees</h3><p><span>Cleaning</span><strong>$50,000 COP <small>per stay</small></strong></p><p><span>Guest wristbands per group</span><strong>$35,000 COP <small>per group</small></strong></p></div><a class="stay-button" href="https://wa.me/573163030589?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20this%20Dunas%20%26%20Olas%20accommodation%3A%20One-bedroom%20apartment%20%C2%B7%20Living-room%20sleeping%20space.%20Nightly%20rates%20depend%20on%20your%20dates.%20Send%20check-in%20and%20check-out%20dates%20and%20guest%20count%20to%20confirm%20availability%2C%20price%20and%20extra%20fees." target="_blank" rel="noopener noreferrer">Ask about availability</a></div></article><article class="stay-card"><img src="/images/hospedaje/apartamento-dos-habitaciones.webp" alt="Two-bedroom apartment · Up to 6 guests" width="1205" height="1600" loading="lazy" decoding="async"><div class="stay-card-content"><p class="stay-catalog-name">Apartamento 2 habitaciones 6px</p><h2>Two-bedroom apartment · Up to 6 guests</h2><p class="stay-copy">Two-bedroom apartment for up to six guests, with a basic equipped kitchen.</p><p class="stay-capacity"><span>Listed capacity:</span> 6 guests</p><p class="stay-rate"><span>Nightly rate</span><strong>Ask for the rate</strong></p><div class="stay-card-fees"><h3>Catalogue-listed extra fees</h3><p><span>Final cleaning</span><strong>$90,000 COP <small>per stay</small></strong></p></div><a class="stay-button" href="https://wa.me/573163030589?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20this%20Dunas%20%26%20Olas%20accommodation%3A%20Two-bedroom%20apartment%20%C2%B7%20Up%20to%206%20guests.%20Nightly%20rates%20depend%20on%20your%20dates.%20Send%20check-in%20and%20check-out%20dates%20and%20guest%20count%20to%20confirm%20availability%2C%20price%20and%20extra%20fees." target="_blank" rel="noopener noreferrer">Ask about availability</a></div></article></section><section class="stay-contact"><h2>Before you book</h2><p>Accommodation rates vary by date. Send your check-in and check-out dates and guest count to confirm the total and availability.</p><p>We answer in writing in Spanish, English, French and German.</p><a class="stay-button" href="https://wa.me/573163030589?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20this%20Dunas%20%26%20Olas%20accommodation%3A%20Dates%3A%20__.%20Guests%3A%20__." target="_blank" rel="noopener noreferrer">Ask about availability</a></section></main><footer class="bg-gray-900 text-white pt-12 pb-8 border-t border-gray-800">
+      <div class="container mx-auto px-6 text-center md:text-left">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 md:mb-12">
+          <div class="col-span-1 md:col-span-1 flex flex-col items-center md:items-start">
+            <picture><source srcset="../images/logo-master.webp" type="image/webp"><img src="../images/logo-master.png" alt="Dunas &amp; Olas - Boat tours, kitesurf and experiences in Cartagena, Colombia" width="315" height="148" class="h-12 w-auto object-contain mb-2" loading="lazy" decoding="async"></picture><span class="block mb-4 leading-none select-none">
+              <span class="block font-extrabold tracking-tight text-xl text-white">
+                Dunas <span class="text-yellow-500">&amp; Olas</span>
+              </span>
+              <span class="block text-[9px] uppercase tracking-[0.25em] text-gray-400 font-semibold mt-0.5">
+                Cartagena de Indias
+              </span>
+            </span>
+            <p class="text-gray-400 text-xs leading-relaxed max-w-xs">
+              The warmth of the north, the magic of the Caribbean.
+            </p>
+          </div>
+          <div class="hidden md:block">
+            <h4 class="text-white font-bold mb-4 text-sm">Explore</h4>
+            <ul class="space-y-2 text-gray-400 text-xs">
+              <li>
+                <a href="experiences.html" class="hover:text-blue-400">Experiences</a>
+              </li>
+              <li>
+                <a href="kitesurf.html" class="hover:text-blue-400">Kitesurf</a>
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-blue-400">About Us</a>
+              </li>
+              <li>
+                <a href="blog/index.html" class="hover:text-blue-400">Blog</a>
+              </li>
+            <li><a data-lodging-link="" href="/en/cartagena-accommodations">Stays</a></li></ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-4 text-sm">Contact</h4>
+            <ul class="space-y-2 text-gray-400 text-xs flex flex-col items-center md:items-start">
+              <li class="flex items-center">
+                <i class="fas fa-map-marker-alt mr-2 text-blue-500"></i> Getsemaní, Cartagena
+              </li>
+              <li class="flex items-center">
+                <i class="fab fa-whatsapp mr-2 text-blue-500"></i> +57 316 303 0589
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-4 text-sm">Social</h4>
+            <div class="flex justify-center md:justify-start gap-2">
+              <a href="https://www.instagram.com/mexicanaencartagena?igsh=MTJ2MjZwdmU5NjZ4Nw==" target="_blank" class="transition hover:opacity-80 group" rel="noopener noreferrer">
+                <img src="../images/instagram-logo.png" alt="Instagram" class="w-12 h-12 hover:scale-110 transition transform" width="512" height="512" decoding="async" loading="lazy">
+              </a>
+              <a href="https://www.facebook.com/share/1aQqHEvkyG/" target="_blank" class="transition hover:opacity-80 group" rel="noopener noreferrer">
+                <img src="../images/logo-facebook.png" alt="Facebook" class="w-12 h-12 hover:scale-110 transition transform" width="512" height="512" decoding="async" loading="lazy">
+              </a>
+              <a href="https://www.tiktok.com/@mexicanaencartagena?_r=1&amp;_t=ZS-97Sfx04blGW" target="_blank" title="Follow us on TikTok: Mexicana en Cartagena" rel="noopener noreferrer" class="social-badge transition hover:opacity-80" style="background:#000000;">
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <span title="Coming soon: Dunas &amp; Olas on YouTube" class="social-badge transition hover:opacity-80" style="background:#FF0000;" aria-disabled="true">
+                <i class="fab fa-youtube"></i>
+              </span>
+              <span title="Coming soon: Dunas &amp; Olas on X" class="social-badge transition hover:opacity-80" style="background:#000000;" aria-disabled="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg>
+              </span>
+                        </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-500 text-center">
+          <p>© 2026 Dunas &amp; Olas. All rights reserved.</p>
+          <p class="mt-1">RNT No. 292710</p>
+          <div class="mt-2 space-x-3">
+            <a href="policies.html" class="hover:text-white">Terms and Conditions</a> · <a href="privacy.html" class="hover:text-white">Privacy Policy</a> · <a href="faq.html" class="hover:text-white">Frequently Asked Questions</a>
+          </div>
+        </div>
+      </div>
+    </footer><script src="/js/site-refresh.js?v=20260915f" defer=""></script>
+</body></html>

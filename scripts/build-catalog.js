@@ -2,6 +2,15 @@
 const fs = require('fs');
 const path = require('path');
 const root = path.resolve(__dirname, '..');
+function writeFileWithRetry(file, contents) {
+  for (let attempt = 0; attempt < 8; attempt += 1) {
+    try { fs.writeFileSync(file, contents); return; }
+    catch (error) {
+      if (!['UNKNOWN', 'EBUSY', 'EPERM'].includes(error.code) || attempt === 7) throw error;
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 100 * (attempt + 1));
+    }
+  }
+}
 const catalog = JSON.parse(fs.readFileSync(path.join(root, 'data/catalog.json'), 'utf8'));
 const english = JSON.parse(fs.readFileSync(path.join(root, 'data/catalog-en.json'), 'utf8'));
 for (const [id, product] of Object.entries(catalog.products)) {
@@ -35,5 +44,5 @@ for (const f of walk(root).filter(f=>f.endsWith('.html'))) {
  $('[data-product-id]').each((i,e)=>{const p=catalog.products[$(e).attr('data-product-id')];if(!p)return;$(e).attr('data-cop-val',p.price).text('$'+p.price.toLocaleString(en?'en-US':'es-CO')+' COP');});
  $('[data-package-price]').each((i,e)=>{const pkg=catalog.packages[$(e).attr('data-package-price')];if(!pkg)return;const total=pkg.activities.reduce((n,id)=>n+Object.values(catalog.products).find(p=>p.plannerId===id).price,0);$(e).text('$'+total.toLocaleString(en?'en-US':'es-CO')+' COP');});
  $('#experiences-grid > [data-category]').each((i,e)=>{const card=$(e);const id=(card.find('[onclick*="addToCart("]').first().attr('onclick')||'').match(/addToCart\(['"]([^'"]+)/)?.[1]||card.find('[data-product-id]').first().attr('data-product-id');const p=catalog.products[id];if(p)card.attr('data-price',p.price);});
- fs.writeFileSync(f,$.html());
+ writeFileWithRetry(f,$.html());
 }

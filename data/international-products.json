@@ -1,62 +1,194 @@
 {
-  "pasadia_cuatro_islas": {
-    "fr": ["journee-quatre-iles", "Journée dans quatre îles avec coucher de soleil", "Une journée qui associe Isla Grande, Cholón, Barú et Bocachica, puis une sortie au coucher du soleil. Ce pasadía convient aux voyageurs qui souhaitent découvrir plusieurs ambiances au cours de la même excursion.", "Déjeuner, sélection de boissons et snorkeling prévus dans le programme.|Formule annoncée pour un maximum de 12 participants.|Le temps passé à chaque arrêt dépend du parcours : ce n’est pas une journée entière sur chaque plage.", "Pour voir plusieurs endroits en une journée. Si votre priorité est de rester longtemps sur une seule plage, comparez plutôt les formules de beach club."],
-    "de": ["vier-inseln-tagesausflug", "Vier Inseln und Sonnenuntergang ab Cartagena", "Dieser Tagesausflug verbindet Isla Grande, Cholón, Barú und Bocachica mit einer Fahrt zum Sonnenuntergang. Das Programm richtet sich an Reisende, die an einem Tag mehrere unterschiedliche Orte erleben möchten.", "Mittagessen, ausgewählte Getränke und Schnorcheln sind im Programm vorgesehen.|Die angebotene Variante ist für höchstens 12 Gäste ausgelegt.|Die Aufenthaltsdauer ist je nach Station unterschiedlich; nicht jeder Halt bietet einen langen Strandaufenthalt.", "Geeignet, wenn Sie mehrere Orte kennenlernen möchten. Für einen ausgedehnten Strandtag ist ein einzelner Beachclub oft die passendere Wahl."]
-  },
-  "islas_vip_5": {
-    "fr": ["journee-cinq-iles-vip", "Pasadía VIP dans cinq îles au départ de Carthagène", "Le programme VIP associe une traversée en bateau rapide, Cocoliso, du snorkeling, Cholón, Mambo Beach et un beach club privé. Comparez les arrêts et les prestations avant de choisir : le mot VIP ne signifie pas que le bateau vous est réservé.", "Déplacement en bateau rapide entre les étapes.|Alternance de baignade, découverte et ambiance de plage.|Demandez le détail du déjeuner, des boissons, des droits de quai et des services optionnels.", "Pour un groupe qui apprécie une journée rythmée et plusieurs arrêts. Demandez si le niveau de musique et le programme conviennent aux enfants de votre groupe."],
-    "de": ["fuenf-inseln-vip", "VIP-Tagesausflug zu fünf Inseln ab Cartagena", "Die VIP-Variante verbindet eine Schnellbootfahrt mit Cocoliso, Schnorcheln, Cholón, Mambo Beach und einem privaten Beachclub. Vergleichen Sie die einzelnen Leistungen: Die Bezeichnung VIP bedeutet nicht automatisch, dass Ihnen das Boot allein zur Verfügung steht.", "Schnellbootfahrten zwischen den Stationen.|Eine Kombination aus Baden, Entdecken und Strandatmosphäre.|Lassen Sie sich Mittagessen, Getränke, Hafengebühren und optionale Leistungen einzeln bestätigen.", "Für Reisende, die einen abwechslungsreichen Tag mit mehreren Stopps suchen. Bei Kindern sollten Musik, Ablauf und Eignung vorab besprochen werden."]
-  },
-  "islas_standard_5": {
-    "fr": ["journee-cinq-iles-standard", "Pasadía dans cinq îles : formule Standard", "Cette formule prévoit un bateau de passagers et un parcours comprenant Bocachica, Cocoliso, un arrêt snorkeling, Cholón, Mambo Beach et Sol y Papaya. Le nom commercial du plan ne correspond pas forcément au nombre exact d’arrêts avec débarquement.", "Transport en bateau de passagers.|Étapes panoramiques, activités et plages selon le programme confirmé.|Comparez cette formule avec le VIP en fonction du bateau, des arrêts et des prestations, pas seulement du prix.", "Pour une journée collective dans les îles. Vérifiez les frais supplémentaires et le temps réellement disponible sur les plages avant de réserver."],
-    "de": ["fuenf-inseln-standard", "Fünf Inseln: Tagesausflug in der Standard-Variante", "Die Standard-Variante umfasst eine Fahrt im Passagierboot mit Bocachica, Cocoliso, einem Schnorchelstopp, Cholón, Mambo Beach und Sol y Papaya im Programm. Der Angebotsname entspricht nicht zwangsläufig der Zahl der tatsächlichen Landgänge.", "Transport im Passagierboot.|Panoramafahrten, Aktivitäten und Strandstopps gemäß bestätigtem Programm.|Vergleichen Sie Standard und VIP anhand von Boot, Stopps und Leistungen sowie dem Preis.", "Für einen gemeinsamen Ausflug in die Inselwelt. Klären Sie zusätzliche Gebühren und die tatsächliche Zeit an den Stränden vor Ihrer Buchung."]
-  },
   "citytour_roa": {
-    "fr": ["visite-carthagene-roa", "Visite de Carthagène avec déjeuner ou dîner — ROA", "Découvrez les principaux sites de Carthagène avec un parcours ROA associant déplacements, histoire et promenade à Getsemaní. Deux formules permettent de choisir si l’entrée au château de San Felipe est incluse.", "Baie de Castillo Grande, monument de la Palenquera, maison de Rafael Núñez et lettres de Cartagena.|La Popa, monument des Vieilles Chaussures, château de San Felipe et fort du Pastelillo.|Promenade à Getsemaní et déjeuner ou dîner selon le départ.|L’entrée à La Popa n’est pas incluse. L’entrée au château dépend de la formule.", "Une bonne base pour découvrir la ville avant de prévoir une journée en mer. Communiquez vos besoins de mobilité : les arrêts et les promenades peuvent demander de marcher."],
-    "de": ["stadtrundfahrt-cartagena-roa", "Cartagena-Stadtrundfahrt mit Mittag- oder Abendessen — ROA", "Die ROA-Stadtrundfahrt verbindet Cartagenas Sehenswürdigkeiten mit historischen Erläuterungen und einem Spaziergang durch Getsemaní. Zwei Varianten unterscheiden sich unter anderem darin, ob der Eintritt in die Festung San Felipe enthalten ist.", "Bucht von Castillo Grande, Palenquera-Denkmal, Haus von Rafael Núñez und Cartagena-Schriftzug.|La Popa, Alte-Schuhe-Denkmal, Festung San Felipe und Fort Pastelillo.|Spaziergang durch Getsemaní und je nach Abfahrt Mittag- oder Abendessen.|Der Eintritt zu La Popa ist nicht enthalten. Der Festungseintritt hängt von der gewählten Variante ab.", "Als Einstieg in die Stadt geeignet, bevor Sie einen Inseltag planen. Teilen Sie Einschränkungen beim Gehen mit, damit die Eignung der Stopps geklärt werden kann."]
+    "fr": [
+      "visite-carthagene-roa",
+      "Visite de Carthagène avec déjeuner ou dîner — ROA",
+      "Découvrez les principaux sites de Carthagène avec un parcours ROA associant déplacements, histoire et promenade à Getsemaní. Deux formules permettent de choisir si l’entrée au château de San Felipe est incluse.",
+      "Baie de Castillo Grande, monument de la Palenquera, maison de Rafael Núñez et lettres de Cartagena.|La Popa, monument des Vieilles Chaussures, château de San Felipe et fort du Pastelillo.|Promenade à Getsemaní et déjeuner ou dîner selon le départ.|L’entrée à La Popa n’est pas incluse. L’entrée au château dépend de la formule.",
+      "Une bonne base pour découvrir la ville avant de prévoir une journée en mer. Communiquez vos besoins de mobilité : les arrêts et les promenades peuvent demander de marcher."
+    ],
+    "de": [
+      "stadtrundfahrt-cartagena-roa",
+      "Cartagena-Stadtrundfahrt mit Mittag- oder Abendessen — ROA",
+      "Die ROA-Stadtrundfahrt verbindet Cartagenas Sehenswürdigkeiten mit historischen Erläuterungen und einem Spaziergang durch Getsemaní. Zwei Varianten unterscheiden sich unter anderem darin, ob der Eintritt in die Festung San Felipe enthalten ist.",
+      "Bucht von Castillo Grande, Palenquera-Denkmal, Haus von Rafael Núñez und Cartagena-Schriftzug.|La Popa, Alte-Schuhe-Denkmal, Festung San Felipe und Fort Pastelillo.|Spaziergang durch Getsemaní und je nach Abfahrt Mittag- oder Abendessen.|Der Eintritt zu La Popa ist nicht enthalten. Der Festungseintritt hängt von der gewählten Variante ab.",
+      "Als Einstieg in die Stadt geeignet, bevor Sie einen Inseltag planen. Teilen Sie Einschränkungen beim Gehen mit, damit die Eignung der Stopps geklärt werden kann."
+    ]
   },
   "citybahia": {
-    "fr": ["carthagene-ville-et-baie", "Carthagène : visite de la ville et coucher de soleil en baie", "Associez une découverte de Carthagène, un déjeuner et une sortie au coucher du soleil en bateau sportif. Le programme City Bahía de ROA permet de consacrer la journée à la ville puis à sa silhouette vue depuis la mer.", "Parcours urbain avec accompagnement et déjeuner.|Sortie au coucher du soleil avec deux heures de sélection de boissons à volonté.|Une formule Full ajoute l’entrée au château de San Felipe.|Vérifiez le point de rendez-vous et la correspondance entre le parcours terrestre et le bateau.", "Pour combiner culture et baie le même jour. Prévoyez une journée suffisamment libre et demandez l’heure de retour avant de réserver un dîner séparé."],
-    "de": ["cartagena-stadt-und-bucht", "Cartagena: Stadtrundfahrt und Sonnenuntergang in der Bucht", "Verbinden Sie Cartagenas Sehenswürdigkeiten mit einem Mittagessen und einer Fahrt im Sportboot zum Sonnenuntergang. City Bahía von ROA zeigt die Stadt an Land und anschließend ihre Silhouette vom Wasser aus.", "Stadtrundfahrt mit Begleitung und Mittagessen.|Bootsfahrt zum Sonnenuntergang mit zwei Stunden ausgewählter Getränke.|Die Full-Variante enthält zusätzlich den Eintritt in die Festung San Felipe.|Treffpunkt und Übergang zwischen Landprogramm und Boot vorab bestätigen lassen.", "Für einen Tag mit Stadtbesichtigung und Bucht. Halten Sie genügend Zeit frei und klären Sie die Rückkehr, bevor Sie ein separates Abendessen reservieren."]
+    "fr": [
+      "carthagene-ville-et-baie",
+      "Carthagène : visite de la ville et coucher de soleil en baie",
+      "Associez une découverte de Carthagène, un déjeuner et une sortie au coucher du soleil en bateau sportif. Le programme City Bahía de ROA permet de consacrer la journée à la ville puis à sa silhouette vue depuis la mer.",
+      "Parcours urbain avec accompagnement et déjeuner.|Sortie au coucher du soleil avec deux heures de sélection de boissons à volonté.|Une formule Full ajoute l’entrée au château de San Felipe.|Vérifiez le point de rendez-vous et la correspondance entre le parcours terrestre et le bateau.",
+      "Pour combiner culture et baie le même jour. Prévoyez une journée suffisamment libre et demandez l’heure de retour avant de réserver un dîner séparé."
+    ],
+    "de": [
+      "cartagena-stadt-und-bucht",
+      "Cartagena: Stadtrundfahrt und Sonnenuntergang in der Bucht",
+      "Verbinden Sie Cartagenas Sehenswürdigkeiten mit einem Mittagessen und einer Fahrt im Sportboot zum Sonnenuntergang. City Bahía von ROA zeigt die Stadt an Land und anschließend ihre Silhouette vom Wasser aus.",
+      "Stadtrundfahrt mit Begleitung und Mittagessen.|Bootsfahrt zum Sonnenuntergang mit zwei Stunden ausgewählter Getränke.|Die Full-Variante enthält zusätzlich den Eintritt in die Festung San Felipe.|Treffpunkt und Übergang zwischen Landprogramm und Boot vorab bestätigen lassen.",
+      "Für einen Tag mit Stadtbesichtigung und Bucht. Halten Sie genügend Zeit frei und klären Sie die Rückkehr, bevor Sie ein separates Abendessen reservieren."
+    ]
   },
   "catamaran": {
-    "fr": ["catamaran-coucher-de-soleil", "Coucher de soleil en catamaran dans la baie de Carthagène", "Profitez de la baie de Carthagène en catamaran avec la formule Silver. Cette sortie courte peut compléter une journée en ville ; elle ne remplace pas un pasadía dans les îles du Rosaire.", "Sortie annoncée d’environ deux heures.|Formules Silver et Gold à comparer avant réservation.|Confirmez les boissons, les horaires et le quai de départ correspondant à votre formule.", "Pour voir la ville depuis l’eau sans organiser une journée entière dans les îles. Demandez l’horaire du coucher de soleil et les conditions adaptées à votre groupe."],
-    "de": ["katamaran-sonnenuntergang", "Katamaranfahrt zum Sonnenuntergang in Cartagena", "Erleben Sie die Bucht von Cartagena mit der Silver-Variante einer Katamaranfahrt. Der kurze Ausflug lässt sich mit einem Stadttag verbinden; er ist kein ganztägiger Ausflug zu den Rosario-Inseln.", "Die Fahrt ist mit etwa zwei Stunden angegeben.|Silver und Gold stehen als unterschiedliche Varianten zur Auswahl.|Getränke, Abfahrtszeit und den jeweiligen Anleger vor der Buchung bestätigen lassen.", "Wenn Sie die Stadt vom Wasser sehen möchten, ohne einen ganzen Inseltag einzuplanen. Fragen Sie nach dem passenden Abfahrtstermin und den Bedingungen für Ihre Gruppe."]
+    "fr": [
+      "catamaran-coucher-de-soleil",
+      "Coucher de soleil en catamaran dans la baie de Carthagène",
+      "Profitez de la baie de Carthagène en catamaran avec la formule Silver. Cette sortie courte peut compléter une journée en ville ; elle ne remplace pas un pasadía dans les îles du Rosaire.",
+      "Sortie annoncée d’environ deux heures.|Formules Silver et Gold à comparer avant réservation.|Confirmez les boissons, les horaires et le quai de départ correspondant à votre formule.",
+      "Pour voir la ville depuis l’eau sans organiser une journée entière dans les îles. Demandez l’horaire du coucher de soleil et les conditions adaptées à votre groupe."
+    ],
+    "de": [
+      "katamaran-sonnenuntergang",
+      "Katamaranfahrt zum Sonnenuntergang in Cartagena",
+      "Erleben Sie die Bucht von Cartagena mit der Silver-Variante einer Katamaranfahrt. Der kurze Ausflug lässt sich mit einem Stadttag verbinden; er ist kein ganztägiger Ausflug zu den Rosario-Inseln.",
+      "Die Fahrt ist mit etwa zwei Stunden angegeben.|Silver und Gold stehen als unterschiedliche Varianten zur Auswahl.|Getränke, Abfahrtszeit und den jeweiligen Anleger vor der Buchung bestätigen lassen.",
+      "Wenn Sie die Stadt vom Wasser sehen möchten, ohne einen ganzen Inseltag einzuplanen. Fragen Sie nach dem passenden Abfahrtstermin und den Bedingungen für Ihre Gruppe."
+    ]
   },
   "tamarindo": {
-    "fr": ["tamarindo-tierra-bomba", "Tamarindo Beach House : journée à Tierra Bomba", "Tamarindo Beach House propose une journée de beach club à Tierra Bomba. La formule de base associe transport, déjeuner, cocktail de bienvenue, piscine et espace de détente près d’une plage semi-privée.", "La formule Pasadía I est le tarif de départ présenté ici.|Une formule Pasadía II et une offre Bachelorette sont également proposées.|L’offre Bachelorette demande au moins cinq participants.|Le tarif enfant concerne le Pasadía I ; confirmez les âges applicables et les autres formules.", "Pour rester dans un même beach club plutôt que changer d’île plusieurs fois. Comparez précisément les cocktails, prestations et horaires de chaque formule."],
-    "de": ["tamarindo-tierra-bomba", "Tamarindo Beach House: Strandtag auf Tierra Bomba", "Tamarindo Beach House bietet einen Beachclub-Tag auf Tierra Bomba. Die Basisvariante verbindet Transfer, Mittagessen, Begrüßungscocktail, Pool und einen Ruhebereich an einem halbprivaten Strand.", "Der angezeigte Einstiegspreis gilt für Pasadía I.|Zusätzlich gibt es Pasadía II und eine Bachelorette-Variante.|Für die Bachelorette-Variante sind mindestens fünf Personen erforderlich.|Der Kinderpreis gilt für Pasadía I; Altersgrenzen und andere Varianten bitte bestätigen lassen.", "Wenn Sie den Tag an einem Beachclub verbringen möchten, statt zwischen Inseln zu wechseln. Vergleichen Sie Getränke, Leistungen und Zeiten der einzelnen Varianten."]
+    "fr": [
+      "tamarindo-tierra-bomba",
+      "Tamarindo Beach House : journée à Tierra Bomba",
+      "Tamarindo Beach House propose une journée de beach club à Tierra Bomba. La formule de base associe transport, déjeuner, cocktail de bienvenue, piscine et espace de détente près d’une plage semi-privée.",
+      "La formule Pasadía I est le tarif de départ présenté ici.|Une formule Pasadía II et une offre Bachelorette sont également proposées.|L’offre Bachelorette demande au moins cinq participants.|Le tarif enfant concerne le Pasadía I ; confirmez les âges applicables et les autres formules.",
+      "Pour rester dans un même beach club plutôt que changer d’île plusieurs fois. Comparez précisément les cocktails, prestations et horaires de chaque formule."
+    ],
+    "de": [
+      "tamarindo-tierra-bomba",
+      "Tamarindo Beach House: Strandtag auf Tierra Bomba",
+      "Tamarindo Beach House bietet einen Beachclub-Tag auf Tierra Bomba. Die Basisvariante verbindet Transfer, Mittagessen, Begrüßungscocktail, Pool und einen Ruhebereich an einem halbprivaten Strand.",
+      "Der angezeigte Einstiegspreis gilt für Pasadía I.|Zusätzlich gibt es Pasadía II und eine Bachelorette-Variante.|Für die Bachelorette-Variante sind mindestens fünf Personen erforderlich.|Der Kinderpreis gilt für Pasadía I; Altersgrenzen und andere Varianten bitte bestätigen lassen.",
+      "Wenn Sie den Tag an einem Beachclub verbringen möchten, statt zwischen Inseln zu wechseln. Vergleichen Sie Getränke, Leistungen und Zeiten der einzelnen Varianten."
+    ]
   },
   "namaste": {
-    "fr": ["namaste-tierra-bomba", "Namaste : journée bien-être à Tierra Bomba", "Découvrez une expérience de bien-être à Tierra Bomba, avec yoga, méditation, massage et accès à la piscine selon la formule publiée. Namaste s’adresse aux voyageurs qui privilégient une ambiance plus calme pour leur journée.", "Le programme comprend un jus détox et un crédit de consommation.|Demandez le montant exact du crédit et ce qu’il permet de commander.|Les tarifs publiés sont non remboursables : vérifiez cette condition avant tout règlement.", "Pour une journée centrée sur la détente. Confirmez le déroulement des séances, leurs horaires et la formule retenue avant d’organiser vos autres activités."],
-    "de": ["namaste-tierra-bomba", "Namaste: Wellness-Tag auf Tierra Bomba", "Entdecken Sie ein Wellness-Erlebnis auf Tierra Bomba mit Yoga, Meditation, Massage und Poolzugang gemäß der angebotenen Variante. Namaste richtet sich an Reisende, die einen ruhigeren Tag verbringen möchten.", "Das Programm umfasst einen Detox-Saft und ein Verzehrguthaben.|Erfragen Sie die genaue Höhe und die nutzbaren Leistungen des Guthabens.|Die veröffentlichten Tarife sind nicht erstattbar. Prüfen Sie diese Bedingung vor einer Zahlung.", "Für einen Tag mit Schwerpunkt Entspannung. Lassen Sie sich Ablauf, Zeiten und gebuchte Variante bestätigen, bevor Sie weitere Aktivitäten planen."]
+    "fr": [
+      "namaste-tierra-bomba",
+      "Namaste : journée bien-être à Tierra Bomba",
+      "Découvrez une expérience de bien-être à Tierra Bomba, avec yoga, méditation, massage et accès à la piscine selon la formule publiée. Namaste s’adresse aux voyageurs qui privilégient une ambiance plus calme pour leur journée.",
+      "Le programme comprend un jus détox et un crédit de consommation.|Demandez le montant exact du crédit et ce qu’il permet de commander.|Les tarifs publiés sont non remboursables : vérifiez cette condition avant tout règlement.",
+      "Pour une journée centrée sur la détente. Confirmez le déroulement des séances, leurs horaires et la formule retenue avant d’organiser vos autres activités."
+    ],
+    "de": [
+      "namaste-tierra-bomba",
+      "Namaste: Wellness-Tag auf Tierra Bomba",
+      "Entdecken Sie ein Wellness-Erlebnis auf Tierra Bomba mit Yoga, Meditation, Massage und Poolzugang gemäß der angebotenen Variante. Namaste richtet sich an Reisende, die einen ruhigeren Tag verbringen möchten.",
+      "Das Programm umfasst einen Detox-Saft und ein Verzehrguthaben.|Erfragen Sie die genaue Höhe und die nutzbaren Leistungen des Guthabens.|Die veröffentlichten Tarife sind nicht erstattbar. Prüfen Sie diese Bedingung vor einer Zahlung.",
+      "Für einen Tag mit Schwerpunkt Entspannung. Lassen Sie sich Ablauf, Zeiten und gebuchte Variante bestätigen, bevor Sie weitere Aktivitäten planen."
+    ]
   },
   "family_eco_route": {
-    "fr": ["baru-plancton-bioluminescent", "Barú : éco-parcours et plancton bioluminescent", "Le Family Eco-Route combine Mambo Beach, snorkeling, mangroves, coucher de soleil et observation du plancton bioluminescent à Barú. Il s’agit d’un programme de jour et de soirée, plus long qu’un simple pasadía de plage.", "Plusieurs activités de nature au cours de la même journée.|Retour après la partie nocturne : demandez l’horaire estimé et le transport final.|La bioluminescence est un phénomène naturel dont l’intensité varie.|La photographie présentée est une référence prise à La Parguera, Porto Rico, et non à Barú.", "Pour les voyageurs qui peuvent consacrer la soirée à l’excursion. Avec des enfants, précisez leur âge et vérifiez la durée, les équipements et les conditions de participation."],
-    "de": ["baru-leuchtendes-plankton", "Barú: Naturausflug und biolumineszentes Plankton", "Die Family Eco-Route verbindet Mambo Beach, Schnorcheln, Mangroven, Sonnenuntergang und biolumineszentes Plankton auf Barú. Das Programm dauert bis in den Abend und ist länger als ein gewöhnlicher Strandtag.", "Mehrere Naturerlebnisse innerhalb eines Ausflugs.|Die Rückfahrt erfolgt nach dem Abendprogramm; Rückkehrzeit und letzten Transfer erfragen.|Biolumineszenz ist ein Naturphänomen mit wechselnder Intensität.|Das Foto ist eine Referenzaufnahme aus La Parguera, Puerto Rico, nicht aus Barú.", "Für Reisende, die auch den Abend für den Ausflug freihalten können. Bei Kindern bitte Alter, Dauer, Ausrüstung und Teilnahmebedingungen vorher klären."]
+    "fr": [
+      "baru-plancton-bioluminescent",
+      "Barú : éco-parcours et plancton bioluminescent",
+      "Le Family Eco-Route combine Mambo Beach, snorkeling, mangroves, coucher de soleil et observation du plancton bioluminescent à Barú. Il s’agit d’un programme de jour et de soirée, plus long qu’un simple pasadía de plage.",
+      "Plusieurs activités de nature au cours de la même journée.|Retour après la partie nocturne : demandez l’horaire estimé et le transport final.|La bioluminescence est un phénomène naturel dont l’intensité varie.|La photographie présentée est une référence prise à La Parguera, Porto Rico, et non à Barú.",
+      "Pour les voyageurs qui peuvent consacrer la soirée à l’excursion. Avec des enfants, précisez leur âge et vérifiez la durée, les équipements et les conditions de participation."
+    ],
+    "de": [
+      "baru-leuchtendes-plankton",
+      "Barú: Naturausflug und biolumineszentes Plankton",
+      "Die Family Eco-Route verbindet Mambo Beach, Schnorcheln, Mangroven, Sonnenuntergang und biolumineszentes Plankton auf Barú. Das Programm dauert bis in den Abend und ist länger als ein gewöhnlicher Strandtag.",
+      "Mehrere Naturerlebnisse innerhalb eines Ausflugs.|Die Rückfahrt erfolgt nach dem Abendprogramm; Rückkehrzeit und letzten Transfer erfragen.|Biolumineszenz ist ein Naturphänomen mit wechselnder Intensität.|Das Foto ist eine Referenzaufnahme aus La Parguera, Puerto Rico, nicht aus Barú.",
+      "Für Reisende, die auch den Abend für den Ausflug freihalten können. Bei Kindern bitte Alter, Dauer, Ausrüstung und Teilnahmebedingungen vorher klären."
+    ]
   },
   "kitesurf_iniciacion": {
-    "fr": ["kitesurf-la-boquilla", "Initiation au kitesurf à La Boquilla, Carthagène", "Commencez le kitesurf à La Boquilla avec le cours d’initiation de deux heures proposé au catalogue. Le choix du cours dépend de votre niveau et des conditions de vent ; une initiation n’est pas équivalente à une location de matériel.", "Cours d’initiation de deux heures avec instructeur.|D’autres cours existent pour la reprise, la progression, le foil et les groupes.|Confirmez l’équipement, le transport et la langue d’enseignement avant de réserver.|L’organisation dépend des conditions sur place.", "Pour découvrir la discipline avec un encadrement. Si vous avez déjà pratiqué, décrivez votre expérience pour choisir un cours adapté plutôt que reprendre automatiquement une initiation."],
-    "de": ["kitesurfen-la-boquilla", "Kitesurf-Einstieg in La Boquilla bei Cartagena", "Starten Sie mit dem zweistündigen Einsteigerkurs in La Boquilla in den Kitesurfsport. Der passende Kurs hängt von Ihren Vorkenntnissen und den Windbedingungen ab; ein Kurs ist nicht dasselbe wie eine Materialmiete.", "Zweistündiger Einsteigerkurs mit Instructor.|Weitere Angebote für Wiedereinstieg, Fortgeschrittene, Foil und Gruppen.|Ausrüstung, Transfer und Unterrichtssprache vor der Buchung bestätigen lassen.|Die Durchführung richtet sich nach den Bedingungen vor Ort.", "Für einen begleiteten Einstieg in die Sportart. Wenn Sie bereits Erfahrung haben, beschreiben Sie Ihr Niveau, damit der passende Kurs ausgewählt werden kann."]
+    "fr": [
+      "kitesurf-la-boquilla",
+      "Initiation au kitesurf à La Boquilla, Carthagène",
+      "Commencez le kitesurf à La Boquilla avec le cours d’initiation de deux heures proposé au catalogue. Le choix du cours dépend de votre niveau et des conditions de vent ; une initiation n’est pas équivalente à une location de matériel.",
+      "Cours d’initiation de deux heures avec instructeur.|D’autres cours existent pour la reprise, la progression, le foil et les groupes.|Confirmez l’équipement, le transport et la langue d’enseignement avant de réserver.|L’organisation dépend des conditions sur place.",
+      "Pour découvrir la discipline avec un encadrement. Si vous avez déjà pratiqué, décrivez votre expérience pour choisir un cours adapté plutôt que reprendre automatiquement une initiation."
+    ],
+    "de": [
+      "kitesurfen-la-boquilla",
+      "Kitesurf-Einstieg in La Boquilla bei Cartagena",
+      "Starten Sie mit dem zweistündigen Einsteigerkurs in La Boquilla in den Kitesurfsport. Der passende Kurs hängt von Ihren Vorkenntnissen und den Windbedingungen ab; ein Kurs ist nicht dasselbe wie eine Materialmiete.",
+      "Zweistündiger Einsteigerkurs mit Instructor.|Weitere Angebote für Wiedereinstieg, Fortgeschrittene, Foil und Gruppen.|Ausrüstung, Transfer und Unterrichtssprache vor der Buchung bestätigen lassen.|Die Durchführung richtet sich nach den Bedingungen vor Ort.",
+      "Für einen begleiteten Einstieg in die Sportart. Wenn Sie bereits Erfahrung haben, beschreiben Sie Ihr Niveau, damit der passende Kurs ausgewählt werden kann."
+    ]
   },
   "paratrike_5": {
-    "fr": ["vol-paratrike-carthagene", "Fly Cartagena : vol en paratrike au-dessus des Caraïbes", "Découvrez La Boquilla depuis les airs avec Fly Cartagena. Choisissez un vol de 5, 10 ou 15 minutes et ajoutez, si vous le souhaitez, une vidéo GoPro ou un transport aller-retour.", "Poids maximal : 100 kg par personne.|Départ à l’Escuela de Kite Nativo, en bord de plage, à 300 mètres au nord de l’hôtel Sonesta.|En cas de météo défavorable, le vol est reprogrammé sans frais supplémentaires.|Les tarifs en COP et USD sont ceux fournis par l’opérateur, pas une conversion automatique.", "Pour une activité aérienne courte au départ de La Boquilla. Confirmez le créneau et les conditions météo avant de vous rendre au point de départ."],
-    "de": ["paratrike-flug-cartagena", "Fly Cartagena: Paratrike-Flug über der Karibik", "Erleben Sie La Boquilla aus der Luft mit Fly Cartagena. Wählen Sie einen Flug von 5, 10 oder 15 Minuten und ergänzen Sie auf Wunsch ein GoPro-Video oder einen Hin- und Rücktransfer.", "Maximalgewicht: 100 kg pro Person.|Treffpunkt: Escuela de Kite Nativo am Strand, 300 Meter nördlich des Hotels Sonesta.|Bei ungeeignetem Wetter wird der Flug ohne zusätzliche Kosten verschoben.|Die COP- und USD-Preise stammen vom Anbieter und sind keine automatische Währungsumrechnung.", "Für ein kurzes Flugerlebnis ab La Boquilla. Bestätigen Sie Termin und Wetterbedingungen, bevor Sie zum Startpunkt fahren."]
+    "fr": [
+      "vol-paratrike-carthagene",
+      "Fly Cartagena : vol en paratrike au-dessus des Caraïbes",
+      "Découvrez La Boquilla depuis les airs avec Fly Cartagena. Choisissez un vol de 5, 10 ou 15 minutes et ajoutez, si vous le souhaitez, une vidéo GoPro ou un transport aller-retour.",
+      "Poids maximal : 100 kg par personne.|Départ à l’Escuela de Kite Nativo, en bord de plage, à 300 mètres au nord de l’hôtel Sonesta.|En cas de météo défavorable, le vol est reprogrammé sans frais supplémentaires.|Les tarifs en COP et USD sont ceux fournis par l’opérateur, pas une conversion automatique.",
+      "Pour une activité aérienne courte au départ de La Boquilla. Confirmez le créneau et les conditions météo avant de vous rendre au point de départ."
+    ],
+    "de": [
+      "paratrike-flug-cartagena",
+      "Fly Cartagena: Paratrike-Flug über der Karibik",
+      "Erleben Sie La Boquilla aus der Luft mit Fly Cartagena. Wählen Sie einen Flug von 5, 10 oder 15 Minuten und ergänzen Sie auf Wunsch ein GoPro-Video oder einen Hin- und Rücktransfer.",
+      "Maximalgewicht: 100 kg pro Person.|Treffpunkt: Escuela de Kite Nativo am Strand, 300 Meter nördlich des Hotels Sonesta.|Bei ungeeignetem Wetter wird der Flug ohne zusätzliche Kosten verschoben.|Die COP- und USD-Preise stammen vom Anbieter und sind keine automatische Währungsumrechnung.",
+      "Für ein kurzes Flugerlebnis ab La Boquilla. Bestätigen Sie Termin und Wetterbedingungen, bevor Sie zum Startpunkt fahren."
+    ]
   },
   "buceo": {
-    "fr": ["plongee-snorkeling-carthagene", "Plongée et snorkeling au départ de Carthagène", "Découvrez les récifs caribéens avec une expérience de plongée accompagnée et un déjeuner sur une île selon la formule choisie. La plongée avec bouteille et le snorkeling sont deux activités différentes : précisez celle que vous recherchez.", "Demandez le nombre de plongées et leur durée pour votre formule.|Signalez votre niveau et vos éventuelles certifications.|Confirmez l’équipement, le lieu de départ et l’heure de retour.|L’opérateur doit confirmer les conditions de participation avant le paiement.", "Pour découvrir la vie sous-marine avec un programme adapté à votre expérience. Ne réservez pas une formule de plongée uniquement sur la base d’une photo de snorkeling."],
-    "de": ["tauchen-schnorcheln-cartagena", "Tauchen und Schnorcheln ab Cartagena", "Entdecken Sie karibische Riffe mit einem begleiteten Taucherlebnis und einem Inselmittagessen gemäß gewähltem Angebot. Gerätetauchen und Schnorcheln sind unterschiedliche Aktivitäten; geben Sie bei Ihrer Anfrage an, welche Sie suchen.", "Anzahl und Dauer der Tauchgänge für Ihre Variante erfragen.|Erfahrung und vorhandene Tauchzertifikate mitteilen.|Ausrüstung, Treffpunkt und Rückkehrzeit bestätigen lassen.|Der Betreiber muss die Teilnahmebedingungen vor der Zahlung bestätigen.", "Für ein Unterwassererlebnis passend zu Ihren Vorkenntnissen. Wählen Sie einen Tauchkurs nicht allein aufgrund eines Schnorchelfotos aus."]
+    "fr": [
+      "plongee-snorkeling-carthagene",
+      "Plongée et snorkeling au départ de Carthagène",
+      "Découvrez les récifs caribéens avec une expérience de plongée accompagnée et un déjeuner sur une île selon la formule choisie. La plongée avec bouteille et le snorkeling sont deux activités différentes : précisez celle que vous recherchez.",
+      "Demandez le nombre de plongées et leur durée pour votre formule.|Signalez votre niveau et vos éventuelles certifications.|Confirmez l’équipement, le lieu de départ et l’heure de retour.|L’opérateur doit confirmer les conditions de participation avant le paiement.",
+      "Pour découvrir la vie sous-marine avec un programme adapté à votre expérience. Ne réservez pas une formule de plongée uniquement sur la base d’une photo de snorkeling."
+    ],
+    "de": [
+      "tauchen-schnorcheln-cartagena",
+      "Tauchen und Schnorcheln ab Cartagena",
+      "Entdecken Sie karibische Riffe mit einem begleiteten Taucherlebnis und einem Inselmittagessen gemäß gewähltem Angebot. Gerätetauchen und Schnorcheln sind unterschiedliche Aktivitäten; geben Sie bei Ihrer Anfrage an, welche Sie suchen.",
+      "Anzahl und Dauer der Tauchgänge für Ihre Variante erfragen.|Erfahrung und vorhandene Tauchzertifikate mitteilen.|Ausrüstung, Treffpunkt und Rückkehrzeit bestätigen lassen.|Der Betreiber muss die Teilnahmebedingungen vor der Zahlung bestätigen.",
+      "Für ein Unterwassererlebnis passend zu Ihren Vorkenntnissen. Wählen Sie einen Tauchkurs nicht allein aufgrund eines Schnorchelfotos aus."
+    ]
   },
   "isla_palma": {
-    "fr": ["journee-isla-palma", "Isla Palma : journée plage et réserve naturelle", "Rejoignez l’hôtel Isla Palma pour une journée associant traversée panoramique, déjeuner gourmet et accès à la plage. Le parcours maritime passe par les secteurs du Rosaire et de San Bernardo selon l’organisation annoncée.", "Transfert de l’hôtel au quai prévu dans le programme.|Déjeuner et accès à la plage de l’hôtel Isla Palma.|Droits portuaires et assurance facturés séparément.|Confirmez la prise en charge de votre hébergement et l’heure du retour.", "Pour consacrer la journée à une destination insulaire. Tenez compte de la traversée et évitez de prévoir une correspondance serrée le soir même."],
-    "de": ["isla-palma-tagesausflug", "Isla Palma: Tagesausflug zu Strand und Naturreservat", "Besuchen Sie das Hotel Isla Palma bei einem Tagesausflug mit Panoramabootsfahrt, Gourmet-Mittagessen und Strandzugang. Das angekündigte Programm führt durch die Inselgebiete Rosario und San Bernardo.", "Transfer vom Hotel zum Anleger im Programm vorgesehen.|Mittagessen und Strandzugang im Hotel Isla Palma.|Hafengebühren und Versicherung werden zusätzlich berechnet.|Abholung an Ihrer Unterkunft und Rückkehrzeit bestätigen lassen.", "Wenn Sie einen ganzen Tag für eine Inseldestination reservieren möchten. Berücksichtigen Sie die Bootsfahrt und vermeiden Sie einen knappen Anschluss am selben Abend."]
+    "fr": [
+      "journee-isla-palma",
+      "Isla Palma : journée plage et réserve naturelle",
+      "Rejoignez l’hôtel Isla Palma pour une journée associant traversée panoramique, déjeuner gourmet et accès à la plage. Le parcours maritime passe par les secteurs du Rosaire et de San Bernardo selon l’organisation annoncée.",
+      "Transfert de l’hôtel au quai prévu dans le programme.|Déjeuner et accès à la plage de l’hôtel Isla Palma.|Droits portuaires et assurance facturés séparément.|Confirmez la prise en charge de votre hébergement et l’heure du retour.",
+      "Pour consacrer la journée à une destination insulaire. Tenez compte de la traversée et évitez de prévoir une correspondance serrée le soir même."
+    ],
+    "de": [
+      "isla-palma-tagesausflug",
+      "Isla Palma: Tagesausflug zu Strand und Naturreservat",
+      "Besuchen Sie das Hotel Isla Palma bei einem Tagesausflug mit Panoramabootsfahrt, Gourmet-Mittagessen und Strandzugang. Das angekündigte Programm führt durch die Inselgebiete Rosario und San Bernardo.",
+      "Transfer vom Hotel zum Anleger im Programm vorgesehen.|Mittagessen und Strandzugang im Hotel Isla Palma.|Hafengebühren und Versicherung werden zusätzlich berechnet.|Abholung an Ihrer Unterkunft und Rückkehrzeit bestätigen lassen.",
+      "Wenn Sie einen ganzen Tag für eine Inseldestination reservieren möchten. Berücksichtigen Sie die Bootsfahrt und vermeiden Sie einen knappen Anschluss am selben Abend."
+    ]
   },
   "corona_island": {
-    "fr": ["corona-island-adultes", "Corona Island : journée réservée aux adultes", "Corona Island propose un pasadía réservé aux personnes de 18 ans et plus, avec transport en bateau rapide, déjeuner en trois services et activités nautiques annoncées dans la formule.", "Âge minimum : 18 ans.|Déjeuner en trois services et bière Corona à volonté selon l’offre.|Kayak et paddle prévus dans le programme.|Confirmez le quai, les horaires et les éventuels frais supplémentaires.", "Pour un séjour entre adultes. Cette formule ne convient pas aux familles accompagnées de mineurs, même si ceux-ci ne souhaitent pas participer aux activités nautiques."],
-    "de": ["corona-island-erwachsene", "Corona Island: Tagesausflug nur für Erwachsene", "Corona Island bietet einen Tagesaufenthalt für Gäste ab 18 Jahren mit Schnellboottransfer, Drei-Gänge-Mittagessen und den im Angebot genannten Wassersportaktivitäten.", "Mindestalter: 18 Jahre.|Drei-Gänge-Mittagessen und Corona-Bier gemäß Angebot.|Kajak und Stand-up-Paddling sind im Programm vorgesehen.|Anleger, Zeiten und mögliche Zusatzgebühren vorab klären.", "Für eine Reise unter Erwachsenen. Diese Variante ist für Familien mit Minderjährigen nicht geeignet, auch wenn die Kinder nicht an den Wasseraktivitäten teilnehmen möchten."]
+    "fr": [
+      "corona-island-adultes",
+      "Corona Island : journée réservée aux adultes",
+      "Corona Island propose un pasadía réservé aux personnes de 18 ans et plus, avec transport en bateau rapide, déjeuner en trois services et activités nautiques annoncées dans la formule.",
+      "Âge minimum : 18 ans.|Déjeuner en trois services et bière Corona à volonté selon l’offre.|Kayak et paddle prévus dans le programme.|Confirmez le quai, les horaires et les éventuels frais supplémentaires.",
+      "Pour un séjour entre adultes. Cette formule ne convient pas aux familles accompagnées de mineurs, même si ceux-ci ne souhaitent pas participer aux activités nautiques."
+    ],
+    "de": [
+      "corona-island-erwachsene",
+      "Corona Island: Tagesausflug nur für Erwachsene",
+      "Corona Island bietet einen Tagesaufenthalt für Gäste ab 18 Jahren mit Schnellboottransfer, Drei-Gänge-Mittagessen und den im Angebot genannten Wassersportaktivitäten.",
+      "Mindestalter: 18 Jahre.|Drei-Gänge-Mittagessen und Corona-Bier gemäß Angebot.|Kajak und Stand-up-Paddling sind im Programm vorgesehen.|Anleger, Zeiten und mögliche Zusatzgebühren vorab klären.",
+      "Für eine Reise unter Erwachsenen. Diese Variante ist für Familien mit Minderjährigen nicht geeignet, auch wenn die Kinder nicht an den Wasseraktivitäten teilnehmen möchten."
+    ]
   },
   "volcan_totumo": {
-    "fr": ["volcan-totumo", "Excursion au volcan de boue El Totumo", "Découvrez le volcan de boue El Totumo lors d’une excursion accompagnée depuis Carthagène. Cette sortie d’une demi-journée constitue une alternative aux activités en mer et aux journées de plage.", "Programme annoncé sur une demi-journée.|Demandez le transport inclus, l’heure de départ et les arrêts éventuels.|Confirmez les services facultatifs sur place et leur prix avant de les accepter.|Prévoyez des affaires de rechange et renseignez-vous sur les installations disponibles.", "Pour une expérience différente des îles. Signalez vos besoins de mobilité et demandez si l’accès au bassin correspond à vos capacités."],
-    "de": ["totumo-schlammvulkan", "Ausflug zum Schlammvulkan El Totumo", "Besuchen Sie den Schlammvulkan El Totumo bei einem begleiteten Ausflug ab Cartagena. Das halbtägige Programm bietet eine Alternative zu Bootsausflügen und Strandtagen.", "Als halbtägiger Ausflug angeboten.|Enthaltenen Transfer, Abfahrt und weitere Stopps erfragen.|Optionale Leistungen vor Ort und ihre Preise vor der Nutzung klären.|Wechselkleidung einplanen und nach den vorhandenen Einrichtungen fragen.", "Für ein anderes Erlebnis als einen Inselausflug. Teilen Sie Mobilitätsbedürfnisse mit und lassen Sie sich erklären, wie der Zugang zum Becken erfolgt."]
+    "fr": [
+      "volcan-totumo",
+      "Excursion au volcan de boue El Totumo",
+      "Découvrez le volcan de boue El Totumo lors d’une excursion accompagnée depuis Carthagène. Cette sortie d’une demi-journée constitue une alternative aux activités en mer et aux journées de plage.",
+      "Programme annoncé sur une demi-journée.|Demandez le transport inclus, l’heure de départ et les arrêts éventuels.|Confirmez les services facultatifs sur place et leur prix avant de les accepter.|Prévoyez des affaires de rechange et renseignez-vous sur les installations disponibles.",
+      "Pour une expérience différente des îles. Signalez vos besoins de mobilité et demandez si l’accès au bassin correspond à vos capacités."
+    ],
+    "de": [
+      "totumo-schlammvulkan",
+      "Ausflug zum Schlammvulkan El Totumo",
+      "Besuchen Sie den Schlammvulkan El Totumo bei einem begleiteten Ausflug ab Cartagena. Das halbtägige Programm bietet eine Alternative zu Bootsausflügen und Strandtagen.",
+      "Als halbtägiger Ausflug angeboten.|Enthaltenen Transfer, Abfahrt und weitere Stopps erfragen.|Optionale Leistungen vor Ort und ihre Preise vor der Nutzung klären.|Wechselkleidung einplanen und nach den vorhandenen Einrichtungen fragen.",
+      "Für ein anderes Erlebnis als einen Inselausflug. Teilen Sie Mobilitätsbedürfnisse mit und lassen Sie sich erklären, wie der Zugang zum Becken erfolgt."
+    ]
   }
 }

@@ -15,8 +15,6 @@ const routes = [
   "/pasadia-isla-lizamar.html",
   "/pasadia-mucura-tintipan.html",
   "/islas-del-rosario.html",
-  "/tour-5-islas-vip.html",
-  "/tour-5-islas-standard.html",
   "/volcan-del-totumo.html",
   "/3-luxury-beach-clubs.html",
   "/kitesurf.html",

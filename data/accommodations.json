@@ -1,0 +1,178 @@
+{
+  "routes": {
+    "es": "/hospedaje-cartagena",
+    "en": "/en/cartagena-accommodations",
+    "fr": "/fr/hebergements-carthagene",
+    "de": "/de/unterkuenfte-cartagena"
+  },
+  "properties": [
+    {
+      "id": "studio-1",
+      "image": "/images/hospedaje/apartaestudio-1.webp",
+      "feeCOP": 90000,
+      "feeLabel": { "es": "Aseo final y registro", "en": "Final cleaning and registration", "fr": "Ménage final et enregistrement", "de": "Endreinigung und Registrierung" },
+      "name": {
+        "es": "Apartaestudio · Unidad 1",
+        "en": "Studio apartment · Unit 1",
+        "fr": "Studio · Logement 1",
+        "de": "Studio-Apartment · Einheit 1"
+      },
+      "catalogName": "Apartaestudio",
+      "copy": {
+        "es": "Apartaestudio de un solo ambiente con wifi, aire acondicionado y cocineta con dotación básica. El edificio tiene piscina y está a una cuadra de la playa.",
+        "en": "A single-room studio with Wi-Fi, air conditioning and a basic kitchenette. The building has a pool and is one block from the beach.",
+        "fr": "Studio en une pièce avec Wi-Fi, climatisation et kitchenette équipée du nécessaire. L’immeuble dispose d’une piscine et se trouve à un pâté de maisons de la plage.",
+        "de": "Einraum-Studio mit WLAN, Klimaanlage und einfacher Küchenausstattung. Das Gebäude hat einen Pool und liegt einen Häuserblock vom Strand entfernt."
+      }
+    },
+    {
+      "id": "studio-cocina",
+      "image": "/images/hospedaje/apartaestudio-cocina.webp",
+      "feeCOP": 90000,
+      "feeLabel": { "es": "Aseo final y registro", "en": "Final cleaning and registration", "fr": "Ménage final et enregistrement", "de": "Endreinigung und Registrierung" },
+      "name": {
+        "es": "Apartaestudio · Unidad 2",
+        "en": "Studio apartment · Unit 2",
+        "fr": "Studio · Logement 2",
+        "de": "Studio-Apartment · Einheit 2"
+      },
+      "catalogName": "Apartaestudio",
+      "copy": {
+        "es": "Segundo apartaestudio publicado en el catálogo, con una distribución y una fotografía propias. Tiene un solo ambiente, wifi, aire acondicionado y cocineta básica; el edificio cuenta con piscina y está a una cuadra de la playa.",
+        "en": "A second studio listed in the catalogue, with its own layout and photo. It has one room, Wi-Fi, air conditioning and a basic kitchenette; the building has a pool and is one block from the beach.",
+        "fr": "Un second studio du catalogue, avec son propre agencement et sa photo. Il comprend une pièce, le Wi-Fi, la climatisation et une kitchenette simple ; l’immeuble dispose d’une piscine et se trouve à un pâté de maisons de la plage.",
+        "de": "Ein zweites Studio aus dem Katalog mit eigenem Grundriss und Foto. Es hat einen Raum, WLAN, Klimaanlage und eine einfache Küchenzeile; das Gebäude hat einen Pool und liegt einen Häuserblock vom Strand entfernt."
+      }
+    },
+    {
+      "id": "apartamento-una-habitacion-a",
+      "image": "/images/hospedaje/apartamento-una-habitacion-a.webp",
+      "feeCOP": 50000,
+      "wristbandCOP": 35000,
+      "feeLabel": { "es": "Aseo", "en": "Cleaning", "fr": "Ménage", "de": "Reinigung" },
+      "name": {
+        "es": "Apartamento de 1 habitación",
+        "en": "One-bedroom apartment",
+        "fr": "Appartement avec une chambre",
+        "de": "Apartment mit einem Schlafzimmer"
+      },
+      "catalogName": "Apartamento 1 sola habitación",
+      "copy": {
+        "es": "Apartamento de una habitación con espacio adicional para acomodación en la sala y cocina con dotación básica.",
+        "en": "One-bedroom apartment with additional sleeping space in the living room and a basic equipped kitchen.",
+        "fr": "Appartement d’une chambre avec couchage supplémentaire dans le séjour et cuisine équipée du nécessaire.",
+        "de": "Apartment mit einem Schlafzimmer, zusätzlicher Schlafmöglichkeit im Wohnzimmer und einfacher Küchenausstattung."
+      }
+    },
+    {
+      "id": "apartamento-una-habitacion-b",
+      "image": "/images/hospedaje/apartamento-una-habitacion-b.webp",
+      "feeCOP": 50000,
+      "wristbandCOP": 35000,
+      "feeLabel": { "es": "Aseo", "en": "Cleaning", "fr": "Ménage", "de": "Reinigung" },
+      "name": {
+        "es": "Apartamento de 1 habitación · Sala habilitada",
+        "en": "One-bedroom apartment · Living-room sleeping space",
+        "fr": "Appartement d’une chambre · Couchage dans le séjour",
+        "de": "Apartment mit einem Schlafzimmer · Schlafplatz im Wohnzimmer"
+      },
+      "catalogName": "Apartamento 1 habitación acomodación en sala",
+      "copy": {
+        "es": "Otra unidad publicada por separado en el catálogo: una habitación, acomodación en sala y cocina con dotación básica. Se conserva como alojamiento distinto.",
+        "en": "A separate unit listed in the catalogue: one bedroom, additional sleeping space in the living room and a basic equipped kitchen. It is kept as a distinct accommodation.",
+        "fr": "Un autre logement présenté séparément dans le catalogue : une chambre, couchage supplémentaire dans le séjour et cuisine équipée du nécessaire. Il reste présenté comme un logement distinct.",
+        "de": "Eine weitere, separat im Katalog geführte Unterkunft: ein Schlafzimmer, zusätzlicher Schlafplatz im Wohnzimmer und einfache Küchenausstattung. Sie wird als eigene Unterkunft dargestellt."
+      }
+    },
+    {
+      "id": "apartamento-dos-habitaciones",
+      "image": "/images/hospedaje/apartamento-dos-habitaciones.webp",
+      "feeCOP": 90000,
+      "feeLabel": { "es": "Aseo final", "en": "Final cleaning", "fr": "Ménage final", "de": "Endreinigung" },
+      "capacity": 6,
+      "name": {
+        "es": "Apartamento de 2 habitaciones · Hasta 6 personas",
+        "en": "Two-bedroom apartment · Up to 6 guests",
+        "fr": "Appartement de 2 chambres · Jusqu’à 6 personnes",
+        "de": "Apartment mit 2 Schlafzimmern · Bis zu 6 Personen"
+      },
+      "catalogName": "Apartamento 2 habitaciones 6px",
+      "copy": {
+        "es": "Apartamento de dos habitaciones, para hasta seis personas, con cocina de dotación básica.",
+        "en": "Two-bedroom apartment for up to six guests, with a basic equipped kitchen.",
+        "fr": "Appartement de deux chambres pour jusqu’à six personnes, avec cuisine équipée du nécessaire.",
+        "de": "Apartment mit zwei Schlafzimmern für bis zu sechs Personen und einfacher Küchenausstattung."
+      }
+    }
+  ],
+  "locale": {
+    "es": {
+      "title": "Apartamentos y apartaestudios en Cartagena",
+      "description": "Conoce los apartamentos y apartaestudios de Cartagena del catálogo de Dunas & Olas. Consulta tarifa por fecha, disponibilidad y recargos directamente por WhatsApp.",
+      "intro": "Encuentra un alojamiento práctico cerca de la playa. El catálogo incluye dos apartaestudios diferentes, apartamentos de una habitación y una opción de dos habitaciones.",
+      "seasonal": "Tarifa por noche según las fechas. Confirma disponibilidad y precio antes de reservar.",
+      "fees": "Recargos publicados en el catálogo",
+      "cleaning": "Aseo final y registro",
+      "wristbands": "Manillas por grupo",
+      "ask": "Consultar fechas y tarifa",
+      "catalog": "Ver alojamiento en el catálogo",
+      "why": "Antes de reservar",
+      "note": "La tarifa de alojamiento cambia según la fecha. Escribe las fechas de entrada y salida y el número de huéspedes para confirmar el valor total y la disponibilidad.",
+      "blog": "Guía para elegir dónde alojarte en Cartagena",
+      "support": "Te atendemos por escrito en español, inglés, francés y alemán.",
+      "feesFor": "por estancia",
+      "all": "Ver alojamientos"
+    },
+    "en": {
+      "title": "Apartments and studio rentals in Cartagena",
+      "description": "Browse the apartments and studio rentals in the Dunas & Olas catalogue. Ask about date-based rates, availability and extra fees on WhatsApp.",
+      "intro": "Find a practical stay near the beach. The catalogue includes two different studios, one-bedroom apartments and a two-bedroom option.",
+      "seasonal": "Nightly rates depend on your dates. Confirm availability and the total price before booking.",
+      "fees": "Extra fees listed in the catalogue",
+      "cleaning": "Final cleaning and registration",
+      "wristbands": "Guest wristbands per group",
+      "ask": "Ask about dates and rates",
+      "catalog": "View this stay in the catalogue",
+      "why": "Before you book",
+      "note": "Accommodation rates vary by date. Send your check-in and check-out dates and guest count to confirm the total and availability.",
+      "blog": "Guide to choosing where to stay in Cartagena",
+      "support": "We answer in writing in Spanish, English, French and German.",
+      "feesFor": "per stay",
+      "all": "View accommodations"
+    },
+    "fr": {
+      "title": "Appartements et studios à Carthagène",
+      "description": "Découvrez les appartements et studios du catalogue Dunas & Olas. Demandez les tarifs selon les dates, la disponibilité et les frais sur WhatsApp.",
+      "intro": "Trouvez un hébergement pratique près de la plage. Le catalogue comprend deux studios distincts, des appartements d’une chambre et un appartement de deux chambres.",
+      "seasonal": "Le tarif par nuit dépend des dates. Confirmez la disponibilité et le prix total avant de réserver.",
+      "fees": "Frais supplémentaires indiqués au catalogue",
+      "cleaning": "Ménage final et enregistrement",
+      "wristbands": "Bracelets par groupe",
+      "ask": "Demander les dates et tarifs",
+      "catalog": "Voir ce logement au catalogue",
+      "why": "Avant de réserver",
+      "note": "Le tarif varie selon les dates. Indiquez les dates d’arrivée et de départ ainsi que le nombre de voyageurs pour confirmer le total et la disponibilité.",
+      "blog": "Guide pour choisir où séjourner à Carthagène",
+      "support": "Nous répondons par écrit en espagnol, anglais, français et allemand.",
+      "feesFor": "par séjour",
+      "all": "Voir les logements"
+    },
+    "de": {
+      "title": "Apartments und Studios in Cartagena",
+      "description": "Entdecken Sie Apartments und Studios aus dem Dunas-&-Olas-Katalog. Fragen Sie auf WhatsApp nach Preisen je Reisedatum, Verfügbarkeit und Zusatzkosten.",
+      "intro": "Finden Sie eine praktische Unterkunft nahe am Strand. Der Katalog enthält zwei verschiedene Studios, Einzimmerwohnungen und eine Wohnung mit zwei Schlafzimmern.",
+      "seasonal": "Der Übernachtungspreis hängt vom Reisedatum ab. Verfügbarkeit und Gesamtpreis bitte vor der Buchung bestätigen.",
+      "fees": "Im Katalog genannte Zusatzkosten",
+      "cleaning": "Endreinigung und Registrierung",
+      "wristbands": "Armbänder pro Gruppe",
+      "ask": "Termine und Preise anfragen",
+      "catalog": "Unterkunft im Katalog ansehen",
+      "why": "Vor der Buchung",
+      "note": "Der Unterkunftspreis hängt vom Datum ab. Senden Sie Anreise, Abreise und Gästezahl, damit Gesamtpreis und Verfügbarkeit bestätigt werden können.",
+      "blog": "Ratgeber zur Unterkunftswahl in Cartagena",
+      "support": "Wir beraten schriftlich auf Spanisch, Englisch, Französisch und Deutsch.",
+      "feesFor": "pro Aufenthalt",
+      "all": "Unterkünfte ansehen"
+    }
+  }
+}

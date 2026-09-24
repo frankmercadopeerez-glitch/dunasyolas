@@ -30,7 +30,7 @@ La comparación siguiente identifica competidores y referencias relevantes encon
 | Itinerario de tres días | `/fr/blog/carthagene-en-trois-jours` | `/de/blog/cartagena-in-drei-tagen` |
 | Preparar una reserva | `/fr/blog/reserver-excursion-carthagene` | `/de/blog/ausflug-cartagena-buchen` |
 
-Las fichas cubren pasadías de 4 y 5 islas, ROA, ciudad y bahía, catamarán, Tamarindo, Namasté, plancton, kitesurf, paratrike, buceo, Isla Palma, Corona Island y Totumo. No se ha añadido una nueva oferta de tres islas.
+Las fichas cubren las experiencias vigentes del catálogo, city tours, clubes de playa, kitesurf, paratrike, buceo, Isla Palma, Corona Island y Totumo.
 
 ## Implementación técnica
 
