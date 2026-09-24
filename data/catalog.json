@@ -201,7 +201,7 @@
       "plannerId": "yate",
       "route": "/tour-bahia-yate",
       "description": "Navega la bahía con barra libre en bebidas seleccionadas, DJ a bordo, animador y bartender. 3 salidas diarias desde el Muelle de los Pegasos",
-      "image": "/images/yate-bahia.webp"
+      "image": "/images/lunamia.webp"
     },
     "yate_noche": {
       "name": "Tour Nocturno en Yate – Luna Mía (7pm–9pm o 9pm–11pm)",
@@ -235,7 +235,7 @@
       "plannerId": "catamaran_noche",
       "route": "/catamaran-atardecer",
       "description": "La fiesta del Caribe sobre el mar. DJ, coctelería, baile y el horizonte iluminado de noche. Sale 7pm–9pm o 9pm–11pm. Membresía Plata $150k / Oro $180k.",
-      "image": "/images/cartagenasunset.webp"
+      "image": "/images/catamaran-cartagena-atardecer.webp"
     },
     "chiva": {
       "name": "Chiva Rumbera (con discoteca Taboo)",
@@ -416,7 +416,7 @@
       "plannerId": "catamaran",
       "route": "/catamaran-atardecer",
       "description": "Bebidas ilimitadas, DJ en vivo y el mejor atardecer de Cartagena desde el mar. Membresía Plata $150k / Oro $180k",
-      "image": "/images/cartagenasunset.webp",
+      "image": "/images/catamaran-cartagena-atardecer.webp",
       "variants": {
         "gold": 180000
       }
@@ -641,7 +641,7 @@
       "plannerId": "family_eco_route",
       "route": "/family-eco-route",
       "description": "Un día completo con Mambo Beach, snorkel, manglar, atardecer y plancton bioluminiscente en Barú.",
-      "image": "/images/plancton-referencia.webp"
+      "image": "/images/backpackers/family-eco-route/01.webp"
     },
     "golden_hours": {
       "name": "Golden Hours: Sunset + Beach Club",
@@ -658,7 +658,7 @@
       "plannerId": "golden_hours",
       "route": "/golden-hours-cartagena",
       "description": "Atardecer en lancha deportiva, música, coctelería y parada en beach club privado frente a Cartagena.",
-      "image": "/images/backpackers/golden-hours-cartagena/01.webp"
+      "image": "/images/backpackers/golden-hours-cartagena/02.webp"
     },
     "kitesurf_iniciacion": {
       "name": "Kitesurf — Clase de Iniciación (2 horas)",
