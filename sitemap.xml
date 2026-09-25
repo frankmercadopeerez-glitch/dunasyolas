@@ -204,6 +204,11 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/identificar-lancha-pirata/"/>
     <image:image><image:loc>https://dunasyolas.com/images/islastour%20(7).webp</image:loc></image:image>
   </url>
+  <url><loc>https://dunasyolas.com/blog/islas-del-rosario-con-ninos/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/islas-del-rosario-con-ninos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/islas-del-rosario-con-ninos/"/>
+    <image:image><image:loc>https://dunasyolas.com/images/isla-palma-4.webp</image:loc></image:image>
+  </url>
   <url><loc>https://dunasyolas.com/blog/itinerario-3-dias-cartagena/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/itinerario-3-dias-cartagena/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/itinerario-3-dias-cartagena/"/>
@@ -215,6 +220,11 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/kitesurf-cartagena/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/kitesurf-cartagena/"/>
     <image:image><image:loc>https://dunasyolas.com/images/kitesurf/class.webp</image:loc></image:image>
+  </url>
+  <url><loc>https://dunasyolas.com/blog/mareo-lancha-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/mareo-lancha-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/mareo-lancha-cartagena/"/>
+    <image:image><image:loc>https://dunasyolas.com/images/isla-palma-4.webp</image:loc></image:image>
   </url>
   <url><loc>https://dunasyolas.com/blog/mejor-epoca-para-visitar-cartagena/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/mejor-epoca-para-visitar-cartagena/"/>
@@ -506,6 +516,14 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://dunasyolas.com/fr/location-bateau"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dunasyolas.com/de/bootsmiete"/>
     <image:image><image:loc>https://dunasyolas.com/images/cartagenasunset.webp</image:loc></image:image>
+  </url>
+  <url><loc>https://dunasyolas.com/de/cartagena-reisefragen</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/preguntas-viaje-cartagena"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/cartagena-travel-questions"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dunasyolas.com/fr/questions-voyage-carthagene"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dunasyolas.com/de/cartagena-reisefragen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/preguntas-viaje-cartagena"/>
+    <image:image><image:loc>https://dunasyolas.com/images/cartagena.webp</image:loc></image:image>
   </url>
   <url><loc>https://dunasyolas.com/de/cartagena-stadt-und-bucht</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/city-bahia"/>
@@ -801,6 +819,11 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/identificar-lancha-pirata/"/>
     <image:image><image:loc>https://dunasyolas.com/images/cartagena.webp</image:loc></image:image>
   </url>
+  <url><loc>https://dunasyolas.com/en/blog/islas-del-rosario-con-ninos/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/islas-del-rosario-con-ninos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/islas-del-rosario-con-ninos/"/>
+    <image:image><image:loc>https://dunasyolas.com/images/isla-palma-4.webp</image:loc></image:image>
+  </url>
   <url><loc>https://dunasyolas.com/en/blog/itinerario-3-dias-cartagena/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/itinerario-3-dias-cartagena/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/itinerario-3-dias-cartagena/"/>
@@ -812,6 +835,11 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/kitesurf-cartagena/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/kitesurf-cartagena/"/>
     <image:image><image:loc>https://dunasyolas.com/images/cartagenasunset.webp</image:loc></image:image>
+  </url>
+  <url><loc>https://dunasyolas.com/en/blog/mareo-lancha-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/mareo-lancha-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/mareo-lancha-cartagena/"/>
+    <image:image><image:loc>https://dunasyolas.com/images/isla-palma-4.webp</image:loc></image:image>
   </url>
   <url><loc>https://dunasyolas.com/en/blog/mejor-epoca-para-visitar-cartagena/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/mejor-epoca-para-visitar-cartagena/"/>
@@ -940,6 +968,14 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dunasyolas.com/de/unterkuenfte-cartagena"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/hospedaje-cartagena"/>
     <image:image><image:loc>https://dunasyolas.com/images/hospedaje/apartaestudio-1.webp</image:loc></image:image>
+  </url>
+  <url><loc>https://dunasyolas.com/en/cartagena-travel-questions</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/preguntas-viaje-cartagena"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/cartagena-travel-questions"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dunasyolas.com/fr/questions-voyage-carthagene"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dunasyolas.com/de/cartagena-reisefragen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/preguntas-viaje-cartagena"/>
+    <image:image><image:loc>https://dunasyolas.com/images/cartagena.webp</image:loc></image:image>
   </url>
   <url><loc>https://dunasyolas.com/en/catamaran-atardecer</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/catamaran-atardecer"/>
@@ -1416,6 +1452,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/buceo-snorkel"/>
     <image:image><image:loc>https://dunasyolas.com/images/buceo-snorkel-cartagena.webp</image:loc></image:image>
   </url>
+  <url><loc>https://dunasyolas.com/fr/questions-voyage-carthagene</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/preguntas-viaje-cartagena"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/cartagena-travel-questions"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dunasyolas.com/fr/questions-voyage-carthagene"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dunasyolas.com/de/cartagena-reisefragen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/preguntas-viaje-cartagena"/>
+    <image:image><image:loc>https://dunasyolas.com/images/cartagena.webp</image:loc></image:image>
+  </url>
   <url><loc>https://dunasyolas.com/fr/reserver</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://dunasyolas.com/fr/reserver"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dunasyolas.com/de/anfrage"/>
@@ -1645,6 +1689,14 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/policies"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/policies"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/policies"/>
+    <image:image><image:loc>https://dunasyolas.com/images/cartagena.webp</image:loc></image:image>
+  </url>
+  <url><loc>https://dunasyolas.com/preguntas-viaje-cartagena</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/preguntas-viaje-cartagena"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/cartagena-travel-questions"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dunasyolas.com/fr/questions-voyage-carthagene"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dunasyolas.com/de/cartagena-reisefragen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/preguntas-viaje-cartagena"/>
     <image:image><image:loc>https://dunasyolas.com/images/cartagena.webp</image:loc></image:image>
   </url>
   <url><loc>https://dunasyolas.com/privacy</loc>
