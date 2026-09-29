@@ -1,12 +1,13 @@
 "use strict";
 
 const assert = require("node:assert/strict");
-const { fetchAllReviews, normalizeReview, ratingToNumber } = require("../lib/google-business-reviews");
+const { discoverBusinessProfile, fetchAllReviews, locationMatchScore, normalizeReview, ratingToNumber } = require("../lib/google-business-reviews");
 const reviewsHandler = require("../api/google-reviews");
 
 async function run() {
   assert.equal(ratingToNumber("FIVE"), 5);
   assert.equal(ratingToNumber("ONE"), 1);
+  assert.equal(locationMatchScore("Dunas & Olas", "Dunas y Olas"), 100);
   assert.deepEqual(normalizeReview({
     reviewId: "r-1",
     reviewer: { displayName: "Cliente" },
@@ -58,6 +59,27 @@ async function run() {
   assert.equal(calls.length, 4);
   assert.ok(calls.every((url) => url.searchParams.get("pageSize") === "50"));
   assert.equal(calls[3].searchParams.get("pageToken"), "page-4");
+
+  const discovered = await discoverBusinessProfile({
+    accessToken: "test-token",
+    profileName: "Dunas y Olas",
+    fetchFn: async (url) => {
+      const value = String(url);
+      if (value.includes("mybusinessaccountmanagement")) {
+        return { ok: true, json: async () => ({ accounts: [{ name: "accounts/123" }] }) };
+      }
+      return {
+        ok: true,
+        json: async () => ({
+          locations: [
+            { name: "locations/999", title: "Otra empresa" },
+            { name: "locations/456", title: "Dunas & Olas" },
+          ],
+        }),
+      };
+    },
+  });
+  assert.deepEqual(discovered, { accountId: "123", locationId: "456", title: "Dunas & Olas" });
 
   const response = {
     statusCode: 0,

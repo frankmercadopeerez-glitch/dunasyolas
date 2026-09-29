@@ -1,7 +1,9 @@
 "use strict";
 
 const fallback = require("../data/google-reviews.json");
-const { fetchAllReviews, getAccessToken } = require("../lib/google-business-reviews");
+const { discoverBusinessProfile, fetchAllReviews, getAccessToken } = require("../lib/google-business-reviews");
+
+let resolvedProfileCache = null;
 
 function json(res, status, body, cacheControl) {
   res.status(status).setHeader("Content-Type", "application/json; charset=utf-8");
@@ -45,18 +47,33 @@ module.exports = async function handler(req, res) {
     refreshToken: process.env.GOOGLE_BUSINESS_REFRESH_TOKEN,
     accountId: process.env.GOOGLE_BUSINESS_ACCOUNT_ID,
     locationId: process.env.GOOGLE_BUSINESS_LOCATION_ID,
+    profileName: process.env.GOOGLE_BUSINESS_PROFILE_NAME || "Dunas y Olas",
   };
-  if (Object.values(config).some((value) => !value)) {
+  if (!config.clientId || !config.clientSecret || !config.refreshToken) {
     return json(res, 200, fallbackPayload("google_business_not_configured"));
   }
 
   try {
     const accessToken = await getAccessToken({ ...config, fetchFn: fetch });
+    let accountId = config.accountId;
+    let locationId = config.locationId;
+    if (!accountId || !locationId) {
+      if (!resolvedProfileCache || resolvedProfileCache.expiresAt < Date.now()) {
+        const profile = await discoverBusinessProfile({
+          fetchFn: fetch,
+          accessToken,
+          profileName: config.profileName,
+        });
+        resolvedProfileCache = { value: profile, expiresAt: Date.now() + 60 * 60 * 1000 };
+      }
+      accountId = resolvedProfileCache.value.accountId;
+      locationId = resolvedProfileCache.value.locationId;
+    }
     const result = await fetchAllReviews({
       fetchFn: fetch,
       accessToken,
-      accountId: config.accountId,
-      locationId: config.locationId,
+      accountId,
+      locationId,
     });
     return json(res, 200, {
       source: "google-business-profile",
