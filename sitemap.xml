@@ -1243,6 +1243,12 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/puerto-medallo-islas"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/puerto-medallo-islas"/>
   </url>
+  <url><loc>https://dunasyolas.com/en/reviews</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/opiniones"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/reviews"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/opiniones"/>
+    <image:image><image:loc>https://dunasyolas.com/images/cartagena.webp</image:loc></image:image>
+  </url>
   <url><loc>https://dunasyolas.com/en/salto-paracaidismo</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/salto-paracaidismo"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/salto-paracaidismo"/>
@@ -1651,6 +1657,12 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dunasyolas.com/de/namaste-tierra-bomba"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/namaste-holistica"/>
     <image:image><image:loc>https://dunasyolas.com/images/namaste-2.webp</image:loc></image:image>
+  </url>
+  <url><loc>https://dunasyolas.com/opiniones</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/opiniones"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/reviews"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/opiniones"/>
+    <image:image><image:loc>https://dunasyolas.com/images/cartagena.webp</image:loc></image:image>
   </url>
   <url><loc>https://dunasyolas.com/paratrike-cartagena</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/paratrike-cartagena"/>

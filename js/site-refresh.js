@@ -245,6 +245,7 @@
               <li><a href="${isEnglish ? "/en" : ""}/kitesurf" class="hover:text-blue-400">Kitesurf</a></li>
               <li><a href="${isEnglish ? "/en/about" : "/about"}" class="hover:text-blue-400">${copy.about}</a></li>
               <li><a href="${isEnglish ? "/en/blog/" : "/blog/"}" class="hover:text-blue-400">Blog</a></li>
+              <li><a href="${isEnglish ? "/en/reviews" : "/opiniones"}" class="hover:text-yellow-400">${isEnglish ? "Google reviews" : "Opiniones en Google"}</a></li>
             </ul>
           </div>
           <div>
@@ -261,6 +262,7 @@
               <a href="https://www.facebook.com/share/1aQqHEvkyG/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-badge social-badge-image"><img src="/images/logo-facebook.png" alt="" width="512" height="512" loading="lazy" decoding="async"/></a>
               <a href="https://www.tiktok.com/@mexicanaencartagena?_r=1&amp;_t=ZS-97Sfx04blGW" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="social-badge" style="background:#000"><i class="fab fa-tiktok"></i></a>
               <a href="https://youtube.com/@mexicanaencartagena?si=9JDydMI-7EINl9ns" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-badge social-badge-youtube"><i class="fab fa-youtube"></i></a>
+              <a href="https://maps.app.goo.gl/sgg1H17KudQiPi4H9?g_st=ac" target="_blank" rel="noopener noreferrer" aria-label="${isEnglish ? "Dunas y Olas on Google Maps" : "Dunas y Olas en Google Maps"}" class="social-badge" style="background:#fff;color:#4285f4;border:1px solid #d7e0e5"><i class="fab fa-google"></i></a>
             </div>
           </div>
         </div>
