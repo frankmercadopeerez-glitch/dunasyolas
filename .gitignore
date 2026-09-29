@@ -7,3 +7,6 @@ _cmp/
 v-*.png
 tmp/
 !scripts/qa-google-priority.mjs
+
+.vercel
+.env*
