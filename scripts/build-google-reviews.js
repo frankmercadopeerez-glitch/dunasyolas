@@ -3,8 +3,8 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const data = JSON.parse(fs.readFileSync(path.join(root, 'data', 'google-reviews.json'), 'utf8'));
-const cssLink = '<link rel="stylesheet" href="/css/google-reviews.css?v=20260929b">';
-const scriptTag = '<script src="/js/google-reviews.js?v=20260929b" defer></script>';
+const cssLink = '<link rel="stylesheet" href="/css/google-reviews.css?v=20260930a">';
+const scriptTag = '<script src="/js/google-reviews.js?v=20260930a" defer></script>';
 
 function esc(value) {
   return String(value).replace(/[&<>"']/g, (character) => ({
@@ -19,17 +19,14 @@ function stars(rating, lang = 'es') {
 function card(review, lang) {
   const text = lang === 'en' ? review.textEn : review.textEs;
   const source = lang === 'en' ? 'Verified public review on Google' : 'Reseña pública verificada en Google';
-  return `<article class="google-review-card"><div>${stars(review.rating, lang)}</div><blockquote>“${esc(text)}”</blockquote><div class="google-review-attribution"><cite>${esc(review.author)}</cite><span class="google-review-source">${source}</span></div></article>`;
+  return `<article class="google-review-card"><div class="google-review-top">${stars(review.rating, lang)}<img class="google-review-brand" src="/images/google-g.png" width="28" height="28" alt="Google" loading="lazy" decoding="async"></div><blockquote>“${esc(text)}”</blockquote><div class="google-review-attribution"><span class="google-review-avatar"><img src="/images/google-g.png" width="24" height="24" alt="" loading="lazy" decoding="async"></span><span><cite>${esc(review.author)}</cite><span class="google-review-source">${source}</span></span></div></article>`;
 }
 
 function section(lang, compact = false) {
   const en = lang === 'en';
   const cards = data.reviews.map((review) => card(review, lang)).join('');
   const title = en ? 'Travelers recommend Dunas & Olas' : 'Viajeros que ya confiaron en Dunas & Olas';
-  const note = en
-    ? `Google currently reports ${data.reviewCount} public reviews. Three include public text visible for quotation; open the profile to see the live total and latest updates.`
-    : `Google informa actualmente ${data.reviewCount} reseñas públicas. Tres muestran texto público verificable para citar; abre la ficha para consultar el total y las actualizaciones más recientes.`;
-  return `<section class="google-reviews-section" data-google-reviews data-lang="${lang}" aria-labelledby="google-reviews-title"><div class="google-reviews-shell"><div class="google-reviews-head"><div><p class="google-reviews-kicker">Google Reviews</p><h2 id="google-reviews-title">${title}</h2></div><div class="google-reviews-score" aria-label="${en ? `${data.rating} out of 5, ${data.reviewCount} reviews on Google` : `${data.rating} de 5, ${data.reviewCount} reseñas en Google`}"><strong data-review-score>${data.rating.toFixed(1)}</strong><div>${stars(5, lang)}<span data-review-count>${data.reviewCount} ${en ? 'reviews on Google' : 'reseñas en Google'}</span></div></div></div><div class="google-reviews-actions"><a class="google-reviews-link" href="${data.profileUrl}" target="_blank" rel="noopener noreferrer">${en ? 'View live Google profile' : 'Ver ficha en Google'}</a><button class="google-reviews-nav" type="button" data-review-prev aria-label="${en ? 'Previous review' : 'Reseña anterior'}">←</button><button class="google-reviews-nav" type="button" data-review-next aria-label="${en ? 'Next review' : 'Reseña siguiente'}">→</button><button class="google-reviews-pause" type="button" aria-pressed="false" data-pause-label="${en ? 'Pause carousel' : 'Pausar carrusel'}" data-play-label="${en ? 'Resume carousel' : 'Reanudar carrusel'}">${en ? 'Pause carousel' : 'Pausar carrusel'}</button></div><div class="google-reviews-viewport"><div class="google-reviews-track"><div class="google-reviews-set">${cards}</div></div></div><p class="google-reviews-note" data-review-note aria-live="polite">${note} ${en ? 'Verified' : 'Verificado'}: ${data.verifiedOn}.</p>${compact ? '' : `<a class="google-reviews-page-cta" href="${data.profileUrl}" target="_blank" rel="noopener noreferrer">${en ? 'Read all reviews directly on Google' : 'Leer todas las reseñas directamente en Google'} →</a>`}</div></section>`;
+  return `<section class="google-reviews-section" data-google-reviews data-lang="${lang}" aria-labelledby="google-reviews-title"><div class="google-reviews-shell"><div class="google-reviews-head"><div><p class="google-reviews-kicker">Google Reviews</p><h2 id="google-reviews-title">${title}</h2></div><div class="google-reviews-score" aria-label="${en ? `${data.rating} out of 5, ${data.reviewCount} reviews on Google` : `${data.rating} de 5, ${data.reviewCount} reseñas en Google`}"><strong data-review-score>${data.rating.toFixed(1)}</strong><div>${stars(5, lang)}<span data-review-count>${data.reviewCount} ${en ? 'reviews on Google' : 'reseñas en Google'}</span></div></div></div><div class="google-reviews-actions"><a class="google-reviews-link" href="${data.profileUrl}" target="_blank" rel="noopener noreferrer">${en ? 'View live Google profile' : 'Ver ficha en Google'}</a></div><div class="google-reviews-viewport"><div class="google-reviews-track"><div class="google-reviews-set">${cards}</div></div></div>${compact ? '' : `<a class="google-reviews-page-cta" href="${data.profileUrl}" target="_blank" rel="noopener noreferrer">${en ? 'Read all reviews directly on Google' : 'Leer todas las reseñas directamente en Google'} →</a>`}</div></section>`;
 }
 
 function organizationSchema() {
@@ -72,8 +69,8 @@ function patchSchema(html) {
 function patchHome(relative, lang) {
   const file = path.join(root, relative);
   let html = fs.readFileSync(file, 'utf8');
-  html = html.replace(/\/css\/google-reviews\.css\?v=[^"']+/g, '/css/google-reviews.css?v=20260929b');
-  html = html.replace(/\/js\/google-reviews\.js\?v=[^"']+/g, '/js/google-reviews.js?v=20260929b');
+  html = html.replace(/\/css\/google-reviews\.css\?v=[^"']+/g, '/css/google-reviews.css?v=20260930a');
+  html = html.replace(/\/js\/google-reviews\.js\?v=[^"']+/g, '/js/google-reviews.js?v=20260930a');
   html = html.replace(/\/\* --- Carrusel Doble de Reseñas --- \*\/[\s\S]*?(?=\s*\/\* FAQ accordion \*\/)/, '');
   html = html.replace(/(?:<!-- Carrusel Doble de Reseñas -->|<!-- Google Reviews -->)[\s\S]*?(?:<!-- \/Google Reviews -->\s*)?<!-- Blog Preview -->/, `<!-- Google Reviews -->\n${section(lang, true)}\n<!-- /Google Reviews -->\n\n    <!-- Blog Preview -->`);
   if (!html.includes('/css/google-reviews.css')) html = html.replace('</head>', `  ${cssLink}\n</head>`);

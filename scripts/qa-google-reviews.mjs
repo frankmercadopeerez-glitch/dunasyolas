@@ -41,15 +41,30 @@ try {
     for (const route of ["/opiniones", "/en/reviews", "/"]) {
       const response = await page.goto(`http://127.0.0.1:${port}${route}`, { waitUntil: "networkidle0", timeout: 30000 });
       const result = await page.evaluate(() => ({
-        cards: document.querySelectorAll(".google-review-card").length,
+        cards: document.querySelectorAll(".google-reviews-set:not([data-review-clone]) .google-review-card").length,
         count: document.querySelector("[data-review-count]")?.textContent.trim(),
         overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
         controls: document.querySelectorAll(".google-reviews-actions button").length,
-        dynamic: document.querySelector(".google-reviews-track")?.classList.contains("is-dynamic"),
+        dynamic: document.querySelector(".google-reviews-track")?.classList.contains("is-ready"),
+        logo: document.querySelectorAll(".google-review-brand").length,
+        avatar: document.querySelector(".google-review-avatar img")?.getAttribute("src"),
+        radius: parseFloat(getComputedStyle(document.querySelector(".google-review-card")).borderTopLeftRadius),
+        note: document.body.textContent.includes("Mostramos la última copia verificada") || document.body.textContent.includes("Showing the latest verified backup"),
+        animation: getComputedStyle(document.querySelector(".google-reviews-track")).animationName,
+        duration: getComputedStyle(document.querySelector(".google-reviews-track")).animationDuration,
+        playState: getComputedStyle(document.querySelector(".google-reviews-track")).animationPlayState,
+        distance: getComputedStyle(document.querySelector(".google-reviews-track")).getPropertyValue("--review-distance"),
+        keyframes: document.querySelector(".google-reviews-track").getAnimations().map((a) => a.effect?.getKeyframes()),
+        currentTime: document.querySelector(".google-reviews-track").getAnimations().map((a) => [a.currentTime,a.playState]),
       }));
-      if (response.status() !== 200 || result.cards !== 200 || !result.count?.includes("200") || result.overflow || result.controls !== 3 || !result.dynamic) {
+      if (response.status() !== 200 || result.cards !== 200 || !result.count?.includes("200") || result.overflow || result.controls !== 0 || !result.dynamic || result.logo < 200 || result.radius < 10 || result.note || result.animation === "none") {
         throw new Error(`${viewport.name} ${route}: ${JSON.stringify(result)}`);
       }
+      await page.$eval(".google-reviews-section", (node) => node.scrollIntoView());
+      const start = await page.$eval(".google-reviews-track", (node) => getComputedStyle(node).transform);
+      await new Promise((resolve) => setTimeout(resolve, 250));
+      const end = await page.$eval(".google-reviews-track", (node) => getComputedStyle(node).transform);
+      if (start === end) throw new Error(`${viewport.name} ${route}: carrusel inmóvil ${JSON.stringify({start,end,result})}`);
     }
   }
   if (consoleErrors.length) throw new Error(`Errores de consola: ${consoleErrors.join(" | ")}`);
