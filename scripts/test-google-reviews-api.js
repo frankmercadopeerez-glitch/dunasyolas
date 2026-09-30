@@ -62,7 +62,7 @@ async function run() {
 
   const discovered = await discoverBusinessProfile({
     accessToken: "test-token",
-    profileName: "Dunas y Olas",
+    profileName: "MEXICANA EN CARTAGENA & DUNAS Y OLAS AGENCIA TURÍSTICA MULTICULTURAL",
     fetchFn: async (url) => {
       const value = String(url);
       if (value.includes("mybusinessaccountmanagement")) {
@@ -73,13 +73,24 @@ async function run() {
         json: async () => ({
           locations: [
             { name: "locations/999", title: "Otra empresa" },
-            { name: "locations/456", title: "Dunas & Olas" },
+            { name: "locations/456", title: "MEXICANA EN CARTAGENA & DUNAS Y OLAS AGENCIA TURÍSTICA MULTICULTURAL" },
           ],
         }),
       };
     },
   });
-  assert.deepEqual(discovered, { accountId: "123", locationId: "456", title: "Dunas & Olas" });
+  assert.deepEqual(discovered, { accountId: "123", locationId: "456", title: "MEXICANA EN CARTAGENA & DUNAS Y OLAS AGENCIA TURÍSTICA MULTICULTURAL" });
+
+  await assert.rejects(discoverBusinessProfile({
+    accessToken: "test-token",
+    profileName: "MEXICANA EN CARTAGENA & DUNAS Y OLAS AGENCIA TURÍSTICA MULTICULTURAL",
+    fetchFn: async (url) => ({
+      ok: true,
+      json: async () => String(url).includes("mybusinessaccountmanagement")
+        ? { accounts: [{ name: "accounts/123" }] }
+        : { locations: [{ name: "locations/999", title: "Dunas & Olas" }] },
+    }),
+  }), /ficha única/);
 
   const response = {
     statusCode: 0,
