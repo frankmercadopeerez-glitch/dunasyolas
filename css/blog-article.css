@@ -1,0 +1,146 @@
+:root {
+  --blog-card-ink: #102535;
+  --blog-card-muted: #526675;
+  --blog-card-border: #d8e2e6;
+  --blog-card-primary: #076474;
+  --blog-card-primary-hover: #064f5b;
+  --blog-card-whatsapp: #075e54;
+  --blog-card-whatsapp-hover: #064c44;
+  --blog-card-radius: 16px;
+  --blog-button-radius: 8px;
+}
+
+/*
+ * Shared article sidebar. This file is intentionally loaded after legacy
+ * article styles so one edit updates every Spanish and English blog article.
+ */
+.article-shell > aside,
+.editorial-shell > aside,
+.blog-article-aside {
+  align-self: start;
+  min-width: 0;
+}
+
+:where(.side-card, .editorial-card) {
+  position: static !important;
+  inset: auto !important;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem !important;
+  overflow: hidden;
+  color: var(--blog-card-ink) !important;
+  background: #fff !important;
+  border: 1px solid var(--blog-card-border) !important;
+  border-radius: var(--blog-card-radius) !important;
+  box-shadow: 0 14px 34px rgba(16, 37, 53, 0.09) !important;
+}
+
+.blog-article-aside > :first-child {
+  position: static !important;
+  inset: auto !important;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid var(--blog-card-border) !important;
+  border-radius: var(--blog-card-radius) !important;
+  box-shadow: 0 14px 34px rgba(16, 37, 53, 0.09) !important;
+}
+
+:where(.side-card, .editorial-card) :where(h2, h3) {
+  color: var(--blog-card-ink) !important;
+  line-height: 1.2;
+}
+
+:where(.side-card, .editorial-card) p {
+  color: var(--blog-card-muted) !important;
+  line-height: 1.65;
+}
+
+:where(.side-card, .editorial-card) :where(a.primary, a.cta, a.whatsapp, button) {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 52px;
+  box-sizing: border-box;
+  margin: 0.75rem 0 0 !important;
+  padding: 0.85rem 1rem !important;
+  border: 1px solid transparent !important;
+  border-radius: var(--blog-button-radius) !important;
+  font: inherit;
+  font-weight: 800 !important;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none !important;
+  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.blog-article-aside > :first-child > :where(a, button) {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 52px;
+  box-sizing: border-box;
+  margin: 0.75rem 0 0 !important;
+  padding: 0.85rem 1rem !important;
+  border: 1px solid transparent !important;
+  border-radius: var(--blog-button-radius) !important;
+  font: inherit;
+  font-weight: 800 !important;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none !important;
+}
+
+.blog-article-aside > :first-child > a {
+  color: #fff !important;
+  background: var(--blog-card-primary) !important;
+}
+
+.blog-article-aside > :first-child > button {
+  color: #fff !important;
+  background: var(--blog-card-whatsapp) !important;
+}
+
+:where(.side-card, .editorial-card) :where(a.primary, a.cta) {
+  color: #fff !important;
+  background: var(--blog-card-primary) !important;
+}
+
+:where(.side-card, .editorial-card) :where(a.primary, a.cta):hover {
+  background: var(--blog-card-primary-hover) !important;
+}
+
+:where(.side-card, .editorial-card) :where(a.whatsapp, button) {
+  color: #fff !important;
+  background: var(--blog-card-whatsapp) !important;
+}
+
+:where(.side-card, .editorial-card) :where(a.whatsapp, button):hover {
+  background: var(--blog-card-whatsapp-hover) !important;
+}
+
+:where(.side-card, .editorial-card) :where(a.primary, a.cta, a.whatsapp, button):focus-visible {
+  outline: 3px solid #e6b632;
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  :where(.side-card, .editorial-card) :where(a.primary, a.cta, a.whatsapp, button):hover {
+    transform: translateY(-1px);
+  }
+}
+
+@media (max-width: 900px) {
+  .article-shell,
+  .editorial-shell {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(.side-card, .editorial-card) :where(a.primary, a.cta, a.whatsapp, button) {
+    transition: none;
+  }
+}

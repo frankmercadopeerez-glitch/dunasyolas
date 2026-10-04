@@ -451,6 +451,7 @@ function articleHtml(article) {
     @media(max-width:900px){.article-shell{grid-template-columns:1fr}.side-card{position:static}.article-hero{padding-top:5.8rem}.article-content{border-radius:18px}.article-hero h1{font-size:2.3rem}}
     @media(max-width:520px){.article-shell{padding:2rem .85rem}.article-hero h1{font-size:1.95rem}.article-content p,.article-content li{font-size:1rem}.article-content{padding:1.25rem}.article-hero img{height:250px}.article-content table{font-size:.88rem}.article-content th,.article-content td{padding:.65rem .45rem}}
   </style>
+  <link rel="stylesheet" href="../../css/blog-article.css?v=20261004a" data-blog-article-styles=""/>
 </head>
 <body>
   <nav class="fixed w-full z-50 bg-gray-900 text-white shadow-lg py-[2.5px]">
