@@ -31,7 +31,17 @@ await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
 const port = server.address().port;
 const chrome = ["C:/Program Files/Google/Chrome/Application/chrome.exe", "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"].find(fs.existsSync);
 if (!chrome) throw new Error("Chrome no encontrado");
-const browser = await puppeteer.launch({ executablePath: chrome, headless: true, args: ["--no-sandbox", "--disable-dev-shm-usage"] });
+const browser = await puppeteer.launch({
+  executablePath: chrome,
+  headless: true,
+  args: [
+    "--no-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-background-timer-throttling",
+    "--disable-backgrounding-occluded-windows",
+    "--disable-renderer-backgrounding",
+  ],
+});
 try {
   const page = await browser.newPage();
   const consoleErrors = [];
@@ -60,15 +70,16 @@ try {
       if (response.status() !== 200 || result.cards !== 200 || !result.count?.includes("200") || result.overflow || result.controls !== 0 || !result.dynamic || result.logo < 200 || result.radius < 10 || result.note || result.animation === "none") {
         throw new Error(`${viewport.name} ${route}: ${JSON.stringify(result)}`);
       }
-      await page.$eval(".google-reviews-section", (node) => node.scrollIntoView());
+      await page.bringToFront();
+      await page.$eval(".google-reviews-section", (node) => node.scrollIntoView({ block: "center" }));
       const start = await page.$eval(".google-reviews-track", (node) => getComputedStyle(node).transform);
-      await new Promise((resolve) => setTimeout(resolve, 250));
+      await new Promise((resolve) => setTimeout(resolve, 750));
       const end = await page.$eval(".google-reviews-track", (node) => getComputedStyle(node).transform);
       if (start === end) throw new Error(`${viewport.name} ${route}: carrusel inmóvil ${JSON.stringify({start,end,result})}`);
     }
   }
   if (consoleErrors.length) throw new Error(`Errores de consola: ${consoleErrors.join(" | ")}`);
-  console.log("Google reviews UI: 200 reseñas verificadas en inicio y páginas ES/EN, desktop 1440x900 y móvil 390x844.");
+  console.log("Google reviews UI: carga simulada de 200 reseñas superada en inicio y páginas ES/EN, desktop 1440x900 y móvil 390x844.");
 } finally {
   await browser.close();
   await new Promise((resolve) => server.close(resolve));

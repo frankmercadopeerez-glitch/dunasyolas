@@ -137,6 +137,12 @@
   .editorial-shell {
     grid-template-columns: minmax(0, 1fr) !important;
   }
+
+  .blog-article-aside {
+    width: 100% !important;
+    max-width: calc(100vw - 3rem) !important;
+    box-sizing: border-box;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

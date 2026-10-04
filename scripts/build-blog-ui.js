@@ -10,8 +10,8 @@ let covered = 0;
 for (const blogRoot of roots) {
   if (!fs.existsSync(blogRoot)) continue;
   const stylesheetHref = blogRoot.includes(`${path.sep}en${path.sep}`)
-    ? "../../../css/blog-article.css?v=20261004a"
-    : "../../css/blog-article.css?v=20261004a";
+    ? "../../../css/blog-article.css?v=20261004b"
+    : "../../css/blog-article.css?v=20261004b";
   const stylesheet = `<link rel="stylesheet" href="${stylesheetHref}" data-blog-article-styles="">`;
   for (const entry of fs.readdirSync(blogRoot, { withFileTypes: true })) {
     if (!entry.isDirectory()) continue;

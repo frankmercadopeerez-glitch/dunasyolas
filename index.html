@@ -4,8 +4,8 @@
 
 
 
-    <link rel="preload" as="image" href="images/catamaran-cartagena-atardecer-mobile.webp" media="(max-width: 767px)" fetchpriority="high">
-    <link rel="preload" as="image" href="images/catamaran-cartagena-atardecer.webp" media="(min-width: 768px)" fetchpriority="high">
+    <link rel="preload" as="image" type="image/avif" href="images/catamaran-cartagena-atardecer-mobile.avif" media="(max-width: 767px)" fetchpriority="high">
+    <link rel="preload" as="image" type="image/avif" href="images/catamaran-cartagena-atardecer.avif" media="(min-width: 768px)" fetchpriority="high">
     <meta name="description" content="Reserva tours en Cartagena con precios claros y orientación local de Nohemi, Mexicana en Cartagena. Islas, ciudad, gastronomía e itinerarios personalizados.">
     <meta name="keywords" content="experiencias locales Cartagena, itinerario personalizado Cartagena, tours con acompañamiento Cartagena, agencia turística Cartagena, tours seguros Cartagena, qué hacer en Cartagena">
     <!-- Open Graph / Facebook -->
@@ -1137,21 +1137,12 @@ button[data-filter].active, button[data-filter].active-filter,
       }
 
       .hero-bg-image {
+        display: block;
         width: 100%;
         height: 100%;
-        background-size: cover;
-        background-position: center;
       }
-
-      .home-hero-image {
-        background-image: url("images/catamaran-cartagena-atardecer-mobile.webp");
-      }
-
-      @media (min-width: 768px) {
-        .home-hero-image {
-          background-image: url("images/catamaran-cartagena-atardecer.webp");
-        }
-      }
+      .hero-bg-image img { display:block;width:100%;height:100%;object-fit:cover;object-position:center 58%; }
+      .home-hero ~ section { content-visibility:auto;contain-intrinsic-size:auto 760px; }
 
       .hero-video {
         width: 100%;
@@ -1389,10 +1380,10 @@ button[data-filter].active, button[data-filter].active-filter,
 
 
 
-<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" href="/images/favicon-192.png" sizes="192x192"><link rel="apple-touch-icon" href="/images/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="stylesheet" href="/css/brand-refresh.css?v=20260915f" data-site-brand-refresh="">  <link rel="stylesheet" href="/css/google-reviews.css?v=20260930a">
-<link rel="alternate" hreflang="es" href="https://dunasyolas.com/"><link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/"><link rel="alternate" hreflang="fr" href="https://dunasyolas.com/fr/"><link rel="alternate" hreflang="de" href="https://dunasyolas.com/de/"><link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/"><link rel="stylesheet" href="/css/conversion.css?v=20260915f"></head>
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" href="/images/favicon-192.png" sizes="192x192"><link rel="apple-touch-icon" href="/images/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="stylesheet" href="/css/brand-refresh.css?v=20261004b" data-site-brand-refresh="">  <link rel="stylesheet" href="/css/google-reviews.css?v=20260930a">
+<link rel="alternate" hreflang="es" href="https://dunasyolas.com/"><link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/"><link rel="alternate" hreflang="fr" href="https://dunasyolas.com/fr/"><link rel="alternate" hreflang="de" href="https://dunasyolas.com/de/"><link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/"><link rel="stylesheet" href="/css/conversion.css?v=20261004b"></head>
   <body class="site-homepage bg-gray-50 text-gray-800 antialiased selection:bg-blue-200 selection:text-blue-900">
-    <nav class="site-navbar fixed top-0 left-0 right-0 z-50" data-static-nav="true"><div class="site-navbar-inner"><a class="site-brand" href="/" aria-label="Dunas y Olas"><picture><source srcset="/images/logo-master.webp" type="image/webp"><img src="/images/logo-master.png" alt="" width="315" height="148" decoding="async" loading="eager"></picture><span class="site-brand-copy"><strong>Dunas <em>&amp; Olas</em></strong><small>MEXICANA EN CARTAGENA</small></span></a><div class="site-navbar-links" aria-label="Navegación principal"><a class="site-nav-link is-active" href="/" aria-current="page">INICIO</a><a class="site-nav-link" href="/experiences">EXPERIENCIAS</a><a class="site-nav-link" href="/renta-de-botes">BOTES PRIVADOS</a><a class="site-nav-link" href="/galeria">GALERÍA</a><a class="site-nav-link" href="/kitesurf">KITESURF</a><a class="site-nav-link" href="/about">NOSOTROS</a><a class="site-nav-link" href="/blog/">BLOG</a></div><div class="site-navbar-tools"><details class="site-language-menu"><summary aria-label="Idioma">ES ▾</summary><div><a href="/" lang="es" hreflang="es">Español</a><a href="/en/" lang="en" hreflang="en">English</a><a href="/fr/" lang="fr" hreflang="fr">Français</a><a href="/de/" lang="de" hreflang="de">Deutsch</a></div></details><a class="site-planner-cta" href="/arma-tu-viaje">✦ ARMA TU VIAJE</a><button class="site-menu-button" id="mobile-menu-btn" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú"><i class="fas fa-bars" aria-hidden="true"></i></button></div></div><div class="site-mobile-menu hidden" id="mobile-menu"><div class="site-mobile-menu-head"><span>Dunas <strong>&amp; Olas</strong></span><button type="button" data-close-menu="" aria-label="Cerrar menú">×</button></div><a class="site-mobile-link is-active" href="/" aria-current="page">INICIO</a><a class="site-mobile-link" href="/experiences">EXPERIENCIAS</a><a class="site-mobile-link" href="/renta-de-botes">BOTES PRIVADOS</a><a class="site-mobile-link" data-lodging-link="" href="/hospedaje-cartagena">Hospedajes</a><a class="site-mobile-link" href="/galeria">GALERÍA</a><a class="site-mobile-link" href="/kitesurf">KITESURF</a><a class="site-mobile-link" href="/about">NOSOTROS</a><a class="site-mobile-link" href="/blog/">BLOG</a><a class="site-mobile-link site-mobile-language" href="/en/">ENGLISH</a><a class="site-mobile-link site-mobile-planner" href="/arma-tu-viaje">✦ ARMA TU VIAJE</a></div></nav>
+    <nav class="site-navbar fixed top-0 left-0 right-0 z-50" data-static-nav="true"><div class="site-navbar-inner"><a class="site-brand" href="/" aria-label="Dunas y Olas"><picture><source srcset="/images/logo-master.webp" type="image/webp"><img src="/images/logo-master.png" alt="" width="315" height="148" decoding="async" loading="eager"></picture><span class="site-brand-copy"><strong>Dunas <em>&amp; Olas</em></strong><small>MEXICANA EN CARTAGENA</small></span></a><div class="site-navbar-links" aria-label="Navegación principal"><a class="site-nav-link is-active" href="/" aria-current="page">INICIO</a><a class="site-nav-link" href="/experiences">EXPERIENCIAS</a><a class="site-nav-link" href="/renta-de-botes">BOTES PRIVADOS</a><a class="site-nav-link" href="/galeria">GALERÍA</a><a class="site-nav-link" href="/kitesurf">KITESURF</a><a class="site-nav-link" href="/about">NOSOTROS</a><a class="site-nav-link" href="/blog/">BLOG</a></div><div class="site-navbar-tools"><details class="site-language-menu"><summary aria-label="Idioma">ES ▾</summary><div><a href="/" lang="es" hreflang="es">Español</a><a href="/en/" lang="en" hreflang="en">English</a><a href="/fr/" lang="fr" hreflang="fr">Français</a><a href="/de/" lang="de" hreflang="de">Deutsch</a></div></details><a class="site-planner-cta" href="/arma-tu-viaje">✦ ARMA TU VIAJE</a><button class="site-menu-button" id="mobile-menu-btn" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú"><i class="fas fa-bars" aria-hidden="true"></i></button></div></div><div class="site-mobile-menu hidden" id="mobile-menu"><div class="site-mobile-menu-head"><span>Dunas <strong>&amp; Olas</strong></span><button type="button" data-close-menu="" aria-label="Cerrar menú">×</button></div><a class="site-mobile-link is-active" href="/" aria-current="page">INICIO</a><a class="site-mobile-link" href="/experiences">EXPERIENCIAS</a><a class="site-mobile-link" href="/renta-de-botes">BOTES PRIVADOS</a><a class="site-mobile-link" href="/galeria">GALERÍA</a><a class="site-mobile-link" href="/kitesurf">KITESURF</a><a class="site-mobile-link" href="/about">NOSOTROS</a><a class="site-mobile-link" href="/blog/">BLOG</a><a class="site-mobile-link site-mobile-language" href="/en/">ENGLISH</a><a class="site-mobile-link site-mobile-planner" href="/arma-tu-viaje">✦ ARMA TU VIAJE</a></div></nav>
 
     <!-- MENÚ MÓVIL -->
 
@@ -1401,7 +1392,12 @@ button[data-filter].active, button[data-filter].active-filter,
     <header class="hero-section home-hero flex items-center justify-center text-center px-4">
       <!-- Imagen única para mantener legibilidad y una identidad consistente -->
       <div class="hero-slide active">
-        <div class="hero-bg-image home-hero-image" role="img" aria-label="Catamarán navegando frente a Cartagena durante el atardecer" style="background-position:center 58%;"></div>
+        <picture class="hero-bg-image home-hero-image">
+          <source media="(max-width: 767px)" type="image/avif" srcset="images/catamaran-cartagena-atardecer-mobile.avif">
+          <source media="(min-width: 768px)" type="image/avif" srcset="images/catamaran-cartagena-atardecer.avif">
+          <source media="(max-width: 767px)" type="image/webp" srcset="images/catamaran-cartagena-atardecer-mobile.webp">
+          <img src="images/catamaran-cartagena-atardecer.webp" alt="Catamarán navegando frente a Cartagena durante el atardecer" width="1600" height="900" loading="eager" decoding="async" fetchpriority="high">
+        </picture>
       </div>
 
       <div class="hero-overlay"></div>
@@ -1555,7 +1551,7 @@ button[data-filter].active, button[data-filter].active-filter,
 
 
     <!-- Google Reviews -->
-<section class="google-reviews-section" data-google-reviews data-lang="es" aria-labelledby="google-reviews-title"><div class="google-reviews-shell"><div class="google-reviews-head"><div><p class="google-reviews-kicker">Google Reviews</p><h2 id="google-reviews-title">Viajeros que ya confiaron en Dunas & Olas</h2></div><div class="google-reviews-score" aria-label="5 de 5, 8 reseñas en Google"><strong data-review-score>5.0</strong><div><span class="google-review-stars" aria-label="5 de 5 estrellas">★★★★★</span><span data-review-count>8 reseñas en Google</span></div></div></div><div class="google-reviews-actions"><a class="google-reviews-link" href="https://maps.app.goo.gl/sgg1H17KudQiPi4H9?g_st=ac" target="_blank" rel="noopener noreferrer">Ver ficha en Google</a></div><div class="google-reviews-viewport"><div class="google-reviews-track"><div class="google-reviews-set"><article class="google-review-card"><div class="google-review-top"><span class="google-review-stars" aria-label="5 de 5 estrellas">★★★★★</span><img class="google-review-brand" src="/images/google-g.png" width="28" height="28" alt="Google" loading="lazy" decoding="async"></div><blockquote>“Excelente atención y súper confiable. Nohemi es una hermosa persona; en nuestro viaje nos asesoró en todo y fue muy amable. Sin duda alguna la recomiendo ampliamente.”</blockquote><div class="google-review-attribution"><span class="google-review-avatar"><img src="/images/google-g.png" width="24" height="24" alt="" loading="lazy" decoding="async"></span><span><cite>Karina Ibarra</cite><span class="google-review-source">Reseña pública verificada en Google</span></span></div></article><article class="google-review-card"><div class="google-review-top"><span class="google-review-stars" aria-label="5 de 5 estrellas">★★★★★</span><img class="google-review-brand" src="/images/google-g.png" width="28" height="28" alt="Google" loading="lazy" decoding="async"></div><blockquote>“Excelente atención, muy bien asesorados; nos sentimos como en casa. Recomendada 100%.”</blockquote><div class="google-review-attribution"><span class="google-review-avatar"><img src="/images/google-g.png" width="24" height="24" alt="" loading="lazy" decoding="async"></span><span><cite>Karen Castellanos</cite><span class="google-review-source">Reseña pública verificada en Google</span></span></div></article><article class="google-review-card"><div class="google-review-top"><span class="google-review-stars" aria-label="5 de 5 estrellas">★★★★★</span><img class="google-review-brand" src="/images/google-g.png" width="28" height="28" alt="Google" loading="lazy" decoding="async"></div><blockquote>“¡Atención personalizada top! Me dio las mejores opciones para comparar y escoger mejor. ¡Gracias!”</blockquote><div class="google-review-attribution"><span class="google-review-avatar"><img src="/images/google-g.png" width="24" height="24" alt="" loading="lazy" decoding="async"></span><span><cite>Anneth Miramontes</cite><span class="google-review-source">Reseña pública verificada en Google</span></span></div></article></div></div></div></div></section>
+<section class="google-reviews-section" data-google-reviews="" data-lang="es" aria-labelledby="google-reviews-title"><div class="google-reviews-shell"><div class="google-reviews-head"><div><p class="google-reviews-kicker">Google Reviews</p><h2 id="google-reviews-title">Viajeros que ya confiaron en Dunas &amp; Olas</h2></div><div class="google-reviews-score" aria-label="5 de 5, 8 reseñas en Google"><strong data-review-score="">5.0</strong><div><span class="google-review-stars" aria-label="5 de 5 estrellas">★★★★★</span><span data-review-count="">8 reseñas en Google</span></div></div></div><div class="google-reviews-actions"><a class="google-reviews-link" href="https://maps.app.goo.gl/sgg1H17KudQiPi4H9?g_st=ac" target="_blank" rel="noopener noreferrer">Ver ficha en Google</a></div><div class="google-reviews-viewport"><div class="google-reviews-track"><div class="google-reviews-set"><article class="google-review-card"><div class="google-review-top"><span class="google-review-stars" aria-label="5 de 5 estrellas">★★★★★</span><img class="google-review-brand" src="/images/google-g.png" width="28" height="28" alt="Google" loading="lazy" decoding="async"></div><blockquote>“Excelente atención y súper confiable. Nohemi es una hermosa persona; en nuestro viaje nos asesoró en todo y fue muy amable. Sin duda alguna la recomiendo ampliamente.”</blockquote><div class="google-review-attribution"><span class="google-review-avatar"><img src="/images/google-g.png" width="24" height="24" alt="" loading="lazy" decoding="async"></span><span><cite>Karina Ibarra</cite><span class="google-review-source">Reseña pública verificada en Google</span></span></div></article><article class="google-review-card"><div class="google-review-top"><span class="google-review-stars" aria-label="5 de 5 estrellas">★★★★★</span><img class="google-review-brand" src="/images/google-g.png" width="28" height="28" alt="Google" loading="lazy" decoding="async"></div><blockquote>“Excelente atención, muy bien asesorados; nos sentimos como en casa. Recomendada 100%.”</blockquote><div class="google-review-attribution"><span class="google-review-avatar"><img src="/images/google-g.png" width="24" height="24" alt="" loading="lazy" decoding="async"></span><span><cite>Karen Castellanos</cite><span class="google-review-source">Reseña pública verificada en Google</span></span></div></article><article class="google-review-card"><div class="google-review-top"><span class="google-review-stars" aria-label="5 de 5 estrellas">★★★★★</span><img class="google-review-brand" src="/images/google-g.png" width="28" height="28" alt="Google" loading="lazy" decoding="async"></div><blockquote>“¡Atención personalizada top! Me dio las mejores opciones para comparar y escoger mejor. ¡Gracias!”</blockquote><div class="google-review-attribution"><span class="google-review-avatar"><img src="/images/google-g.png" width="24" height="24" alt="" loading="lazy" decoding="async"></span><span><cite>Anneth Miramontes</cite><span class="google-review-source">Reseña pública verificada en Google</span></span></div></article></div></div></div></div></section>
 <!-- /Google Reviews -->
 
     <!-- Blog Preview -->
@@ -1563,6 +1559,12 @@ button[data-filter].active, button[data-filter].active-filter,
       <div class="container mx-auto px-6">
         <div class="text-center mb-12"><span class="text-teal-700 font-bold text-sm uppercase tracking-wide mb-2 block">Cartagena al día</span><h2 id="actualidad-cartagena-title" class="font-serif text-3xl md:text-4xl font-bold text-gray-900">Agenda y datos útiles para viajar en 2026</h2><p class="text-gray-500 mt-3 max-w-2xl mx-auto">Fechas confirmadas, normas locales y recomendaciones verificadas para organizar tu viaje con información reciente.</p></div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10"><article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-100">
+            <a href="blog/cartagena-octubre-2026-clima-eventos/" class="block h-full">
+              <div class="overflow-hidden h-52 relative"><img src="images/cartagenacentro.webp" alt="Calles coloridas del Centro Histórico de Cartagena durante octubre" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" width="1232" height="999" decoding="async" loading="lazy"><span class="absolute left-4 top-4 rounded-full bg-slate-900/85 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">Actualizado 2026</span></div>
+              <div class="p-5"><span class="text-xs font-bold uppercase tracking-wide text-teal-700">Octubre 2026</span><h3 class="font-serif font-bold text-xl text-gray-900 mt-1 mb-2 leading-snug group-hover:text-teal-700 transition-colors">Cartagena en octubre 2026</h3><p class="text-gray-500 text-sm leading-relaxed">Clima, lluvias, preludios, Gran Fondo Nairo y consejos para combinar ciudad, playa e islas durante octubre.</p></div>
+            </a>
+          </article>
+<article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-100">
             <a href="blog/festival-nautico-cartagena-2026/" class="block h-full">
               <div class="overflow-hidden h-52 relative"><img src="images/blog/festival-nautico-cartagena-2026-card.webp" alt="Embarcaciones durante una celebración náutica en la bahía de Cartagena al atardecer" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" width="720" height="405" decoding="async" loading="lazy"><span class="absolute left-4 top-4 rounded-full bg-slate-900/85 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">Actualizado 2026</span></div>
               <div class="p-5"><span class="text-xs font-bold uppercase tracking-wide text-cyan-700">Actualidad 2026</span><h3 class="font-serif font-bold text-xl text-gray-900 mt-1 mb-2 leading-snug group-hover:text-teal-700 transition-colors">Festival Náutico de Cartagena 2026</h3><p class="text-gray-500 text-sm leading-relaxed">Fechas confirmadas, recomendaciones, seguridad y cómo organizar el viaje para uno de los eventos más esperados de noviembre.</p></div>
@@ -1587,15 +1589,9 @@ button[data-filter].active, button[data-filter].active-filter,
             </a>
           </article>
 <article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-100">
-            <a href="blog/cartagena-noviembre-clima-que-llevar/" class="block h-full">
-              <div class="overflow-hidden h-52 relative"><img src="images/cartagenasunset.webp" alt="Atardecer cálido sobre la bahía de Cartagena" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" width="1400" height="933" decoding="async" loading="lazy"><span class="absolute left-4 top-4 rounded-full bg-slate-900/85 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">Actualizado 2026</span></div>
-              <div class="p-5"><span class="text-xs font-bold uppercase tracking-wide text-amber-700">Planificación</span><h3 class="font-serif font-bold text-xl text-gray-900 mt-1 mb-2 leading-snug group-hover:text-teal-700 transition-colors">Cartagena en noviembre de 2026</h3><p class="text-gray-500 text-sm leading-relaxed">Lluvia, equipaje, eventos y planes alternativos: una guía honesta para aprovechar noviembre sin depender de un pronóstico perfecto.</p></div>
-            </a>
-          </article>
-<article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-100">
-            <a href="blog/navidad-cartagena-2026/" class="block h-full">
-              <div class="overflow-hidden h-52 relative"><img src="images/blog/navidad-cartagena-2026-card.webp" alt="Centro Histórico de Cartagena iluminado durante una noche de Navidad" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" width="720" height="405" decoding="async" loading="lazy"><span class="absolute left-4 top-4 rounded-full bg-slate-900/85 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">Actualizado 2026</span></div>
-              <div class="p-5"><span class="text-xs font-bold uppercase tracking-wide text-emerald-700">Diciembre 2026</span><h3 class="font-serif font-bold text-xl text-gray-900 mt-1 mb-2 leading-snug group-hover:text-teal-700 transition-colors">Navidad en Cartagena 2026</h3><p class="text-gray-500 text-sm leading-relaxed">Luces, mercadito, novenas, Festival del Pastel y mar Caribe: organiza diciembre con la agenda anunciada para 2026.</p></div>
+            <a href="blog/zarpar-seguro-islas-cartagena/" class="block h-full">
+              <div class="overflow-hidden h-52 relative"><img src="images/islastour (1).webp" alt="Lancha turística navegando hacia las islas de Cartagena" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" width="786" height="524" decoding="async" loading="lazy"><span class="absolute left-4 top-4 rounded-full bg-slate-900/85 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">Actualizado 2026</span></div>
+              <div class="p-5"><span class="text-xs font-bold uppercase tracking-wide text-teal-700">Seguridad marítima</span><h3 class="font-serif font-bold text-xl text-gray-900 mt-1 mb-2 leading-snug group-hover:text-teal-700 transition-colors">Cómo zarpar seguro hacia las islas</h3><p class="text-gray-500 text-sm leading-relaxed">Operador, muelle, chaleco, capacidad, clima y regreso: revisa estas señales antes de subir a una lancha en Cartagena.</p></div>
             </a>
           </article></div>
         <div class="text-center"><a href="blog/index.html" class="btn-outline px-8">Ver todas las guías de Cartagena</a></div>
@@ -1878,9 +1874,10 @@ button[data-filter].active, button[data-filter].active-filter,
       <script src="js/currency.js"></script>
 
     <script src="/js/site-search.js?v=20260915f" defer=""></script>
-    <script src="/js/site-refresh.js?v=20260915f" defer=""></script>
+    <script src="/js/site-refresh.js?v=20261004b" defer=""></script>
 
 
   <script src="/js/google-reviews.js?v=20260930a" defer=""></script>
+
 
 </body></html>

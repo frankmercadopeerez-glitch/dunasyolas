@@ -11,8 +11,8 @@ for(const file of walk('.').filter(f=>f.endsWith('.html'))){
 }
 const entries=[...pages].sort(([a],[b])=>a.localeCompare(b)).map(([url,data])=>{
  const {alternates,file}=data;
- let image='';if(file){const $=cheerio.load(fs.readFileSync(file,'utf8'));image=$('meta[property="og:image"]').attr('content')||'';if(image.startsWith('/'))image='https://dunasyolas.com'+image;}
- return '  <url><loc>'+escape(url)+'</loc>'+alternates.filter(a=>pages.has(a.url)).map(a=>'\n    <xhtml:link rel="alternate" hreflang="'+escape(a.lang)+'" href="'+escape(a.url)+'"/>').join('')+(image?'\n    <image:image><image:loc>'+escape(image)+'</image:loc></image:image>':'')+'\n  </url>';
+ let image='',lastmod='';if(file){const $=cheerio.load(fs.readFileSync(file,'utf8'));image=$('meta[property="og:image"]').attr('content')||'';if(image.startsWith('/'))image='https://dunasyolas.com'+image;$('script[type="application/ld+json"]').each((i,e)=>{try{const data=JSON.parse($(e).text());const nodes=Array.isArray(data?.['@graph'])?data['@graph']:[data];const article=nodes.find(node=>{const types=Array.isArray(node?.['@type'])?node['@type']:[node?.['@type']];return types.includes('BlogPosting')||types.includes('Article');});const value=article?.dateModified;if(/^\d{4}-\d{2}-\d{2}$/.test(value||''))lastmod=value;}catch{}});}
+ return '  <url><loc>'+escape(url)+'</loc>'+alternates.filter(a=>pages.has(a.url)).map(a=>'\n    <xhtml:link rel="alternate" hreflang="'+escape(a.lang)+'" href="'+escape(a.url)+'"/>').join('')+(lastmod?'\n    <lastmod>'+escape(lastmod)+'</lastmod>':'')+(image?'\n    <image:image><image:loc>'+escape(image)+'</image:loc></image:image>':'')+'\n  </url>';
 });
 fs.writeFileSync('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n'+entries.join('\n')+'\n</urlset>\n');
 console.log(pages.size+' sitemap URLs with language alternatives');

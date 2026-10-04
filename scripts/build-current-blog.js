@@ -13,6 +13,7 @@ const ideamClimate = "https://www.ideam.gov.co/documents/21021/418894/Caracter%C
 const safeBoating = "https://www.cartagena.gov.co/noticias/contratar-servicios-turisticos-autorizados-zarpar-desde-el-muelle-bodeguita-acudir-canales-atencion-denuncias-recomendaciones-distrito-temporada-turistica-mas-importante-ano";
 const safeDeparture = "https://www.cartagena.gov.co/noticias/zarpa-seguro-hacia-zona-insular-cartagena-desde-muelle-bodeguita";
 const dimar = "https://www.dimar.mil.co/comunicado-de-prensa-301";
+const nairoOctober = "https://www.cartagena.gov.co/noticias/alcalde-dumek-turbay-gobernador-yamil-arana-ultimaron-detalles-para-el-gran-fondo-nairo-quintana";
 
 const articles = [
   {
@@ -198,6 +199,7 @@ const articles = [
       ["3. Confirma regreso y condiciones", `<p>Pregunta la hora prevista de retorno, el lugar exacto y qué sucede si cambian las condiciones del mar. En avisos oficiales de temporada aparecen ventanas de salida y regreso que pueden variar. No tomes una hora comercial como autorización marítima inamovible.</p>`],
       ["4. Evita estas señales de alerta", `<ul><li>Pago sin recibo o precio que cambia al llegar.</li><li>Punto de embarque improvisado.</li><li>Más pasajeros que chalecos.</li><li>Promesa de navegar pese a una restricción oficial.</li><li>Consumo excesivo de alcohol durante el trayecto.</li><li>Falta de explicación sobre tasa portuaria, seguro o extras.</li></ul>`],
       ["5. Canales de emergencia", `<p>La línea de Guardacostas es la <strong>146</strong>. Sigue las indicaciones de la tripulación y no te lances al agua alrededor de embarcaciones en movimiento. Consulta también los <a href="../horarios-playas-cartagena-2026/">horarios y cierres de playas</a>.</p>`],
+      ["Dos comprobaciones adicionales antes de pagar", `<p>Consulta la guía del <a href="../seguro-obligatorio-islas-rosario-san-bernardo-2026/">seguro obligatorio para Corales del Rosario y San Bernardo</a> y la lista detallada para <a href="../requisitos-lancha-segura-islas-cartagena/">reconocer una lancha segura en Cartagena</a>.</p>`],
     ],
     faqs: [
       ["¿Desde qué muelle salen los tours a las Islas del Rosario?", "Muchas excursiones autorizadas salen del Muelle de La Bodeguita. Confirma con el operador la puerta, hora y muelle exactos porque algunas operaciones usan otros puntos habilitados."],
@@ -335,6 +337,40 @@ const articles = [
   },
 ];
 
+articles.unshift({
+  slug: "cartagena-octubre-2026-clima-eventos",
+  title: "Cartagena en octubre 2026: clima, eventos y qué hacer",
+  shortTitle: "Cartagena en octubre 2026",
+  description: "Clima de Cartagena en octubre de 2026, eventos confirmados, preludios, Gran Fondo Nairo y consejos para organizar playa, ciudad e islas.",
+  keywords: "cartagena octubre 2026, clima cartagena octubre, eventos cartagena octubre 2026, que hacer cartagena octubre",
+  category: "Octubre 2026",
+  categoryClass: "text-teal-700",
+  cardCategory: "actualidad destacado",
+  image: "images/cartagenacentro.webp",
+  imageWidth: 1232,
+  imageHeight: 999,
+  alt: "Calles coloridas del Centro Histórico de Cartagena durante octubre",
+  reading: "8 min",
+  datePublished: "2026-10-04",
+  dateModified: "2026-10-04",
+  intro: "Octubre combina cultura, deporte y el comienzo de las celebraciones de Independencia. También suele ser el mes más húmedo del patrón climático de Cartagena. La clave es reservar con margen: alterna actividades urbanas con playa o islas y confirma el estado del mar el mismo día.",
+  notice: "Las fechas citadas provienen de la Alcaldía de Cartagena. Horarios, recorridos, aforos y condiciones marítimas pueden cambiar; verifica el comunicado operativo antes de salir.",
+  sections: [
+    ["Cómo es el clima de Cartagena en octubre", `<p>Cartagena mantiene temperaturas cálidas durante todo el año. IDEAM señala que la humedad aumenta hasta cerca del 84 % en octubre y que este mes concentra la mayor frecuencia de lluvia del patrón climático local. Eso no significa lluvia continua: pueden presentarse aguaceros intensos y luego periodos de sol.</p><p>Lleva ropa ligera, calzado con agarre, una bolsa impermeable para documentos y un plan urbano alternativo. Para una salida marítima, confirma viento, oleaje y autorización del zarpe con el operador.</p>`],
+    ["Eventos confirmados en octubre de 2026", `<ul><li><strong>6 al 10 de octubre:</strong> Clínicas Instrumentales de UNIBAC.</li><li><strong>9 de octubre:</strong> Primer Preludio de las Fiestas de Independencia.</li><li><strong>9 al 11 de octubre:</strong> Gran Fondo Nairo Quintana Cartagena Fest.</li><li><strong>16 de octubre:</strong> Segundo Preludio.</li><li><strong>23 de octubre:</strong> Tercer Preludio.</li><li><strong>30 de octubre:</strong> Noche de Candela y Jolgorio de Tambores.</li></ul>`],
+    ["Qué hacer si llueve", `<p>Reserva el Centro Histórico, museos, cocina local o una actividad cultural para las horas de lluvia. Evita cruzar calles inundadas y no asumas que una aplicación meteorológica decide si una lancha puede salir. Lee nuestra guía sobre <a href="../temporada-lluvias-cartagena-tours/">lluvia y cancelación de tours</a>.</p>`],
+    ["Cómo combinar ciudad, playa e islas", `<p>Deja el plan marítimo para el día con mejores condiciones y mantén una mañana o tarde intercambiable. Consulta los <a href="../horarios-playas-cartagena-2026/">horarios y cierres de playas</a>, revisa cómo <a href="../zarpar-seguro-islas-cartagena/">zarpar de forma segura</a> y compara las <a href="../../experiences.html">experiencias disponibles</a>.</p>`],
+    ["Qué llevar en octubre", `<ul><li>Ropa fresca y una muda seca.</li><li>Protector solar, sombrero y agua.</li><li>Chaqueta impermeable ligera o paraguas compacto.</li><li>Bolsa estanca para teléfono, pasaporte y medicamentos.</li><li>Calzado que no resbale sobre piedra mojada.</li></ul>`]
+  ],
+  faqs: [
+    ["¿Llueve todo el día en Cartagena durante octubre?", "No necesariamente. Octubre es el mes de mayor frecuencia de lluvia en el patrón climático local, pero son comunes los aguaceros por periodos y las horas de sol."],
+    ["¿Qué eventos hay en Cartagena en octubre de 2026?", "La agenda oficial incluye Clínicas Instrumentales, preludios de Independencia, el Gran Fondo Nairo del 9 al 11 y la Noche de Candela el 30."],
+    ["¿Salen tours a las islas si está lloviendo?", "La lluvia por sí sola no determina la salida. El operador y la autoridad marítima evalúan viento, oleaje, tormentas, visibilidad y restricciones de zarpe."]
+  ],
+  sources: [["Alcaldía de Cartagena: agenda cultural 2026", culturalAgenda], ["Alcaldía de Cartagena: Gran Fondo Nairo Quintana Cartagena Fest", nairoOctober], ["IDEAM: características climáticas de Cartagena", ideamClimate]],
+  cardText: "Clima, lluvias, preludios, Gran Fondo Nairo y consejos para combinar ciudad, playa e islas durante octubre.",
+});
+
 function esc(value) {
   return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
@@ -346,8 +382,8 @@ function schema(article) {
       "@type": "BlogPosting",
       headline: article.title,
       description: article.description,
-      datePublished: today,
-      dateModified: today,
+      datePublished: article.datePublished || today,
+      dateModified: article.dateModified || today,
       inLanguage: "es-CO",
       url,
       mainEntityOfPage: url,
@@ -386,6 +422,11 @@ function schema(article) {
 }
 
 function articleHtml(article) {
+  const published = article.datePublished || today;
+  const modified = article.dateModified || today;
+  const englishAlternate = fs.existsSync(path.join(root, "en", "blog", article.slug, "index.html"))
+    ? `\n  <link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/${article.slug}/"/>`
+    : "";
   const sourceItems = article.sources.map(([label, href]) => `<li><a href="${href}" target="_blank" rel="noopener noreferrer">${esc(label)}</a></li>`).join("");
   const sections = article.sections.map(([heading, html]) => `<section><h2>${heading}</h2>${html}</section>`).join("\n");
   const faqs = article.faqs.map(([q, a]) => `<div class="faq-item"><h3>${esc(q)}</h3><p>${esc(a)}</p></div>`).join("");
@@ -408,14 +449,14 @@ function articleHtml(article) {
   <meta property="og:image:width" content="${article.imageWidth}"/>
   <meta property="og:image:height" content="${article.imageHeight}"/>
   <meta property="og:site_name" content="Dunas & Olas"/>
-  <meta property="article:published_time" content="${today}T08:00:00-05:00"/>
-  <meta property="article:modified_time" content="${today}T08:00:00-05:00"/>
+  <meta property="article:published_time" content="${published}T08:00:00-05:00"/>
+  <meta property="article:modified_time" content="${modified}T08:00:00-05:00"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="${esc(article.title)}"/>
   <meta name="twitter:description" content="${esc(article.description)}"/>
   <meta name="twitter:image" content="https://dunasyolas.com/${article.image}"/>
   <link rel="canonical" href="https://dunasyolas.com/blog/${article.slug}/"/>
-  <link rel="alternate" hreflang="es-CO" href="https://dunasyolas.com/blog/${article.slug}/"/>
+  <link rel="alternate" hreflang="es-CO" href="https://dunasyolas.com/blog/${article.slug}/"/>${englishAlternate}
   <link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/${article.slug}/"/>
   <link rel="icon" href="../../images/favicon-circle.png" type="image/png"/>
   <link rel="apple-touch-icon" href="../../images/favicon-circle.png"/>
@@ -451,7 +492,7 @@ function articleHtml(article) {
     @media(max-width:900px){.article-shell{grid-template-columns:1fr}.side-card{position:static}.article-hero{padding-top:5.8rem}.article-content{border-radius:18px}.article-hero h1{font-size:2.3rem}}
     @media(max-width:520px){.article-shell{padding:2rem .85rem}.article-hero h1{font-size:1.95rem}.article-content p,.article-content li{font-size:1rem}.article-content{padding:1.25rem}.article-hero img{height:250px}.article-content table{font-size:.88rem}.article-content th,.article-content td{padding:.65rem .45rem}}
   </style>
-  <link rel="stylesheet" href="../../css/blog-article.css?v=20261004a" data-blog-article-styles=""/>
+  <link rel="stylesheet" href="../../css/blog-article.css?v=20261004b" data-blog-article-styles=""/>
 </head>
 <body>
   <nav class="fixed w-full z-50 bg-gray-900 text-white shadow-lg py-[2.5px]">
@@ -463,14 +504,14 @@ function articleHtml(article) {
   </nav>
   <div id="mobile-menu" class="fixed inset-0 bg-gray-900/95 z-[10000] hidden flex flex-col justify-center items-center gap-8 opacity-0 transition-opacity"><a href="../../index.html" class="text-2xl font-bold text-white">Inicio</a><a href="../../experiences.html" class="text-2xl font-bold text-white">Experiencias</a><a href="../../galeria.html" class="text-2xl font-bold text-white">Galería</a><a href="../../about.html" class="text-2xl font-bold text-white">Nosotros</a><a href="../index.html" class="text-2xl font-bold text-white">Blog</a><button aria-label="Cerrar menú" id="close-menu-btn" class="absolute top-6 right-6 text-white text-3xl"><i class="fas fa-times"></i></button></div>
   <header class="article-hero">
-    <div class="max-w-5xl mx-auto text-center px-6 pb-9"><span class="text-yellow-300 font-bold uppercase tracking-[.16em] text-xs">${esc(article.category)}</span><h1 class="font-serif text-4xl md:text-6xl font-bold leading-tight mt-4">${esc(article.title)}</h1><div class="meta-row"><span>Por Nohemi</span><span>Actualizado: 12 de agosto de 2026</span><span>${article.reading} de lectura</span></div></div>
+    <div class="max-w-5xl mx-auto text-center px-6 pb-9"><span class="text-yellow-300 font-bold uppercase tracking-[.16em] text-xs">${esc(article.category)}</span><h1 class="font-serif text-4xl md:text-6xl font-bold leading-tight mt-4">${esc(article.title)}</h1><div class="meta-row"><span>Por Nohemi</span><span>Actualizado: ${new Intl.DateTimeFormat('es-CO', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${modified}T12:00:00Z`))}</span><span>${article.reading} de lectura</span></div></div>
     <figure class="article-cover max-w-[1600px] mx-auto"${article.coverStyle ? ` style="${article.coverStyle}"` : ""}><img src="../../${article.image}" alt="${esc(article.alt)}" width="${article.imageWidth}" height="${article.imageHeight}" loading="eager" decoding="async" fetchpriority="high"${article.imageStyle ? ` style="${article.imageStyle}"` : ""}/>${eventImageNote}</figure>
   </header>
   <nav class="breadcrumb" aria-label="Migas de pan"><a href="../../index.html">Inicio</a> / <a href="../index.html">Blog</a> / <span>${esc(article.shortTitle)}</span></nav>
   <main class="article-shell">
     <article class="article-content">
       <p class="text-xl leading-relaxed text-slate-700">${article.intro}</p>
-      <div class="notice"><p><strong>Información vigente al 12 de agosto de 2026:</strong> ${article.notice}</p></div>
+      <div class="notice"><p><strong>Información vigente al ${new Intl.DateTimeFormat('es-CO', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${modified}T12:00:00Z`))}:</strong> ${article.notice}</p></div>
       ${sections}
       <section><h2>Preguntas frecuentes</h2>${faqs}</section>
       <section><h2>Fuentes oficiales consultadas</h2><p>Actualizamos esta guía con información institucional. Abre las fuentes para comprobar cualquier cambio posterior a la fecha de actualización.</p><ul class="source-list">${sourceItems}</ul></section>

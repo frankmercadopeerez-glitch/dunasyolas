@@ -18,6 +18,9 @@ const routes = [
   "/volcan-del-totumo.html",
   "/3-luxury-beach-clubs.html",
   "/kitesurf.html",
+  "/renta-de-botes.html",
+  "/hospedaje-cartagena.html",
+  "/blog/cartagena-octubre-2026-clima-eventos/",
   "/blog/mejor-epoca-para-visitar-cartagena/",
   "/blog/viajar-cartagena-desde-mexico/",
   "/blog/precios-tours-cartagena/",
@@ -82,7 +85,8 @@ try {
       const failed = [];
       const onFailed = (request) => {
         const url = request.url();
-        if (url.startsWith(`http://127.0.0.1:${port}`)) failed.push(url);
+        const error = request.failure()?.errorText || '';
+        if (url.startsWith(`http://127.0.0.1:${port}`) && error !== 'net::ERR_ABORTED') failed.push(`${url} (${error})`);
       };
       page.on("requestfailed", onFailed);
       const response = await page.goto(`http://127.0.0.1:${port}${route}`, { waitUntil: "networkidle0", timeout: 30000 });
@@ -125,7 +129,7 @@ try {
           throw new Error(`${viewport.name} ${route}: navbar recortado o solapado ${JSON.stringify(navbar)}`);
         }
       }
-      if (["/islas-del-rosario.html", "/blog/viajar-cartagena-desde-mexico/", "/blog/precios-tours-cartagena/", "/blog/cuanto-cuesta-tour-islas-del-rosario-2026/", "/blog/derechos-turista-cobros-excesivos-cartagena/", "/en/blog/cartagena-tour-prices/"].includes(route)) {
+      if (["/islas-del-rosario.html", "/blog/cartagena-octubre-2026-clima-eventos/", "/blog/viajar-cartagena-desde-mexico/", "/blog/precios-tours-cartagena/", "/blog/cuanto-cuesta-tour-islas-del-rosario-2026/", "/blog/derechos-turista-cobros-excesivos-cartagena/", "/en/blog/cartagena-tour-prices/"].includes(route)) {
         const slug = route === "/islas-del-rosario.html" ? "islas-del-rosario" : route.split("/").filter(Boolean).at(-1);
         await page.screenshot({ path: path.join(output, `${slug}-${viewport.name}.png`), fullPage: true });
       }

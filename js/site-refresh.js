@@ -504,7 +504,9 @@
 
   function initReveal() {
     if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    var nodes = document.querySelectorAll("main section, body > section, article:not(.article-content)");
+    // Animate page-level sections only. Nested editorial sections stay visible
+    // so articles never show blank gaps during fast scrolling or page capture.
+    var nodes = document.querySelectorAll("main > section, body > section, main > article:not(.article-content)");
     // Keep the first viewport visible; only animate content entering below it.
     nodes = Array.from(nodes).filter(function (node) { return node.getBoundingClientRect().top >= window.innerHeight; });
     nodes.forEach(function (node) { node.classList.add("reveal-ready"); });
